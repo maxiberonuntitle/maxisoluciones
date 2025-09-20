@@ -1,0 +1,484 @@
+import React, { useEffect, useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft, ArrowRight, CheckCircle, ExternalLink, ChevronDown, Clock, Search, Smartphone, Database, BarChart, Map } from 'lucide-react';
+import AnimatedSection from '../components/ui/AnimatedSection';
+const PapeleriaAbrilPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const pageRef = useRef<HTMLDivElement>(null);
+  const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [activeSection, setActiveSection] = useState(0);
+  useEffect(() => {
+    setIsVisible(true);
+    const handleScroll = () => {
+      if (!pageRef.current) return;
+      const scrollPosition = window.scrollY;
+      sectionRefs.current.forEach((section, index) => {
+        if (!section) return;
+        const sectionTop = section.offsetTop - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          setActiveSection(index);
+        }
+      });
+      // Animate elements when they come into view
+      const elements = document.querySelectorAll('.animate-on-scroll');
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const isInView = rect.top <= window.innerHeight * 0.8;
+        if (isInView) {
+          el.classList.add('is-visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initially
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  const scrollToSection = (index: number) => {
+    if (sectionRefs.current[index]) {
+      window.scrollTo({
+        top: sectionRefs.current[index]!.offsetTop - 80,
+        behavior: 'smooth'
+      });
+    }
+  };
+  return <div ref={pageRef} className={`transition-opacity duration-700 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      {/* Hero Section */}
+      <section ref={el => sectionRefs.current[0] = el} className="relative py-20 md:py-32 bg-gradient-to-r from-gray-900 via-blue-950 to-gray-900 overflow-hidden">
+        {/* Background grid */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0" style={{
+          backgroundImage: 'linear-gradient(0deg, rgba(34, 211, 238, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(34, 211, 238, 0.1) 1px, transparent 1px)',
+          backgroundSize: '40px 40px',
+          backgroundPosition: 'center center',
+          perspective: '1000px',
+          transformStyle: 'preserve-3d',
+          transform: 'rotateX(75deg) translateZ(-100px) translateY(-10%)'
+        }}></div>
+          {/* Digital particles */}
+          {[...Array(15)].map((_, i) => <div key={`particle-${i}`} className="absolute rounded-full bg-cyan-400" style={{
+          width: `${Math.random() * 3 + 1}px`,
+          height: `${Math.random() * 3 + 1}px`,
+          top: `${Math.random() * 100}%`,
+          left: `${Math.random() * 100}%`,
+          opacity: Math.random() * 0.7 + 0.3,
+          boxShadow: '0 0 8px 2px rgba(34, 211, 238, 0.6)',
+          animation: `float ${Math.random() * 10 + 15}s infinite alternate ${Math.random() * 5}s ease-in-out`
+        }}></div>)}
+        </div>
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          {/* Back button */}
+          <Link to="/" className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors group">
+            <ArrowLeft className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
+            <span>Volver a proyectos</span>
+          </Link>
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-block mb-4 px-4 py-1 bg-cyan-500/10 rounded-full border border-cyan-500/20 text-cyan-400 text-sm font-medium">
+              Caso de Éxito
+            </div>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Papelería Abril –{' '}
+              <span className="text-cyan-400">Sitio Web y SEO Local</span>
+            </h1>
+            <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+              Transformación digital para una papelería local con visión
+              moderna.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="https://abrilpapeleria.azurewebsites.net/" target="_blank" rel="noopener noreferrer" className="group bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
+                Visitar sitio
+                <ExternalLink className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+              <button onClick={() => scrollToSection(1)} className="bg-transparent border-2 border-cyan-400 text-cyan-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center">
+                Ver detalles
+                <ChevronDown className="ml-2 w-4 h-4 animate-bounce" />
+              </button>
+            </div>
+          </div>
+        </div>
+        {/* Navigation dots */}
+        <div className="hidden md:flex flex-col fixed right-6 top-1/2 transform -translate-y-1/2 z-50">
+          {[0, 1, 2, 3, 4, 5].map(index => <button key={index} onClick={() => scrollToSection(index)} className={`w-3 h-3 rounded-full my-2 transition-all duration-300 ${activeSection === index ? 'bg-cyan-400 scale-125' : 'bg-gray-400 hover:bg-gray-300'}`} aria-label={`Scroll to section ${index + 1}`} />)}
+        </div>
+      </section>
+      {/* About the Client Section */}
+      <AnimatedSection ref={el => sectionRefs.current[1] = el} className="py-16 bg-gray-900">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-10 items-center">
+              <div className="md:w-1/2 animate-on-scroll opacity-0 translate-y-8">
+                <div className="rounded-xl overflow-hidden border-2 border-gray-800 shadow-xl" style={{
+                boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)'
+              }}>
+                  <img src="https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Papelería local con útiles escolares" className="w-full h-auto aspect-video object-cover" />
+                </div>
+              </div>
+              <div className="md:w-1/2 animate-on-scroll opacity-0 translate-y-8" style={{
+              transitionDelay: '0.2s'
+            }}>
+                <h2 className="text-3xl font-bold mb-6 text-white">
+                  Sobre el cliente
+                </h2>
+                <p className="text-gray-300 mb-6">
+                  Papelería Abril es un negocio local establecido en Tacuarembó,
+                  Uruguay, que ofrece una amplia gama de útiles escolares,
+                  artículos de oficina y regalos personalizados.
+                </p>
+                <p className="text-gray-300 mb-6">
+                  Con más de 10 años de experiencia en el mercado, buscaban
+                  modernizar su presencia digital para llegar a más clientes en
+                  su región.
+                </p>
+                <div className="flex items-center text-cyan-400 font-medium">
+                  <Clock className="w-5 h-5 mr-2" />
+                  <span>Establecido desde 2013</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+      {/* Project Objectives Section */}
+      <AnimatedSection ref={el => sectionRefs.current[2] = el} className="py-16 bg-gray-950">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-10 text-white text-center animate-on-scroll opacity-0 translate-y-8">
+              Objetivos del proyecto
+            </h2>
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-1 bg-cyan-900/50 z-0"></div>
+              {/* Objective 1 */}
+              <div className="relative z-10 mb-12 md:mb-20 animate-on-scroll opacity-0 translate-y-8">
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-12 mt-6 md:mt-0">
+                    <h3 className="text-2xl font-bold text-cyan-400 mb-3">
+                      Visibilidad en Google
+                    </h3>
+                    <p className="text-gray-300">
+                      Necesitaban mejorar su presencia en buscadores para ser
+                      encontrados por clientes potenciales en Tacuarembó y
+                      alrededores.
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0 order-1 md:order-2 bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-10" style={{
+                  boxShadow: '0 0 15px rgba(34, 211, 238, 0.5)'
+                }}>
+                    <Search className="w-6 h-6" />
+                  </div>
+                </div>
+              </div>
+              {/* Objective 2 */}
+              <div className="relative z-10 mb-12 md:mb-20 animate-on-scroll opacity-0 translate-y-8" style={{
+              transitionDelay: '0.1s'
+            }}>
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="flex-shrink-0 order-1 bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-10" style={{
+                  boxShadow: '0 0 15px rgba(34, 211, 238, 0.5)'
+                }}>
+                    <Smartphone className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1 order-2 md:pl-12 mt-6 md:mt-0">
+                    <h3 className="text-2xl font-bold text-cyan-400 mb-3">
+                      Modernizar su imagen online
+                    </h3>
+                    <p className="text-gray-300">
+                      Querían proyectar una imagen profesional y moderna que
+                      reflejara la calidad de sus productos y servicios.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/* Objective 3 */}
+              <div className="relative z-10 animate-on-scroll opacity-0 translate-y-8" style={{
+              transitionDelay: '0.2s'
+            }}>
+                <div className="flex flex-col md:flex-row items-center">
+                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-12 mt-6 md:mt-0">
+                    <h3 className="text-2xl font-bold text-cyan-400 mb-3">
+                      Mostrar su catálogo de productos
+                    </h3>
+                    <p className="text-gray-300">
+                      Necesitaban una forma sencilla de mostrar su amplio
+                      catálogo de productos organizados por categorías.
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0 order-1 md:order-2 bg-cyan-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-10" style={{
+                  boxShadow: '0 0 15px rgba(34, 211, 238, 0.5)'
+                }}>
+                    <Database className="w-6 h-6" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+      {/* What We Did Section */}
+      <AnimatedSection ref={el => sectionRefs.current[3] = el} className="py-16 bg-gray-900">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-10 text-white text-center animate-on-scroll opacity-0 translate-y-8">
+              Nuestra solución
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Solution Card 1 */}
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group animate-on-scroll opacity-0 translate-y-8">
+                <div className="w-12 h-12 bg-cyan-900/50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-800/50 transition-colors">
+                  <Smartphone className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors">
+                  Diseño y desarrollo web responsivo
+                </h3>
+                <p className="text-gray-300">
+                  Creamos un sitio web moderno y completamente responsivo
+                  utilizando React, asegurando una experiencia perfecta en todos
+                  los dispositivos.
+                </p>
+              </div>
+              {/* Solution Card 2 */}
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group animate-on-scroll opacity-0 translate-y-8" style={{
+              transitionDelay: '0.1s'
+            }}>
+                <div className="w-12 h-12 bg-cyan-900/50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-800/50 transition-colors">
+                  <Database className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors">
+                  Catálogo de productos organizado
+                </h3>
+                <p className="text-gray-300">
+                  Implementamos un sistema de catálogo dinámico con filtrado por
+                  categorías, facilitando a los clientes encontrar exactamente
+                  lo que buscan.
+                </p>
+              </div>
+              {/* Solution Card 3 */}
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group animate-on-scroll opacity-0 translate-y-8" style={{
+              transitionDelay: '0.2s'
+            }}>
+                <div className="w-12 h-12 bg-cyan-900/50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-800/50 transition-colors">
+                  <Map className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors">
+                  Integración de contacto y ubicación
+                </h3>
+                <p className="text-gray-300">
+                  Integramos WhatsApp, formulario de contacto y Google Maps para
+                  facilitar la comunicación y ayudar a los clientes a encontrar
+                  la tienda física.
+                </p>
+              </div>
+              {/* Solution Card 4 */}
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group animate-on-scroll opacity-0 translate-y-8" style={{
+              transitionDelay: '0.3s'
+            }}>
+                <div className="w-12 h-12 bg-cyan-900/50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-800/50 transition-colors">
+                  <Search className="w-6 h-6 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-cyan-400 transition-colors">
+                  SEO técnico y local
+                </h3>
+                <p className="text-gray-300">
+                  Optimizamos el sitio con keywords locales, meta tags, schema
+                  markup y contenido relevante para mejorar su posicionamiento
+                  en búsquedas locales.
+                </p>
+              </div>
+            </div>
+            {/* Before/After Mockup */}
+            <div className="mt-16 bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 animate-on-scroll opacity-0 translate-y-8" style={{
+            transitionDelay: '0.4s'
+          }}>
+              <h3 className="text-xl font-bold mb-6 text-white text-center">
+                Antes / Después
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="relative h-64 bg-gray-800 rounded-lg overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center text-gray-600">
+                    Diseño anterior
+                  </div>
+                  <div className="absolute left-4 bottom-4 bg-gray-700 text-white text-xs font-medium px-3 py-1 rounded-full">
+                    Antes
+                  </div>
+                </div>
+                <div className="relative h-64 bg-gray-800 rounded-lg overflow-hidden">
+                  <img src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Diseño moderno de sitio web" className="w-full h-full object-cover" />
+                  <div className="absolute right-4 bottom-4 bg-cyan-600 text-white text-xs font-medium px-3 py-1 rounded-full shadow-lg">
+                    Después
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+      {/* Results Section */}
+      <AnimatedSection ref={el => sectionRefs.current[4] = el} className="py-16 bg-gray-950">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold mb-10 text-white text-center animate-on-scroll opacity-0 translate-y-8">
+              Impacto del proyecto
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Result Card 1 */}
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center animate-on-scroll opacity-0 translate-y-8">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">
+                  +200
+                </div>
+                <p className="text-white font-medium">
+                  búsquedas mensuales en Google
+                </p>
+              </div>
+              {/* Result Card 2 */}
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center animate-on-scroll opacity-0 translate-y-8" style={{
+              transitionDelay: '0.1s'
+            }}>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">
+                  Top 3
+                </div>
+                <p className="text-white font-medium">en búsquedas locales</p>
+              </div>
+              {/* Result Card 3 */}
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center animate-on-scroll opacity-0 translate-y-8" style={{
+              transitionDelay: '0.2s'
+            }}>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">
+                  +50%
+                </div>
+                <p className="text-white font-medium">consultas vía WhatsApp</p>
+              </div>
+              {/* Result Card 4 */}
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center animate-on-scroll opacity-0 translate-y-8" style={{
+              transitionDelay: '0.3s'
+            }}>
+                <div className="text-4xl font-bold text-cyan-400 mb-2">
+                  +30%
+                </div>
+                <p className="text-white font-medium">crecimiento en ventas</p>
+              </div>
+            </div>
+            <div className="mt-12 bg-gray-800/30 rounded-xl p-6 border border-gray-700 animate-on-scroll opacity-0 translate-y-8" style={{
+            transitionDelay: '0.4s'
+          }}>
+              <h3 className="text-xl font-bold mb-4 text-white">
+                Mejoras clave logradas
+              </h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">
+                    Presencia activa en Google Maps y búsquedas locales
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">
+                    Primeros resultados en búsquedas como "papelería Tacuarembó"
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">
+                    Crecimiento orgánico desde el primer mes de implementación
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-300">
+                    Mayor visibilidad de productos y ofertas especiales
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+      {/* Testimonial Section */}
+      <AnimatedSection ref={el => sectionRefs.current[5] = el} className="py-16 bg-gray-900">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 md:p-10 border border-gray-700 relative overflow-hidden animate-on-scroll opacity-0 translate-y-8">
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
+              {/* Quote mark */}
+              <div className="text-7xl font-serif text-cyan-800/30 absolute top-4 left-6">
+                "
+              </div>
+              <div className="relative z-10">
+                <p className="text-xl md:text-2xl text-gray-300 italic mb-8 relative z-10">
+                  Estamos encantados con el nuevo sitio, ahora nuestros clientes
+                  nos encuentran fácilmente en Google. La organización por
+                  categorías ha facilitado mucho mostrar nuestro catálogo y
+                  hemos notado un aumento en las consultas y ventas.
+                </p>
+                <div className="flex items-center">
+                  <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center mr-4">
+                    <span className="text-cyan-400 font-bold text-xl">A</span>
+                  </div>
+                  <div>
+                    <div className="font-bold text-white">Ana Martínez</div>
+                    <div className="text-gray-400">
+                      Gerente, Papelería Abril
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* CTA Section */}
+            <div className="mt-16 text-center animate-on-scroll opacity-0 translate-y-8" style={{
+            transitionDelay: '0.2s'
+          }}>
+              <h3 className="text-2xl font-bold mb-6 text-white">
+                ¿Listo para impulsar tu negocio local?
+              </h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a href="https://abrilpapeleria.azurewebsites.net/" target="_blank" rel="noopener noreferrer" className="group bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
+                  Ver sitio en vivo
+                  <ExternalLink className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                </a>
+                <Link to="/#proyectos" className="bg-transparent border-2 border-cyan-400 text-cyan-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center">
+                  Ver más proyectos
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
+              {/* QR Code */}
+              <div className="mt-12 flex flex-col items-center animate-on-scroll opacity-0 translate-y-8" style={{
+              transitionDelay: '0.3s'
+            }}>
+                <p className="text-gray-400 mb-4">
+                  Escanea para visitar el sitio en tu móvil
+                </p>
+                <div className="w-32 h-32 bg-white p-2 rounded-lg">
+                  <div className="w-full h-full bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">
+                    Código QR
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
+      <style jsx>{`
+        .animate-on-scroll {
+          transition:
+            opacity 0.8s ease-out,
+            transform 0.8s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0) translateX(0);
+          }
+          50% {
+            transform: translateY(-10px) translateX(5px);
+          }
+        }
+      `}</style>
+    </div>;
+};
+export default PapeleriaAbrilPage;
