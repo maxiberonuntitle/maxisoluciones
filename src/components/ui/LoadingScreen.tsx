@@ -103,7 +103,7 @@ const LoadingScreen = ({
         </div>
       </div>
       {/* Custom animations */}
-      <style jsx>{`
+      <style>{`
         @keyframes loadingPulse {
           0% {
             opacity: 0.1;

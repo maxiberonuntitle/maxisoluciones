@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Users, BarChart, TrendingUp, PieChart, CheckCircle, Briefcase, Lightbulb } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import { useNavigationWithScroll } from '../components/utils/NavigationUtils';
+import { useLanguage } from '../components/context/LanguageContext';
 const BusinessConsultingPage = () => {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);
   const { navigateToHomeWithScroll } = useNavigationWithScroll();
@@ -34,27 +36,30 @@ const BusinessConsultingPage = () => {
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           {/* Back button */}
-          <Link to="/" className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors group">
+          <button 
+            onClick={() => navigateToHomeWithScroll('servicios')}
+            className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors group"
+          >
             <ArrowLeft className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
-            <span>Volver a inicio</span>
-          </Link>
+            <span>{t('pages.business_consulting.back_to_home')}</span>
+          </button>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
               Consultoría <span className="text-blue-300">Comercial</span>{' '}
               Estratégica
             </h1>
-            <p className="text-xl text-blue-100 mb-10">
-              Optimizamos tus procesos comerciales y estrategias de ventas para
+            <p className="text-lg md:text-xl text-blue-100 mb-8 md:mb-10 px-4 md:px-0">
+              Optimizo tus procesos comerciales y estrategias de ventas para
               maximizar tus resultados de negocio.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <button 
                 onClick={() => navigateToHomeWithScroll('contacto')}
-                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm md:text-base"
               >
-                Solicitar asesoría
+                {t('pages.business_consulting.request_consultation')}
               </button>
-              <a href="#areas" className="bg-transparent border-2 border-blue-400 text-blue-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
+              <a href="#areas" className="bg-transparent border-2 border-blue-400 text-blue-100 hover:text-white hover:border-white font-medium py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-300 text-sm md:text-base">
                 Explorar áreas de consultoría
               </a>
             </div>
@@ -74,7 +79,7 @@ const BusinessConsultingPage = () => {
               aumentar tus ventas
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Area Card 1 */}
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8">
               <div className="p-6">
@@ -520,11 +525,11 @@ const BusinessConsultingPage = () => {
             onClick={() => navigateToHomeWithScroll('contacto')}
             className="bg-white text-blue-600 hover:bg-blue-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
           >
-            Solicitar consulta gratuita
+            {t('pages.business_consulting.request_consultation')}
           </button>
         </div>
       </AnimatedSection>
-      <style jsx>{`
+      <style>{`
         .animate-on-scroll {
           transition:
             opacity 0.8s ease-out,

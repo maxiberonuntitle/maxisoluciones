@@ -1,0 +1,417 @@
+{
+  "navigation": {
+    "inicio": "Home",
+    "servicios": "Services",
+    "por_que_elegirnos": "Why Choose Me",
+    "tecnologias": "Technologies",
+    "proyectos": "Projects",
+    "contacto": "Contact"
+  },
+  "hero": {
+    "title_desktop": "I boost the",
+    "title_mobile": "The",
+    "title_highlight": "digital presence",
+    "title_desktop_2": "to drive your",
+    "title_mobile_2": "for your",
+    "title_highlight_2": "success",
+    "subtitle": "I transform your vision into digital solutions that connect, convert and grow your business in the online world.",
+    "cta_primary": "Start project",
+    "cta_secondary": "View services",
+    "scroll_indicator": "Scroll to explore"
+  },
+  "services": {
+    "title": "Specialized Services",
+    "subtitle": "Complete digital solutions to grow your business",
+    "web_development": {
+      "title": "Web Development",
+      "description": "Modern, fast and conversion-optimized websites",
+      "features": [
+        "Responsive and modern design",
+        "Integrated SEO optimization",
+        "Optimized loading speed",
+        "Payment systems integration"
+      ]
+    },
+    "digital_marketing": {
+      "title": "Digital Marketing",
+      "description": "Strategies that generate measurable results and increase your visibility",
+      "features": [
+        "SEO and web positioning",
+        "Google Ads and Facebook Ads",
+        "Social media marketing",
+        "Detailed analysis and reports"
+      ]
+    },
+    "business_consulting": {
+      "title": "Business Consulting",
+      "description": "Process and strategy optimization to maximize results",
+      "features": [
+        "Business process analysis",
+        "Sales strategies",
+        "Conversion optimization",
+        "Team training"
+      ]
+    },
+    "view_service": "View service",
+    "request_quote": "Request quote"
+  },
+  "why_choose_us": {
+    "title": "Why choose me?",
+    "subtitle": "Experience, innovation and results that make the difference",
+    "innovation": "Innovation and Technology",
+    "innovation_description": "I combine cutting-edge technology with creative strategies to offer solutions that stand out in the digital market.",
+    "experience": {
+      "title": "Proven Experience",
+      "description": "More than 5 years helping companies grow in the digital world with measurable results"
+    },
+    "personalized": {
+      "title": "Personalized Approach",
+      "description": "Every project is unique. I adapt my solutions to the specific needs of your business"
+    },
+    "results": {
+      "title": "Measurable Results",
+      "description": "I work with clear metrics and detailed reports so you can see the impact of my actions"
+    },
+    "support": {
+      "title": "Continuous Support",
+      "description": "I don't leave you alone. I offer continuous support and maintenance to ensure long-term success"
+    }
+  },
+  "technologies": {
+    "title": "Technologies We Master",
+    "subtitle": "I use the best tools and technologies in the market to create robust and scalable solutions",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Databases",
+    "cloud": "Cloud & DevOps",
+    "tools": "Tools"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Success stories that demonstrate my commitment to excellence",
+    "view_project": "View project",
+    "view_case_study": "View case study",
+    "services_applied": "Services applied",
+    "web_development": "Web Development",
+    "seo": "SEO",
+    "google_maps": "Google Maps",
+    "responsive_design": "Responsive Design",
+    "professional_design": "Professional Design",
+    "local_seo": "Local SEO",
+    "digital_marketing": "Digital Marketing",
+    "papeleria_abril": {
+      "title": "Papelería Abril",
+      "description": "Complete digital transformation with optimized e-commerce and local SEO",
+      "results": [
+        "300% increase in online sales",
+        "150% improvement in local positioning",
+        "40% reduction in loading time"
+      ]
+    },
+    "antonio_yadama": {
+      "title": "Antonio y Adama Gardening",
+      "description": "Professional website for gardening and landscaping services",
+      "results": [
+        "Modern and responsive design",
+        "Optimized local SEO",
+        "Integrated contact form"
+      ]
+    },
+    "cafe_nuevo_jago": {
+      "title": "Cafetería Nuevo Jago",
+      "description": "Complete digital presence with specialized local SEO",
+      "results": [
+        "Improved Google Maps positioning",
+        "Increased local customers",
+        "Conversion optimization"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Ready to Grow?",
+    "subtitle": "Let's talk about your project and how I can help you achieve your goals",
+    "form": {
+      "name": "Full name",
+      "email": "Email address",
+      "phone": "Phone (optional)",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send message",
+      "submitting": "Sending...",
+      "success": "Message sent successfully!",
+      "success_message": "I will contact you soon.",
+      "error": "Error sending message. Please try again.",
+      "required": "This field is required",
+      "invalid_email": "Invalid email"
+    },
+    "info": {
+      "title": "Contact Information",
+      "phone": "+598 98 009 803",
+      "address": "Barcelona",
+      "hours": "Monday to Friday: 9:00 - 18:00"
+    }
+  },
+  "pages": {
+    "web_development": {
+      "title": "Professional Web Development",
+      "subtitle": "I create websites and applications that stand out for their design, performance and user experience",
+      "request_quote": "Request quote",
+      "see_process": "See process",
+      "back_to_home": "Back to home"
+    },
+    "digital_marketing": {
+      "title": "Strategic Digital Marketing",
+      "subtitle": "Digital marketing strategies that generate measurable results and increase your brand visibility",
+      "request_strategy": "Request strategy",
+      "see_services": "View services",
+      "back_to_home": "Back to home"
+    },
+    "business_consulting": {
+      "title": "Strategic Business Consulting",
+      "subtitle": "I optimize your business processes and sales strategies to maximize your business results",
+      "request_consultation": "Request consultation",
+      "back_to_home": "Back to home"
+    }
+  },
+  "footer": {
+    "company": "Maxi Digital Solutions",
+    "description": "I transform your vision into digital solutions that connect, convert and grow your business.",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "follow_us": "Follow me",
+    "rights": "All rights reserved",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "project_pages": {
+    "papeleria_abril": {
+      "hero": {
+        "badge": "Success Case",
+        "title": "Papelería Abril –",
+        "title_highlight": "Website and Local SEO",
+        "subtitle": "Digital transformation for a local stationery store with modern vision.",
+        "visit_site": "Visit site",
+        "view_details": "View details"
+      },
+      "about_client": {
+        "title": "About the client",
+        "description_1": "Papelería Abril is a local business established in Tacuarembó, Uruguay, offering a wide range of school supplies, office items and personalized gifts.",
+        "description_2": "With more than 10 years of experience in the market, they sought to modernize their digital presence to reach more customers in their region.",
+        "established": "Established since 2013"
+      },
+      "objectives": {
+        "title": "Project objectives",
+        "google_visibility": {
+          "title": "Google visibility",
+          "description": "They needed to improve their presence in search engines to be found by potential customers in Tacuarembó and surrounding areas."
+        },
+        "modernize_image": {
+          "title": "Modernize their online image",
+          "description": "They wanted to project a professional and modern image that reflected the quality of their products and services."
+        },
+        "show_catalog": {
+          "title": "Show their product catalog",
+          "description": "They needed a simple way to display their extensive product catalog organized by categories."
+        }
+      },
+      "solution": {
+        "title": "My solution",
+        "responsive_design": {
+          "title": "Responsive web design and development",
+          "description": "I created a modern and fully responsive website using React, ensuring a perfect experience on all devices."
+        },
+        "catalog": {
+          "title": "Organized product catalog",
+          "description": "I implemented a dynamic catalog system with category filtering, making it easy for customers to find exactly what they're looking for."
+        },
+        "contact_integration": {
+          "title": "Contact and location integration",
+          "description": "We integrated WhatsApp, contact form and Google Maps to facilitate communication and help customers find the physical store."
+        },
+        "seo": {
+          "title": "Technical and local SEO",
+          "description": "We optimized the site with local keywords, meta tags, schema markup and relevant content to improve its positioning in local searches."
+        },
+        "before_after": {
+          "title": "Before / After",
+          "before": "Before",
+          "after": "After",
+          "previous_design": "Previous design"
+        }
+      },
+      "impact": {
+        "title": "Project impact",
+        "searches": "monthly Google searches",
+        "local_ranking": "in local searches",
+        "whatsapp_queries": "WhatsApp queries",
+        "sales_growth": "sales growth",
+        "key_improvements": "Key improvements achieved",
+        "improvements": [
+          "Active presence on Google Maps and local searches",
+          "First results in searches like \"stationery Tacuarembó\"",
+          "Organic growth from the first month of implementation",
+          "Greater visibility of products and special offers"
+        ]
+      },
+      "testimonial": {
+        "quote": "We are delighted with the new site, now our customers find us easily on Google. The organization by categories has made it much easier to show our catalog and we have noticed an increase in queries and sales.",
+        "author": "Ana Martínez",
+        "position": "Manager, Papelería Abril"
+      },
+      "cta": {
+        "title": "Ready to boost your local business?",
+        "description": "Contact me today and discover how my digital transformation strategy can boost your local business as I did with Papelería Abril.",
+        "view_live_site": "View live site"
+      }
+    },
+    "antonio_yadama": {
+      "hero": {
+        "title": "Web Development",
+        "title_highlight": "Antonio y Adama Gardening",
+        "subtitle": "Professional website for Antonio y Adama Gardening, specialists in gardening and landscaping services in Lloret de Mar."
+      },
+      "overview": {
+        "title": "Professional Gardening Project",
+        "description": "Development of a professional website for Antonio y Adama Gardening, specialists in gardening and landscaping services. The project included modern web development, local SEO optimization for gardening services and optimized presence on Google Maps to attract local customers in Lloret de Mar.",
+        "web_development": "Modern and responsive website",
+        "seo": "Optimization for gardening",
+        "google_maps": "Optimized local presence",
+        "design": "Professional interface"
+      },
+      "services": {
+        "title": "Services Implemented",
+        "subtitle": "Comprehensive solutions to enhance the digital presence of a professional gardening business",
+        "web_development": {
+          "title": "Web Development",
+          "description": "Modern and responsive website developed with the latest technologies, optimized to showcase gardening services and landscaping projects professionally."
+        },
+        "seo_specialized": {
+          "title": "Specialized SEO",
+          "description": "SEO optimization specific to gardening services, including relevant keywords like \"gardening Lloret de Mar\" and search engine optimized structure."
+        },
+        "google_maps": {
+          "title": "Google Maps",
+          "description": "Optimization of presence on Google Maps to attract local customers interested in gardening and landscaping services in Lloret de Mar."
+        },
+        "responsive_design": {
+          "title": "Responsive Design",
+          "description": "Fully responsive design that adapts perfectly to all devices, from mobile to desktop."
+        },
+        "digital_portfolio": {
+          "title": "Digital Portfolio",
+          "description": "Professional gallery to showcase gardening and landscaping projects with intuitive navigation and impactful visual presentation."
+        },
+        "contact_optimized": {
+          "title": "Optimized Contact",
+          "description": "Optimized contact forms and clear contact information to facilitate communication with potential customers."
+        }
+      },
+      "results": {
+        "title": "Results Obtained",
+        "subtitle": "Measurable impact on the architect's digital presence",
+        "seo_improvement": {
+          "title": "SEO Improvement",
+          "description": "Improved positioning in searches related to gardening and landscaping services."
+        },
+        "local_visibility": {
+          "title": "Local Visibility",
+          "description": "Greater presence on Google Maps and local searches for architecture services."
+        },
+        "more_queries": {
+          "title": "More Queries",
+          "description": "Significant increase in queries from potential customers interested in gardening services."
+        },
+        "professional_image": {
+          "title": "Professional Image",
+          "description": "Website that projects professionalism and trust, improving brand perception."
+        }
+      },
+      "cta": {
+        "title": "Need a Professional Website?",
+        "description": "Contact me today and turn your idea into reality with my professional web development experience."
+      }
+    },
+    "cafe_nuevo_jago": {
+      "hero": {
+        "title": "Cafetería",
+        "title_highlight": "Nuevo Yago",
+        "subtitle": "Complete digital transformation for cafeterianuevoyago.es. Web development, specialized local SEO and Google Maps presence optimization to increase local customers."
+      },
+      "overview": {
+        "title": "Digital Transformation for Cafeteria",
+        "description": "Comprehensive digital transformation strategy for cafeterianuevoyago.es. The project included complete web development, specialized local SEO for restaurants and Google Maps presence optimization to increase local customers.",
+        "web_development": "Modern website for cafeteria",
+        "local_seo": "Optimization for restaurants",
+        "google_maps": "Optimized local presence",
+        "digital_marketing": "Comprehensive digital strategy"
+      },
+      "services": {
+        "title": "Services Implemented",
+        "subtitle": "Comprehensive solutions to enhance the digital presence of a local cafeteria",
+        "web_development": {
+          "title": "Web Development",
+          "description": "Modern and attractive website developed specifically for cafeterias, with digital menu, product gallery and contact information."
+        },
+        "local_seo": {
+          "title": "Local SEO",
+          "description": "Local SEO optimization specialized for restaurants and cafeterias, including keywords like \"cafeteria near me\" and \"best local coffee\"."
+        },
+        "google_maps": {
+          "title": "Google Maps",
+          "description": "Complete optimization of presence on Google Maps with updated information, hours, photos and reviews to attract local customers."
+        },
+        "responsive_design": {
+          "title": "Responsive Design",
+          "description": "Fully responsive design that adapts perfectly to mobile, tablets and desktops for an optimal experience on all devices."
+        },
+        "user_experience": {
+          "title": "User Experience",
+          "description": "Intuitive and attractive interface that reflects the warmth and cozy atmosphere of the cafeteria, improving the customer experience."
+        },
+        "digital_marketing": {
+          "title": "Digital Marketing",
+          "description": "Comprehensive digital marketing strategy that includes social media management and online promotion to increase cafeteria visibility."
+        }
+      },
+      "results": {
+        "title": "Results Obtained",
+        "subtitle": "Measurable impact on the cafeteria's digital presence",
+        "local_seo_improvement": {
+          "title": "Local SEO Improvement",
+          "description": "Improved positioning in local searches related to cafeterias and restaurants."
+        },
+        "maps_visibility": {
+          "title": "Maps Visibility",
+          "description": "Greater presence on Google Maps with updated information and positive reviews."
+        },
+        "more_customers": {
+          "title": "More Customers",
+          "description": "Significant increase in the number of local customers who discover the cafeteria online."
+        },
+        "modern_image": {
+          "title": "Modern Image",
+          "description": "Website that projects modernity and professionalism, improving brand perception."
+        }
+      },
+      "cta": {
+        "title": "Need to Transform Your Local Business?",
+        "description": "Contact me today and discover how my digital transformation strategy can boost your local business."
+      }
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "close": "Close",
+    "open": "Open",
+    "read_more": "Read more",
+    "learn_more": "Learn more",
+    "get_started": "Get started",
+    "contact_us": "Contact us",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  }
+}

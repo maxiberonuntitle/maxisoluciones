@@ -98,14 +98,14 @@ const Footer = () => {
       }}></div>)}
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {/* Company Info */}
           <div className={`transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h3 className="text-xl font-bold mb-4">
               Maxi <span className="text-blue-500">Soluciones</span>
               <span className="text-blue-400">&gt;</span>
             </h3>
-            <p className="text-gray-300 mb-4">{t('footer_description')}</p>
+            <p className="text-gray-300 mb-4">{t('footer.description')}</p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors transform hover:scale-110">
                 <FacebookIcon className="w-5 h-5" />
@@ -124,48 +124,48 @@ const Footer = () => {
           {/* Services */}
           <div className={`transition-all duration-700 delay-100 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h3 className="text-lg font-semibold mb-4">
-              {t('footer_services')}
+              {t('footer.services')}
             </h3>
             <ul className="space-y-2">
               <li>
                 <a href="#servicios" className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
-                  {t('service_web_title')}
+                  {t('services.web_development.title')}
                 </a>
               </li>
               <li>
                 <a href="#servicios" className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
-                  {t('service_marketing_title')}
+                  {t('services.digital_marketing.title')}
                 </a>
               </li>
               <li>
                 <a href="#servicios" className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
-                  {t('service_consulting_title')}
+                  {t('services.business_consulting.title')}
                 </a>
               </li>
             </ul>
           </div>
           {/* Quick Links */}
           <div className={`transition-all duration-700 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h3 className="text-lg font-semibold mb-4">{t('footer_links')}</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.projects')}</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('inicio'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
-                  {t('inicio')}
+                  {t('navigation.inicio')}
                 </a>
               </li>
               <li>
                 <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('por-qué-elegirnos'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
-                  {t('por_que_elegirnos')}
+                  {t('navigation.por_que_elegirnos')}
                 </a>
               </li>
               <li>
                 <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('proyectos'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
-                  {t('proyectos')}
+                  {t('navigation.proyectos')}
                 </a>
               </li>
               <li>
                 <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('contacto'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
-                  {t('contacto')}
+                  {t('navigation.contacto')}
                 </a>
               </li>
             </ul>
@@ -173,7 +173,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div className={`transition-all duration-700 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h3 className="text-lg font-semibold mb-4">
-              {t('footer_contact')}
+              {t('footer.contact')}
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start group">

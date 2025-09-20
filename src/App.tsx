@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -11,9 +11,9 @@ import ContactSection from './components/home/ContactSection';
 import WebDevelopmentPage from './pages/WebDevelopmentPage';
 import DigitalMarketingPage from './pages/DigitalMarketingPage';
 import BusinessConsultingPage from './pages/BusinessConsultingPage';
-import PapeleriaAbrilPage from './pages/PapeleriaAbrilPage';
+import AbrilPapeleriaPage from './pages/AbrilPapeleriaPage';
 import AntonioYadamaPage from './pages/AntonioYadamaPage';
-import CafeNuevoJagoPage from './pages/CafeNuevoJagoPage';
+import CafeNuevoYagoPage from './pages/CafeteriaNuevoYagoPage';
 import WhatsAppButton from './components/ui/WhatsAppButton';
 import ScrollToTopButton from './components/ui/ScrollToTopButton';
 import AnimatedParticles from './components/ui/AnimatedParticles';
@@ -64,7 +64,7 @@ export function App() {
     document.documentElement.setAttribute('data-scroll-direction', scrollDirection);
   }, [scrollDirection]);
   return <LanguageProvider>
-      <Router>
+      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <ScrollToTop />
         <div className="flex flex-col min-h-screen bg-white overflow-hidden">
           <Navbar />
@@ -80,9 +80,9 @@ export function App() {
               <Route path="/servicios/desarrollo-web" element={<WebDevelopmentPage />} />
               <Route path="/servicios/marketing-digital" element={<DigitalMarketingPage />} />
               <Route path="/servicios/consultoria-comercial" element={<BusinessConsultingPage />} />
-              <Route path="/proyectos/papeleria-abril" element={<PapeleriaAbrilPage />} />
+              <Route path="/proyectos/papeleria-abril" element={<AbrilPapeleriaPage />} />
               <Route path="/proyectos/antonio-yadama" element={<AntonioYadamaPage />} />
-              <Route path="/proyectos/cafe-nuevo-jago" element={<CafeNuevoJagoPage />} />
+              <Route path="/proyectos/cafe-nuevo-jago" element={<CafeNuevoYagoPage />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>

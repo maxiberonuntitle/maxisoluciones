@@ -1,0 +1,422 @@
+{
+  "navigation": {
+    "inicio": "Inicio",
+    "servicios": "Servicios",
+    "por_que_elegirnos": "Por qué elegirme",
+    "tecnologias": "Tecnologías",
+    "proyectos": "Proyectos",
+    "contacto": "Contacto"
+  },
+  "hero": {
+    "title_desktop": "Potenciamos la",
+    "title_mobile": "La",
+    "title_highlight": "presencia digital",
+    "title_desktop_2": "para impulsar tu",
+    "title_mobile_2": "para tu",
+    "title_highlight_2": "éxito",
+    "subtitle": "Transformo tu visión en soluciones digitales que conectan, convierten y hacen crecer tu negocio en el mundo online.",
+    "cta_primary": "Comenzar proyecto",
+    "cta_secondary": "Ver servicios",
+    "scroll_indicator": "Desplázate para explorar"
+  },
+  "services": {
+    "title": "Servicios Especializados",
+    "subtitle": "Soluciones digitales completas para hacer crecer tu negocio",
+    "web_development": {
+      "title": "Desarrollo Web",
+      "description": "Sitios web modernos, rápidos y optimizados para conversión",
+      "features": [
+        "Diseño responsive y moderno",
+        "Optimización SEO integrada",
+        "Velocidad de carga optimizada",
+        "Integración con sistemas de pago"
+      ]
+    },
+    "digital_marketing": {
+      "title": "Marketing Digital",
+      "description": "Estrategias que generan resultados medibles y aumentan tu visibilidad",
+      "features": [
+        "SEO y posicionamiento web",
+        "Google Ads y Facebook Ads",
+        "Marketing en redes sociales",
+        "Análisis y reportes detallados"
+      ]
+    },
+    "business_consulting": {
+      "title": "Consultoría Comercial",
+      "description": "Optimización de procesos y estrategias para maximizar resultados",
+      "features": [
+        "Análisis de procesos comerciales",
+        "Estrategias de ventas",
+        "Optimización de conversión",
+        "Formación de equipos"
+      ]
+    },
+    "view_service": "Ver servicio",
+    "request_quote": "Solicitar presupuesto"
+  },
+  "why_choose_us": {
+    "title": "¿Por qué elegirme?",
+    "subtitle": "Experiencia, innovación y resultados que marcan la diferencia",
+    "innovation": "Innovación y Tecnología",
+    "innovation_description": "Combino tecnología de vanguardia con estrategias creativas para ofrecer soluciones que destacan en el mercado digital.",
+    "experience": {
+      "title": "Experiencia Comprobada",
+      "description": "Más de 5 años ayudando a empresas a crecer en el mundo digital con resultados medibles"
+    },
+    "personalized": {
+      "title": "Enfoque Personalizado",
+      "description": "Cada proyecto es único. Adapto mis soluciones a las necesidades específicas de tu negocio"
+    },
+    "results": {
+      "title": "Resultados Medibles",
+      "description": "Trabajo con métricas claras y reportes detallados para que veas el impacto de mis acciones"
+    },
+    "support": {
+      "title": "Soporte Continuo",
+      "description": "No te dejo solo. Ofrezco soporte y mantenimiento continuo para garantizar el éxito a largo plazo"
+    }
+  },
+  "technologies": {
+    "title": "Tecnologías que Dominamos",
+    "subtitle": "Utilizo las mejores herramientas y tecnologías del mercado para crear soluciones robustas y escalables",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Bases de Datos",
+    "cloud": "Cloud & DevOps",
+    "tools": "Herramientas"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Casos de éxito que demuestran mi compromiso con la excelencia",
+    "view_project": "Ver proyecto",
+    "view_case_study": "Ver caso de estudio",
+    "services_applied": "Servicios aplicados",
+    "web_development": "Desarrollo Web",
+    "seo": "SEO",
+    "google_maps": "Google Maps",
+    "responsive_design": "Diseño Responsive",
+    "professional_design": "Diseño Profesional",
+    "local_seo": "SEO Local",
+    "digital_marketing": "Marketing Digital",
+    "papeleria_abril": {
+      "title": "Papelería Abril",
+      "description": "Transformación digital completa con e-commerce optimizado y SEO local",
+      "results": [
+        "Aumento del 300% en ventas online",
+        "Mejora del 150% en posicionamiento local",
+        "Reducción del 40% en tiempo de carga"
+      ]
+    },
+    "antonio_yadama": {
+      "title": "Antonio y Adama Jardinería",
+      "description": "Sitio web profesional para servicios de jardinería y paisajismo",
+      "results": [
+        "Diseño moderno y responsive",
+        "SEO local optimizado",
+        "Formulario de contacto integrado"
+      ]
+    },
+    "cafe_nuevo_jago": {
+      "title": "Cafetería Nuevo Jago",
+      "description": "Presencia digital completa con SEO local especializado",
+      "results": [
+        "Mejora en posicionamiento Google Maps",
+        "Aumento de clientes locales",
+        "Optimización de conversión"
+      ]
+    }
+  },
+  "contact": {
+    "title": "¿Listo para Crecer?",
+    "subtitle": "Hablemos sobre tu proyecto y cómo puedo ayudarte a alcanzar tus objetivos",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "phone": "Teléfono (opcional)",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando...",
+      "success": "¡Mensaje enviado correctamente!",
+      "success_message": "Me pondré en contacto contigo pronto.",
+      "error": "Error al enviar el mensaje. Inténtalo de nuevo.",
+      "required": "Este campo es obligatorio",
+      "invalid_email": "Email inválido",
+      "placeholder_name": "Tu nombre completo",
+      "placeholder_email": "tu@email.com",
+      "placeholder_phone": "+34 600 000 000",
+      "placeholder_subject": "Selecciona un asunto",
+      "placeholder_message": "¿En qué puedo ayudarte?"
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "phone": "+598 98 009 803",
+      "address": "Barcelona",
+      "hours": "Lunes a Viernes: 9:00 - 18:00"
+    }
+  },
+  "pages": {
+    "web_development": {
+      "title": "Desarrollo Web Profesional",
+      "subtitle": "Creo sitios web y aplicaciones que destacan por su diseño, rendimiento y experiencia de usuario",
+      "request_quote": "Solicitar presupuesto",
+      "see_process": "Ver proceso",
+      "back_to_home": "Volver al inicio"
+    },
+    "digital_marketing": {
+      "title": "Marketing Digital Estratégico",
+      "subtitle": "Estrategias de marketing digital que generan resultados medibles y aumentan la visibilidad de tu marca",
+      "request_strategy": "Solicitar estrategia",
+      "see_services": "Ver servicios",
+      "back_to_home": "Volver al inicio"
+    },
+    "business_consulting": {
+      "title": "Consultoría Comercial Estratégica",
+      "subtitle": "Optimizo tus procesos comerciales y estrategias de ventas para maximizar tus resultados de negocio",
+      "request_consultation": "Solicitar consultoría",
+      "back_to_home": "Volver al inicio"
+    }
+  },
+  "footer": {
+    "company": "Maxi Soluciones Digitales",
+    "description": "Transformo tu visión en soluciones digitales que conectan, convierten y hacen crecer tu negocio.",
+    "services": "Servicios",
+    "projects": "Proyectos",
+    "contact": "Contacto",
+    "follow_us": "Sígueme",
+    "rights": "Todos los derechos reservados",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  },
+  "project_pages": {
+    "papeleria_abril": {
+      "hero": {
+        "badge": "Caso de Éxito",
+        "title": "Papelería Abril –",
+        "title_highlight": "Sitio Web y SEO Local",
+        "subtitle": "Transformación digital para una papelería local con visión moderna.",
+        "visit_site": "Visitar sitio",
+        "view_details": "Ver detalles"
+      },
+      "about_client": {
+        "title": "Sobre el cliente",
+        "description_1": "Papelería Abril es un negocio local establecido en Tacuarembó, Uruguay, que ofrece una amplia gama de útiles escolares, artículos de oficina y regalos personalizados.",
+        "description_2": "Con más de 10 años de experiencia en el mercado, buscaban modernizar su presencia digital para llegar a más clientes en su región.",
+        "established": "Establecido desde 2013"
+      },
+      "objectives": {
+        "title": "Objetivos del proyecto",
+        "google_visibility": {
+          "title": "Visibilidad en Google",
+          "description": "Necesitaban mejorar su presencia en buscadores para ser encontrados por clientes potenciales en Tacuarembó y alrededores."
+        },
+        "modernize_image": {
+          "title": "Modernizar su imagen online",
+          "description": "Querían proyectar una imagen profesional y moderna que reflejara la calidad de sus productos y servicios."
+        },
+        "show_catalog": {
+          "title": "Mostrar su catálogo de productos",
+          "description": "Necesitaban una forma sencilla de mostrar su amplio catálogo de productos organizados por categorías."
+        }
+      },
+      "solution": {
+        "title": "Mi solución",
+        "responsive_design": {
+          "title": "Diseño y desarrollo web responsivo",
+          "description": "Creé un sitio web moderno y completamente responsivo utilizando React, asegurando una experiencia perfecta en todos los dispositivos."
+        },
+        "catalog": {
+          "title": "Catálogo de productos organizado",
+          "description": "Implementé un sistema de catálogo dinámico con filtrado por categorías, facilitando a los clientes encontrar exactamente lo que buscan."
+        },
+        "contact_integration": {
+          "title": "Integración de contacto y ubicación",
+          "description": "Integramos WhatsApp, formulario de contacto y Google Maps para facilitar la comunicación y ayudar a los clientes a encontrar la tienda física."
+        },
+        "seo": {
+          "title": "SEO técnico y local",
+          "description": "Optimizamos el sitio con keywords locales, meta tags, schema markup y contenido relevante para mejorar su posicionamiento en búsquedas locales."
+        },
+        "before_after": {
+          "title": "Antes / Después",
+          "before": "Antes",
+          "after": "Después",
+          "previous_design": "Diseño anterior"
+        }
+      },
+      "impact": {
+        "title": "Impacto del proyecto",
+        "searches": "búsquedas mensuales en Google",
+        "local_ranking": "en búsquedas locales",
+        "whatsapp_queries": "consultas vía WhatsApp",
+        "sales_growth": "crecimiento en ventas",
+        "key_improvements": "Mejoras clave logradas",
+        "improvements": [
+          "Presencia activa en Google Maps y búsquedas locales",
+          "Primeros resultados en búsquedas como \"papelería Tacuarembó\"",
+          "Crecimiento orgánico desde el primer mes de implementación",
+          "Mayor visibilidad de productos y ofertas especiales"
+        ]
+      },
+      "testimonial": {
+        "quote": "Estamos encantados con el nuevo sitio, ahora nuestros clientes nos encuentran fácilmente en Google. La organización por categorías ha facilitado mucho mostrar nuestro catálogo y hemos notado un aumento en las consultas y ventas.",
+        "author": "Ana Martínez",
+        "position": "Gerente, Papelería Abril"
+      },
+      "cta": {
+        "title": "¿Listo para impulsar tu negocio local?",
+        "description": "Contáctame hoy mismo y descubre cómo mi estrategia de transformación digital puede impulsar tu negocio local como lo hice con Papelería Abril.",
+        "view_live_site": "Ver sitio en vivo"
+      }
+    },
+    "antonio_yadama": {
+      "hero": {
+        "title": "Desarrollo Web",
+        "title_highlight": "Antonio y Adama Jardinería",
+        "subtitle": "Sitio web profesional para Antonio y Adama Jardinería, especialistas en servicios de jardinería y paisajismo en Lloret de Mar."
+      },
+      "overview": {
+        "title": "Proyecto de Jardinería Profesional",
+        "description": "Desarrollo de un sitio web profesional para Antonio y Adama Jardinería, especialistas en servicios de jardinería y paisajismo. El proyecto incluyó desarrollo web moderno, optimización SEO local para servicios de jardinería y presencia optimizada en Google Maps para atraer clientes locales en Lloret de Mar.",
+        "web_development": "Sitio web moderno y responsive",
+        "seo": "Optimización para jardinería",
+        "google_maps": "Presencia local optimizada",
+        "design": "Interfaz profesional"
+      },
+      "services": {
+        "title": "Servicios Implementados",
+        "subtitle": "Soluciones integrales para potenciar la presencia digital de un negocio de jardinería profesional",
+        "web_development": {
+          "title": "Desarrollo Web",
+          "description": "Sitio web moderno y responsive desarrollado con las últimas tecnologías, optimizado para mostrar servicios de jardinería y proyectos de paisajismo de manera profesional."
+        },
+        "seo_specialized": {
+          "title": "SEO Especializado",
+          "description": "Optimización SEO específica para servicios de jardinería, incluyendo palabras clave relevantes como \"jardinería Lloret de Mar\" y estructura optimizada para motores de búsqueda."
+        },
+        "google_maps": {
+          "title": "Google Maps",
+          "description": "Optimización de presencia en Google Maps para atraer clientes locales interesados en servicios de jardinería y paisajismo en Lloret de Mar."
+        },
+        "responsive_design": {
+          "title": "Diseño Responsive",
+          "description": "Diseño completamente responsive que se adapta perfectamente a todos los dispositivos, desde móviles hasta escritorios."
+        },
+        "digital_portfolio": {
+          "title": "Portfolio Digital",
+          "description": "Galería profesional para mostrar proyectos de jardinería y paisajismo con navegación intuitiva y presentación visual impactante."
+        },
+        "contact_optimized": {
+          "title": "Contacto Optimizado",
+          "description": "Formularios de contacto optimizados y información de contacto clara para facilitar la comunicación con clientes potenciales."
+        }
+      },
+      "results": {
+        "title": "Resultados Obtenidos",
+        "subtitle": "Impacto medible en la presencia digital del arquitecto",
+        "seo_improvement": {
+          "title": "Mejora SEO",
+          "description": "Posicionamiento mejorado en búsquedas relacionadas con jardinería y servicios de paisajismo."
+        },
+        "local_visibility": {
+          "title": "Visibilidad Local",
+          "description": "Mayor presencia en Google Maps y búsquedas locales de servicios de arquitectura."
+        },
+        "more_queries": {
+          "title": "Más Consultas",
+          "description": "Aumento significativo en consultas de clientes potenciales interesados en servicios de jardinería."
+        },
+        "professional_image": {
+          "title": "Imagen Profesional",
+          "description": "Sitio web que proyecta profesionalismo y confianza, mejorando la percepción de marca."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas un Sitio Web Profesional?",
+        "description": "Contáctame hoy mismo y convierte tu idea en realidad con mi experiencia en desarrollo web profesional."
+      }
+    },
+    "cafe_nuevo_jago": {
+      "hero": {
+        "title": "Cafetería",
+        "title_highlight": "Nuevo Yago",
+        "subtitle": "Transformación digital completa para cafeterianuevoyago.es. Desarrollo web, SEO local especializado y optimización de presencia en Google Maps para aumentar clientes locales."
+      },
+      "overview": {
+        "title": "Transformación Digital para Cafetería",
+        "description": "Estrategia integral de transformación digital para cafeterianuevoyago.es. El proyecto incluyó desarrollo web completo, SEO local especializado para restaurantes y optimización de presencia en Google Maps para aumentar clientes locales.",
+        "web_development": "Sitio web moderno para cafetería",
+        "local_seo": "Optimización para restaurantes",
+        "google_maps": "Presencia local optimizada",
+        "digital_marketing": "Estrategia digital integral"
+      },
+      "services": {
+        "title": "Servicios Implementados",
+        "subtitle": "Soluciones integrales para potenciar la presencia digital de una cafetería local",
+        "web_development": {
+          "title": "Desarrollo Web",
+          "description": "Sitio web moderno y atractivo desarrollado específicamente para cafeterías, con menú digital, galería de productos y información de contacto."
+        },
+        "local_seo": {
+          "title": "SEO Local",
+          "description": "Optimización SEO local especializada para restaurantes y cafeterías, incluyendo palabras clave como \"cafetería cerca de mí\" y \"mejor café local\"."
+        },
+        "google_maps": {
+          "title": "Google Maps",
+          "description": "Optimización completa de presencia en Google Maps con información actualizada, horarios, fotos y reseñas para atraer clientes locales."
+        },
+        "responsive_design": {
+          "title": "Diseño Responsive",
+          "description": "Diseño completamente responsive que se adapta perfectamente a móviles, tablets y escritorios para una experiencia óptima en todos los dispositivos."
+        },
+        "user_experience": {
+          "title": "Experiencia de Usuario",
+          "description": "Interfaz intuitiva y atractiva que refleja la calidez y ambiente acogedor de la cafetería, mejorando la experiencia del cliente."
+        },
+        "digital_marketing": {
+          "title": "Marketing Digital",
+          "description": "Estrategia de marketing digital integral que incluye gestión de redes sociales y promoción online para aumentar la visibilidad de la cafetería."
+        }
+      },
+      "results": {
+        "title": "Resultados Obtenidos",
+        "subtitle": "Impacto medible en la presencia digital de la cafetería",
+        "local_seo_improvement": {
+          "title": "Mejora SEO Local",
+          "description": "Posicionamiento mejorado en búsquedas locales relacionadas con cafeterías y restaurantes."
+        },
+        "maps_visibility": {
+          "title": "Visibilidad en Maps",
+          "description": "Mayor presencia en Google Maps con información actualizada y reseñas positivas."
+        },
+        "more_customers": {
+          "title": "Más Clientes",
+          "description": "Aumento significativo en el número de clientes locales que descubren la cafetería online."
+        },
+        "modern_image": {
+          "title": "Imagen Moderna",
+          "description": "Sitio web que proyecta modernidad y profesionalismo, mejorando la percepción de marca."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas Transformar tu Negocio Local?",
+        "description": "Contáctame hoy mismo y descubre cómo mi estrategia de transformación digital puede impulsar tu negocio local."
+      }
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "close": "Cerrar",
+    "open": "Abrir",
+    "read_more": "Leer más",
+    "learn_more": "Saber más",
+    "get_started": "Comenzar",
+    "contact_us": "Contáctanos",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior"
+  }
+}

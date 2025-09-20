@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { MenuIcon, XIcon, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useLocation, Link } from 'react-router-dom';
-import type { Locale } from '../utils/translations';
+type Locale = 'es' | 'en' | 'fr' | 'ca';
 const Navbar = () => {
   const {
     language,
@@ -107,22 +107,22 @@ const Navbar = () => {
   };
   const navItems = [{
     id: 'inicio',
-    translationKey: 'inicio' as const
+    translationKey: 'navigation.inicio'
   }, {
     id: 'servicios',
-    translationKey: 'servicios' as const
+    translationKey: 'navigation.servicios'
   }, {
     id: 'por-qué-elegirnos',
-    translationKey: 'por_que_elegirnos' as const
+    translationKey: 'navigation.por_que_elegirnos'
   }, {
     id: 'tecnologias',
-    translationKey: 'tecnologias' as const
+    translationKey: 'navigation.tecnologias'
   }, {
     id: 'proyectos',
-    translationKey: 'proyectos' as const
+    translationKey: 'navigation.proyectos'
   }, {
     id: 'contacto',
-    translationKey: 'contacto' as const
+    translationKey: 'navigation.contacto'
   }];
   const languages = [{
     code: 'es' as Locale,
@@ -154,12 +154,12 @@ const Navbar = () => {
             </span>
           </Link>
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
-            <nav className="flex space-x-8">
+          <div className="hidden lg:flex items-center space-x-6">
+            <nav className="flex space-x-6 xl:space-x-8">
               {navItems.map(item => <a key={item.id} href={`#${item.id}`} onClick={e => {
               e.preventDefault();
               scrollToSection(item.id);
-            }} className={`font-medium transition-all duration-300 relative group ${isScrolled ? activeLink === item.id ? 'text-blue-600' : 'text-gray-700 hover:text-blue-500' : activeLink === item.id ? 'text-blue-300' : 'text-white hover:text-blue-300'}`}>
+            }} className={`font-medium transition-all duration-300 relative group text-sm xl:text-base ${isScrolled ? activeLink === item.id ? 'text-blue-600' : 'text-gray-700 hover:text-blue-500' : activeLink === item.id ? 'text-blue-300' : 'text-white hover:text-blue-300'}`}>
                   {t(item.translationKey)}
                   <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-current group-hover:w-full transition-all duration-300 ease-in-out ${activeLink === item.id ? 'w-full' : 'w-0'}`}></span>
                 </a>)}
@@ -183,9 +183,9 @@ const Navbar = () => {
                 </div>}
             </div>
           </div>
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-3">
-            {/* Language Selector - Mobile */}
+          {/* Mobile/Tablet Menu Button */}
+          <div className="lg:hidden flex items-center space-x-3">
+            {/* Language Selector - Mobile/Tablet */}
             <button onClick={toggleLanguageMenu} className={`flex items-center p-1.5 rounded-full ${isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'}`}>
               <Globe className="w-5 h-5" />
             </button>
@@ -198,28 +198,28 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-        {/* Mobile Navigation */}
-        <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'max-h-[400px] opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'}`}>
+        {/* Mobile/Tablet Navigation */}
+        <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'}`}>
           <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg">
-            <nav className="flex flex-col space-y-3 px-4 py-4">
+            <nav className="flex flex-col space-y-2 md:space-y-3 px-4 py-4">
               {navItems.map(item => <a key={item.id} href={`#${item.id}`} onClick={e => {
               e.preventDefault();
               scrollToSection(item.id);
-            }} className={`font-medium py-2 px-3 rounded-md transition-all duration-300 ${activeLink === item.id ? 'text-white bg-blue-500' : 'text-gray-700 hover:text-blue-500 hover:bg-blue-50'}`}>
+            }} className={`font-medium py-2 md:py-3 px-3 md:px-4 rounded-md transition-all duration-300 text-sm md:text-base ${activeLink === item.id ? 'text-white bg-blue-500' : 'text-gray-700 hover:text-blue-500 hover:bg-blue-50'}`}>
                   {t(item.translationKey)}
                 </a>)}
-              {/* Language options in mobile menu */}
+              {/* Language options in mobile/tablet menu */}
               <div className="border-t border-gray-100 pt-2 mt-2">
                 <p className="text-sm text-gray-500 px-3 py-1">Idioma</p>
-                {languages.map(lang => <button key={lang.code} onClick={() => changeLanguage(lang.code)} className={`w-full text-left py-2 px-3 rounded-md transition-all duration-300 ${language === lang.code ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-500 hover:bg-blue-50'}`}>
+                {languages.map(lang => <button key={lang.code} onClick={() => changeLanguage(lang.code)} className={`w-full text-left py-2 md:py-3 px-3 md:px-4 rounded-md transition-all duration-300 text-sm md:text-base ${language === lang.code ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:text-blue-500 hover:bg-blue-50'}`}>
                     {lang.name}
                   </button>)}
               </div>
             </nav>
           </div>
         </div>
-        {/* Mobile Language Dropdown */}
-        {isLanguageMenuOpen && !isMenuOpen && <div className="md:hidden absolute right-4 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
+        {/* Mobile/Tablet Language Dropdown */}
+        {isLanguageMenuOpen && !isMenuOpen && <div className="lg:hidden absolute right-4 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
             {languages.map(lang => <button key={lang.code} onClick={() => changeLanguage(lang.code)} className={`block w-full text-left px-4 py-2 text-sm ${language === lang.code ? 'bg-blue-50 text-blue-600' : 'text-gray-700 hover:bg-gray-50'}`}>
                 {lang.name}
               </button>)}

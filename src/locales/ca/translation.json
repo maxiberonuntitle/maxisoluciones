@@ -1,0 +1,417 @@
+{
+  "navigation": {
+    "inicio": "Inici",
+    "servicios": "Serveis",
+    "por_que_elegirnos": "Per què triar-me",
+    "tecnologias": "Tecnologies",
+    "proyectos": "Projectes",
+    "contacto": "Contacte"
+  },
+  "hero": {
+    "title_desktop": "Potenci la",
+    "title_mobile": "La",
+    "title_highlight": "presència digital",
+    "title_desktop_2": "per impulsar el teu",
+    "title_mobile_2": "per al teu",
+    "title_highlight_2": "èxit",
+    "subtitle": "Transformo la teva visió en solucions digitals que connecten, converteixen i fan créixer el teu negoci al món online.",
+    "cta_primary": "Començar projecte",
+    "cta_secondary": "Veure serveis",
+    "scroll_indicator": "Desplaça't per explorar"
+  },
+  "services": {
+    "title": "Serveis Especialitzats",
+    "subtitle": "Solucions digitals completes per fer créixer el teu negoci",
+    "web_development": {
+      "title": "Desenvolupament Web",
+      "description": "Llocs web moderns, ràpids i optimitzats per a la conversió",
+      "features": [
+        "Disseny responsive i modern",
+        "Optimització SEO integrada",
+        "Velocitat de càrrega optimitzada",
+        "Integració amb sistemes de pagament"
+      ]
+    },
+    "digital_marketing": {
+      "title": "Marketing Digital",
+      "description": "Estratègies que generen resultats mesurables i augmenten la teva visibilitat",
+      "features": [
+        "SEO i posicionament web",
+        "Google Ads i Facebook Ads",
+        "Marketing a xarxes socials",
+        "Anàlisi i informes detallats"
+      ]
+    },
+    "business_consulting": {
+      "title": "Consultoria Comercial",
+      "description": "Optimització de processos i estratègies per maximitzar resultats",
+      "features": [
+        "Anàlisi de processos comercials",
+        "Estratègies de vendes",
+        "Optimització de conversió",
+        "Formació d'equips"
+      ]
+    },
+    "view_service": "Veure servei",
+    "request_quote": "Sol·licitar pressupost"
+  },
+  "why_choose_us": {
+    "title": "Per què triar-me?",
+    "subtitle": "Experiència, innovació i resultats que fan la diferència",
+    "innovation": "Innovació i Tecnologia",
+    "innovation_description": "Combino tecnologia de vanguardia amb estratègies creatives per oferir solucions que destaquen al mercat digital.",
+    "experience": {
+      "title": "Experiència Comprovada",
+      "description": "Més de 5 anys ajudant empreses a créixer al món digital amb resultats mesurables"
+    },
+    "personalized": {
+      "title": "Enfocament Personalitzat",
+      "description": "Cada projecte és únic. Adapto les meves solucions a les necessitats específiques del teu negoci"
+    },
+    "results": {
+      "title": "Resultats Mesurables",
+      "description": "Treballo amb mètriques clares i informes detallats perquè puguis veure l'impacte de les meves accions"
+    },
+    "support": {
+      "title": "Suport Continu",
+      "description": "No et deixo sol. Oferisc suport i manteniment continu per garantir l'èxit a llarg termini"
+    }
+  },
+  "technologies": {
+    "title": "Tecnologies que Dominem",
+    "subtitle": "Utilitzo les millors eines i technologies del mercat per crear solucions robustes i escalables",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "databases": "Bases de Dades",
+    "cloud": "Cloud & DevOps",
+    "tools": "Eines"
+  },
+  "projects": {
+    "title": "Projectes Destacats",
+    "subtitle": "Casos d'èxit que demostren el meu compromís amb l'excel·lència",
+    "view_project": "Veure projecte",
+    "view_case_study": "Veure cas d'estudi",
+    "services_applied": "Serveis aplicats",
+    "web_development": "Desenvolupament Web",
+    "seo": "SEO",
+    "google_maps": "Google Maps",
+    "responsive_design": "Disseny Responsive",
+    "professional_design": "Disseny Professional",
+    "local_seo": "SEO Local",
+    "digital_marketing": "Marketing Digital",
+    "papeleria_abril": {
+      "title": "Papelería Abril",
+      "description": "Transformació digital completa amb e-commerce optimitzat i SEO local",
+      "results": [
+        "Augment del 300% en vendes online",
+        "Millora del 150% en posicionament local",
+        "Reducció del 40% en temps de càrrega"
+      ]
+    },
+    "antonio_yadama": {
+      "title": "Antonio y Adama Jardinería",
+      "description": "Lloc web professional per a serveis de jardineria i paisatgisme",
+      "results": [
+        "Disseny modern i responsive",
+        "SEO local optimitzat",
+        "Formulari de contacte integrat"
+      ]
+    },
+    "cafe_nuevo_jago": {
+      "title": "Cafetería Nuevo Jago",
+      "description": "Presència digital completa amb SEO local especialitzat",
+      "results": [
+        "Millora en posicionament Google Maps",
+        "Augment de clients locals",
+        "Optimització de conversió"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Llest per Créixer?",
+    "subtitle": "Parlem del teu projecte i com puc ajudar-te a assolir els teus objectius",
+    "form": {
+      "name": "Nom complet",
+      "email": "Correu electrònic",
+      "phone": "Telèfon (opcional)",
+      "subject": "Assumpte",
+      "message": "Missatge",
+      "submit": "Enviar missatge",
+      "submitting": "Enviant...",
+      "success": "Missatge enviat correctament!",
+      "success_message": "Et contactaré aviat.",
+      "error": "Error en enviar el missatge. Torna-ho a intentar.",
+      "required": "Aquest camp és obligatori",
+      "invalid_email": "Email invàlid"
+    },
+    "info": {
+      "title": "Informació de Contacte",
+      "phone": "+598 98 009 803",
+      "address": "Barcelona",
+      "hours": "Dilluns a Divendres: 9:00 - 18:00"
+    }
+  },
+  "pages": {
+    "web_development": {
+      "title": "Desenvolupament Web Professional",
+      "subtitle": "Creo llocs web i aplicacions que destaquen pel seu disseny, rendiment i experiència d'usuari",
+      "request_quote": "Sol·licitar pressupost",
+      "see_process": "Veure procés",
+      "back_to_home": "Tornar a l'inici"
+    },
+    "digital_marketing": {
+      "title": "Marketing Digital Estratègic",
+      "subtitle": "Estratègies de marketing digital que generen resultats mesurables i augmenten la visibilitat de la teva marca",
+      "request_strategy": "Sol·licitar estratègia",
+      "see_services": "Veure serveis",
+      "back_to_home": "Tornar a l'inici"
+    },
+    "business_consulting": {
+      "title": "Consultoria Comercial Estratègica",
+      "subtitle": "Optimitzo els teus processos comercials i estratègies de vendes per maximitzar els teus resultats de negoci",
+      "request_consultation": "Sol·licitar consultoria",
+      "back_to_home": "Tornar a l'inici"
+    }
+  },
+  "footer": {
+    "company": "Maxi Solucions Digitals",
+    "description": "Transformo la teva visió en solucions digitals que connecten, converteixen i fan créixer el teu negoci.",
+    "services": "Serveis",
+    "projects": "Projectes",
+    "contact": "Contacte",
+    "follow_us": "Segueix-me",
+    "rights": "Tots els drets reservats",
+    "privacy": "Política de Privacitat",
+    "terms": "Termes de Servei"
+  },
+  "project_pages": {
+    "papeleria_abril": {
+      "hero": {
+        "badge": "Cas d'Èxit",
+        "title": "Papelería Abril –",
+        "title_highlight": "Lloc Web i SEO Local",
+        "subtitle": "Transformació digital per a una papereria local amb visió moderna.",
+        "visit_site": "Visitar lloc",
+        "view_details": "Veure detalls"
+      },
+      "about_client": {
+        "title": "Sobre el client",
+        "description_1": "Papelería Abril és un negoci local establert a Tacuarembó, Uruguai, que ofereix una àmplia gamma d'útils escolars, articles d'oficina i regals personalitzats.",
+        "description_2": "Amb més de 10 anys d'experiència al mercat, buscaven modernitzar la seva presència digital per arribar a més clients a la seva regió.",
+        "established": "Establert des de 2013"
+      },
+      "objectives": {
+        "title": "Objectius del projecte",
+        "google_visibility": {
+          "title": "Visibilitat a Google",
+          "description": "Necessitaven millorar la seva presència als cercadors per ser trobats per clients potencials a Tacuarembó i voltants."
+        },
+        "modernize_image": {
+          "title": "Modernitzar la seva imatge online",
+          "description": "Volien projectar una imatge professional i moderna que reflectís la qualitat dels seus productes i serveis."
+        },
+        "show_catalog": {
+          "title": "Mostrar el seu catàleg de productes",
+          "description": "Necessitaven una forma senzilla de mostrar el seu ampli catàleg de productes organitzats per categories."
+        }
+      },
+      "solution": {
+        "title": "La meva solució",
+        "responsive_design": {
+          "title": "Disseny i desenvolupament web responsiu",
+          "description": "Vaig crear un lloc web modern i completament responsiu utilitzant React, assegurant una experiència perfecta en tots els dispositius."
+        },
+        "catalog": {
+          "title": "Catàleg de productes organitzat",
+          "description": "Vaig implementar un sistema de catàleg dinàmic amb filtrat per categories, facilitant als clients trobar exactament el que busquen."
+        },
+        "contact_integration": {
+          "title": "Integració de contacte i ubicació",
+          "description": "Vam integrar WhatsApp, formulari de contacte i Google Maps per facilitar la comunicació i ajudar als clients a trobar la botiga física."
+        },
+        "seo": {
+          "title": "SEO tècnic i local",
+          "description": "Vam optimitzar el lloc amb paraules clau locals, meta tags, schema markup i contingut rellevant per millorar el seu posicionament en cerques locals."
+        },
+        "before_after": {
+          "title": "Abans / Després",
+          "before": "Abans",
+          "after": "Després",
+          "previous_design": "Disseny anterior"
+        }
+      },
+      "impact": {
+        "title": "Impacte del projecte",
+        "searches": "cerques mensuals a Google",
+        "local_ranking": "en cerques locals",
+        "whatsapp_queries": "consultes via WhatsApp",
+        "sales_growth": "creixement en vendes",
+        "key_improvements": "Millores clau aconseguides",
+        "improvements": [
+          "Presència activa a Google Maps i cerques locals",
+          "Primers resultats en cerques com \"papereria Tacuarembó\"",
+          "Creixement orgànic des del primer mes d'implementació",
+          "Major visibilitat de productes i ofertes especials"
+        ]
+      },
+      "testimonial": {
+        "quote": "Estem encantats amb el nou lloc, ara els nostres clients ens troben fàcilment a Google. L'organització per categories ha facilitat molt mostrar el nostre catàleg i hem notat un augment en les consultes i vendes.",
+        "author": "Ana Martínez",
+        "position": "Gerenta, Papelería Abril"
+      },
+      "cta": {
+        "title": "Llest per impulsar el teu negoci local?",
+        "description": "Contacta'm avui mateix i descobreix com la meva estratègia de transformació digital pot impulsar el teu negoci local com ho vaig fer amb Papelería Abril.",
+        "view_live_site": "Veure lloc en viu"
+      }
+    },
+    "antonio_yadama": {
+      "hero": {
+        "title": "Desenvolupament Web",
+        "title_highlight": "Antonio y Adama Jardinería",
+        "subtitle": "Lloc web professional per a Antonio y Adama Jardinería, especialistes en serveis de jardineria i paisatgisme a Lloret de Mar."
+      },
+      "overview": {
+        "title": "Projecte de Jardineria Professional",
+        "description": "Desenvolupament d'un lloc web professional per a Antonio y Adama Jardinería, especialistes en serveis de jardineria i paisatgisme. El projecte va incloure desenvolupament web modern, optimització SEO local per a serveis de jardineria i presència optimitzada a Google Maps per atreure clients locals a Lloret de Mar.",
+        "web_development": "Lloc web modern i responsiu",
+        "seo": "Optimització per a jardineria",
+        "google_maps": "Presència local optimitzada",
+        "design": "Interfície professional"
+      },
+      "services": {
+        "title": "Serveis Implementats",
+        "subtitle": "Solucions integrals per potenciar la presència digital d'un negoci de jardineria professional",
+        "web_development": {
+          "title": "Desenvolupament Web",
+          "description": "Lloc web modern i responsiu desenvolupat amb les últimes tecnologies, optimitzat per mostrar serveis de jardineria i projectes de paisatgisme de manera professional."
+        },
+        "seo_specialized": {
+          "title": "SEO Especialitzat",
+          "description": "Optimització SEO específica per a serveis de jardineria, incloent paraules clau rellevants com \"jardineria Lloret de Mar\" i estructura optimitzada per a motors de cerca."
+        },
+        "google_maps": {
+          "title": "Google Maps",
+          "description": "Optimització de presència a Google Maps per atreure clients locals interessats en serveis de jardineria i paisatgisme a Lloret de Mar."
+        },
+        "responsive_design": {
+          "title": "Disseny Responsiu",
+          "description": "Disseny completament responsiu que s'adapta perfectament a tots els dispositius, des de mòbils fins a escriptoris."
+        },
+        "digital_portfolio": {
+          "title": "Portfolio Digital",
+          "description": "Galeria professional per mostrar projectes de jardineria i paisatgisme amb navegació intuïtiva i presentació visual impactant."
+        },
+        "contact_optimized": {
+          "title": "Contacte Optimitzat",
+          "description": "Formularis de contacte optimitzats i informació de contacte clara per facilitar la comunicació amb clients potencials."
+        }
+      },
+      "results": {
+        "title": "Resultats Obtinguts",
+        "subtitle": "Impacte mesurable en la presència digital de l'arquitecte",
+        "seo_improvement": {
+          "title": "Millora SEO",
+          "description": "Posicionament millorat en cerques relacionades amb jardineria i serveis de paisatgisme."
+        },
+        "local_visibility": {
+          "title": "Visibilitat Local",
+          "description": "Major presència a Google Maps i cerques locals de serveis d'arquitectura."
+        },
+        "more_queries": {
+          "title": "Més Consultes",
+          "description": "Augment significatiu en consultes de clients potencials interessats en serveis de jardineria."
+        },
+        "professional_image": {
+          "title": "Imatge Professional",
+          "description": "Lloc web que projecta professionalitat i confiança, millorant la percepció de marca."
+        }
+      },
+      "cta": {
+        "title": "Necessites un Lloc Web Professional?",
+        "description": "Contacta'm avui mateix i converteix la teva idea en realitat amb la meva experiència en desenvolupament web professional."
+      }
+    },
+    "cafe_nuevo_jago": {
+      "hero": {
+        "title": "Cafetería",
+        "title_highlight": "Nuevo Yago",
+        "subtitle": "Transformació digital completa per a cafeterianuevoyago.es. Desenvolupament web, SEO local especialitzat i optimització de presència a Google Maps per augmentar clients locals."
+      },
+      "overview": {
+        "title": "Transformació Digital per a Cafeteria",
+        "description": "Estratègia integral de transformació digital per a cafeterianuevoyago.es. El projecte va incloure desenvolupament web complet, SEO local especialitzat per a restaurants i optimització de presència a Google Maps per augmentar clients locals.",
+        "web_development": "Lloc web modern per a cafeteria",
+        "local_seo": "Optimització per a restaurants",
+        "google_maps": "Presència local optimitzada",
+        "digital_marketing": "Estratègia digital integral"
+      },
+      "services": {
+        "title": "Serveis Implementats",
+        "subtitle": "Solucions integrals per potenciar la presència digital d'una cafeteria local",
+        "web_development": {
+          "title": "Desenvolupament Web",
+          "description": "Lloc web modern i atractiu desenvolupat específicament per a cafeteries, amb menú digital, galeria de productes i informació de contacte."
+        },
+        "local_seo": {
+          "title": "SEO Local",
+          "description": "Optimització SEO local especialitzada per a restaurants i cafeteries, incloent paraules clau com \"cafeteria a prop meu\" i \"millor cafè local\"."
+        },
+        "google_maps": {
+          "title": "Google Maps",
+          "description": "Optimització completa de presència a Google Maps amb informació actualitzada, horaris, fotos i ressenyes per atreure clients locals."
+        },
+        "responsive_design": {
+          "title": "Disseny Responsiu",
+          "description": "Disseny completament responsiu que s'adapta perfectament a mòbils, tauletes i escriptoris per a una experiència òptima en tots els dispositius."
+        },
+        "user_experience": {
+          "title": "Experiència d'Usuari",
+          "description": "Interfície intuïtiva i atractiva que reflecteix la calidesa i ambient acollidor de la cafeteria, millorant l'experiència del client."
+        },
+        "digital_marketing": {
+          "title": "Marketing Digital",
+          "description": "Estratègia de marketing digital integral que inclou gestió de xarxes socials i promoció online per augmentar la visibilitat de la cafeteria."
+        }
+      },
+      "results": {
+        "title": "Resultats Obtinguts",
+        "subtitle": "Impacte mesurable en la presència digital de la cafeteria",
+        "local_seo_improvement": {
+          "title": "Millora SEO Local",
+          "description": "Posicionament millorat en cerques locals relacionades amb cafeteries i restaurants."
+        },
+        "maps_visibility": {
+          "title": "Visibilitat a Maps",
+          "description": "Major presència a Google Maps amb informació actualitzada i ressenyes positives."
+        },
+        "more_customers": {
+          "title": "Més Clients",
+          "description": "Augment significatiu en el nombre de clients locals que descobreixen la cafeteria online."
+        },
+        "modern_image": {
+          "title": "Imatge Moderna",
+          "description": "Lloc web que projecta modernitat i professionalitat, millorant la percepció de marca."
+        }
+      },
+      "cta": {
+        "title": "Necessites Transformar el teu Negoci Local?",
+        "description": "Contacta'm avui mateix i descobreix com la meva estratègia de transformació digital pot impulsar el teu negoci local."
+      }
+    }
+  },
+  "common": {
+    "loading": "Carregant...",
+    "error": "Error",
+    "success": "Èxit",
+    "close": "Tancar",
+    "open": "Obrir",
+    "read_more": "Llegir més",
+    "learn_more": "Saber més",
+    "get_started": "Començar",
+    "contact_us": "Contacta'ns",
+    "back": "Tornar",
+    "next": "Següent",
+    "previous": "Anterior"
+  }
+}

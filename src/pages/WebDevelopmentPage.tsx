@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { ArrowLeft, Code, Server, Smartphone, Globe, CheckCircle, Users, Zap } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import { useNavigationWithScroll } from '../components/utils/NavigationUtils';
+import { useLanguage } from '../components/context/LanguageContext';
 const WebDevelopmentPage = () => {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);
   const { navigateToHomeWithScroll } = useNavigationWithScroll();
@@ -34,27 +36,30 @@ const WebDevelopmentPage = () => {
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           {/* Back button */}
-          <Link to="/" className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors group">
+          <button 
+            onClick={() => navigateToHomeWithScroll('servicios')}
+            className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors group"
+          >
             <ArrowLeft className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
-            <span>Volver a inicio</span>
-          </Link>
+            <span>{t('pages.web_development.back_to_home')}</span>
+          </button>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
               Desarrollo Web <span className="text-blue-400">Profesional</span>
             </h1>
-            <p className="text-xl text-blue-100 mb-10">
-              Creamos sitios web y aplicaciones que destacan por su diseño,
+            <p className="text-lg md:text-xl text-blue-100 mb-8 md:mb-10 px-4 md:px-0">
+              Creo sitios web y aplicaciones que destacan por su diseño,
               rendimiento y experiencia de usuario.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <button 
                 onClick={() => navigateToHomeWithScroll('contacto')}
-                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm md:text-base"
               >
-                Solicitar presupuesto
+                {t('pages.web_development.request_quote')}
               </button>
-              <a href="#proceso" className="bg-transparent border-2 border-blue-400 text-blue-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
-                Ver mi proceso
+              <a href="#proceso" className="bg-transparent border-2 border-blue-400 text-blue-100 hover:text-white hover:border-white font-medium py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-300 text-sm md:text-base">
+                {t('pages.web_development.see_process')}
               </a>
             </div>
           </div>
@@ -69,21 +74,21 @@ const WebDevelopmentPage = () => {
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Ofrecemos soluciones digitales completas para cualquier necesidad
+              Ofrezco soluciones digitales completas para cualquier necesidad
               de negocio
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Service Card 1 */}
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8">
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
-                  <Globe className="h-7 w-7 text-blue-600" />
+              <div className="p-4 md:p-6">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 md:mb-5">
+                  <Globe className="h-6 w-6 md:h-7 md:w-7 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
                   Sitios Web Corporativos
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm md:text-base text-gray-600 mb-4">
                   Diseño y desarrollo de sitios web profesionales que
                   representan la identidad de tu empresa.
                 </p>
@@ -109,14 +114,14 @@ const WebDevelopmentPage = () => {
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
             transitionDelay: '0.1s'
           }}>
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-5">
-                  <Code className="h-7 w-7 text-indigo-600" />
+              <div className="p-4 md:p-6">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-4 md:mb-5">
+                  <Code className="h-6 w-6 md:h-7 md:w-7 text-indigo-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
                   Aplicaciones Web
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm md:text-base text-gray-600 mb-4">
                   Desarrollo de aplicaciones web a medida con funcionalidades
                   avanzadas para tu negocio.
                 </p>
@@ -144,14 +149,14 @@ const WebDevelopmentPage = () => {
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
             transitionDelay: '0.2s'
           }}>
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
-                  <Smartphone className="h-7 w-7 text-blue-600" />
+              <div className="p-4 md:p-6">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 md:mb-5">
+                  <Smartphone className="h-6 w-6 md:h-7 md:w-7 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
                   Desarrollo Responsive
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm md:text-base text-gray-600 mb-4">
                   Sitios web adaptados a todos los dispositivos para una
                   experiencia óptima.
                 </p>
@@ -177,14 +182,14 @@ const WebDevelopmentPage = () => {
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
             transitionDelay: '0.3s'
           }}>
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-5">
-                  <Server className="h-7 w-7 text-indigo-600" />
+              <div className="p-4 md:p-6">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-4 md:mb-5">
+                  <Server className="h-6 w-6 md:h-7 md:w-7 text-indigo-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
                   E-commerce
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm md:text-base text-gray-600 mb-4">
                   Tiendas online completas con todas las funcionalidades para
                   vender tus productos.
                 </p>
@@ -208,14 +213,14 @@ const WebDevelopmentPage = () => {
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
             transitionDelay: '0.4s'
           }}>
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
-                  <Users className="h-7 w-7 text-blue-600" />
+              <div className="p-4 md:p-6">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 md:mb-5">
+                  <Users className="h-6 w-6 md:h-7 md:w-7 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
                   CMS Personalizados
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm md:text-base text-gray-600 mb-4">
                   Sistemas de gestión de contenido a medida para facilitar la
                   actualización de tu sitio.
                 </p>
@@ -239,14 +244,14 @@ const WebDevelopmentPage = () => {
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
             transitionDelay: '0.5s'
           }}>
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-5">
-                  <Zap className="h-7 w-7 text-indigo-600" />
+              <div className="p-4 md:p-6">
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-4 md:mb-5">
+                  <Zap className="h-6 w-6 md:h-7 md:w-7 text-indigo-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
                   Mantenimiento Web
                 </h3>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm md:text-base text-gray-600 mb-4">
                   Servicios de mantenimiento y actualización para mantener tu
                   sitio seguro y funcional.
                 </p>
@@ -291,18 +296,18 @@ const WebDevelopmentPage = () => {
               {/* Step 1 */}
               <div className="relative z-10 mb-12 md:mb-20 animate-on-scroll opacity-0 translate-y-8">
                 <div className="flex flex-col md:flex-row items-center">
-                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-12 mt-6 md:mt-0">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 lg:pr-12 mt-6 md:mt-0">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
                       Análisis y Planificación
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-sm md:text-base text-gray-600">
                       Comenzamos con una evaluación detallada de tus
                       necesidades, objetivos y público objetivo. Definimos la
                       arquitectura, funcionalidades y planificamos el proyecto.
                     </p>
                   </div>
-                  <div className="flex-shrink-0 order-1 md:order-2 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
-                    <span className="font-bold">1</span>
+                  <div className="flex-shrink-0 order-1 md:order-2 bg-blue-500 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg">
+                    <span className="font-bold text-sm md:text-base">1</span>
                   </div>
                 </div>
               </div>
@@ -319,8 +324,8 @@ const WebDevelopmentPage = () => {
                       Diseño UX/UI
                     </h3>
                     <p className="text-gray-600">
-                      Creamos wireframes y prototipos para visualizar la
-                      estructura y experiencia de usuario. Diseñamos interfaces
+                      Creo wireframes y prototipos para visualizar la
+                      estructura y experiencia de usuario. Diseño interfaces
                       atractivas y funcionales que reflejan tu marca.
                     </p>
                   </div>
@@ -376,8 +381,8 @@ const WebDevelopmentPage = () => {
                       Lanzamiento y Soporte
                     </h3>
                     <p className="text-gray-600">
-                      Implementamos tu proyecto y te proporcionamos
-                      capacitación. Ofrecemos soporte continuo y mantenimiento
+                      Implemento tu proyecto y te proporciono
+                      capacitación. Ofrezco soporte continuo y mantenimiento
                       para asegurar el éxito a largo plazo.
                     </p>
                   </div>
@@ -404,11 +409,11 @@ const WebDevelopmentPage = () => {
             onClick={() => navigateToHomeWithScroll('contacto')}
             className="bg-white text-blue-600 hover:bg-blue-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
           >
-            Solicitar presupuesto gratuito
+            {t('pages.web_development.request_quote')}
           </button>
         </div>
       </AnimatedSection>
-      <style jsx>{`
+      <style>{`
         .animate-on-scroll {
           transition:
             opacity 0.8s ease-out,

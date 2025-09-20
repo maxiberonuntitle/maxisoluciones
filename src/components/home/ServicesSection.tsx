@@ -6,6 +6,35 @@ const ServicesSection = () => {
   const {
     t
   } = useLanguage();
+  
+  // Helper function to get array from translation
+  const getFeatures = (key: string): string[] => {
+    try {
+      // Try to get the translation as an array
+      const features = t(key, { returnObjects: true });
+      
+      // If it's already an array, return it
+      if (Array.isArray(features)) {
+        return features;
+      }
+      
+      // If it's a string, try to parse it as JSON
+      if (typeof features === 'string') {
+        try {
+          const parsed = JSON.parse(features);
+          return Array.isArray(parsed) ? parsed : [features];
+        } catch {
+          return [features];
+        }
+      }
+      
+      // Fallback: return as single item array
+      return [features];
+    } catch (error) {
+      console.error('Error getting features for key:', key, error);
+      return ['Error loading features'];
+    }
+  };
   const sectionRef = useRef<HTMLElement>(null);
   const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('down');
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -42,26 +71,26 @@ const ServicesSection = () => {
   }, [lastScrollY]);
   const services = [{
     id: 1,
-    title: t('service_web_title'),
-    description: t('service_web_desc'),
+    title: t('services.web_development.title') as string,
+    description: t('services.web_development.description') as string,
     icon: <Code className="w-10 h-10 text-blue-500" />,
-    features: [t('service_feature_1'), t('service_feature_2'), t('service_feature_3'), t('service_feature_4')],
+    features: getFeatures('services.web_development.features'),
     animationClass: 'service-left',
     link: '/servicios/desarrollo-web'
   }, {
     id: 2,
-    title: t('service_marketing_title'),
-    description: t('service_marketing_desc'),
+    title: t('services.digital_marketing.title') as string,
+    description: t('services.digital_marketing.description') as string,
     icon: <LineChart className="w-10 h-10 text-blue-500" />,
-    features: ['SEO y posicionamiento web', 'Campañas de Google Ads', 'Marketing de contenidos', 'Análisis y reportes de resultados'],
+    features: getFeatures('services.digital_marketing.features'),
     animationClass: 'service-top',
     link: '/servicios/marketing-digital'
   }, {
     id: 3,
-    title: 'Consultoría Comercial',
-    description: 'Optimizamos tus procesos comerciales y estrategias de ventas para maximizar tus resultados de negocio.',
+    title: t('services.business_consulting.title') as string,
+    description: t('services.business_consulting.description') as string,
     icon: <Lightbulb className="w-10 h-10 text-blue-500" />,
-    features: ['Estrategias de ventas B2B y B2C', 'Optimización de procesos comerciales', 'Capacitación de equipos de venta', 'Implementación de CRM y herramientas'],
+    features: getFeatures('services.business_consulting.features'),
     animationClass: 'service-right',
     link: '/servicios/consultoria-comercial'
   }];
@@ -99,12 +128,12 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 service-animate service-down">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            {t('services_title')}
+            {t('services.title')}
           </h2>
           <div className="w-20 h-1 bg-cyan-500 mx-auto mb-6"></div>
-          <p className="text-xl text-blue-200">{t('services_subtitle')}</p>
+          <p className="text-xl text-blue-200">{t('services.subtitle')}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative z-10">
           {services.map((service, index) => <div key={service.id} className={`service-animate ${service.animationClass}`} style={{
           transitionDelay: `${index * 80}ms`
         }} data-scroll={scrollDirection}>
@@ -118,7 +147,7 @@ const ServicesSection = () => {
         }}></div>
           <div className="bg-gray-800/40 backdrop-blur-sm p-8 rounded-xl relative z-10 service-animate service-scale">
             <p className="text-blue-100 text-center text-lg md:text-xl italic">
-              {t('services_quote')}
+              {t('services.request_quote')}
             </p>
           </div>
         </div>
@@ -175,8 +204,8 @@ const ServicesSection = () => {
         .service-animate.active {
           transition-delay: 0.1s;
         }
-        /* Mobile optimizations */
-        @media (max-width: 768px) {
+        /* Mobile and tablet optimizations */
+        @media (max-width: 1024px) {
           .service-animate {
             transition-duration: 0.5s;
           }
@@ -187,6 +216,12 @@ const ServicesSection = () => {
           .service-left.active,
           .service-right.active {
             transform: translateX(0) translateY(0) rotate(0deg);
+          }
+        }
+        
+        @media (max-width: 768px) {
+          .service-animate {
+            transition-duration: 0.4s;
           }
         }
         .bg-scanlines {

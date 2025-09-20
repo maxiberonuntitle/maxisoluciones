@@ -72,7 +72,7 @@ const NotebookImage: React.FC<NotebookImageProps> = ({
         </div>
       </div>
       {/* Custom CSS for VHS effect */}
-      <style jsx>{`
+      <style>{`
         .vhs-effect {
           background: repeating-linear-gradient(
             0deg,

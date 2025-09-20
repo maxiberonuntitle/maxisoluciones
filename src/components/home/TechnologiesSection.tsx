@@ -94,12 +94,15 @@ const TechnologiesSection = () => {
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 tech-animate tech-stagger">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            {t('technologies.title')}
+          </h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-          <p className="text-xl text-blue-200">{t('tech_subtitle')}</p>
+          <p className="text-xl text-blue-200">{t('technologies.subtitle')}</p>
         </div>
         {/* Technologies Grid - All together */}
         <div className="tech-animate tech-slide-up">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
             {technologies.map((tech, techIndex) => (
               <div 
                 key={tech} 
@@ -110,7 +113,7 @@ const TechnologiesSection = () => {
                 data-scroll={scrollDirection}
               >
                 {/* Main Card */}
-                <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/60 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-center transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl border border-gray-700/30 group-hover:border-blue-400/50 relative overflow-hidden h-24">
+                <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/60 backdrop-blur-sm rounded-xl p-4 md:p-6 flex flex-col items-center justify-center transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl border border-gray-700/30 group-hover:border-blue-400/50 relative overflow-hidden h-20 md:h-24">
                   
                   {/* Background Pattern */}
                   <div className="absolute inset-0 opacity-5">
@@ -124,7 +127,7 @@ const TechnologiesSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm rounded-xl"></div>
                   
                   {/* Tech Name with better typography */}
-                  <span className="relative z-10 text-sm font-semibold text-gray-200 transition-all duration-300 group-hover:text-white text-center leading-tight">
+                  <span className="relative z-10 text-xs md:text-sm font-semibold text-gray-200 transition-all duration-300 group-hover:text-white text-center leading-tight">
                     {tech}
                   </span>
                   
@@ -166,11 +169,11 @@ const TechnologiesSection = () => {
             <div className="flex items-center justify-center">
               <div className="text-center">
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
-                  {t('tech_project_question')}
+                  {t('common.learn_more')}
                 </h3>
-                <p className="text-blue-200 mb-6">{t('tech_project_desc')}</p>
+                <p className="text-blue-200 mb-6">{t('technologies.subtitle')}</p>
                 <Link to="/#contacto" className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1">
-                  {t('tech_project_cta')}
+                  {t('common.contact_us')}
                 </Link>
               </div>
             </div>
@@ -178,7 +181,7 @@ const TechnologiesSection = () => {
         </div>
       </div>
       {/* Custom animations for tech section */}
-      <style jsx>{`
+      <style>{`
         /* Base styles for tech animations */
         .tech-animate {
           opacity: 0;
@@ -270,8 +273,8 @@ const TechnologiesSection = () => {
         .tech-expand:nth-child(5) { transition-delay: 400ms; }
         .tech-expand:nth-child(6) { transition-delay: 500ms; }
         
-        /* Mobile optimizations */
-        @media (max-width: 768px) {
+        /* Mobile and tablet optimizations */
+        @media (max-width: 1024px) {
           .tech-animate {
             transition-duration: 0.5s;
           }
@@ -283,9 +286,18 @@ const TechnologiesSection = () => {
           }
         }
         
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
+          .tech-animate {
+            transition-duration: 0.4s;
+          }
           .tech-expand {
             transform: scale(0.85) translateY(15px);
+          }
+        }
+        
+        @media (max-width: 640px) {
+          .tech-expand {
+            transform: scale(0.8) translateY(20px);
           }
         }
         /* Digital scanlines */

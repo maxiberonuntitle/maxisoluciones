@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { useLanguage } from '../context/LanguageContext';
 const WhatsAppButton = () => {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isPulsing, setIsPulsing] = useState(false);
@@ -25,7 +27,7 @@ const WhatsAppButton = () => {
       <a href="https://wa.me/34600123456" target="_blank" rel="noopener noreferrer" className={`fixed bottom-6 right-6 z-50 flex items-center justify-center transition-all duration-500 ease-out ${isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-0'}`} aria-label="Chat on WhatsApp" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
         {/* Tooltip */}
         <div className={`absolute bottom-full right-0 mb-2 bg-white text-gray-800 text-sm py-1 px-3 rounded-lg shadow-lg transition-all duration-300 whitespace-nowrap ${isHovered ? 'opacity-100 transform-none' : 'opacity-0 translate-y-2'}`}>
-          ¿Necesitas ayuda? ¡Chatea conmigo!
+          {t('common.contact_us')}
           <div className="absolute bottom-0 right-4 transform translate-y-1/2 rotate-45 w-2 h-2 bg-white"></div>
         </div>
         {/* Pulse effect */}

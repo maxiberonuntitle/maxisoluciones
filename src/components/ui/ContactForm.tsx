@@ -45,18 +45,18 @@ const ContactForm = () => {
       message: ''
     };
     if (!formData.name.trim()) {
-      newErrors.name = 'El nombre es obligatorio';
+      newErrors.name = t('contact.form.required');
       valid = false;
     }
     if (!formData.email.trim()) {
-      newErrors.email = 'El email es obligatorio';
+      newErrors.email = t('contact.form.required');
       valid = false;
     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email inválido';
+      newErrors.email = t('contact.form.invalid_email');
       valid = false;
     }
     if (!formData.message.trim()) {
-      newErrors.message = 'El mensaje es obligatorio';
+      newErrors.message = t('contact.form.required');
       valid = false;
     }
     setErrors(newErrors);
@@ -103,25 +103,25 @@ const ContactForm = () => {
           </svg>
         </div>
         <h3 className="text-xl font-bold text-white mb-2">
-          {t('contact_form_success')}
+          {t('contact.form.success')}
         </h3>
         <p className="text-blue-200 text-center">
-          Me pondré en contacto contigo pronto.
+          {t('contact.form.success_message')}
         </p>
       </div>
       <div className="relative z-10">
         <h3 className="text-2xl font-bold mb-6 text-white relative inline-block">
-          {t('contact_form_title')}
+          {t('contact.title')}
           <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-indigo-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
         </h3>
         <form onSubmit={handleSubmit} className="relative">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
             <div className="relative">
               <label htmlFor="name" className={`block text-sm font-medium mb-1 transition-all duration-300 ${focused === 'name' ? 'text-blue-300' : 'text-blue-200'}`}>
-                {t('contact_form_name')}*
+                {t('contact.form.name')}*
               </label>
               <div className="relative">
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} onFocus={() => handleFocus('name')} onBlur={handleBlur} className={`w-full px-4 py-2 bg-blue-800/30 border rounded-lg transition-all duration-300 text-white ${errors.name ? 'border-red-500 bg-red-900/20' : focused === 'name' ? 'border-blue-400 ring-2 ring-blue-500/20 bg-blue-800/50' : 'border-blue-700 hover:border-blue-600'}`} placeholder="Tu nombre" />
+                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} onFocus={() => handleFocus('name')} onBlur={handleBlur} className={`w-full px-4 py-2 bg-blue-800/30 border rounded-lg transition-all duration-300 text-white ${errors.name ? 'border-red-500 bg-red-900/20' : focused === 'name' ? 'border-blue-400 ring-2 ring-blue-500/20 bg-blue-800/50' : 'border-blue-700 hover:border-blue-600'}`} placeholder={t('contact.form.placeholder_name')} />
                 {/* Animated bottom border */}
                 <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 ${focused === 'name' ? 'w-full' : ''}`}></span>
               </div>
@@ -134,10 +134,10 @@ const ContactForm = () => {
             </div>
             <div className="relative">
               <label htmlFor="email" className={`block text-sm font-medium mb-1 transition-all duration-300 ${focused === 'email' ? 'text-blue-300' : 'text-blue-200'}`}>
-                {t('contact_form_email')}*
+                {t('contact.form.email')}*
               </label>
               <div className="relative">
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} onFocus={() => handleFocus('email')} onBlur={handleBlur} className={`w-full px-4 py-2 bg-blue-800/30 border rounded-lg transition-all duration-300 text-white ${errors.email ? 'border-red-500 bg-red-900/20' : focused === 'email' ? 'border-blue-400 ring-2 ring-blue-500/20 bg-blue-800/50' : 'border-blue-700 hover:border-blue-600'}`} placeholder="tu@email.com" />
+                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} onFocus={() => handleFocus('email')} onBlur={handleBlur} className={`w-full px-4 py-2 bg-blue-800/30 border rounded-lg transition-all duration-300 text-white ${errors.email ? 'border-red-500 bg-red-900/20' : focused === 'email' ? 'border-blue-400 ring-2 ring-blue-500/20 bg-blue-800/50' : 'border-blue-700 hover:border-blue-600'}`} placeholder={t('contact.form.placeholder_email')} />
                 <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 ${focused === 'email' ? 'w-full' : ''}`}></span>
               </div>
               {errors.email && <p className="mt-1 text-sm text-red-400 flex items-center">
@@ -151,23 +151,23 @@ const ContactForm = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
             <div className="relative">
               <label htmlFor="phone" className={`block text-sm font-medium mb-1 transition-all duration-300 ${focused === 'phone' ? 'text-blue-300' : 'text-blue-200'}`}>
-                {t('contact_form_phone')}
+                {t('contact.form.phone')}
               </label>
               <div className="relative">
-                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} onFocus={() => handleFocus('phone')} onBlur={handleBlur} className={`w-full px-4 py-2 bg-blue-800/30 border rounded-lg transition-all duration-300 text-white ${focused === 'phone' ? 'border-blue-400 ring-2 ring-blue-500/20 bg-blue-800/50' : 'border-blue-700 hover:border-blue-600'}`} placeholder="+34 600 000 000" />
+                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} onFocus={() => handleFocus('phone')} onBlur={handleBlur} className={`w-full px-4 py-2 bg-blue-800/30 border rounded-lg transition-all duration-300 text-white ${focused === 'phone' ? 'border-blue-400 ring-2 ring-blue-500/20 bg-blue-800/50' : 'border-blue-700 hover:border-blue-600'}`} placeholder={t('contact.form.placeholder_phone')} />
                 <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 ${focused === 'phone' ? 'w-full' : ''}`}></span>
               </div>
             </div>
             <div className="relative">
               <label htmlFor="subject" className={`block text-sm font-medium mb-1 transition-all duration-300 ${focused === 'subject' ? 'text-blue-300' : 'text-blue-200'}`}>
-                {t('contact_form_subject')}
+                {t('contact.form.subject')}
               </label>
               <div className="relative">
                 <select id="subject" name="subject" value={formData.subject} onChange={handleChange} onFocus={() => handleFocus('subject')} onBlur={handleBlur} className={`w-full px-4 py-2 bg-blue-800/30 border rounded-lg transition-all duration-300 text-white ${focused === 'subject' ? 'border-blue-400 ring-2 ring-blue-500/20 bg-blue-800/50' : 'border-blue-700 hover:border-blue-600'}`}>
-                  <option value="">Selecciona un asunto</option>
-                  <option value="Desarrollo Web">Desarrollo Web</option>
-                  <option value="Marketing Digital">Marketing Digital</option>
-                  <option value="Consultoría">Consultoría</option>
+                  <option value="">{t('contact.form.placeholder_subject')}</option>
+                  <option value="Desarrollo Web">{t('service_web_title')}</option>
+                  <option value="Marketing Digital">{t('service_marketing_title')}</option>
+                  <option value="Consultoría">{t('service_consulting_title')}</option>
                   <option value="Otro">Otro</option>
                 </select>
                 <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 ${focused === 'subject' ? 'w-full' : ''}`}></span>
@@ -176,10 +176,10 @@ const ContactForm = () => {
           </div>
           <div className="mb-6 relative">
             <label htmlFor="message" className={`block text-sm font-medium mb-1 transition-all duration-300 ${focused === 'message' ? 'text-blue-300' : 'text-blue-200'}`}>
-              {t('contact_form_message')}*
+              {t('contact.form.message')}*
             </label>
             <div className="relative">
-              <textarea id="message" name="message" value={formData.message} onChange={handleChange} onFocus={() => handleFocus('message')} onBlur={handleBlur} rows={5} className={`w-full px-4 py-2 bg-blue-800/30 border rounded-lg transition-all duration-300 text-white ${errors.message ? 'border-red-500 bg-red-900/20' : focused === 'message' ? 'border-blue-400 ring-2 ring-blue-500/20 bg-blue-800/50' : 'border-blue-700 hover:border-blue-600'}`} placeholder="¿En qué podemos ayudarte?"></textarea>
+              <textarea id="message" name="message" value={formData.message} onChange={handleChange} onFocus={() => handleFocus('message')} onBlur={handleBlur} rows={5} className={`w-full px-4 py-2 bg-blue-800/30 border rounded-lg transition-all duration-300 text-white ${errors.message ? 'border-red-500 bg-red-900/20' : focused === 'message' ? 'border-blue-400 ring-2 ring-blue-500/20 bg-blue-800/50' : 'border-blue-700 hover:border-blue-600'}`} placeholder={t('contact.form.placeholder_message')}></textarea>
               <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 ${focused === 'message' ? 'w-full' : ''}`}></span>
             </div>
             {errors.message && <p className="mt-1 text-sm text-red-400 flex items-center">
@@ -199,7 +199,7 @@ const ContactForm = () => {
                   </svg>
                   Enviando...
                 </> : <>
-                  {t('contact_form_submit')}
+                  {t('contact.form.submit')}
                   <SendIcon className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </>}
             </span>

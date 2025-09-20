@@ -126,7 +126,7 @@ const ProjectCard = ({
         <div className={`absolute bottom-0 right-0 w-10 h-10 border-b-2 border-r-2 border-cyan-400 rounded-br-lg transition-all duration-500 ${isHovered ? 'opacity-100 scale-100' : 'opacity-0 scale-50'}`}></div>
       </div>
       {/* Add animation for rocket hover effect */}
-      <style jsx>{`
+      <style>{`
         @keyframes twinkle {
           0% {
             opacity: 0.2;

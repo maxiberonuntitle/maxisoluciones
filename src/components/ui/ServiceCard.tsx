@@ -56,13 +56,13 @@ const ServiceCard = ({
       </div>
       <div className="px-8 py-4 bg-gray-800/50 border-t border-gray-700/30 transition-all duration-300 group-hover:bg-gray-800/80 group-hover:border-cyan-800/30 relative overflow-hidden">
         <div className="text-cyan-300 font-medium hover:text-cyan-200 transition-all duration-300 flex items-center relative z-10 group-hover:translate-x-2">
-          {t('view_details')}
+          {t('services.view_service')}
           <ArrowRightIcon className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
         </div>
         {/* Animated background on hover */}
         <div className={`absolute bottom-0 left-0 h-full bg-gradient-to-r from-gray-800/50 to-gray-700/50 transition-all duration-500 ease-in-out ${isHovered ? 'w-full' : 'w-0'}`}></div>
       </div>
-      <style jsx>{`
+      <style>{`
         .feature-item {
           opacity: 0.9;
           transform: translateX(0);

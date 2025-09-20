@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import ContactForm from '../ui/ContactForm';
-import { MailIcon, PhoneIcon, MapPinIcon, ClockIcon } from 'lucide-react';
+import { PhoneIcon, MapPinIcon, ClockIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import SpaceBackground from '../ui/SpaceBackground';
 const ContactSection = () => {
@@ -53,22 +53,17 @@ const ContactSection = () => {
   }, [lastScrollY]);
   const contactInfo = [{
     icon: <PhoneIcon className="w-5 h-5 text-blue-500" />,
-    title: t('contact_phone'),
-    details: '+34 600 123 456',
-    link: 'tel:+34600123456'
-  }, {
-    icon: <MailIcon className="w-5 h-5 text-blue-500" />,
-    title: t('contact_email'),
-    details: 'info@maxisoluciones.com',
-    link: 'mailto:info@maxisoluciones.com'
+    title: t('contact.info.phone'),
+    details: '+598 98 009 803',
+    link: 'tel:+59898009803'
   }, {
     icon: <MapPinIcon className="w-5 h-5 text-blue-500" />,
-    title: t('contact_address'),
-    details: 'Barcelona, España',
+    title: t('contact.info.address'),
+    details: 'Barcelona',
     link: '#'
   }, {
     icon: <ClockIcon className="w-5 h-5 text-blue-500" />,
-    title: t('contact_hours'),
+    title: t('contact.info.hours'),
     details: 'Lun - Vie: 9:00 - 18:00',
     link: '#'
   }];
@@ -106,16 +101,16 @@ const ContactSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 contact-animate contact-title">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            {t('contact_title')}
+            {t('contact.title')}
           </h2>
           <div className="w-20 h-1 bg-cyan-500 mx-auto mb-6"></div>
-          <p className="text-xl text-blue-200">{t('contact_subtitle')}</p>
+          <p className="text-xl text-blue-200">{t('contact.subtitle')}</p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           <div className="contact-animate contact-left">
             <div className="bg-blue-900/30 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-sm mb-6 md:mb-8 border border-blue-800/50">
               <h3 className="text-2xl font-bold mb-6 text-white">
-                {t('contact_info_title')}
+                {t('contact.info.title')}
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
                 {contactInfo.map((item, index) => <a key={index} href={item.link} className="flex items-start p-4 bg-blue-800/30 rounded-lg hover:bg-blue-800/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg border border-blue-700/30 contact-animate contact-info" style={{
@@ -159,7 +154,7 @@ const ContactSection = () => {
         </div>
       </div>
       {/* Estilos optimizados para animaciones */}
-      <style jsx>{`
+      <style>{`
         /* Base styles for contact animations */
         .contact-animate {
           opacity: 0;

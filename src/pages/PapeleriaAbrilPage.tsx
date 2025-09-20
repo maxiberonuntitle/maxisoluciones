@@ -1,12 +1,16 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, ArrowRight, CheckCircle, ExternalLink, ChevronDown, Clock, Search, Smartphone, Database, BarChart, Map } from 'lucide-react';
+import { useEffect, useState, useRef } from 'react';
+import { ArrowLeft, ArrowRight, CheckCircle, ExternalLink, ChevronDown, Clock, Search, Smartphone, Database, Map } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import { useNavigationWithScroll } from '../components/utils/NavigationUtils';
+import { useLanguage } from '../components/context/LanguageContext';
 const PapeleriaAbrilPage = () => {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);
   const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
   const [activeSection, setActiveSection] = useState(0);
+  const { navigateToHomeWithScroll } = useNavigationWithScroll();
+  
   useEffect(() => {
     setIsVisible(true);
     const handleScroll = () => {
@@ -42,9 +46,10 @@ const PapeleriaAbrilPage = () => {
       });
     }
   };
-  return <div ref={pageRef} className={`transition-opacity duration-700 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+  return (
+    <div ref={pageRef} className={`transition-opacity duration-700 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
       {/* Hero Section */}
-      <section ref={el => sectionRefs.current[0] = el} className="relative py-20 md:py-32 bg-gradient-to-r from-gray-900 via-blue-950 to-gray-900 overflow-hidden">
+      <section ref={el => sectionRefs.current[0] = el as HTMLDivElement} className="relative py-20 md:py-32 bg-gradient-to-r from-cyan-900 via-blue-950 to-cyan-900 overflow-hidden">
         {/* Background grid */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0" style={{
@@ -68,28 +73,31 @@ const PapeleriaAbrilPage = () => {
         </div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           {/* Back button */}
-          <Link to="/" className="inline-flex items-center text-blue-200 hover:text-white mb-8 transition-colors group">
+          <button 
+            onClick={() => navigateToHomeWithScroll('proyectos')}
+            className="inline-flex items-center text-cyan-200 hover:text-white mb-8 transition-colors group"
+          >
             <ArrowLeft className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
-            <span>Volver a proyectos</span>
-          </Link>
+            <span>{t('common.back')}</span>
+          </button>
           <div className="max-w-4xl mx-auto text-center">
             <div className="inline-block mb-4 px-4 py-1 bg-cyan-500/10 rounded-full border border-cyan-500/20 text-cyan-400 text-sm font-medium">
               Caso de Éxito
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-white">
               Papelería Abril –{' '}
               <span className="text-cyan-400">Sitio Web y SEO Local</span>
             </h1>
-            <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-cyan-100 mb-8 md:mb-10 max-w-2xl mx-auto px-4 md:px-0">
               Transformación digital para una papelería local con visión
               moderna.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="https://abrilpapeleria.azurewebsites.net/" target="_blank" rel="noopener noreferrer" className="group bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+              <a href="https://abrilpapeleria.azurewebsites.net/" target="_blank" rel="noopener noreferrer" className="group bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center justify-center text-sm md:text-base">
                 Visitar sitio
                 <ExternalLink className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
-              <button onClick={() => scrollToSection(1)} className="bg-transparent border-2 border-cyan-400 text-cyan-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center">
+              <button onClick={() => scrollToSection(1)} className="bg-transparent border-2 border-cyan-400 text-cyan-100 hover:text-white hover:border-white font-medium py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-300 flex items-center justify-center text-sm md:text-base">
                 Ver detalles
                 <ChevronDown className="ml-2 w-4 h-4 animate-bounce" />
               </button>
@@ -102,20 +110,18 @@ const PapeleriaAbrilPage = () => {
         </div>
       </section>
       {/* About the Client Section */}
-      <AnimatedSection ref={el => sectionRefs.current[1] = el} className="py-16 bg-gray-900">
+      <AnimatedSection ref={el => sectionRefs.current[1] = el as HTMLDivElement} className="py-16 bg-gray-900">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row gap-10 items-center">
-              <div className="md:w-1/2 animate-on-scroll opacity-0 translate-y-8">
+              <div className="md:w-1/2">
                 <div className="rounded-xl overflow-hidden border-2 border-gray-800 shadow-xl" style={{
                 boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)'
               }}>
-                  <img src="/src/public/papeleriaaabril.png" alt="Papelería local con útiles escolares" className="w-full h-auto aspect-video object-cover" />
+                  <img src="/papeleriaaabril.png" alt="Papelería local con útiles escolares" className="w-full h-auto aspect-video object-cover" />
                 </div>
               </div>
-              <div className="md:w-1/2 animate-on-scroll opacity-0 translate-y-8" style={{
-              transitionDelay: '0.2s'
-            }}>
+              <div className="md:w-1/2">
                 <h2 className="text-3xl font-bold mb-6 text-white">
                   Sobre el cliente
                 </h2>
@@ -139,17 +145,17 @@ const PapeleriaAbrilPage = () => {
         </div>
       </AnimatedSection>
       {/* Project Objectives Section */}
-      <AnimatedSection ref={el => sectionRefs.current[2] = el} className="py-16 bg-gray-950">
+      <AnimatedSection ref={el => sectionRefs.current[2] = el as HTMLDivElement} className="py-16 bg-gray-950">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-10 text-white text-center animate-on-scroll opacity-0 translate-y-8">
+            <h2 className="text-3xl font-bold mb-10 text-white text-center ">
               Objetivos del proyecto
             </h2>
             <div className="relative">
               {/* Timeline line */}
               <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-1 bg-cyan-900/50 z-0"></div>
               {/* Objective 1 */}
-              <div className="relative z-10 mb-12 md:mb-20 animate-on-scroll opacity-0 translate-y-8">
+              <div className="relative z-10 mb-12 md:mb-20 ">
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="flex-1 order-2 md:order-1 md:text-right md:pr-12 mt-6 md:mt-0">
                     <h3 className="text-2xl font-bold text-cyan-400 mb-3">
@@ -169,7 +175,7 @@ const PapeleriaAbrilPage = () => {
                 </div>
               </div>
               {/* Objective 2 */}
-              <div className="relative z-10 mb-12 md:mb-20 animate-on-scroll opacity-0 translate-y-8" style={{
+              <div className="relative z-10 mb-12 md:mb-20 " style={{
               transitionDelay: '0.1s'
             }}>
                 <div className="flex flex-col md:flex-row items-center">
@@ -190,7 +196,7 @@ const PapeleriaAbrilPage = () => {
                 </div>
               </div>
               {/* Objective 3 */}
-              <div className="relative z-10 animate-on-scroll opacity-0 translate-y-8" style={{
+              <div className="relative z-10 " style={{
               transitionDelay: '0.2s'
             }}>
                 <div className="flex flex-col md:flex-row items-center">
@@ -215,15 +221,15 @@ const PapeleriaAbrilPage = () => {
         </div>
       </AnimatedSection>
       {/* What We Did Section */}
-      <AnimatedSection ref={el => sectionRefs.current[3] = el} className="py-16 bg-gray-900">
+      <AnimatedSection ref={el => sectionRefs.current[3] = el as HTMLDivElement} className="py-16 bg-gray-900">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-10 text-white text-center animate-on-scroll opacity-0 translate-y-8">
+            <h2 className="text-3xl font-bold mb-10 text-white text-center ">
               Mi solución
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {/* Solution Card 1 */}
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group animate-on-scroll opacity-0 translate-y-8">
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group ">
                 <div className="w-12 h-12 bg-cyan-900/50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-800/50 transition-colors">
                   <Smartphone className="w-6 h-6 text-cyan-400" />
                 </div>
@@ -231,13 +237,13 @@ const PapeleriaAbrilPage = () => {
                   Diseño y desarrollo web responsivo
                 </h3>
                 <p className="text-gray-300">
-                  Creamos un sitio web moderno y completamente responsivo
+                  Creé un sitio web moderno y completamente responsivo
                   utilizando React, asegurando una experiencia perfecta en todos
                   los dispositivos.
                 </p>
               </div>
               {/* Solution Card 2 */}
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group animate-on-scroll opacity-0 translate-y-8" style={{
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group " style={{
               transitionDelay: '0.1s'
             }}>
                 <div className="w-12 h-12 bg-cyan-900/50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-800/50 transition-colors">
@@ -247,13 +253,13 @@ const PapeleriaAbrilPage = () => {
                   Catálogo de productos organizado
                 </h3>
                 <p className="text-gray-300">
-                  Implementamos un sistema de catálogo dinámico con filtrado por
+                  Implementé un sistema de catálogo dinámico con filtrado por
                   categorías, facilitando a los clientes encontrar exactamente
                   lo que buscan.
                 </p>
               </div>
               {/* Solution Card 3 */}
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group animate-on-scroll opacity-0 translate-y-8" style={{
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group " style={{
               transitionDelay: '0.2s'
             }}>
                 <div className="w-12 h-12 bg-cyan-900/50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-800/50 transition-colors">
@@ -269,7 +275,7 @@ const PapeleriaAbrilPage = () => {
                 </p>
               </div>
               {/* Solution Card 4 */}
-              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group animate-on-scroll opacity-0 translate-y-8" style={{
+              <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 transition-all duration-300 hover:border-cyan-700 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-cyan-900/20 group " style={{
               transitionDelay: '0.3s'
             }}>
                 <div className="w-12 h-12 bg-cyan-900/50 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-800/50 transition-colors">
@@ -286,7 +292,7 @@ const PapeleriaAbrilPage = () => {
               </div>
             </div>
             {/* Before/After Mockup */}
-            <div className="mt-16 bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 animate-on-scroll opacity-0 translate-y-8" style={{
+            <div className="mt-16 bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 " style={{
             transitionDelay: '0.4s'
           }}>
               <h3 className="text-xl font-bold mb-6 text-white text-center">
@@ -302,7 +308,7 @@ const PapeleriaAbrilPage = () => {
                   </div>
                 </div>
                 <div className="relative h-64 bg-gray-800 rounded-lg overflow-hidden">
-                  <img src="/src/public/papeleriaaabril.png" alt="Diseño moderno de sitio web" className="w-full h-full object-cover" />
+                  <img src="/papeleriaaabril.png" alt="Diseño moderno de sitio web" className="w-full h-full object-cover" />
                   <div className="absolute right-4 bottom-4 bg-cyan-600 text-white text-xs font-medium px-3 py-1 rounded-full shadow-lg">
                     Después
                   </div>
@@ -313,15 +319,15 @@ const PapeleriaAbrilPage = () => {
         </div>
       </AnimatedSection>
       {/* Results Section */}
-      <AnimatedSection ref={el => sectionRefs.current[4] = el} className="py-16 bg-gray-950">
+      <AnimatedSection ref={el => sectionRefs.current[4] = el as HTMLDivElement} className="py-16 bg-gray-950">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-10 text-white text-center animate-on-scroll opacity-0 translate-y-8">
+            <h2 className="text-3xl font-bold mb-10 text-white text-center ">
               Impacto del proyecto
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Result Card 1 */}
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center animate-on-scroll opacity-0 translate-y-8">
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center ">
                 <div className="text-4xl font-bold text-cyan-400 mb-2">
                   +200
                 </div>
@@ -330,7 +336,7 @@ const PapeleriaAbrilPage = () => {
                 </p>
               </div>
               {/* Result Card 2 */}
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center animate-on-scroll opacity-0 translate-y-8" style={{
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center " style={{
               transitionDelay: '0.1s'
             }}>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">
@@ -339,7 +345,7 @@ const PapeleriaAbrilPage = () => {
                 <p className="text-white font-medium">en búsquedas locales</p>
               </div>
               {/* Result Card 3 */}
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center animate-on-scroll opacity-0 translate-y-8" style={{
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center " style={{
               transitionDelay: '0.2s'
             }}>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">
@@ -348,7 +354,7 @@ const PapeleriaAbrilPage = () => {
                 <p className="text-white font-medium">consultas vía WhatsApp</p>
               </div>
               {/* Result Card 4 */}
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center animate-on-scroll opacity-0 translate-y-8" style={{
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 border border-gray-700 text-center " style={{
               transitionDelay: '0.3s'
             }}>
                 <div className="text-4xl font-bold text-cyan-400 mb-2">
@@ -357,7 +363,7 @@ const PapeleriaAbrilPage = () => {
                 <p className="text-white font-medium">crecimiento en ventas</p>
               </div>
             </div>
-            <div className="mt-12 bg-gray-800/30 rounded-xl p-6 border border-gray-700 animate-on-scroll opacity-0 translate-y-8" style={{
+            <div className="mt-12 bg-gray-800/30 rounded-xl p-6 border border-gray-700 " style={{
             transitionDelay: '0.4s'
           }}>
               <h3 className="text-xl font-bold mb-4 text-white">
@@ -394,10 +400,10 @@ const PapeleriaAbrilPage = () => {
         </div>
       </AnimatedSection>
       {/* Testimonial Section */}
-      <AnimatedSection ref={el => sectionRefs.current[5] = el} className="py-16 bg-gray-900">
+      <AnimatedSection ref={el => sectionRefs.current[5] = el as HTMLDivElement} className="py-16 bg-gray-900">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 md:p-10 border border-gray-700 relative overflow-hidden animate-on-scroll opacity-0 translate-y-8">
+            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 md:p-10 border border-gray-700 relative overflow-hidden ">
               {/* Decorative elements */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
               <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
@@ -426,52 +432,43 @@ const PapeleriaAbrilPage = () => {
               </div>
             </div>
             {/* CTA Section */}
-            <div className="mt-16 text-center animate-on-scroll opacity-0 translate-y-8" style={{
+            <div className="mt-16 text-center " style={{
             transitionDelay: '0.2s'
           }}>
               <h3 className="text-2xl font-bold mb-6 text-white">
                 ¿Listo para impulsar tu negocio local?
               </h3>
+              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+                Contáctame hoy mismo y descubre cómo mi estrategia de transformación digital 
+                puede impulsar tu negocio local como lo hice con Papelería Abril.
+              </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a href="https://abrilpapeleria.azurewebsites.net/" target="_blank" rel="noopener noreferrer" className="group bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
                   Ver sitio en vivo
                   <ExternalLink className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </a>
-                <Link to="/#proyectos" className="bg-transparent border-2 border-cyan-400 text-cyan-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center">
-                  Ver más proyectos
+                <button 
+                  onClick={() => navigateToHomeWithScroll('contacto')}
+                  className="bg-transparent border-2 border-cyan-400 text-cyan-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center"
+                >
+                  {t('common.contact_us')}
                   <ArrowRight className="ml-2 w-4 h-4" />
-                </Link>
-              </div>
-              {/* QR Code */}
-              <div className="mt-12 flex flex-col items-center animate-on-scroll opacity-0 translate-y-8" style={{
-              transitionDelay: '0.3s'
-            }}>
-                <p className="text-gray-400 mb-4">
-                  Escanea para visitar el sitio en tu móvil
-                </p>
-                <div className="w-32 h-32 bg-white p-2 rounded-lg">
-                  <div className="w-full h-full bg-gray-200 rounded flex items-center justify-center text-xs text-gray-500">
-                    Código QR
-                  </div>
-                </div>
+                </button>
               </div>
             </div>
           </div>
         </div>
       </AnimatedSection>
-      <style jsx>{`
+      <style>{`
         .animate-on-scroll {
-          transition:
-            opacity 0.8s ease-out,
-            transform 0.8s ease-out;
+          transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
         .animate-on-scroll.is-visible {
           opacity: 1;
           transform: translateY(0);
         }
         @keyframes float {
-          0%,
-          100% {
+          0%, 100% {
             transform: translateY(0) translateX(0);
           }
           50% {
@@ -479,6 +476,7 @@ const PapeleriaAbrilPage = () => {
           }
         }
       `}</style>
-    </div>;
+    </div>
+  );
 };
 export default PapeleriaAbrilPage;

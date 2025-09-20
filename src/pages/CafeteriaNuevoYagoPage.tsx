@@ -1,10 +1,11 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Coffee, MapPin, Search, Smartphone, CheckCircle, Users, Zap, BarChart, Target, Globe, Heart } from 'lucide-react';
+import { useEffect, useState, useRef } from 'react';
+import { ArrowLeft, Coffee, MapPin, Search, Smartphone, Users, BarChart, Heart } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import { useNavigationWithScroll } from '../components/utils/NavigationUtils';
+import { useLanguage } from '../components/context/LanguageContext';
 
-const CafeNuevoJagoPage = () => {
+const CafeNuevoYagoPage = () => {
+  const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);
   const { navigateToHomeWithScroll } = useNavigationWithScroll();
@@ -39,30 +40,33 @@ const CafeNuevoJagoPage = () => {
         
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           {/* Back button */}
-          <Link to="/" className="inline-flex items-center text-amber-200 hover:text-white mb-8 transition-colors group">
+          <button 
+            onClick={() => navigateToHomeWithScroll('proyectos')}
+            className="inline-flex items-center text-amber-200 hover:text-white mb-8 transition-colors group"
+          >
             <ArrowLeft className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
-            <span>Volver a inicio</span>
-          </Link>
+            <span>{t('common.back')}</span>
+          </button>
           
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-              Cafetería <span className="text-amber-400">Nuevo Jago</span>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+              Cafetería <span className="text-amber-400">Nuevo Yago</span>
             </h1>
-            <p className="text-xl text-amber-100 mb-10">
+            <p className="text-lg md:text-xl text-amber-100 mb-8 md:mb-10 px-4 md:px-0">
               Transformación digital completa para cafeterianuevoyago.es. Desarrollo web, SEO local especializado 
               y optimización de presencia en Google Maps para aumentar clientes locales.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <a 
                 href="https://cafeterianuevoyago.es" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="bg-amber-500 hover:bg-amber-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+                className="bg-amber-500 hover:bg-amber-600 text-white font-medium py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm md:text-base"
               >
-                Ver el proyecto
+                {t('projects.view_project')}
               </a>
-              <a href="#servicios" className="bg-transparent border-2 border-amber-400 text-amber-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
-                Ver servicios
+              <a href="#servicios" className="bg-transparent border-2 border-amber-400 text-amber-100 hover:text-white hover:border-white font-medium py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-300 text-sm md:text-base">
+                {t('services.view_service')}
               </a>
             </div>
           </div>
@@ -89,7 +93,7 @@ const CafeNuevoJagoPage = () => {
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-amber-50 p-4 rounded-lg">
-                  <h3 className="font-semibold text-amber-900 mb-2">Desarrollo Web</h3>
+                  <h3 className="font-semibold text-amber-900 mb-2">{t('projects.web_development')}</h3>
                   <p className="text-amber-700 text-sm">Sitio web moderno para cafetería</p>
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg">
@@ -101,7 +105,7 @@ const CafeNuevoJagoPage = () => {
                   <p className="text-purple-700 text-sm">Presencia local optimizada</p>
                 </div>
                 <div className="bg-orange-50 p-4 rounded-lg">
-                  <h3 className="font-semibold text-orange-900 mb-2">Marketing</h3>
+                  <h3 className="font-semibold text-orange-900 mb-2">{t('services.digital_marketing.title')}</h3>
                   <p className="text-orange-700 text-sm">Estrategia digital integral</p>
                 </div>
               </div>
@@ -123,13 +127,13 @@ const CafeNuevoJagoPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* Service 1 */}
             <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-on-scroll opacity-0 translate-y-8">
               <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6">
                 <Coffee className="h-8 w-8 text-amber-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Desarrollo Web</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('projects.web_development')}</h3>
               <p className="text-gray-600">
                 Sitio web moderno y atractivo desarrollado específicamente para cafeterías, 
                 con menú digital, galería de productos y información de contacto.
@@ -189,7 +193,7 @@ const CafeNuevoJagoPage = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
                 <Users className="h-8 w-8 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Marketing Digital</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('services.digital_marketing.title')}</h3>
               <p className="text-gray-600">
                 Estrategia de marketing digital integral que incluye gestión de redes sociales 
                 y promoción online para aumentar la visibilidad de la cafetería.
@@ -282,12 +286,12 @@ const CafeNuevoJagoPage = () => {
             onClick={() => navigateToHomeWithScroll('contacto')}
             className="bg-white text-amber-600 hover:bg-amber-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
           >
-            Solicitar consultoría gratuita
+            {t('common.contact_us')}
           </button>
         </div>
       </AnimatedSection>
 
-      <style jsx>{`
+      <style>{`
         .animate-on-scroll {
           transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
@@ -300,4 +304,4 @@ const CafeNuevoJagoPage = () => {
   );
 };
 
-export default CafeNuevoJagoPage;
+export default CafeNuevoYagoPage;

@@ -49,29 +49,29 @@ const ProjectsSection = () => {
     title: 'Papelería Abril',
     category: 'Papelería',
     location: 'Tacuarembó',
-    description: 'Servicios aplicados: Desarrollo Web, SEO, Google Maps, Responsive Design. Transformación digital completa para una papelería local con desarrollo web moderno, optimización SEO avanzada y presencia destacada en Google Maps.',
+    description: `${t('projects.services_applied')}: ${t('projects.web_development')}, ${t('projects.seo')}, ${t('projects.google_maps')}, ${t('projects.responsive_design')}. ${t('projects.papeleria_abril.description')}`,
     image: '/src/public/papeleriaaabril.png',
     link: '/proyectos/papeleria-abril',
-    technologies: ['Desarrollo Web', 'SEO', 'Google Maps', 'Responsive Design'],
+    technologies: [t('projects.web_development'), t('projects.seo'), t('projects.google_maps'), t('projects.responsive_design')],
     showCaseStudy: true
   }, {
     id: 2,
     title: 'Antonio y Adama Jardinería',
     category: 'Jardinería',
     location: 'Lloret de Mar',
-    description: 'Servicios aplicados: Desarrollo Web, SEO, Google Maps, Diseño Profesional. Sitio web profesional para especialistas en servicios de jardinería y paisajismo con optimización SEO local y presencia en Google Maps.',
+    description: `${t('projects.services_applied')}: ${t('projects.web_development')}, ${t('projects.seo')}, ${t('projects.google_maps')}, ${t('projects.professional_design')}. ${t('projects.antonio_yadama.description')}`,
     image: '/src/public/antonioyadamajardineria.png',
     link: '/proyectos/antonio-yadama',
-    technologies: ['Desarrollo Web', 'SEO', 'Google Maps', 'Diseño Profesional']
+    technologies: [t('projects.web_development'), t('projects.seo'), t('projects.google_maps'), t('projects.professional_design')]
   }, {
     id: 3,
     title: 'Cafetería Nuevo Jago',
     category: 'Cafetería',
     location: 'Madrid',
-    description: 'Servicios aplicados: Desarrollo Web, SEO Local, Google Maps, Marketing Digital. Estrategia integral de transformación digital con desarrollo web completo, SEO local especializado para restaurantes y optimización de presencia en Google Maps.',
+    description: `${t('projects.services_applied')}: ${t('projects.web_development')}, ${t('projects.local_seo')}, ${t('projects.google_maps')}, ${t('projects.digital_marketing')}. ${t('projects.cafe_nuevo_jago.description')}`,
     image: '/src/public/cafefeterianuevojago.png',
     link: '/proyectos/cafe-nuevo-jago',
-    technologies: ['Desarrollo Web', 'SEO Local', 'Google Maps', 'Marketing Digital']
+    technologies: [t('projects.web_development'), t('projects.local_seo'), t('projects.google_maps'), t('projects.digital_marketing')]
   }];
   return <section id="proyectos" className="py-20 bg-gradient-to-b from-gray-950 to-indigo-950 relative overflow-hidden" ref={sectionRef}>
       {/* Background elements - updated for retro-futuristic look */}
@@ -103,10 +103,10 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 project-animate project-title">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            {t('projects_title')}
+            {t('projects.title')}
           </h2>
           <div className="w-20 h-1 bg-cyan-500 mx-auto mb-6"></div>
-          <p className="text-xl text-blue-200">{t('projects_subtitle')}</p>
+          <p className="text-xl text-blue-200">{t('projects.subtitle')}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => <div key={project.id} className={`project-animate project-card-${index % 3}`} style={{
@@ -117,7 +117,7 @@ const ProjectsSection = () => {
         </div>
       </div>
       {/* Custom animations for projects section */}
-      <style jsx>{`
+      <style>{`
         /* Base styles for project animations */
         .project-animate {
           opacity: 0;
