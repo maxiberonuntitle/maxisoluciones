@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import ProjectCard from '../ui/ProjectCard';
 import { useLanguage } from '../context/LanguageContext';
 const ProjectsSection = () => {
@@ -8,7 +8,6 @@ const ProjectsSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const [scrollDirection, setScrollDirection] = useState<'up' | 'down'>('down');
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isInView, setIsInView] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -22,8 +21,6 @@ const ProjectsSection = () => {
       if (!sectionRef.current) return;
       // Check if section is in view
       const rect = sectionRef.current.getBoundingClientRect();
-      const isVisible = rect.top < window.innerHeight * 0.8 && rect.bottom > 0;
-      setIsInView(isVisible);
       // Animate elements
       const elements = sectionRef.current.querySelectorAll('.project-animate');
       elements.forEach((el, index) => {
@@ -50,7 +47,7 @@ const ProjectsSection = () => {
     category: 'Papelería',
     location: 'Tacuarembó',
     description: `${t('projects.services_applied')}: ${t('projects.web_development')}, ${t('projects.seo')}, ${t('projects.google_maps')}, ${t('projects.responsive_design')}. ${t('projects.papeleria_abril.description')}`,
-    image: '/src/public/papeleriaaabril.png',
+    image: '/papeleriaaabril.png',
     link: '/proyectos/papeleria-abril',
     technologies: [t('projects.web_development'), t('projects.seo'), t('projects.google_maps'), t('projects.responsive_design')],
     showCaseStudy: true
@@ -60,7 +57,7 @@ const ProjectsSection = () => {
     category: 'Jardinería',
     location: 'Lloret de Mar',
     description: `${t('projects.services_applied')}: ${t('projects.web_development')}, ${t('projects.seo')}, ${t('projects.google_maps')}, ${t('projects.professional_design')}. ${t('projects.antonio_yadama.description')}`,
-    image: '/src/public/antonioyadamajardineria.png',
+    image: '/antonioyadamajardineria.png',
     link: '/proyectos/antonio-yadama',
     technologies: [t('projects.web_development'), t('projects.seo'), t('projects.google_maps'), t('projects.professional_design')]
   }, {
@@ -69,7 +66,7 @@ const ProjectsSection = () => {
     category: 'Cafetería',
     location: 'Madrid',
     description: `${t('projects.services_applied')}: ${t('projects.web_development')}, ${t('projects.local_seo')}, ${t('projects.google_maps')}, ${t('projects.digital_marketing')}. ${t('projects.cafe_nuevo_jago.description')}`,
-    image: '/src/public/cafefeterianuevojago.png',
+    image: '/cafefeterianuevojago.png',
     link: '/proyectos/cafe-nuevo-jago',
     technologies: [t('projects.web_development'), t('projects.local_seo'), t('projects.google_maps'), t('projects.digital_marketing')]
   }];
@@ -102,13 +99,12 @@ const ProjectsSection = () => {
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 project-animate project-title">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-4 text-white">
             {t('projects.title')}
           </h2>
           <div className="w-20 h-1 bg-cyan-500 mx-auto mb-6"></div>
-          <p className="text-xl text-blue-200">{t('projects.subtitle')}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-8 max-w-6xl mx-auto">
           {projects.map((project, index) => <div key={project.id} className={`project-animate project-card-${index % 3}`} style={{
           transitionDelay: `${index * 50}ms`
         }} data-scroll={scrollDirection}>

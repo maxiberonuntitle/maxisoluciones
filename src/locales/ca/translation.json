@@ -2,7 +2,7 @@
   "navigation": {
     "inicio": "Inici",
     "servicios": "Serveis",
-    "por_que_elegirnos": "Per què triar-me",
+    "por_que_elegirnos": "Què esperar",
     "tecnologias": "Tecnologies",
     "proyectos": "Projectes",
     "contacto": "Contacte"
@@ -14,7 +14,7 @@
     "title_desktop_2": "per impulsar el teu",
     "title_mobile_2": "per al teu",
     "title_highlight_2": "èxit",
-    "subtitle": "Transformo la teva visió en solucions digitals que connecten, converteixen i fan créixer el teu negoci al món online.",
+    "subtitle": "Transforma la teva visió en solucions digitals que connecten, converteixen i fan créixer el teu negoci al món online.",
     "cta_primary": "Començar projecte",
     "cta_secondary": "Veure serveis",
     "scroll_indicator": "Desplaça't per explorar"
@@ -56,10 +56,7 @@
     "request_quote": "Sol·licitar pressupost"
   },
   "why_choose_us": {
-    "title": "Per què triar-me?",
-    "subtitle": "Experiència, innovació i resultats que fan la diferència",
-    "innovation": "Innovació i Tecnologia",
-    "innovation_description": "Combino tecnologia de vanguardia amb estratègies creatives per oferir solucions que destaquen al mercat digital.",
+    "title": "Què esperar?",
     "experience": {
       "title": "Experiència Comprovada",
       "description": "Més de 5 anys ajudant empreses a créixer al món digital amb resultats mesurables"
@@ -78,8 +75,7 @@
     }
   },
   "technologies": {
-    "title": "Tecnologies que Dominem",
-    "subtitle": "Utilitzo les millors eines i technologies del mercat per crear solucions robustes i escalables",
+    "title": "Tecnologies utilitzades",
     "frontend": "Frontend",
     "backend": "Backend",
     "databases": "Bases de Dades",
@@ -87,8 +83,7 @@
     "tools": "Eines"
   },
   "projects": {
-    "title": "Projectes Destacats",
-    "subtitle": "Casos d'èxit que demostren el meu compromís amb l'excel·lència",
+    "title": "Projectes realitzats",
     "view_project": "Veure projecte",
     "view_case_study": "Veure cas d'estudi",
     "services_applied": "Serveis aplicats",
@@ -128,8 +123,8 @@
     }
   },
   "contact": {
-    "title": "Llest per Créixer?",
-    "subtitle": "Parlem del teu projecte i com puc ajudar-te a assolir els teus objectius",
+    "title": "Contacte",
+    "subtitle": "",
     "form": {
       "name": "Nom complet",
       "email": "Correu electrònic",
@@ -166,12 +161,12 @@
   "pages": {
     "web_development": {
       "title": "Desenvolupament Web Professional",
-      "subtitle": "Creo llocs web i aplicacions que destaquen pel seu disseny, rendiment i experiència d'usuari",
+      "subtitle": "Desenvolupem llocs web i aplicacions que destaquen pel seu disseny, rendiment i experiència d'usuari",
       "request_quote": "Sol·licitar pressupost",
       "see_process": "Veure procés",
       "back_to_home": "Tornar a l'inici",
-      "services_title": "Els Meus Serveis de Desenvolupament",
-      "services_subtitle": "Ofereixo solucions digitals completes per a qualsevol necessitat de negoci",
+      "services_title": "Serveis de Desenvolupament",
+      "services_subtitle": "Ofereixem solucions digitals completes per a qualsevol necessitat de negoci",
       "service_corporate": {
         "title": "Llocs Web Corporatius",
         "description": "Disseny i desenvolupament de llocs web professionals que representen la identitat de la teva empresa",
@@ -226,7 +221,7 @@
           "Suport tècnic"
         ]
       },
-      "process_title": "El Meu Procés de Desenvolupament",
+      "process_title": "Procés de Desenvolupament",
       "process_subtitle": "Un enfocament metòdic que garanteix resultats excepcionals",
       "process_steps": {
         "analysis": {
@@ -235,11 +230,11 @@
         },
         "design": {
           "title": "Disseny UX/UI",
-          "description": "Creo wireframes i prototips per visualitzar l'estructura i experiència d'usuari. Disseny interfícies atractives i funcionals que reflecteixin la teva marca."
+          "description": "Creem wireframes i prototips per visualitzar l'estructura i experiència d'usuari. Dissenyem interfícies atractives i funcionals que reflecteixin la teva marca."
         },
         "development": {
           "title": "Desenvolupament",
-          "description": "Implemento el disseny utilitzant les tecnologies més adequades per al teu projecte, assegurant codi net, eficient i escalable."
+          "description": "Implementem el disseny utilitzant les tecnologies més adequades per al teu projecte, assegurant codi net, eficient i escalable."
         },
         "testing": {
           "title": "Proves i Optimització",
@@ -247,11 +242,11 @@
         },
         "launch": {
           "title": "Llançament i Suport",
-          "description": "Implemento el teu projecte i et proporciono formació. Ofereixo suport continu i manteniment per assegurar l'èxit a llarg termini."
+          "description": "Implementem el teu projecte i et proporcionem formació. Ofereixem suport continu i manteniment per assegurar l'èxit a llarg termini."
         }
       },
       "cta_title": "Llest per iniciar el teu projecte?",
-      "cta_subtitle": "Contacta'm avui mateix i converteix la teva idea en realitat amb el meu equip d'experts en desenvolupament web."
+      "cta_subtitle": "Contacta'ns avui mateix i converteix la teva idea en realitat."
     },
     "digital_marketing": {
       "title": "Marketing Digital Estratègic",
@@ -259,7 +254,7 @@
       "request_strategy": "Sol·licitar estratègia",
       "see_services": "Veure serveis",
       "back_to_home": "Tornar a l'inici",
-      "services_title": "Els Meus Serveis de Marketing",
+      "services_title": "Serveis de Marketing",
       "services_subtitle": "Solucions completes per potenciar la teva presència digital i augmentar les teves conversions",
       "service_seo": {
         "title": "SEO",
@@ -316,7 +311,7 @@
         ]
       },
       "results_title": "Resultats que Pots Esperar",
-      "results_subtitle": "Les meves estratègies de marketing digital estan orientades a resultats mesurables",
+      "results_subtitle": "Les estratègies de marketing digital estan orientades a resultats mesurables",
       "results": {
         "traffic": {
           "title": "Augment del Tràfic",
@@ -336,7 +331,7 @@
         }
       },
       "cta_title": "Potencia la Teva Presència Digital",
-      "cta_subtitle": "Sol·licita una consulta gratuïta i descobreix com les meves estratègies de marketing digital poden impulsar el teu negoci."
+      "cta_subtitle": "Sol·licita una consulta gratuïta i descobreix com les estratègies de marketing digital poden impulsar el teu negoci."
     },
     "business_consulting": {
       "title": "Consultoria Comercial Estratègica",
@@ -400,7 +395,7 @@
           "Transformació digital"
         ]
       },
-      "methodology_title": "La Meva Metodologia",
+      "methodology_title": "La Metodologia",
       "methodology_subtitle": "Un enfocament sistemàtic per transformar la teva àrea comercial",
       "methodology_steps": {
         "diagnosis": {
@@ -428,7 +423,7 @@
           "description": "Avaluem periòdicament els resultats i refinem les estratègies per assegurar una millora constant a llarg termini."
         }
       },
-      "benefits_title": "Beneficis de la Meva Consultoria",
+      "benefits_title": "Beneficis de la Consultoria",
       "benefits_subtitle": "Resultats tangibles que transformaran la teva àrea comercial",
       "benefits": {
         "sales": {
@@ -457,12 +452,12 @@
         }
       },
       "cta_title": "Potencia la Teva Àrea Comercial",
-      "cta_subtitle": "Sol·licita una consulta inicial gratuïta i descobreix com la meva consultoria comercial pot transformar el teu negoci."
+      "cta_subtitle": "Sol·licita una consulta inicial gratuïta i descobreix com la consultoria comercial pot transformar el teu negoci."
     }
   },
   "footer": {
     "company": "Maxi Solucions Digitals",
-    "description": "Transformo la teva visió en solucions digitals que connecten, converteixen i fan créixer el teu negoci.",
+    "description": "Transforma la teva visió en solucions digitals que connecten, converteixen i fan créixer el teu negoci.",
     "services": "Serveis",
     "projects": "Projectes",
     "contact": "Contacte",

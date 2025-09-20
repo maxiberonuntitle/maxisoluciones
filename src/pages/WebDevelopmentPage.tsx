@@ -43,20 +43,20 @@ const WebDevelopmentPage = () => {
             <span>{t('pages.web_development.back_to_home')}</span>
           </button>
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 text-white leading-tight">
               {t('pages.web_development.title')}
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8 md:mb-10 px-4 md:px-0">
+            <p className="text-lg md:text-lg lg:text-xl text-blue-100 mb-8 md:mb-10 px-4 md:px-0">
               {t('pages.web_development.subtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 lg:gap-6">
               <button 
                 onClick={() => navigateToHomeWithScroll('contacto')}
-                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm md:text-base"
+                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 md:py-3 lg:py-4 px-6 md:px-7 lg:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg text-sm md:text-sm lg:text-base"
               >
                 {t('pages.web_development.request_quote')}
               </button>
-              <a href="#proceso" className="bg-transparent border-2 border-blue-400 text-blue-100 hover:text-white hover:border-white font-medium py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-300 text-sm md:text-base">
+              <a href="#proceso" className="bg-transparent border-2 border-blue-400 text-blue-100 hover:text-white hover:border-white font-medium py-3 md:py-3 lg:py-4 px-6 md:px-7 lg:px-8 rounded-lg transition-all duration-300 text-sm md:text-sm lg:text-base">
                 {t('pages.web_development.see_process')}
               </a>
             </div>
@@ -67,22 +67,22 @@ const WebDevelopmentPage = () => {
       <AnimatedSection className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-4 text-gray-900">
               {t('pages.web_development.services_title')}
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg md:text-xl lg:text-xl text-gray-600">
               {t('pages.web_development.services_subtitle')}
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-6 lg:gap-8 xl:gap-8">
             {/* Service Card 1 */}
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8">
-              <div className="p-4 md:p-6">
-                <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 md:mb-5">
-                  <Globe className="h-6 w-6 md:h-7 md:w-7 text-blue-600" />
+              <div className="p-4 md:p-5 lg:p-6">
+                <div className="w-12 h-12 md:w-13 lg:w-14 md:h-13 lg:h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 md:mb-5">
+                  <Globe className="h-6 w-6 md:h-6 lg:h-7 md:w-6 lg:w-7 text-blue-600" />
                 </div>
-                <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
+                <h3 className="text-lg md:text-lg lg:text-xl font-bold mb-3 text-gray-900">
                   {t('pages.web_development.service_corporate.title')}
                 </h3>
                 <p className="text-sm md:text-base text-gray-600 mb-4">
@@ -249,11 +249,11 @@ const WebDevelopmentPage = () => {
       <AnimatedSection id="proceso" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-4 text-gray-900">
               {t('pages.web_development.process_title')}
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600">
+            <p className="text-lg md:text-xl lg:text-xl text-gray-600">
               {t('pages.web_development.process_subtitle')}
             </p>
           </div>
@@ -265,8 +265,8 @@ const WebDevelopmentPage = () => {
               {/* Step 1 */}
               <div className="relative z-10 mb-12 md:mb-20 animate-on-scroll opacity-0 translate-y-8">
                 <div className="flex flex-col md:flex-row items-center">
-                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 lg:pr-12 mt-6 md:mt-0">
-                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
+                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 lg:pr-10 xl:pr-12 mt-6 md:mt-0">
+                    <h3 className="text-xl md:text-xl lg:text-2xl font-bold text-gray-900 mb-3">
                       {t('pages.web_development.process_steps.analysis.title')}
                     </h3>
                     <p className="text-sm md:text-base text-gray-600">
@@ -286,8 +286,8 @@ const WebDevelopmentPage = () => {
                   <div className="flex-shrink-0 order-1 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
                     <span className="font-bold">2</span>
                   </div>
-                  <div className="flex-1 order-2 md:pl-12 mt-6 md:mt-0">
-                    <h3 className='text-2xl font-bold text-gray-900 mb-3'>
+                  <div className="flex-1 order-2 md:pl-10 lg:pl-12 mt-6 md:mt-0">
+                    <h3 className='text-xl md:text-xl lg:text-2xl font-bold text-gray-900 mb-3'>
                       {t('pages.web_development.process_steps.design.title')}
                     </h3>
                     <p className='text-gray-600'>
@@ -301,8 +301,8 @@ const WebDevelopmentPage = () => {
               transitionDelay: '0.2s'
             }}>
                 <div className="flex flex-col md:flex-row items-center">
-                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-12 mt-6 md:mt-0">
-                    <h3 className='text-2xl font-bold text-gray-900 mb-3'>
+                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-10 lg:pr-12 mt-6 md:mt-0">
+                    <h3 className='text-xl md:text-xl lg:text-2xl font-bold text-gray-900 mb-3'>
                       {t('pages.web_development.process_steps.development.title')}
                     </h3>
                     <p className='text-gray-600'>
@@ -322,8 +322,8 @@ const WebDevelopmentPage = () => {
                   <div className="flex-shrink-0 order-1 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
                     <span className="font-bold">4</span>
                   </div>
-                  <div className="flex-1 order-2 md:pl-12 mt-6 md:mt-0">
-                    <h3 className='text-2xl font-bold text-gray-900 mb-3'>
+                  <div className="flex-1 order-2 md:pl-10 lg:pl-12 mt-6 md:mt-0">
+                    <h3 className='text-xl md:text-xl lg:text-2xl font-bold text-gray-900 mb-3'>
                       {t('pages.web_development.process_steps.testing.title')}
                     </h3>
                     <p className='text-gray-600'>
@@ -337,8 +337,8 @@ const WebDevelopmentPage = () => {
               transitionDelay: '0.4s'
             }}>
                 <div className="flex flex-col md:flex-row items-center">
-                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-12 mt-6 md:mt-0">
-                    <h3 className='text-2xl font-bold text-gray-900 mb-3'>
+                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-10 lg:pr-12 mt-6 md:mt-0">
+                    <h3 className='text-xl md:text-xl lg:text-2xl font-bold text-gray-900 mb-3'>
                       {t('pages.web_development.process_steps.launch.title')}
                     </h3>
                     <p className='text-gray-600'>
@@ -357,15 +357,15 @@ const WebDevelopmentPage = () => {
       {/* CTA Section */}
       <AnimatedSection className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-6">
             {t('pages.web_development.cta_title')}
           </h2>
-          <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
             {t('pages.web_development.cta_subtitle')}
           </p>
           <button 
             onClick={() => navigateToHomeWithScroll('contacto')}
-            className="bg-white text-blue-600 hover:bg-blue-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
+            className="bg-white text-blue-600 hover:bg-blue-50 font-medium py-3 md:py-3 lg:py-4 px-6 md:px-7 lg:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
           >
             {t('pages.web_development.request_quote')}
           </button>

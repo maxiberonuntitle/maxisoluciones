@@ -2,7 +2,7 @@
   "navigation": {
     "inicio": "Inicio",
     "servicios": "Servicios",
-    "por_que_elegirnos": "Por qué elegirme",
+    "por_que_elegirnos": "Qué esperar",
     "tecnologias": "Tecnologías",
     "proyectos": "Proyectos",
     "contacto": "Contacto"
@@ -14,7 +14,7 @@
     "title_desktop_2": "para impulsar tu",
     "title_mobile_2": "para tu",
     "title_highlight_2": "éxito",
-    "subtitle": "Transformo tu visión en soluciones digitales que conectan, convierten y hacen crecer tu negocio en el mundo online.",
+    "subtitle": "Transforma tu visión en soluciones digitales que conectan, convierten y hacen crecer tu negocio en el mundo online.",
     "cta_primary": "Comenzar proyecto",
     "cta_secondary": "Ver servicios",
     "scroll_indicator": "Desplázate para explorar"
@@ -56,10 +56,7 @@
     "request_quote": "Solicitar presupuesto"
   },
   "why_choose_us": {
-    "title": "¿Por qué elegirme?",
-    "subtitle": "Experiencia, innovación y resultados que marcan la diferencia",
-    "innovation": "Innovación y Tecnología",
-    "innovation_description": "Combino tecnología de vanguardia con estrategias creativas para ofrecer soluciones que destacan en el mercado digital.",
+    "title": "¿Qué esperar?",
     "experience": {
       "title": "Experiencia Comprobada",
       "description": "Más de 5 años ayudando a empresas a crecer en el mundo digital con resultados medibles"
@@ -78,8 +75,7 @@
     }
   },
   "technologies": {
-    "title": "Tecnologías que Dominamos",
-    "subtitle": "Utilizo las mejores herramientas y tecnologías del mercado para crear soluciones robustas y escalables",
+    "title": "Tecnologías utilizadas",
     "frontend": "Frontend",
     "backend": "Backend",
     "databases": "Bases de Datos",
@@ -87,8 +83,7 @@
     "tools": "Herramientas"
   },
   "projects": {
-    "title": "Proyectos Destacados",
-    "subtitle": "Casos de éxito que demuestran mi compromiso con la excelencia",
+    "title": "Proyectos realizados",
     "view_project": "Ver proyecto",
     "view_case_study": "Ver caso de estudio",
     "services_applied": "Servicios aplicados",
@@ -128,8 +123,8 @@
     }
   },
   "contact": {
-    "title": "¿Listo para Crecer?",
-    "subtitle": "Hablemos sobre tu proyecto y cómo puedo ayudarte a alcanzar tus objetivos",
+    "title": "Contacto",
+    "subtitle": "",
     "form": {
       "name": "Nombre completo",
       "email": "Correo electrónico",
@@ -166,11 +161,11 @@
   "pages": {
     "web_development": {
       "title": "Desarrollo Web Profesional",
-      "subtitle": "Creo sitios web y aplicaciones que destacan por su diseño, rendimiento y experiencia de usuario",
+      "subtitle": "Desarrollo sitios web y aplicaciones que destacan por su diseño, rendimiento y experiencia de usuario",
       "request_quote": "Solicitar presupuesto",
       "see_process": "Ver proceso",
       "back_to_home": "Volver al inicio",
-      "services_title": "Mis Servicios de Desarrollo",
+      "services_title": "Servicios de Desarrollo",
       "services_subtitle": "Ofrezco soluciones digitales completas para cualquier necesidad de negocio",
       "service_corporate": {
         "title": "Sitios Web Corporativos",
@@ -226,7 +221,7 @@
           "Soporte técnico"
         ]
       },
-      "process_title": "Mi Proceso de Desarrollo",
+      "process_title": "Proceso de Desarrollo",
       "process_subtitle": "Un enfoque metódico que garantiza resultados excepcionales",
       "process_steps": {
         "analysis": {
@@ -235,11 +230,11 @@
         },
         "design": {
           "title": "Diseño UX/UI",
-          "description": "Creo wireframes y prototipos para visualizar la estructura y experiencia de usuario. Diseño interfaces atractivas y funcionales que reflejan tu marca."
+          "description": "Se crean wireframes y prototipos para visualizar la estructura y experiencia de usuario. Se diseñan interfaces atractivas y funcionales que reflejan tu marca."
         },
         "development": {
           "title": "Desarrollo",
-          "description": "Implemento el diseño utilizando las tecnologías más adecuadas para tu proyecto, asegurando código limpio, eficiente y escalable."
+          "description": "Se implementa el diseño utilizando las tecnologías más adecuadas para tu proyecto, asegurando código limpio, eficiente y escalable."
         },
         "testing": {
           "title": "Pruebas y Optimización",
@@ -247,11 +242,11 @@
         },
         "launch": {
           "title": "Lanzamiento y Soporte",
-          "description": "Implemento tu proyecto y te proporciono capacitación. Ofrezco soporte continuo y mantenimiento para asegurar el éxito a largo plazo."
+          "description": "Se implementa tu proyecto y se proporciona capacitación. Se ofrece soporte continuo y mantenimiento para asegurar el éxito a largo plazo."
         }
       },
       "cta_title": "¿Listo para iniciar tu proyecto?",
-      "cta_subtitle": "Contáctame hoy mismo y convierte tu idea en realidad con mi equipo de expertos en desarrollo web."
+      "cta_subtitle": "Contáctanos hoy mismo y convierte tu idea en realidad."
     },
     "digital_marketing": {
       "title": "Marketing Digital Estratégico",
@@ -259,7 +254,7 @@
       "request_strategy": "Solicitar estrategia",
       "see_services": "Ver servicios",
       "back_to_home": "Volver al inicio",
-      "services_title": "Mis Servicios de Marketing",
+      "services_title": "Servicios de Marketing",
       "services_subtitle": "Soluciones integrales para potenciar tu presencia digital y aumentar tus conversiones",
       "service_seo": {
         "title": "SEO",
@@ -316,7 +311,7 @@
         ]
       },
       "results_title": "Resultados que Puedes Esperar",
-      "results_subtitle": "Mis estrategias de marketing digital están orientadas a resultados medibles",
+      "results_subtitle": "Las estrategias de marketing digital están orientadas a resultados medibles",
       "results": {
         "traffic": {
           "title": "Aumento de Tráfico",
@@ -336,7 +331,7 @@
         }
       },
       "cta_title": "Potencia tu Presencia Digital",
-      "cta_subtitle": "Solicita una consultoría gratuita y descubre cómo mis estrategias de marketing digital pueden impulsar tu negocio."
+      "cta_subtitle": "Solicita una consultoría gratuita y descubre cómo las estrategias de marketing digital pueden impulsar tu negocio."
     },
     "business_consulting": {
       "title": "Consultoría Comercial Estratégica",
@@ -400,7 +395,7 @@
           "Transformación digital"
         ]
       },
-      "methodology_title": "Mi Metodología",
+      "methodology_title": "La Metodología",
       "methodology_subtitle": "Un enfoque sistemático para transformar tu área comercial",
       "methodology_steps": {
         "diagnosis": {
@@ -428,7 +423,7 @@
           "description": "Evaluamos periódicamente los resultados y refinamos las estrategias para asegurar una mejora constante a largo plazo."
         }
       },
-      "benefits_title": "Beneficios de Mi Consultoría",
+      "benefits_title": "Beneficios de la Consultoría",
       "benefits_subtitle": "Resultados tangibles que transformarán tu área comercial",
       "benefits": {
         "sales": {
@@ -457,12 +452,12 @@
         }
       },
       "cta_title": "Potencia tu Área Comercial",
-      "cta_subtitle": "Solicita una consulta inicial gratuita y descubre cómo mi consultoría comercial puede transformar tu negocio."
+      "cta_subtitle": "Solicita una consulta inicial gratuita y descubre cómo la consultoría comercial puede transformar tu negocio."
     }
   },
   "footer": {
     "company": "Maxi Soluciones Digitales",
-    "description": "Transformo tu visión en soluciones digitales que conectan, convierten y hacen crecer tu negocio.",
+    "description": "Transforma tu visión en soluciones digitales que conectan, convierten y hacen crecer tu negocio.",
     "services": "Servicios",
     "projects": "Proyectos",
     "contact": "Contacto",

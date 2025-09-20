@@ -127,13 +127,13 @@ const ServicesSection = () => {
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 service-animate service-down">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-4 text-white">
             {t('services.title')}
           </h2>
           <div className="w-20 h-1 bg-cyan-500 mx-auto mb-6"></div>
-          <p className="text-xl text-blue-200">{t('services.subtitle')}</p>
+          <p className="text-xl md:text-xl lg:text-xl text-blue-200">{t('services.subtitle')}</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-8 relative z-10">
           {services.map((service, index) => <div key={service.id} className={`service-animate ${service.animationClass}`} style={{
           transitionDelay: `${index * 80}ms`
         }} data-scroll={scrollDirection}>
@@ -145,11 +145,11 @@ const ServicesSection = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl animate-spin opacity-10" style={{
           animationDuration: '30s'
         }}></div>
-          <div className="bg-gray-800/40 backdrop-blur-sm p-8 rounded-xl relative z-10 service-animate service-scale">
-            <p className="text-blue-100 text-center text-lg md:text-xl italic">
+          <a href="#contacto" className="group bg-gray-800/40 backdrop-blur-sm p-8 rounded-xl relative z-10 service-animate service-scale block cursor-pointer hover:bg-gray-700/50 transition-all duration-300 transform hover:scale-105">
+            <p className="text-blue-100 text-center text-lg md:text-xl italic group-hover:text-cyan-300 transition-colors duration-300">
               {t('services.request_quote')}
             </p>
-          </div>
+          </a>
         </div>
       </div>
       {/* Custom animations for service elements */}

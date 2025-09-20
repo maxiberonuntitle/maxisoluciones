@@ -61,7 +61,7 @@ const WhyChooseUsSection = () => {
     title: t('why_choose_us.support.title'),
     description: t('why_choose_us.support.description')
   }];
-  return <section id="por-qué-elegirnos" className="py-20 bg-gradient-to-b from-gray-950 to-gray-900 relative overflow-hidden" ref={sectionRef}>
+  return <section id="que-esperar" className="py-20 bg-gradient-to-b from-gray-950 to-gray-900 relative overflow-hidden" ref={sectionRef}>
       {/* Background decorative elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         {/* Retro grid background */}
@@ -102,25 +102,13 @@ const WhyChooseUsSection = () => {
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 why-animate why-fade-in">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-4 text-white">
             {t('why_choose_us.title')}
           </h2>
           <div className="w-20 h-1 bg-cyan-500 mx-auto mb-6"></div>
-          <p className="text-xl text-blue-200">{t('why_choose_us.subtitle')}</p>
-        </div>
-        {/* 3D rotating element */}
-        <div className="mb-16 max-w-4xl mx-auto why-animate why-scale">
-          <div className="bg-gradient-to-r from-blue-800 to-indigo-800 p-6 rounded-xl text-white text-center shadow-xl border border-blue-700/30">
-            <h3 className="text-2xl font-bold mb-2">
-              {t('why_choose_us.innovation')}
-            </h3>
-            <p className="text-blue-200">
-              {t('why_choose_us.innovation_description')}
-            </p>
-          </div>
         </div>
         {/* Reasons Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-8 mb-20">
           {reasons.map((reason, index) => <div key={index} className={`why-animate ${index % 2 === 0 ? 'why-flip-left' : 'why-flip-right'} group`} style={{
           transitionDelay: `${index * 50}ms`
         }}>
@@ -133,10 +121,10 @@ const WhyChooseUsSection = () => {
                       {reason.icon}
                     </div>
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold mb-3 text-white transition-colors duration-300 group-hover:text-blue-300">
+                  <h3 className="text-lg md:text-xl lg:text-xl font-semibold mb-3 text-white transition-colors duration-300 group-hover:text-blue-300">
                     {reason.title}
                   </h3>
-                  <p className="text-sm md:text-base text-blue-200 transition-colors duration-300 group-hover:text-blue-100">
+                  <p className="text-sm md:text-base lg:text-base text-blue-200 transition-colors duration-300 group-hover:text-blue-100">
                     {reason.description}
                   </p>
                 </div>

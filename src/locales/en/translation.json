@@ -2,7 +2,7 @@
   "navigation": {
     "inicio": "Home",
     "servicios": "Services",
-    "por_que_elegirnos": "Why Choose Me",
+    "por_que_elegirnos": "What to expect",
     "tecnologias": "Technologies",
     "proyectos": "Projects",
     "contacto": "Contact"
@@ -56,10 +56,7 @@
     "request_quote": "Request quote"
   },
   "why_choose_us": {
-    "title": "Why choose me?",
-    "subtitle": "Experience, innovation and results that make the difference",
-    "innovation": "Innovation and Technology",
-    "innovation_description": "I combine cutting-edge technology with creative strategies to offer solutions that stand out in the digital market.",
+    "title": "What to expect?",
     "experience": {
       "title": "Proven Experience",
       "description": "More than 5 years helping companies grow in the digital world with measurable results"
@@ -78,8 +75,7 @@
     }
   },
   "technologies": {
-    "title": "Technologies We Master",
-    "subtitle": "I use the best tools and technologies in the market to create robust and scalable solutions",
+    "title": "Technologies used",
     "frontend": "Frontend",
     "backend": "Backend",
     "databases": "Databases",
@@ -87,8 +83,7 @@
     "tools": "Tools"
   },
   "projects": {
-    "title": "Featured Projects",
-    "subtitle": "Success stories that demonstrate my commitment to excellence",
+    "title": "Projects completed",
     "view_project": "View project",
     "view_case_study": "View case study",
     "services_applied": "Services applied",
@@ -128,8 +123,8 @@
     }
   },
   "contact": {
-    "title": "Ready to Grow?",
-    "subtitle": "Let's talk about your project and how I can help you achieve your goals",
+    "title": "Contact",
+    "subtitle": "",
     "form": {
       "name": "Full name",
       "email": "Email address",
@@ -166,12 +161,12 @@
   "pages": {
     "web_development": {
       "title": "Professional Web Development",
-      "subtitle": "I create websites and applications that stand out for their design, performance and user experience",
+      "subtitle": "We develop websites and applications that stand out for their design, performance and user experience",
       "request_quote": "Request quote",
       "see_process": "See process",
       "back_to_home": "Back to home",
-      "services_title": "My Development Services",
-      "services_subtitle": "I offer complete digital solutions for any business need",
+      "services_title": "Development Services",
+      "services_subtitle": "We offer complete digital solutions for any business need",
       "service_corporate": {
         "title": "Corporate Websites",
         "description": "Design and development of professional websites that represent your company's identity",
@@ -226,7 +221,7 @@
           "Technical support"
         ]
       },
-      "process_title": "My Development Process",
+      "process_title": "Development Process",
       "process_subtitle": "A methodical approach that guarantees exceptional results",
       "process_steps": {
         "analysis": {
@@ -235,11 +230,11 @@
         },
         "design": {
           "title": "UX/UI Design",
-          "description": "I create wireframes and prototypes to visualize structure and user experience. I design attractive and functional interfaces that reflect your brand."
+          "description": "We create wireframes and prototypes to visualize structure and user experience. We design attractive and functional interfaces that reflect your brand."
         },
         "development": {
           "title": "Development",
-          "description": "I implement the design using the most suitable technologies for your project, ensuring clean, efficient and scalable code."
+          "description": "We implement the design using the most suitable technologies for your project, ensuring clean, efficient and scalable code."
         },
         "testing": {
           "title": "Testing and Optimization",
@@ -247,11 +242,11 @@
         },
         "launch": {
           "title": "Launch and Support",
-          "description": "I implement your project and provide you with training. I offer continuous support and maintenance to ensure long-term success."
+          "description": "We implement your project and provide you with training. We offer continuous support and maintenance to ensure long-term success."
         }
       },
       "cta_title": "Ready to start your project?",
-      "cta_subtitle": "Contact me today and turn your idea into reality with my team of web development experts."
+      "cta_subtitle": "Contact us today and turn your idea into reality."
     },
     "digital_marketing": {
       "title": "Strategic Digital Marketing",
@@ -259,7 +254,7 @@
       "request_strategy": "Request strategy",
       "see_services": "View services",
       "back_to_home": "Back to home",
-      "services_title": "My Marketing Services",
+      "services_title": "Marketing Services",
       "services_subtitle": "Comprehensive solutions to boost your digital presence and increase your conversions",
       "service_seo": {
         "title": "SEO",
@@ -316,7 +311,7 @@
         ]
       },
       "results_title": "Results You Can Expect",
-      "results_subtitle": "My digital marketing strategies are focused on measurable results",
+      "results_subtitle": "The digital marketing strategies are focused on measurable results",
       "results": {
         "traffic": {
           "title": "Traffic Increase",
@@ -336,7 +331,7 @@
         }
       },
       "cta_title": "Boost Your Digital Presence",
-      "cta_subtitle": "Request a free consultation and discover how my digital marketing strategies can boost your business."
+      "cta_subtitle": "Request a free consultation and discover how the digital marketing strategies can boost your business."
     },
     "business_consulting": {
       "title": "Strategic Business Consulting",
@@ -400,7 +395,7 @@
           "Digital transformation"
         ]
       },
-      "methodology_title": "My Methodology",
+      "methodology_title": "The Methodology",
       "methodology_subtitle": "A systematic approach to transform your business area",
       "methodology_steps": {
         "diagnosis": {
@@ -428,7 +423,7 @@
           "description": "We periodically evaluate results and refine strategies to ensure constant long-term improvement."
         }
       },
-      "benefits_title": "Benefits of My Consulting",
+      "benefits_title": "Benefits of Consulting",
       "benefits_subtitle": "Tangible results that will transform your business area",
       "benefits": {
         "sales": {
@@ -457,7 +452,7 @@
         }
       },
       "cta_title": "Boost Your Business Area",
-      "cta_subtitle": "Request a free initial consultation and discover how my business consulting can transform your business."
+      "cta_subtitle": "Request a free initial consultation and discover how business consulting can transform your business."
     }
   },
   "footer": {

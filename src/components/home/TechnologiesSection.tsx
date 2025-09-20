@@ -58,8 +58,13 @@ const TechnologiesSection = () => {
     '.NET',
     'C#',
     'MongoDB',
+    'Mongo Atlas',
     'PostgreSQL',
     'SQL',
+    'AWS',
+    'Azure',
+    'Firebase',
+    'Firestore',
     'Git',
     'GitHub',
     'Vite'
@@ -94,88 +99,82 @@ const TechnologiesSection = () => {
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 tech-animate tech-stagger">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-4 text-white">
             {t('technologies.title')}
           </h2>
           <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-          <p className="text-xl text-blue-200">{t('technologies.subtitle')}</p>
         </div>
-        {/* Technologies Grid - All together */}
+        {/* Technologies Horizontal Scroll */}
         <div className="tech-animate tech-slide-up">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
-            {technologies.map((tech, techIndex) => (
-              <div 
-                key={tech} 
-                className="tech-animate tech-expand group relative" 
-                style={{
-                  transitionDelay: `${techIndex * 50}ms`
-                }} 
-                data-scroll={scrollDirection}
-              >
-                {/* Main Card */}
-                <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/60 backdrop-blur-sm rounded-xl p-4 md:p-6 flex flex-col items-center justify-center transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl border border-gray-700/30 group-hover:border-blue-400/50 relative overflow-hidden h-20 md:h-24">
-                  
-                  {/* Background Pattern */}
-                  <div className="absolute inset-0 opacity-5">
-                    <div className="absolute inset-0" style={{
-                      backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 1px, transparent 1px)',
-                      backgroundSize: '20px 20px'
-                    }}></div>
-                  </div>
-                  
-                  {/* Glow Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm rounded-xl"></div>
-                  
-                  {/* Tech Name with better typography */}
-                  <span className="relative z-10 text-xs md:text-sm font-semibold text-gray-200 transition-all duration-300 group-hover:text-white text-center leading-tight">
-                    {tech}
-                  </span>
-                  
-                  {/* Progress bar effect */}
-                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700/50 rounded-b-xl overflow-hidden">
-                    <div className="h-full bg-gradient-to-r from-blue-400 to-indigo-500 w-0 group-hover:w-full transition-all duration-700 ease-out"></div>
-                  </div>
-                  
-                  {/* Corner accent */}
-                  <div className="absolute top-2 right-2 w-3 h-3 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-                  
-                  {/* Hover border effect */}
-                  <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-blue-400/30 transition-all duration-300"></div>
-                </div>
-                
-                {/* Floating particles effect */}
-                <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  {[...Array(3)].map((_, i) => (
+          <div className="relative overflow-hidden">
+            {/* Gradient overlays for smooth fade effect */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-950 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-950 to-transparent z-10 pointer-events-none"></div>
+            
+            {/* Scrolling container with multiple copies for seamless loop */}
+            <div className="flex gap-6 py-4">
+              {/* Create 4 copies to ensure seamless loop */}
+              {[...Array(4)].map((_, copyIndex) => (
+                <div key={copyIndex} className="flex gap-6 animate-scroll">
+                  {technologies.map((tech, techIndex) => (
                     <div 
-                      key={i}
-                      className="absolute w-1 h-1 bg-blue-400 rounded-full animate-ping"
+                      key={`${copyIndex}-${tech}`}
+                      className="tech-animate tech-expand group relative flex-shrink-0" 
                       style={{
-                        top: `${20 + i * 30}%`,
-                        left: `${10 + i * 40}%`,
-                        animationDelay: `${i * 0.5}s`,
-                        animationDuration: '2s'
-                      }}
-                    ></div>
+                        transitionDelay: `${techIndex * 50}ms`
+                      }} 
+                      data-scroll={scrollDirection}
+                    >
+                      {/* Main Card */}
+                      <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/60 backdrop-blur-sm rounded-xl p-4 md:p-6 lg:p-6 flex flex-col items-center justify-center transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl border border-gray-700/30 group-hover:border-blue-400/50 relative overflow-hidden h-20 md:h-24 lg:h-24 w-32 md:w-36 lg:w-36">
+                        
+                        {/* Background Pattern */}
+                        <div className="absolute inset-0 opacity-5">
+                          <div className="absolute inset-0" style={{
+                            backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                            backgroundSize: '20px 20px'
+                          }}></div>
+                        </div>
+                        
+                        {/* Glow Effect */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm rounded-xl"></div>
+                        
+                        {/* Tech Name with better typography */}
+                        <span className="relative z-10 text-xs md:text-sm lg:text-sm font-semibold text-gray-200 transition-all duration-300 group-hover:text-white text-center leading-tight">
+                          {tech}
+                        </span>
+                        
+                        {/* Progress bar effect */}
+                        <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700/50 rounded-b-xl overflow-hidden">
+                          <div className="h-full bg-gradient-to-r from-blue-400 to-indigo-500 w-0 group-hover:w-full transition-all duration-700 ease-out"></div>
+                        </div>
+                        
+                        {/* Corner accent */}
+                        <div className="absolute top-2 right-2 w-3 h-3 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                        
+                        {/* Hover border effect */}
+                        <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-blue-400/30 transition-all duration-300"></div>
+                      </div>
+                      
+                      {/* Floating particles effect */}
+                      <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        {[...Array(3)].map((_, i) => (
+                          <div 
+                            key={i}
+                            className="absolute w-1 h-1 bg-blue-400 rounded-full animate-ping"
+                            style={{
+                              top: `${20 + i * 30}%`,
+                              left: `${10 + i * 40}%`,
+                              animationDelay: `${i * 0.5}s`,
+                              animationDuration: '2s'
+                            }}
+                          ></div>
+                        ))}
+                      </div>
+                    </div>
                   ))}
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Floating code snippets */}
-        <div className="mt-16 relative max-w-4xl mx-auto">
-          <div className="absolute -top-10 -left-10 w-40 h-40 bg-gradient-to-br from-blue-600/20 to-indigo-600/20 rounded-full blur-2xl transition-opacity duration-700 tech-animate tech-fade"></div>
-          <div className="bg-blue-900/40 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-blue-800/30 shadow-xl tech-animate tech-reveal">
-            <div className="flex items-center justify-center">
-              <div className="text-center">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-4">
-                  {t('common.learn_more')}
-                </h3>
-                <p className="text-blue-200 mb-6">{t('technologies.subtitle')}</p>
-                <Link to="/#contacto" className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1">
-                  {t('common.contact_us')}
-                </Link>
-              </div>
+              ))}
             </div>
           </div>
         </div>
@@ -308,6 +307,25 @@ const TechnologiesSection = () => {
             rgba(34, 211, 238, 0.1) 50%
           );
           background-size: 100% 4px;
+        }
+        
+        /* Horizontal scroll animation - infinite loop without jumps */
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+        
+        .animate-scroll {
+          animation: scroll 20s linear infinite;
+        }
+        
+        /* Pause animation on hover */
+        .animate-scroll:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </section>;

@@ -2,7 +2,7 @@
   "navigation": {
     "inicio": "Accueil",
     "servicios": "Services",
-    "por_que_elegirnos": "Pourquoi me choisir",
+    "por_que_elegirnos": "À quoi s'attendre",
     "tecnologias": "Technologies",
     "proyectos": "Projets",
     "contacto": "Contact"
@@ -56,10 +56,7 @@
     "request_quote": "Demander un devis"
   },
   "why_choose_us": {
-    "title": "Pourquoi me choisir ?",
-    "subtitle": "Expérience, innovation et résultats qui font la différence",
-    "innovation": "Innovation et Technologie",
-    "innovation_description": "Je combine une technologie de pointe avec des stratégies créatives pour offrir des solutions qui se démarquent sur le marché numérique.",
+    "title": "À quoi s'attendre ?",
     "experience": {
       "title": "Expérience Prouvée",
       "description": "Plus de 5 ans d'aide aux entreprises pour grandir dans le monde numérique avec des résultats mesurables"
@@ -78,8 +75,7 @@
     }
   },
   "technologies": {
-    "title": "Technologies que nous Maîtrisons",
-    "subtitle": "J'utilise les meilleurs outils et technologies du marché pour créer des solutions robustes et évolutives",
+    "title": "Technologies utilisées",
     "frontend": "Frontend",
     "backend": "Backend",
     "databases": "Bases de Données",
@@ -87,8 +83,7 @@
     "tools": "Outils"
   },
   "projects": {
-    "title": "Projets en Vedette",
-    "subtitle": "Histoires de succès qui démontrent mon engagement envers l'excellence",
+    "title": "Projets réalisés",
     "view_project": "Voir le projet",
     "view_case_study": "Voir l'étude de cas",
     "services_applied": "Services appliqués",
@@ -128,8 +123,8 @@
     }
   },
   "contact": {
-    "title": "Prêt à Grandir ?",
-    "subtitle": "Parlons de votre projet et comment je peux vous aider à atteindre vos objectifs",
+    "title": "Contact",
+    "subtitle": "",
     "form": {
       "name": "Nom complet",
       "email": "Adresse e-mail",
@@ -166,12 +161,12 @@
   "pages": {
     "web_development": {
       "title": "Développement Web Professionnel",
-      "subtitle": "Je crée des sites web et applications qui se démarquent par leur design, performance et expérience utilisateur",
+      "subtitle": "Nous développons des sites web et applications qui se démarquent par leur design, performance et expérience utilisateur",
       "request_quote": "Demander un devis",
       "see_process": "Voir le processus",
       "back_to_home": "Retour à l'accueil",
-      "services_title": "Mes Services de Développement",
-      "services_subtitle": "J'offre des solutions numériques complètes pour tous les besoins d'entreprise",
+      "services_title": "Services de Développement",
+      "services_subtitle": "Nous offrons des solutions numériques complètes pour tous les besoins d'entreprise",
       "service_corporate": {
         "title": "Sites Web Corporatifs",
         "description": "Conception et développement de sites web professionnels qui représentent l'identité de votre entreprise",
@@ -226,7 +221,7 @@
           "Support technique"
         ]
       },
-      "process_title": "Mon Processus de Développement",
+      "process_title": "Processus de Développement",
       "process_subtitle": "Une approche méthodique qui garantit des résultats exceptionnels",
       "process_steps": {
         "analysis": {
@@ -235,11 +230,11 @@
         },
         "design": {
           "title": "Design UX/UI",
-          "description": "Je crée des wireframes et prototypes pour visualiser la structure et l'expérience utilisateur. Je conçois des interfaces attrayantes et fonctionnelles qui reflètent votre marque."
+          "description": "Nous créons des wireframes et prototypes pour visualiser la structure et l'expérience utilisateur. Nous concevons des interfaces attrayantes et fonctionnelles qui reflètent votre marque."
         },
         "development": {
           "title": "Développement",
-          "description": "J'implémente le design en utilisant les technologies les plus adaptées à votre projet, garantissant un code propre, efficace et évolutif."
+          "description": "Nous implémentons le design en utilisant les technologies les plus adaptées à votre projet, garantissant un code propre, efficace et évolutif."
         },
         "testing": {
           "title": "Tests et Optimisation",
@@ -247,11 +242,11 @@
         },
         "launch": {
           "title": "Lancement et Support",
-          "description": "J'implémente votre projet et vous fournis une formation. J'offre un support continu et une maintenance pour assurer le succès à long terme."
+          "description": "Nous implémentons votre projet et vous fournissons une formation. Nous offrons un support continu et une maintenance pour assurer le succès à long terme."
         }
       },
       "cta_title": "Prêt à démarrer votre projet ?",
-      "cta_subtitle": "Contactez-moi aujourd'hui et transformez votre idée en réalité avec mon équipe d'experts en développement web."
+      "cta_subtitle": "Contactez-nous aujourd'hui et transformez votre idée en réalité."
     },
     "digital_marketing": {
       "title": "Marketing Numérique Stratégique",
@@ -259,7 +254,7 @@
       "request_strategy": "Demander une stratégie",
       "see_services": "Voir les services",
       "back_to_home": "Retour à l'accueil",
-      "services_title": "Mes Services de Marketing",
+      "services_title": "Services de Marketing",
       "services_subtitle": "Solutions complètes pour booster votre présence numérique et augmenter vos conversions",
       "service_seo": {
         "title": "SEO",
@@ -316,7 +311,7 @@
         ]
       },
       "results_title": "Résultats que Vous Pouvez Attendre",
-      "results_subtitle": "Mes stratégies de marketing numérique sont orientées vers des résultats mesurables",
+      "results_subtitle": "Les stratégies de marketing numérique sont orientées vers des résultats mesurables",
       "results": {
         "traffic": {
           "title": "Augmentation du Trafic",
@@ -336,7 +331,7 @@
         }
       },
       "cta_title": "Boostez Votre Présence Numérique",
-      "cta_subtitle": "Demandez une consultation gratuite et découvrez comment mes stratégies de marketing numérique peuvent booster votre entreprise."
+      "cta_subtitle": "Demandez une consultation gratuite et découvrez comment les stratégies de marketing numérique peuvent booster votre entreprise."
     },
     "business_consulting": {
       "title": "Conseil Commercial Stratégique",
@@ -400,7 +395,7 @@
           "Transformation numérique"
         ]
       },
-      "methodology_title": "Ma Méthodologie",
+      "methodology_title": "La Méthodologie",
       "methodology_subtitle": "Une approche systématique pour transformer votre domaine commercial",
       "methodology_steps": {
         "diagnosis": {
@@ -428,7 +423,7 @@
           "description": "Nous évaluons périodiquement les résultats et affinons les stratégies pour assurer une amélioration constante à long terme."
         }
       },
-      "benefits_title": "Avantages de Mon Conseil",
+      "benefits_title": "Avantages du Conseil",
       "benefits_subtitle": "Résultats tangibles qui transformeront votre domaine commercial",
       "benefits": {
         "sales": {
@@ -457,7 +452,7 @@
         }
       },
       "cta_title": "Boostez Votre Domaine Commercial",
-      "cta_subtitle": "Demandez une consultation initiale gratuite et découvrez comment mon conseil commercial peut transformer votre entreprise."
+      "cta_subtitle": "Demandez une consultation initiale gratuite et découvrez comment le conseil commercial peut transformer votre entreprise."
     }
   },
   "footer": {

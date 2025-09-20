@@ -50,10 +50,10 @@ const AntonioYadamaPage = () => {
           </button>
           
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 text-white leading-tight">
               {t('project_pages.antonio_yadama.hero.title')} <span className="text-blue-400">{t('project_pages.antonio_yadama.hero.title_highlight')}</span>
             </h1>
-            <p className="text-lg md:text-xl text-blue-100 mb-8 md:mb-10 px-4 md:px-0">
+            <p className="text-lg md:text-xl lg:text-xl text-blue-100 mb-8 md:mb-10 px-4 md:px-0">
               {t('project_pages.antonio_yadama.hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
@@ -79,11 +79,11 @@ const AntonioYadamaPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-on-scroll opacity-0 translate-y-8">
               <div className="rounded-xl overflow-hidden border-2 border-gray-200 shadow-xl">
-                <img src="/src/public/antonioyadamajardineria.png" alt="Sitio web de Antonio Yadama" className="w-full h-auto aspect-video object-cover" />
+                <img src="/antonioyadamajardineria.png" alt="Sitio web de Antonio Yadama" className="w-full h-auto aspect-video object-cover" />
               </div>
             </div>
             <div className="animate-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: '0.2s' }}>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+              <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-6 text-gray-900">
                 {t('project_pages.antonio_yadama.overview.title')}
               </h2>
               <p className="text-lg text-gray-600 mb-6">
@@ -116,7 +116,7 @@ const AntonioYadamaPage = () => {
       <AnimatedSection className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-4 text-gray-900">
               {t('project_pages.antonio_yadama.services.title')}
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
@@ -125,7 +125,7 @@ const AntonioYadamaPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-8">
             {/* Service 1 */}
             <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all duration-300 animate-on-scroll opacity-0 translate-y-8">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
@@ -199,7 +199,7 @@ const AntonioYadamaPage = () => {
       <AnimatedSection className="py-20 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-4 text-gray-900">
               {t('project_pages.antonio_yadama.results.title')}
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
@@ -208,7 +208,7 @@ const AntonioYadamaPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-8">
             {/* Result 1 */}
             <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden p-6 text-center animate-on-scroll opacity-0 translate-y-8">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -267,7 +267,7 @@ const AntonioYadamaPage = () => {
       {/* CTA Section */}
       <AnimatedSection className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-6">
             {t('project_pages.antonio_yadama.cta.title')}
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">

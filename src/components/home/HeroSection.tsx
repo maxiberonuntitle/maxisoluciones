@@ -92,7 +92,7 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center min-h-[70vh] sm:min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh]">
           <div className="text-white max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
             <div className={`overflow-hidden transition-all duration-1000 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight">
                 {/* Mobile version - 2 lines */}
                 <div className="lg:hidden">
                   <div className="text-white">{t('hero.title_mobile')} <span className="text-cyan-400">{t('hero.title_highlight')}</span></div>
@@ -108,20 +108,20 @@ const HeroSection = () => {
               </h1>
             </div>
             <div className={`transition-all duration-1000 delay-300 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <p className="text-lg sm:text-xl text-blue-100 mb-6 md:mb-8 px-2 md:px-0">
+              <p className="text-lg sm:text-xl md:text-xl lg:text-xl text-blue-100 mb-6 md:mb-8 px-2 md:px-0">
                 {t('hero.subtitle')}
               </p>
             </div>
-            <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 transition-all duration-1000 delay-500 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <a href="#contacto" className="group bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 md:py-4 px-6 sm:px-8 md:px-10 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] relative overflow-hidden text-sm sm:text-base md:text-lg">
+            <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 lg:gap-6 transition-all duration-1000 delay-500 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              <a href="#contacto" className="group bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 md:py-4 px-6 sm:px-8 md:px-10 lg:px-10 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] relative overflow-hidden text-sm sm:text-base md:text-lg">
                 <span className="relative z-10 flex items-center justify-center">
                   {t('hero.cta_primary')}
-                  <ChevronRightIcon className="ml-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ChevronRightIcon className="ml-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
                 <span className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                 <span className="absolute top-0 left-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
               </a>
-              <a href="#servicios" className="group bg-transparent border-2 border-cyan-400 text-cyan-400 hover:border-cyan-300 hover:text-cyan-300 font-medium py-3 md:py-4 px-6 sm:px-8 md:px-10 rounded-lg transition-all duration-300 flex items-center justify-center relative overflow-hidden text-sm sm:text-base md:text-lg">
+              <a href="#servicios" className="group bg-transparent border-2 border-cyan-400 text-cyan-400 hover:border-cyan-300 hover:text-cyan-300 font-medium py-3 md:py-4 px-6 sm:px-8 md:px-10 lg:px-10 rounded-lg transition-all duration-300 flex items-center justify-center relative overflow-hidden text-sm sm:text-base md:text-lg">
                 <span className="relative z-10">{t('hero.cta_secondary')}</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-300 group-hover:w-full transition-all duration-300 ease-in-out"></span>
               </a>

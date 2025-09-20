@@ -112,7 +112,7 @@ const Navbar = () => {
     id: 'servicios',
     translationKey: 'navigation.servicios'
   }, {
-    id: 'por-qué-elegirnos',
+    id: 'que-esperar',
     translationKey: 'navigation.por_que_elegirnos'
   }, {
     id: 'tecnologias',
@@ -155,11 +155,11 @@ const Navbar = () => {
           </Link>
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-6">
-            <nav className="flex space-x-6 xl:space-x-8">
+            <nav className="flex space-x-6 lg:space-x-6 xl:space-x-8">
               {navItems.map(item => <a key={item.id} href={`#${item.id}`} onClick={e => {
               e.preventDefault();
               scrollToSection(item.id);
-            }} className={`font-medium transition-all duration-300 relative group text-sm xl:text-base ${isScrolled ? activeLink === item.id ? 'text-blue-600' : 'text-gray-700 hover:text-blue-500' : activeLink === item.id ? 'text-blue-300' : 'text-white hover:text-blue-300'}`}>
+            }} className={`font-medium transition-all duration-300 relative group text-sm lg:text-sm xl:text-base ${isScrolled ? activeLink === item.id ? 'text-blue-600' : 'text-gray-700 hover:text-blue-500' : activeLink === item.id ? 'text-blue-300' : 'text-white hover:text-blue-300'}`}>
                   {t(item.translationKey)}
                   <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-current group-hover:w-full transition-all duration-300 ease-in-out ${activeLink === item.id ? 'w-full' : 'w-0'}`}></span>
                 </a>)}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon, MailIcon, PhoneIcon, MapPinIcon } from 'lucide-react';
+import { FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon, MailIcon, MapPinIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useLocation } from 'react-router-dom';
 const Footer = () => {
@@ -98,7 +98,7 @@ const Footer = () => {
       }}></div>)}
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-8">
           {/* Company Info */}
           <div className={`transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <h3 className="text-xl font-bold mb-4">
@@ -154,7 +154,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('por-qué-elegirnos'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
+                <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('que-esperar'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
                   {t('navigation.por_que_elegirnos')}
                 </a>
               </li>
@@ -180,12 +180,6 @@ const Footer = () => {
                 <MapPinIcon className="w-5 h-5 text-blue-400 mr-2 mt-0.5 group-hover:scale-110 transition-transform" />
                 <span className="text-gray-300 group-hover:text-blue-200 transition-colors">
                   Barcelona, España
-                </span>
-              </li>
-              <li className="flex items-center group">
-                <PhoneIcon className="w-5 h-5 text-blue-400 mr-2 group-hover:scale-110 transition-transform" />
-                <span className="text-gray-300 group-hover:text-blue-200 transition-colors">
-                  +34 600 123 456
                 </span>
               </li>
               <li className="flex items-center group">
