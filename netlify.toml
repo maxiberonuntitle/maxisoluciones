@@ -1,0 +1,57 @@
+[build]
+  # Directorio de build (donde Vite genera los archivos estáticos)
+  publish = "dist"
+  
+  # Comando de build
+  command = "npm run build"
+
+[build.environment]
+  # Versión de Node.js
+  NODE_VERSION = "18"
+
+# Configuración para el dominio personalizado
+[[redirects]]
+  # Redireccionar todas las rutas a index.html para SPA routing
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Headers de seguridad y optimización
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Headers específicos para archivos estáticos
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Headers para archivos HTML
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Configuración de funciones (si las necesitas en el futuro)
+[functions]
+  directory = "netlify/functions"
+
+# Configuración de plugins
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+
+# Configuración para el dominio
+[context.production]
+  command = "npm run build"
+  publish = "dist"
+
+# Configuración para preview
+[context.deploy-preview]
+  command = "npm run build"
+  publish = "dist"

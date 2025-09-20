@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://maxisoluciones.com/sitemap.xml
+
+# Optimización para SEO
+Crawl-delay: 1
