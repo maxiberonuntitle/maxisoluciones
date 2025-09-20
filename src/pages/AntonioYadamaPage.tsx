@@ -51,10 +51,10 @@ const AntonioYadamaPage = () => {
           
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-              {t('projects.web_development')} <span className="text-blue-400">Antonio y Adama Jardinería</span>
+              {t('project_pages.antonio_yadama.hero.title')} <span className="text-blue-400">{t('project_pages.antonio_yadama.hero.title_highlight')}</span>
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-8 md:mb-10 px-4 md:px-0">
-              Sitio web profesional para Antonio y Adama Jardinería, especialistas en servicios de jardinería y paisajismo en Lloret de Mar.
+              {t('project_pages.antonio_yadama.hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <a 
@@ -84,29 +84,27 @@ const AntonioYadamaPage = () => {
             </div>
             <div className="animate-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: '0.2s' }}>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Proyecto de Jardinería Profesional
+                {t('project_pages.antonio_yadama.overview.title')}
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Desarrollo de un sitio web profesional para Antonio y Adama Jardinería, especialistas en servicios de jardinería y paisajismo. 
-                El proyecto incluyó desarrollo web moderno, optimización SEO local para servicios de jardinería y presencia 
-                optimizada en Google Maps para atraer clientes locales en Lloret de Mar.
+                {t('project_pages.antonio_yadama.overview.description')}
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-blue-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-blue-900 mb-2">{t('projects.web_development')}</h3>
-                  <p className="text-blue-700 text-sm">Sitio web moderno y responsive</p>
+                  <p className="text-blue-700 text-sm">{t('project_pages.antonio_yadama.overview.web_development')}</p>
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-green-900 mb-2">SEO</h3>
-                  <p className="text-green-700 text-sm">Optimización para jardinería</p>
+                  <p className="text-green-700 text-sm">{t('project_pages.antonio_yadama.overview.seo')}</p>
                 </div>
                 <div className="bg-purple-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-purple-900 mb-2">Google Maps</h3>
-                  <p className="text-purple-700 text-sm">Presencia local optimizada</p>
+                  <p className="text-purple-700 text-sm">{t('project_pages.antonio_yadama.overview.google_maps')}</p>
                 </div>
                 <div className="bg-orange-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-orange-900 mb-2">Diseño</h3>
-                  <p className="text-orange-700 text-sm">Interfaz profesional</p>
+                  <p className="text-orange-700 text-sm">{t('project_pages.antonio_yadama.overview.design')}</p>
                 </div>
               </div>
             </div>
@@ -119,11 +117,11 @@ const AntonioYadamaPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Servicios Implementados
+              {t('project_pages.antonio_yadama.services.title')}
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Soluciones integrales para potenciar la presencia digital de un negocio de jardinería profesional
+              {t('project_pages.antonio_yadama.services.subtitle')}
             </p>
           </div>
           
@@ -133,10 +131,9 @@ const AntonioYadamaPage = () => {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                 <Code className="h-8 w-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('projects.web_development')}</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.antonio_yadama.services.web_development.title')}</h3>
               <p className="text-gray-600">
-                Sitio web moderno y responsive desarrollado con las últimas tecnologías, 
-                optimizado para mostrar servicios de jardinería y proyectos de paisajismo de manera profesional.
+                {t('project_pages.antonio_yadama.services.web_development.description')}
               </p>
             </div>
 
@@ -145,10 +142,9 @@ const AntonioYadamaPage = () => {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
                 <Search className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">SEO Especializado</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.antonio_yadama.services.seo_specialized.title')}</h3>
               <p className="text-gray-600">
-                Optimización SEO específica para servicios de jardinería, incluyendo palabras clave 
-                relevantes como "jardinería Lloret de Mar" y estructura optimizada para motores de búsqueda.
+                {t('project_pages.antonio_yadama.services.seo_specialized.description')}
               </p>
             </div>
 
@@ -157,10 +153,9 @@ const AntonioYadamaPage = () => {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
                 <MapPin className="h-8 w-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Google Maps</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.antonio_yadama.services.google_maps.title')}</h3>
               <p className="text-gray-600">
-                Optimización de presencia en Google Maps para atraer clientes locales 
-                interesados en servicios de jardinería y paisajismo en Lloret de Mar.
+                {t('project_pages.antonio_yadama.services.google_maps.description')}
               </p>
             </div>
 
@@ -169,10 +164,9 @@ const AntonioYadamaPage = () => {
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <Smartphone className="h-8 w-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Diseño Responsive</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.antonio_yadama.services.responsive_design.title')}</h3>
               <p className="text-gray-600">
-                Diseño completamente responsive que se adapta perfectamente a todos 
-                los dispositivos, desde móviles hasta escritorios.
+                {t('project_pages.antonio_yadama.services.responsive_design.description')}
               </p>
             </div>
 
@@ -181,10 +175,9 @@ const AntonioYadamaPage = () => {
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
                 <Globe className="h-8 w-8 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Portfolio Digital</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.antonio_yadama.services.digital_portfolio.title')}</h3>
               <p className="text-gray-600">
-                Galería profesional para mostrar proyectos de jardinería y paisajismo con 
-                navegación intuitiva y presentación visual impactante.
+                {t('project_pages.antonio_yadama.services.digital_portfolio.description')}
               </p>
             </div>
 
@@ -193,10 +186,9 @@ const AntonioYadamaPage = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
                 <Users className="h-8 w-8 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Contacto Optimizado</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.antonio_yadama.services.contact_optimized.title')}</h3>
               <p className="text-gray-600">
-                Formularios de contacto optimizados y información de contacto 
-                clara para facilitar la comunicación con clientes potenciales.
+                {t('project_pages.antonio_yadama.services.contact_optimized.description')}
               </p>
             </div>
           </div>
@@ -208,11 +200,11 @@ const AntonioYadamaPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Resultados Obtenidos
+              {t('project_pages.antonio_yadama.results.title')}
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Impacto medible en la presencia digital del arquitecto
+              {t('project_pages.antonio_yadama.results.subtitle')}
             </p>
           </div>
           
@@ -223,10 +215,10 @@ const AntonioYadamaPage = () => {
                 <Search className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Mejora SEO
+                {t('project_pages.antonio_yadama.results.seo_improvement.title')}
               </h3>
               <p className="text-gray-600">
-                Posicionamiento mejorado en búsquedas relacionadas con jardinería y servicios de paisajismo.
+                {t('project_pages.antonio_yadama.results.seo_improvement.description')}
               </p>
             </div>
 
@@ -236,10 +228,10 @@ const AntonioYadamaPage = () => {
                 <MapPin className="h-8 w-8 text-green-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Visibilidad Local
+                {t('project_pages.antonio_yadama.results.local_visibility.title')}
               </h3>
               <p className="text-gray-600">
-                Mayor presencia en Google Maps y búsquedas locales de servicios de arquitectura.
+                {t('project_pages.antonio_yadama.results.local_visibility.description')}
               </p>
             </div>
 
@@ -249,10 +241,10 @@ const AntonioYadamaPage = () => {
                 <Users className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Más Consultas
+                {t('project_pages.antonio_yadama.results.more_queries.title')}
               </h3>
               <p className="text-gray-600">
-                Aumento significativo en consultas de clientes potenciales interesados en servicios de jardinería.
+                {t('project_pages.antonio_yadama.results.more_queries.description')}
               </p>
             </div>
 
@@ -262,10 +254,10 @@ const AntonioYadamaPage = () => {
                 <BarChart className="h-8 w-8 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Imagen Profesional
+                {t('project_pages.antonio_yadama.results.professional_image.title')}
               </h3>
               <p className="text-gray-600">
-                Sitio web que proyecta profesionalismo y confianza, mejorando la percepción de marca.
+                {t('project_pages.antonio_yadama.results.professional_image.description')}
               </p>
             </div>
           </div>
@@ -276,11 +268,10 @@ const AntonioYadamaPage = () => {
       <AnimatedSection className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            ¿Necesitas un Sitio Web Profesional?
+            {t('project_pages.antonio_yadama.cta.title')}
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-            Contáctame hoy mismo y convierte tu idea en realidad con mi
-            experiencia en desarrollo web profesional.
+            {t('project_pages.antonio_yadama.cta.description')}
           </p>
           <button 
             onClick={() => navigateToHomeWithScroll('contacto')}

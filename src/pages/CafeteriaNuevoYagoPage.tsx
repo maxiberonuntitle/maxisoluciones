@@ -50,11 +50,10 @@ const CafeNuevoYagoPage = () => {
           
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-              Cafetería <span className="text-amber-400">Nuevo Yago</span>
+              {t('project_pages.cafe_nuevo_jago.hero.title')} <span className="text-amber-400">{t('project_pages.cafe_nuevo_jago.hero.title_highlight')}</span>
             </h1>
             <p className="text-lg md:text-xl text-amber-100 mb-8 md:mb-10 px-4 md:px-0">
-              Transformación digital completa para cafeterianuevoyago.es. Desarrollo web, SEO local especializado 
-              y optimización de presencia en Google Maps para aumentar clientes locales.
+              {t('project_pages.cafe_nuevo_jago.hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <a 
@@ -84,29 +83,27 @@ const CafeNuevoYagoPage = () => {
             </div>
             <div className="animate-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: '0.2s' }}>
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Transformación Digital para Cafetería
+                {t('project_pages.cafe_nuevo_jago.overview.title')}
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                Estrategia integral de transformación digital para cafeterianuevoyago.es. 
-                El proyecto incluyó desarrollo web completo, SEO local especializado para restaurantes 
-                y optimización de presencia en Google Maps para aumentar clientes locales.
+                {t('project_pages.cafe_nuevo_jago.overview.description')}
               </p>
               <div className="grid grid-cols-2 gap-4 mb-8">
                 <div className="bg-amber-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-amber-900 mb-2">{t('projects.web_development')}</h3>
-                  <p className="text-amber-700 text-sm">Sitio web moderno para cafetería</p>
+                  <p className="text-amber-700 text-sm">{t('project_pages.cafe_nuevo_jago.overview.web_development')}</p>
                 </div>
                 <div className="bg-green-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-green-900 mb-2">SEO Local</h3>
-                  <p className="text-green-700 text-sm">Optimización para restaurantes</p>
+                  <p className="text-green-700 text-sm">{t('project_pages.cafe_nuevo_jago.overview.local_seo')}</p>
                 </div>
                 <div className="bg-purple-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-purple-900 mb-2">Google Maps</h3>
-                  <p className="text-purple-700 text-sm">Presencia local optimizada</p>
+                  <p className="text-purple-700 text-sm">{t('project_pages.cafe_nuevo_jago.overview.google_maps')}</p>
                 </div>
                 <div className="bg-orange-50 p-4 rounded-lg">
                   <h3 className="font-semibold text-orange-900 mb-2">{t('services.digital_marketing.title')}</h3>
-                  <p className="text-orange-700 text-sm">Estrategia digital integral</p>
+                  <p className="text-orange-700 text-sm">{t('project_pages.cafe_nuevo_jago.overview.digital_marketing')}</p>
                 </div>
               </div>
             </div>
@@ -119,11 +116,11 @@ const CafeNuevoYagoPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Servicios Implementados
+              {t('project_pages.cafe_nuevo_jago.services.title')}
             </h2>
             <div className="w-20 h-1 bg-amber-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Soluciones integrales para potenciar la presencia digital de una cafetería local
+              {t('project_pages.cafe_nuevo_jago.services.subtitle')}
             </p>
           </div>
           
@@ -133,10 +130,9 @@ const CafeNuevoYagoPage = () => {
               <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mb-6">
                 <Coffee className="h-8 w-8 text-amber-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('projects.web_development')}</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.cafe_nuevo_jago.services.web_development.title')}</h3>
               <p className="text-gray-600">
-                Sitio web moderno y atractivo desarrollado específicamente para cafeterías, 
-                con menú digital, galería de productos y información de contacto.
+                {t('project_pages.cafe_nuevo_jago.services.web_development.description')}
               </p>
             </div>
 
@@ -145,10 +141,9 @@ const CafeNuevoYagoPage = () => {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
                 <Search className="h-8 w-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">SEO Local</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.cafe_nuevo_jago.services.local_seo.title')}</h3>
               <p className="text-gray-600">
-                Optimización SEO local especializada para restaurantes y cafeterías, 
-                incluyendo palabras clave como "cafetería cerca de mí" y "mejor café local".
+                {t('project_pages.cafe_nuevo_jago.services.local_seo.description')}
               </p>
             </div>
 
@@ -157,10 +152,9 @@ const CafeNuevoYagoPage = () => {
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
                 <MapPin className="h-8 w-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Google Maps</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.cafe_nuevo_jago.services.google_maps.title')}</h3>
               <p className="text-gray-600">
-                Optimización completa de presencia en Google Maps con información actualizada, 
-                horarios, fotos y reseñas para atraer clientes locales.
+                {t('project_pages.cafe_nuevo_jago.services.google_maps.description')}
               </p>
             </div>
 
@@ -169,10 +163,9 @@ const CafeNuevoYagoPage = () => {
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <Smartphone className="h-8 w-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Diseño Responsive</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.cafe_nuevo_jago.services.responsive_design.title')}</h3>
               <p className="text-gray-600">
-                Diseño completamente responsive que se adapta perfectamente a móviles, 
-                tablets y escritorios para una experiencia óptima en todos los dispositivos.
+                {t('project_pages.cafe_nuevo_jago.services.responsive_design.description')}
               </p>
             </div>
 
@@ -181,10 +174,9 @@ const CafeNuevoYagoPage = () => {
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
                 <Heart className="h-8 w-8 text-red-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">Experiencia de Usuario</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.cafe_nuevo_jago.services.user_experience.title')}</h3>
               <p className="text-gray-600">
-                Interfaz intuitiva y atractiva que refleja la calidez y ambiente 
-                acogedor de la cafetería, mejorando la experiencia del cliente.
+                {t('project_pages.cafe_nuevo_jago.services.user_experience.description')}
               </p>
             </div>
 
@@ -193,10 +185,9 @@ const CafeNuevoYagoPage = () => {
               <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
                 <Users className="h-8 w-8 text-indigo-600" />
               </div>
-              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('services.digital_marketing.title')}</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-900">{t('project_pages.cafe_nuevo_jago.services.digital_marketing.title')}</h3>
               <p className="text-gray-600">
-                Estrategia de marketing digital integral que incluye gestión de redes sociales 
-                y promoción online para aumentar la visibilidad de la cafetería.
+                {t('project_pages.cafe_nuevo_jago.services.digital_marketing.description')}
               </p>
             </div>
           </div>
@@ -208,11 +199,11 @@ const CafeNuevoYagoPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Resultados Obtenidos
+              {t('project_pages.cafe_nuevo_jago.results.title')}
             </h2>
             <div className="w-20 h-1 bg-amber-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Impacto medible en la presencia digital de la cafetería
+              {t('project_pages.cafe_nuevo_jago.results.subtitle')}
             </p>
           </div>
           
@@ -223,10 +214,10 @@ const CafeNuevoYagoPage = () => {
                 <Search className="h-8 w-8 text-green-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Mejora SEO Local
+                {t('project_pages.cafe_nuevo_jago.results.local_seo_improvement.title')}
               </h3>
               <p className="text-gray-600">
-                Posicionamiento mejorado en búsquedas locales relacionadas con cafeterías y restaurantes.
+                {t('project_pages.cafe_nuevo_jago.results.local_seo_improvement.description')}
               </p>
             </div>
 
@@ -236,10 +227,10 @@ const CafeNuevoYagoPage = () => {
                 <MapPin className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Visibilidad en Maps
+                {t('project_pages.cafe_nuevo_jago.results.maps_visibility.title')}
               </h3>
               <p className="text-gray-600">
-                Mayor presencia en Google Maps con información actualizada y reseñas positivas.
+                {t('project_pages.cafe_nuevo_jago.results.maps_visibility.description')}
               </p>
             </div>
 
@@ -249,10 +240,10 @@ const CafeNuevoYagoPage = () => {
                 <Users className="h-8 w-8 text-orange-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Más Clientes
+                {t('project_pages.cafe_nuevo_jago.results.more_customers.title')}
               </h3>
               <p className="text-gray-600">
-                Aumento significativo en el número de clientes locales que descubren la cafetería online.
+                {t('project_pages.cafe_nuevo_jago.results.more_customers.description')}
               </p>
             </div>
 
@@ -262,10 +253,10 @@ const CafeNuevoYagoPage = () => {
                 <BarChart className="h-8 w-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Imagen Moderna
+                {t('project_pages.cafe_nuevo_jago.results.modern_image.title')}
               </h3>
               <p className="text-gray-600">
-                Sitio web que proyecta modernidad y profesionalismo, mejorando la percepción de marca.
+                {t('project_pages.cafe_nuevo_jago.results.modern_image.description')}
               </p>
             </div>
           </div>
@@ -276,11 +267,10 @@ const CafeNuevoYagoPage = () => {
       <AnimatedSection className="py-20 bg-gradient-to-r from-amber-600 to-orange-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            ¿Necesitas Transformar tu Negocio Local?
+            {t('project_pages.cafe_nuevo_jago.cta.title')}
           </h2>
           <p className="text-xl text-amber-100 mb-10 max-w-3xl mx-auto">
-            Contáctame hoy mismo y descubre cómo mi estrategia de transformación digital 
-            puede impulsar tu negocio local.
+            {t('project_pages.cafe_nuevo_jago.cta.description')}
           </p>
           <button 
             onClick={() => navigateToHomeWithScroll('contacto')}

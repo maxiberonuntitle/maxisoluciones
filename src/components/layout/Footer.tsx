@@ -190,9 +190,9 @@ const Footer = () => {
               </li>
               <li className="flex items-center group">
                 <MailIcon className="w-5 h-5 text-blue-400 mr-2 group-hover:scale-110 transition-transform" />
-                <span className="text-gray-300 group-hover:text-blue-200 transition-colors">
-                  info@maxisoluciones.com
-                </span>
+                <a href="mailto:maxisolucionesdigitales@gmail.com" className="text-gray-300 group-hover:text-blue-200 transition-colors">
+                  maxisolucionesdigitales@gmail.com
+                </a>
               </li>
             </ul>
           </div>

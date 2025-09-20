@@ -142,13 +142,25 @@
       "success_message": "Je vous contacterai bientôt.",
       "error": "Erreur lors de l'envoi du message. Veuillez réessayer.",
       "required": "Ce champ est obligatoire",
-      "invalid_email": "E-mail invalide"
+      "invalid_email": "E-mail invalide",
+      "placeholder_name": "Votre nom complet",
+      "placeholder_email": "votre@email.com",
+      "placeholder_phone": "+34 600 000 000",
+      "placeholder_subject": "Sélectionnez un sujet",
+      "placeholder_message": "Comment puis-je vous aider?",
+      "subject_options": {
+        "web_development": "Développement Web",
+        "digital_marketing": "Marketing Numérique",
+        "business_consulting": "Conseil Commercial",
+        "other": "Autre"
+      }
     },
     "info": {
       "title": "Informations de Contact",
-      "phone": "+598 98 009 803",
-      "address": "Barcelona",
-      "hours": "Lundi au Vendredi : 9h00 - 18h00"
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse",
+      "hours": "Horaires"
     }
   },
   "pages": {
@@ -157,20 +169,295 @@
       "subtitle": "Je crée des sites web et applications qui se démarquent par leur design, performance et expérience utilisateur",
       "request_quote": "Demander un devis",
       "see_process": "Voir le processus",
-      "back_to_home": "Retour à l'accueil"
+      "back_to_home": "Retour à l'accueil",
+      "services_title": "Mes Services de Développement",
+      "services_subtitle": "J'offre des solutions numériques complètes pour tous les besoins d'entreprise",
+      "service_corporate": {
+        "title": "Sites Web Corporatifs",
+        "description": "Conception et développement de sites web professionnels qui représentent l'identité de votre entreprise",
+        "features": [
+          "Design responsive",
+          "Optimisation SEO",
+          "Intégration réseaux sociaux"
+        ]
+      },
+      "service_apps": {
+        "title": "Applications Web",
+        "description": "Développement d'applications web sur mesure avec fonctionnalités avancées pour votre entreprise",
+        "features": [
+          "Interfaces intuitives",
+          "Architecture évolutive",
+          "Intégrations API"
+        ]
+      },
+      "service_responsive": {
+        "title": "Développement Responsive",
+        "description": "Sites web adaptés à tous les appareils pour une expérience optimale",
+        "features": [
+          "Compatibilité mobile",
+          "Design adaptatif",
+          "Performance optimisée"
+        ]
+      },
+      "service_ecommerce": {
+        "title": "E-commerce",
+        "description": "Boutiques en ligne complètes avec toutes les fonctionnalités pour vendre vos produits",
+        "features": [
+          "Passerelles de paiement",
+          "Gestion d'inventaire",
+          "Panier d'achat"
+        ]
+      },
+      "service_cms": {
+        "title": "CMS Personnalisés",
+        "description": "Systèmes de gestion de contenu sur mesure pour faciliter la mise à jour de votre site",
+        "features": [
+          "Interface intuitive",
+          "Gestion d'utilisateurs",
+          "Personnalisation totale"
+        ]
+      },
+      "service_maintenance": {
+        "title": "Maintenance Web",
+        "description": "Services de maintenance et mise à jour pour garder votre site sécurisé et fonctionnel",
+        "features": [
+          "Mises à jour de sécurité",
+          "Sauvegardes",
+          "Support technique"
+        ]
+      },
+      "process_title": "Mon Processus de Développement",
+      "process_subtitle": "Une approche méthodique qui garantit des résultats exceptionnels",
+      "process_steps": {
+        "analysis": {
+          "title": "Analyse et Planification",
+          "description": "Nous commençons par une évaluation détaillée de vos besoins, objectifs et public cible. Nous définissons l'architecture, les fonctionnalités et planifions le projet."
+        },
+        "design": {
+          "title": "Design UX/UI",
+          "description": "Je crée des wireframes et prototypes pour visualiser la structure et l'expérience utilisateur. Je conçois des interfaces attrayantes et fonctionnelles qui reflètent votre marque."
+        },
+        "development": {
+          "title": "Développement",
+          "description": "J'implémente le design en utilisant les technologies les plus adaptées à votre projet, garantissant un code propre, efficace et évolutif."
+        },
+        "testing": {
+          "title": "Tests et Optimisation",
+          "description": "Nous effectuons des tests exhaustifs pour garantir la fonctionnalité, la sécurité et les performances. Nous optimisons pour la vitesse, le SEO et l'expérience utilisateur."
+        },
+        "launch": {
+          "title": "Lancement et Support",
+          "description": "J'implémente votre projet et vous fournis une formation. J'offre un support continu et une maintenance pour assurer le succès à long terme."
+        }
+      },
+      "cta_title": "Prêt à démarrer votre projet ?",
+      "cta_subtitle": "Contactez-moi aujourd'hui et transformez votre idée en réalité avec mon équipe d'experts en développement web."
     },
     "digital_marketing": {
       "title": "Marketing Numérique Stratégique",
       "subtitle": "Stratégies de marketing numérique qui génèrent des résultats mesurables et augmentent la visibilité de votre marque",
       "request_strategy": "Demander une stratégie",
       "see_services": "Voir les services",
-      "back_to_home": "Retour à l'accueil"
+      "back_to_home": "Retour à l'accueil",
+      "services_title": "Mes Services de Marketing",
+      "services_subtitle": "Solutions complètes pour booster votre présence numérique et augmenter vos conversions",
+      "service_seo": {
+        "title": "SEO",
+        "description": "Optimisation pour moteurs de recherche qui améliore votre visibilité et positionnement organique",
+        "features": [
+          "Audit SEO complet",
+          "Optimisation on-page",
+          "Stratégie de contenu"
+        ]
+      },
+      "service_google_ads": {
+        "title": "Google Ads",
+        "description": "Campagnes publicitaires Google qui génèrent du trafic qualifié et des conversions",
+        "features": [
+          "Campagnes de recherche",
+          "Remarketing",
+          "Optimisation des conversions"
+        ]
+      },
+      "service_social_media": {
+        "title": "Médias Sociaux",
+        "description": "Gestion professionnelle des médias sociaux pour connecter avec votre audience et augmenter l'engagement",
+        "features": [
+          "Stratégie de contenu",
+          "Publications organiques",
+          "Analyse des résultats"
+        ]
+      },
+      "service_email": {
+        "title": "Email Marketing",
+        "description": "Stratégies d'email marketing qui nourrissent les leads et fidélisent les clients",
+        "features": [
+          "Conception de newsletters",
+          "Séquences automatisées",
+          "Segmentation avancée"
+        ]
+      },
+      "service_analytics": {
+        "title": "Analytique Web",
+        "description": "Analyse de données pour comprendre le comportement de vos utilisateurs et améliorer les résultats",
+        "features": [
+          "Configuration d'Analytics",
+          "Rapports personnalisés",
+          "Recommandations d'amélioration"
+        ]
+      },
+      "service_content": {
+        "title": "Marketing de Contenu",
+        "description": "Création de contenu pertinent qui attire, convertit et fidélise votre audience",
+        "features": [
+          "Blogs et articles",
+          "Infographies et ebooks",
+          "Vidéos et webinaires"
+        ]
+      },
+      "results_title": "Résultats que Vous Pouvez Attendre",
+      "results_subtitle": "Mes stratégies de marketing numérique sont orientées vers des résultats mesurables",
+      "results": {
+        "traffic": {
+          "title": "Augmentation du Trafic",
+          "description": "Augmentation significative du trafic qualifié vers votre site web"
+        },
+        "conversions": {
+          "title": "Amélioration des Conversions",
+          "description": "Taux de conversion plus élevé et génération de leads qualifiés"
+        },
+        "visibility": {
+          "title": "Visibilité de Marque",
+          "description": "Meilleure reconnaissance et positionnement de votre marque sur le marché"
+        },
+        "roi": {
+          "title": "ROI Positif",
+          "description": "Retour sur investissement mesurable et stratégies continuellement optimisées"
+        }
+      },
+      "cta_title": "Boostez Votre Présence Numérique",
+      "cta_subtitle": "Demandez une consultation gratuite et découvrez comment mes stratégies de marketing numérique peuvent booster votre entreprise."
     },
     "business_consulting": {
       "title": "Conseil Commercial Stratégique",
       "subtitle": "J'optimise vos processus commerciaux et stratégies de vente pour maximiser vos résultats d'entreprise",
       "request_consultation": "Demander une consultation",
-      "back_to_home": "Retour à l'accueil"
+      "back_to_home": "Retour à l'accueil",
+      "explore_areas": "Explorer les domaines de conseil",
+      "areas_title": "Domaines de Conseil Commercial",
+      "areas_subtitle": "Solutions complètes pour optimiser vos processus commerciaux et augmenter vos ventes",
+      "area_b2b": {
+        "title": "Stratégie de Ventes B2B",
+        "description": "Développement et implémentation de stratégies de vente efficaces pour le marché d'entreprise",
+        "features": [
+          "Analyse du cycle de vente",
+          "Prospection qualifiée",
+          "Négociation stratégique"
+        ]
+      },
+      "area_team": {
+        "title": "Gestion d'Équipes Commerciales",
+        "description": "Optimisation et formation d'équipes de vente pour maximiser leurs performances",
+        "features": [
+          "Formation spécialisée",
+          "Systèmes d'incitation",
+          "Gestion des performances"
+        ]
+      },
+      "area_processes": {
+        "title": "Optimisation des Processus",
+        "description": "Analyse et amélioration des processus commerciaux pour augmenter l'efficacité",
+        "features": [
+          "Cartographie des processus",
+          "Élimination des goulots d'étranglement",
+          "Automatisation des tâches"
+        ]
+      },
+      "area_crm": {
+        "title": "Implémentation de CRM",
+        "description": "Sélection et implémentation de systèmes CRM adaptés à vos besoins",
+        "features": [
+          "Analyse des besoins",
+          "Configuration personnalisée",
+          "Formation des utilisateurs"
+        ]
+      },
+      "area_b2c": {
+        "title": "Stratégie Commerciale B2C",
+        "description": "Développement de stratégies efficaces pour la vente directe au consommateur",
+        "features": [
+          "Expérience client",
+          "Techniques de vente persuasive",
+          "Fidélisation des clients"
+        ]
+      },
+      "area_innovation": {
+        "title": "Innovation Commerciale",
+        "description": "Implémentation de nouvelles méthodologies et approches pour vous différencier sur le marché",
+        "features": [
+          "Design Thinking appliqué",
+          "Nouveaux modèles d'affaires",
+          "Transformation numérique"
+        ]
+      },
+      "methodology_title": "Ma Méthodologie",
+      "methodology_subtitle": "Une approche systématique pour transformer votre domaine commercial",
+      "methodology_steps": {
+        "diagnosis": {
+          "title": "Diagnostic",
+          "description": "Nous analysons en profondeur votre situation actuelle, identifiant forces, faiblesses et opportunités d'amélioration dans vos processus commerciaux."
+        },
+        "planning": {
+          "title": "Planification Stratégique",
+          "description": "Nous concevons un plan d'action personnalisé avec des objectifs clairs, indicateurs de performance et délais définis."
+        },
+        "implementation": {
+          "title": "Implémentation",
+          "description": "Nous exécutons les stratégies définies, vous accompagnant à chaque étape pour assurer une adoption correcte par votre équipe."
+        },
+        "training": {
+          "title": "Formation",
+          "description": "Nous formons votre équipe commerciale avec les compétences et connaissances nécessaires pour exécuter les nouvelles stratégies."
+        },
+        "monitoring": {
+          "title": "Suivi",
+          "description": "Nous surveillons les résultats, effectuant les ajustements nécessaires pour assurer le respect des objectifs établis."
+        },
+        "optimization": {
+          "title": "Optimisation Continue",
+          "description": "Nous évaluons périodiquement les résultats et affinons les stratégies pour assurer une amélioration constante à long terme."
+        }
+      },
+      "benefits_title": "Avantages de Mon Conseil",
+      "benefits_subtitle": "Résultats tangibles qui transformeront votre domaine commercial",
+      "benefits": {
+        "sales": {
+          "title": "Augmentation des Ventes",
+          "description": "Augmentation significative de la conversion et du volume de ventes grâce à des stratégies optimisées"
+        },
+        "efficiency": {
+          "title": "Équipes Plus Efficaces",
+          "description": "Productivité et motivation accrues dans vos équipes commerciales avec des processus clairs et une formation adéquate"
+        },
+        "processes": {
+          "title": "Processus Optimisés",
+          "description": "Élimination des inefficacités et automatisation des tâches pour réduire les coûts et augmenter la productivité"
+        },
+        "decisions": {
+          "title": "Meilleure Prise de Décisions",
+          "description": "Accès à des données pertinentes et KPIs clairs pour prendre des décisions informées et stratégiques"
+        },
+        "competitive": {
+          "title": "Avantage Concurrentiel",
+          "description": "Différenciation sur le marché avec des stratégies innovantes axées sur le client"
+        },
+        "culture": {
+          "title": "Culture d'Amélioration Continue",
+          "description": "Implémentation d'une mentalité de croissance et d'optimisation constante dans votre équipe"
+        }
+      },
+      "cta_title": "Boostez Votre Domaine Commercial",
+      "cta_subtitle": "Demandez une consultation initiale gratuite et découvrez comment mon conseil commercial peut transformer votre entreprise."
     }
   },
   "footer": {

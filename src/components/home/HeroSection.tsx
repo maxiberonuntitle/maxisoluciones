@@ -141,7 +141,7 @@ const HeroSection = () => {
 
       {/* Scroll indicator */}
       <div className={`absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center transition-all duration-1000 delay-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-        <span className="text-cyan-200 text-xs sm:text-sm mb-2 hidden sm:block">{t('hero_discover')}</span>
+        <span className="text-cyan-200 text-xs sm:text-sm mb-2 hidden sm:block">{t('hero.scroll_indicator')}</span>
         <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-cyan-200 rounded-full flex justify-center">
           <div className="w-1 h-2 sm:w-1.5 sm:h-3 bg-cyan-200 rounded-full mt-1.5 sm:mt-2 animate-bounce"></div>
         </div>

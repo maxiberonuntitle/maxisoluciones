@@ -44,12 +44,10 @@ const DigitalMarketingPage = () => {
           </button>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-              Marketing <span className="text-indigo-300">Digital</span>{' '}
-              Estratégico
+              {t('pages.digital_marketing.title')}
             </h1>
             <p className="text-lg md:text-xl text-indigo-100 mb-8 md:mb-10 px-4 md:px-0">
-              Estrategias de marketing digital que generan resultados medibles y
-              aumentan la visibilidad de tu marca.
+              {t('pages.digital_marketing.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <button 
@@ -70,12 +68,11 @@ const DigitalMarketingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Mis Servicios de Marketing
+              {t('pages.digital_marketing.services_title')}
             </h2>
             <div className="w-20 h-1 bg-indigo-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Soluciones integrales para potenciar tu presencia digital y
-              aumentar tus conversiones
+              {t('pages.digital_marketing.services_subtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -85,28 +82,21 @@ const DigitalMarketingPage = () => {
                 <div className="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-5">
                   <Search className="h-7 w-7 text-indigo-600" />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">SEO</h3>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">{t('pages.digital_marketing.service_seo.title')}</h3>
                 <p className="text-gray-600 mb-4">
-                  Optimización para motores de búsqueda que mejora tu
-                  visibilidad y posicionamiento orgánico.
+                  {t('pages.digital_marketing.service_seo.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Auditoría SEO completa
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Optimización on-page</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Estrategia de contenidos
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.digital_marketing.service_seo.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -119,27 +109,22 @@ const DigitalMarketingPage = () => {
                   <Target className="h-7 w-7 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Google Ads
+                  {t('pages.digital_marketing.service_google_ads.title')}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Campañas de publicidad en Google que generan tráfico
-                  cualificado y conversiones.
+                  {t('pages.digital_marketing.service_google_ads.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Campañas de búsqueda</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Remarketing</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Optimización de conversiones
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.digital_marketing.service_google_ads.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -152,31 +137,22 @@ const DigitalMarketingPage = () => {
                   <Globe className="h-7 w-7 text-indigo-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Social Media
+                  {t('pages.digital_marketing.service_social_media.title')}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Gestión profesional de redes sociales para conectar con tu
-                  audiencia y aumentar engagement.
+                  {t('pages.digital_marketing.service_social_media.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Estrategia de contenidos
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Publicaciones orgánicas
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Análisis de resultados
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.digital_marketing.service_social_media.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -189,27 +165,22 @@ const DigitalMarketingPage = () => {
                   <Mail className="h-7 w-7 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Email Marketing
+                  {t('pages.digital_marketing.service_email.title')}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Estrategias de email marketing que nutren leads y fidelizan
-                  clientes.
+                  {t('pages.digital_marketing.service_email.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Diseño de newsletters</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Secuencias automatizadas
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Segmentación avanzada</span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.digital_marketing.service_email.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -222,31 +193,22 @@ const DigitalMarketingPage = () => {
                   <BarChart className="h-7 w-7 text-indigo-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Analítica Web
+                  {t('pages.digital_marketing.service_analytics.title')}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Análisis de datos para entender el comportamiento de tus
-                  usuarios y mejorar resultados.
+                  {t('pages.digital_marketing.service_analytics.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Configuración de Analytics
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Informes personalizados
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Recomendaciones de mejora
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.digital_marketing.service_analytics.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -259,25 +221,22 @@ const DigitalMarketingPage = () => {
                   <TrendingUp className="h-7 w-7 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Marketing de Contenidos
+                  {t('pages.digital_marketing.service_content.title')}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Creación de contenido relevante que atrae, convierte y
-                  fideliza a tu audiencia.
+                  {t('pages.digital_marketing.service_content.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Blogs y artículos</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Infografías y ebooks</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Vídeos y webinars</span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.digital_marketing.service_content.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -289,12 +248,11 @@ const DigitalMarketingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Resultados que Puedes Esperar
+              {t('pages.digital_marketing.results_title')}
             </h2>
             <div className="w-20 h-1 bg-indigo-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Mis estrategias de marketing digital están orientadas a
-              resultados medibles
+              {t('pages.digital_marketing.results_subtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -304,10 +262,10 @@ const DigitalMarketingPage = () => {
                 <LineChart className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Aumento de Tráfico
+                {t('pages.digital_marketing.results.traffic.title')}
               </h3>
               <p className="text-gray-600">
-                Incremento significativo del tráfico cualificado a tu sitio web.
+                {t('pages.digital_marketing.results.traffic.description')}
               </p>
             </div>
             {/* Result Card 2 */}
@@ -318,10 +276,10 @@ const DigitalMarketingPage = () => {
                 <Target className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Mejora de Conversiones
+                {t('pages.digital_marketing.results.conversions.title')}
               </h3>
               <p className="text-gray-600">
-                Mayor tasa de conversión y generación de leads cualificados.
+                {t('pages.digital_marketing.results.conversions.description')}
               </p>
             </div>
             {/* Result Card 3 */}
@@ -332,11 +290,10 @@ const DigitalMarketingPage = () => {
                 <Globe className="h-8 w-8 text-indigo-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Visibilidad de Marca
+                {t('pages.digital_marketing.results.visibility.title')}
               </h3>
               <p className="text-gray-600">
-                Mayor reconocimiento y posicionamiento de tu marca en el
-                mercado.
+                {t('pages.digital_marketing.results.visibility.description')}
               </p>
             </div>
             {/* Result Card 4 */}
@@ -347,11 +304,10 @@ const DigitalMarketingPage = () => {
                 <BarChart className="h-8 w-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                ROI Positivo
+                {t('pages.digital_marketing.results.roi.title')}
               </h3>
               <p className="text-gray-600">
-                Retorno de inversión medible y estrategias optimizadas
-                continuamente.
+                {t('pages.digital_marketing.results.roi.description')}
               </p>
             </div>
           </div>
@@ -361,11 +317,10 @@ const DigitalMarketingPage = () => {
       <AnimatedSection className="py-20 bg-gradient-to-r from-indigo-600 to-purple-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Potencia tu Presencia Digital
+            {t('pages.digital_marketing.cta_title')}
           </h2>
           <p className="text-xl text-indigo-100 mb-10 max-w-3xl mx-auto">
-            Solicita una consultoría gratuita y descubre cómo mis
-            estrategias de marketing digital pueden impulsar tu negocio.
+            {t('pages.digital_marketing.cta_subtitle')}
           </p>
           <button 
             onClick={() => navigateToHomeWithScroll('contacto')}

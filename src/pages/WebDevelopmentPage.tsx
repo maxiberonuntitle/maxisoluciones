@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState, useRef } from 'react';
 import { ArrowLeft, Code, Server, Smartphone, Globe, CheckCircle, Users, Zap } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import { useNavigationWithScroll } from '../components/utils/NavigationUtils';
@@ -45,11 +44,10 @@ const WebDevelopmentPage = () => {
           </button>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-              Desarrollo Web <span className="text-blue-400">Profesional</span>
+              {t('pages.web_development.title')}
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-8 md:mb-10 px-4 md:px-0">
-              Creo sitios web y aplicaciones que destacan por su diseño,
-              rendimiento y experiencia de usuario.
+              {t('pages.web_development.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <button 
@@ -70,12 +68,11 @@ const WebDevelopmentPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Mis Servicios de Desarrollo
+              {t('pages.web_development.services_title')}
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Ofrezco soluciones digitales completas para cualquier necesidad
-              de negocio
+              {t('pages.web_development.services_subtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -86,27 +83,22 @@ const WebDevelopmentPage = () => {
                   <Globe className="h-6 w-6 md:h-7 md:w-7 text-blue-600" />
                 </div>
                 <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
-                  Sitios Web Corporativos
+                  {t('pages.web_development.service_corporate.title')}
                 </h3>
                 <p className="text-sm md:text-base text-gray-600 mb-4">
-                  Diseño y desarrollo de sitios web profesionales que
-                  representan la identidad de tu empresa.
+                  {t('pages.web_development.service_corporate.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Diseño responsive</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Optimización SEO</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Integración con redes sociales
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.web_development.service_corporate.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -119,29 +111,22 @@ const WebDevelopmentPage = () => {
                   <Code className="h-6 w-6 md:h-7 md:w-7 text-indigo-600" />
                 </div>
                 <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
-                  Aplicaciones Web
+                  {t('pages.web_development.service_apps.title')}
                 </h3>
                 <p className="text-sm md:text-base text-gray-600 mb-4">
-                  Desarrollo de aplicaciones web a medida con funcionalidades
-                  avanzadas para tu negocio.
+                  {t('pages.web_development.service_apps.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Interfaces intuitivas</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Arquitectura escalable
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Integraciones con APIs
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.web_development.service_apps.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -154,27 +139,22 @@ const WebDevelopmentPage = () => {
                   <Smartphone className="h-6 w-6 md:h-7 md:w-7 text-blue-600" />
                 </div>
                 <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
-                  Desarrollo Responsive
+                  {t('pages.web_development.service_responsive.title')}
                 </h3>
                 <p className="text-sm md:text-base text-gray-600 mb-4">
-                  Sitios web adaptados a todos los dispositivos para una
-                  experiencia óptima.
+                  {t('pages.web_development.service_responsive.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Compatibilidad móvil</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Diseño adaptativo</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Rendimiento optimizado
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.web_development.service_responsive.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -187,25 +167,22 @@ const WebDevelopmentPage = () => {
                   <Server className="h-6 w-6 md:h-7 md:w-7 text-indigo-600" />
                 </div>
                 <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
-                  E-commerce
+                  {t('pages.web_development.service_ecommerce.title')}
                 </h3>
                 <p className="text-sm md:text-base text-gray-600 mb-4">
-                  Tiendas online completas con todas las funcionalidades para
-                  vender tus productos.
+                  {t('pages.web_development.service_ecommerce.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Pasarelas de pago</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Gestión de inventario</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Carrito de compras</span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.web_development.service_ecommerce.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -218,25 +195,22 @@ const WebDevelopmentPage = () => {
                   <Users className="h-6 w-6 md:h-7 md:w-7 text-blue-600" />
                 </div>
                 <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
-                  CMS Personalizados
+                  {t('pages.web_development.service_cms.title')}
                 </h3>
                 <p className="text-sm md:text-base text-gray-600 mb-4">
-                  Sistemas de gestión de contenido a medida para facilitar la
-                  actualización de tu sitio.
+                  {t('pages.web_development.service_cms.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Interfaz intuitiva</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Gestión de usuarios</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Personalización total</span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.web_development.service_cms.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -249,27 +223,22 @@ const WebDevelopmentPage = () => {
                   <Zap className="h-6 w-6 md:h-7 md:w-7 text-indigo-600" />
                 </div>
                 <h3 className="text-lg md:text-xl font-bold mb-3 text-gray-900">
-                  Mantenimiento Web
+                  {t('pages.web_development.service_maintenance.title')}
                 </h3>
                 <p className="text-sm md:text-base text-gray-600 mb-4">
-                  Servicios de mantenimiento y actualización para mantener tu
-                  sitio seguro y funcional.
+                  {t('pages.web_development.service_maintenance.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Actualizaciones de seguridad
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Copias de seguridad</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Soporte técnico</span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.web_development.service_maintenance.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -281,11 +250,11 @@ const WebDevelopmentPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Mi Proceso de Desarrollo
+              {t('pages.web_development.process_title')}
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Un enfoque metódico que garantiza resultados excepcionales
+              {t('pages.web_development.process_subtitle')}
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -298,12 +267,10 @@ const WebDevelopmentPage = () => {
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 lg:pr-12 mt-6 md:mt-0">
                     <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">
-                      Análisis y Planificación
+                      {t('pages.web_development.process_steps.analysis.title')}
                     </h3>
                     <p className="text-sm md:text-base text-gray-600">
-                      Comenzamos con una evaluación detallada de tus
-                      necesidades, objetivos y público objetivo. Definimos la
-                      arquitectura, funcionalidades y planificamos el proyecto.
+                      {t('pages.web_development.process_steps.analysis.description')}
                     </p>
                   </div>
                   <div className="flex-shrink-0 order-1 md:order-2 bg-blue-500 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg">
@@ -320,13 +287,11 @@ const WebDevelopmentPage = () => {
                     <span className="font-bold">2</span>
                   </div>
                   <div className="flex-1 order-2 md:pl-12 mt-6 md:mt-0">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                      Diseño UX/UI
+                    <h3 className='text-2xl font-bold text-gray-900 mb-3'>
+                      {t('pages.web_development.process_steps.design.title')}
                     </h3>
-                    <p className="text-gray-600">
-                      Creo wireframes y prototipos para visualizar la
-                      estructura y experiencia de usuario. Diseño interfaces
-                      atractivas y funcionales que reflejan tu marca.
+                    <p className='text-gray-600'>
+                      {t('pages.web_development.process_steps.design.description')}
                     </p>
                   </div>
                 </div>
@@ -337,13 +302,11 @@ const WebDevelopmentPage = () => {
             }}>
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="flex-1 order-2 md:order-1 md:text-right md:pr-12 mt-6 md:mt-0">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                      Desarrollo
+                    <h3 className='text-2xl font-bold text-gray-900 mb-3'>
+                      {t('pages.web_development.process_steps.development.title')}
                     </h3>
-                    <p className="text-gray-600">
-                      Implemento el diseño utilizando
-                      las tecnologías más adecuadas para tu proyecto, asegurando
-                      código limpio, eficiente y escalable.
+                    <p className='text-gray-600'>
+                      {t('pages.web_development.process_steps.development.description')}
                     </p>
                   </div>
                   <div className="flex-shrink-0 order-1 md:order-2 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
@@ -360,13 +323,11 @@ const WebDevelopmentPage = () => {
                     <span className="font-bold">4</span>
                   </div>
                   <div className="flex-1 order-2 md:pl-12 mt-6 md:mt-0">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                      Pruebas y Optimización
+                    <h3 className='text-2xl font-bold text-gray-900 mb-3'>
+                      {t('pages.web_development.process_steps.testing.title')}
                     </h3>
-                    <p className="text-gray-600">
-                      Realizamos pruebas exhaustivas para garantizar la
-                      funcionalidad, seguridad y rendimiento. Optimizamos para
-                      velocidad, SEO y experiencia de usuario.
+                    <p className='text-gray-600'>
+                      {t('pages.web_development.process_steps.testing.description')}
                     </p>
                   </div>
                 </div>
@@ -377,13 +338,11 @@ const WebDevelopmentPage = () => {
             }}>
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="flex-1 order-2 md:order-1 md:text-right md:pr-12 mt-6 md:mt-0">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                      Lanzamiento y Soporte
+                    <h3 className='text-2xl font-bold text-gray-900 mb-3'>
+                      {t('pages.web_development.process_steps.launch.title')}
                     </h3>
-                    <p className="text-gray-600">
-                      Implemento tu proyecto y te proporciono
-                      capacitación. Ofrezco soporte continuo y mantenimiento
-                      para asegurar el éxito a largo plazo.
+                    <p className='text-gray-600'>
+                      {t('pages.web_development.process_steps.launch.description')}
                     </p>
                   </div>
                   <div className="flex-shrink-0 order-1 md:order-2 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
@@ -399,11 +358,10 @@ const WebDevelopmentPage = () => {
       <AnimatedSection className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            ¿Listo para iniciar tu proyecto?
+            {t('pages.web_development.cta_title')}
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-            Contáctame hoy mismo y convierte tu idea en realidad con mi
-            equipo de expertos en desarrollo web.
+            {t('pages.web_development.cta_subtitle')}
           </p>
           <button 
             onClick={() => navigateToHomeWithScroll('contacto')}

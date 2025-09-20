@@ -66,23 +66,47 @@ const ContactForm = () => {
     e.preventDefault();
     if (validateForm()) {
       setIsSubmitting(true);
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      // In a real application, you would send the form data to a server
-      console.log('Form submitted:', formData);
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      // Reset form after delay
-      setTimeout(() => {
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: ''
-        });
-        setIsSubmitted(false);
-      }, 3000);
+      
+      try {
+        // Create mailto link with form data
+        const subject = formData.subject ? 
+          `${t('contact.form.subject_options.' + formData.subject)} - ${formData.name}` : 
+          `Contacto desde web - ${formData.name}`;
+        
+        const body = `Nombre: ${formData.name}
+Email: ${formData.email}
+Teléfono: ${formData.phone || 'No proporcionado'}
+Asunto: ${formData.subject ? t('contact.form.subject_options.' + formData.subject) : 'No especificado'}
+
+Mensaje:
+${formData.message}`;
+
+        const mailtoLink = `mailto:maxisolucionesdigitales@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        // Open email client
+        window.location.href = mailtoLink;
+        
+        // Simulate success after a short delay
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        setIsSubmitted(true);
+        
+        // Reset form after delay
+        setTimeout(() => {
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            subject: '',
+            message: ''
+          });
+          setIsSubmitted(false);
+        }, 3000);
+        
+      } catch (error) {
+        console.error('Error sending email:', error);
+      } finally {
+        setIsSubmitting(false);
+      }
     }
   };
   const handleFocus = (name: string) => {
@@ -165,10 +189,10 @@ const ContactForm = () => {
               <div className="relative">
                 <select id="subject" name="subject" value={formData.subject} onChange={handleChange} onFocus={() => handleFocus('subject')} onBlur={handleBlur} className={`w-full px-4 py-2 bg-blue-800/30 border rounded-lg transition-all duration-300 text-white ${focused === 'subject' ? 'border-blue-400 ring-2 ring-blue-500/20 bg-blue-800/50' : 'border-blue-700 hover:border-blue-600'}`}>
                   <option value="">{t('contact.form.placeholder_subject')}</option>
-                  <option value="Desarrollo Web">{t('service_web_title')}</option>
-                  <option value="Marketing Digital">{t('service_marketing_title')}</option>
-                  <option value="Consultoría">{t('service_consulting_title')}</option>
-                  <option value="Otro">Otro</option>
+                  <option value="web_development">{t('contact.form.subject_options.web_development')}</option>
+                  <option value="digital_marketing">{t('contact.form.subject_options.digital_marketing')}</option>
+                  <option value="business_consulting">{t('contact.form.subject_options.business_consulting')}</option>
+                  <option value="other">{t('contact.form.subject_options.other')}</option>
                 </select>
                 <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 ${focused === 'subject' ? 'w-full' : ''}`}></span>
               </div>

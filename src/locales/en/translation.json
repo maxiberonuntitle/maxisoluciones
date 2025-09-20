@@ -142,13 +142,25 @@
       "success_message": "I will contact you soon.",
       "error": "Error sending message. Please try again.",
       "required": "This field is required",
-      "invalid_email": "Invalid email"
+      "invalid_email": "Invalid email",
+      "placeholder_name": "Your full name",
+      "placeholder_email": "your@email.com",
+      "placeholder_phone": "+34 600 000 000",
+      "placeholder_subject": "Select a subject",
+      "placeholder_message": "How can I help you?",
+      "subject_options": {
+        "web_development": "Web Development",
+        "digital_marketing": "Digital Marketing",
+        "business_consulting": "Business Consulting",
+        "other": "Other"
+      }
     },
     "info": {
       "title": "Contact Information",
-      "phone": "+598 98 009 803",
-      "address": "Barcelona",
-      "hours": "Monday to Friday: 9:00 - 18:00"
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "hours": "Hours"
     }
   },
   "pages": {
@@ -157,20 +169,295 @@
       "subtitle": "I create websites and applications that stand out for their design, performance and user experience",
       "request_quote": "Request quote",
       "see_process": "See process",
-      "back_to_home": "Back to home"
+      "back_to_home": "Back to home",
+      "services_title": "My Development Services",
+      "services_subtitle": "I offer complete digital solutions for any business need",
+      "service_corporate": {
+        "title": "Corporate Websites",
+        "description": "Design and development of professional websites that represent your company's identity",
+        "features": [
+          "Responsive design",
+          "SEO optimization",
+          "Social media integration"
+        ]
+      },
+      "service_apps": {
+        "title": "Web Applications",
+        "description": "Custom web application development with advanced functionality for your business",
+        "features": [
+          "Intuitive interfaces",
+          "Scalable architecture",
+          "API integrations"
+        ]
+      },
+      "service_responsive": {
+        "title": "Responsive Development",
+        "description": "Websites adapted to all devices for an optimal experience",
+        "features": [
+          "Mobile compatibility",
+          "Adaptive design",
+          "Optimized performance"
+        ]
+      },
+      "service_ecommerce": {
+        "title": "E-commerce",
+        "description": "Complete online stores with all functionality to sell your products",
+        "features": [
+          "Payment gateways",
+          "Inventory management",
+          "Shopping cart"
+        ]
+      },
+      "service_cms": {
+        "title": "Custom CMS",
+        "description": "Custom content management systems to facilitate updating your site",
+        "features": [
+          "Intuitive interface",
+          "User management",
+          "Total customization"
+        ]
+      },
+      "service_maintenance": {
+        "title": "Web Maintenance",
+        "description": "Maintenance and update services to keep your site secure and functional",
+        "features": [
+          "Security updates",
+          "Backups",
+          "Technical support"
+        ]
+      },
+      "process_title": "My Development Process",
+      "process_subtitle": "A methodical approach that guarantees exceptional results",
+      "process_steps": {
+        "analysis": {
+          "title": "Analysis and Planning",
+          "description": "We start with a detailed evaluation of your needs, objectives and target audience. We define architecture, functionalities and plan the project."
+        },
+        "design": {
+          "title": "UX/UI Design",
+          "description": "I create wireframes and prototypes to visualize structure and user experience. I design attractive and functional interfaces that reflect your brand."
+        },
+        "development": {
+          "title": "Development",
+          "description": "I implement the design using the most suitable technologies for your project, ensuring clean, efficient and scalable code."
+        },
+        "testing": {
+          "title": "Testing and Optimization",
+          "description": "We perform exhaustive tests to guarantee functionality, security and performance. We optimize for speed, SEO and user experience."
+        },
+        "launch": {
+          "title": "Launch and Support",
+          "description": "I implement your project and provide you with training. I offer continuous support and maintenance to ensure long-term success."
+        }
+      },
+      "cta_title": "Ready to start your project?",
+      "cta_subtitle": "Contact me today and turn your idea into reality with my team of web development experts."
     },
     "digital_marketing": {
       "title": "Strategic Digital Marketing",
       "subtitle": "Digital marketing strategies that generate measurable results and increase your brand visibility",
       "request_strategy": "Request strategy",
       "see_services": "View services",
-      "back_to_home": "Back to home"
+      "back_to_home": "Back to home",
+      "services_title": "My Marketing Services",
+      "services_subtitle": "Comprehensive solutions to boost your digital presence and increase your conversions",
+      "service_seo": {
+        "title": "SEO",
+        "description": "Search engine optimization that improves your visibility and organic positioning",
+        "features": [
+          "Complete SEO audit",
+          "On-page optimization",
+          "Content strategy"
+        ]
+      },
+      "service_google_ads": {
+        "title": "Google Ads",
+        "description": "Google advertising campaigns that generate qualified traffic and conversions",
+        "features": [
+          "Search campaigns",
+          "Remarketing",
+          "Conversion optimization"
+        ]
+      },
+      "service_social_media": {
+        "title": "Social Media",
+        "description": "Professional social media management to connect with your audience and increase engagement",
+        "features": [
+          "Content strategy",
+          "Organic posts",
+          "Results analysis"
+        ]
+      },
+      "service_email": {
+        "title": "Email Marketing",
+        "description": "Email marketing strategies that nurture leads and retain customers",
+        "features": [
+          "Newsletter design",
+          "Automated sequences",
+          "Advanced segmentation"
+        ]
+      },
+      "service_analytics": {
+        "title": "Web Analytics",
+        "description": "Data analysis to understand your users' behavior and improve results",
+        "features": [
+          "Analytics setup",
+          "Custom reports",
+          "Improvement recommendations"
+        ]
+      },
+      "service_content": {
+        "title": "Content Marketing",
+        "description": "Creation of relevant content that attracts, converts and retains your audience",
+        "features": [
+          "Blogs and articles",
+          "Infographics and ebooks",
+          "Videos and webinars"
+        ]
+      },
+      "results_title": "Results You Can Expect",
+      "results_subtitle": "My digital marketing strategies are focused on measurable results",
+      "results": {
+        "traffic": {
+          "title": "Traffic Increase",
+          "description": "Significant increase in qualified traffic to your website"
+        },
+        "conversions": {
+          "title": "Conversion Improvement",
+          "description": "Higher conversion rate and generation of qualified leads"
+        },
+        "visibility": {
+          "title": "Brand Visibility",
+          "description": "Greater recognition and positioning of your brand in the market"
+        },
+        "roi": {
+          "title": "Positive ROI",
+          "description": "Measurable return on investment and continuously optimized strategies"
+        }
+      },
+      "cta_title": "Boost Your Digital Presence",
+      "cta_subtitle": "Request a free consultation and discover how my digital marketing strategies can boost your business."
     },
     "business_consulting": {
       "title": "Strategic Business Consulting",
       "subtitle": "I optimize your business processes and sales strategies to maximize your business results",
       "request_consultation": "Request consultation",
-      "back_to_home": "Back to home"
+      "back_to_home": "Back to home",
+      "explore_areas": "Explore consulting areas",
+      "areas_title": "Business Consulting Areas",
+      "areas_subtitle": "Comprehensive solutions to optimize your business processes and increase your sales",
+      "area_b2b": {
+        "title": "B2B Sales Strategy",
+        "description": "Development and implementation of effective sales strategies for the business market",
+        "features": [
+          "Sales cycle analysis",
+          "Qualified prospecting",
+          "Strategic negotiation"
+        ]
+      },
+      "area_team": {
+        "title": "Sales Team Management",
+        "description": "Optimization and training of sales teams to maximize their performance",
+        "features": [
+          "Specialized training",
+          "Incentive systems",
+          "Performance management"
+        ]
+      },
+      "area_processes": {
+        "title": "Process Optimization",
+        "description": "Analysis and improvement of business processes to increase efficiency",
+        "features": [
+          "Process mapping",
+          "Bottleneck elimination",
+          "Task automation"
+        ]
+      },
+      "area_crm": {
+        "title": "CRM Implementation",
+        "description": "Selection and implementation of CRM systems adapted to your needs",
+        "features": [
+          "Needs analysis",
+          "Custom configuration",
+          "User training"
+        ]
+      },
+      "area_b2c": {
+        "title": "B2C Business Strategy",
+        "description": "Development of effective strategies for direct consumer sales",
+        "features": [
+          "Customer experience",
+          "Persuasive sales techniques",
+          "Customer retention"
+        ]
+      },
+      "area_innovation": {
+        "title": "Business Innovation",
+        "description": "Implementation of new methodologies and approaches to differentiate yourself in the market",
+        "features": [
+          "Applied Design Thinking",
+          "New business models",
+          "Digital transformation"
+        ]
+      },
+      "methodology_title": "My Methodology",
+      "methodology_subtitle": "A systematic approach to transform your business area",
+      "methodology_steps": {
+        "diagnosis": {
+          "title": "Diagnosis",
+          "description": "We thoroughly analyze your current situation, identifying strengths, weaknesses and improvement opportunities in your business processes."
+        },
+        "planning": {
+          "title": "Strategic Planning",
+          "description": "We design a personalized action plan with clear objectives, performance indicators and defined deadlines."
+        },
+        "implementation": {
+          "title": "Implementation",
+          "description": "We execute the defined strategies, accompanying you at each step to ensure proper adoption by your team."
+        },
+        "training": {
+          "title": "Training",
+          "description": "We train your sales team with the skills and knowledge necessary to execute the new strategies."
+        },
+        "monitoring": {
+          "title": "Monitoring",
+          "description": "We monitor results, making necessary adjustments to ensure compliance with established objectives."
+        },
+        "optimization": {
+          "title": "Continuous Optimization",
+          "description": "We periodically evaluate results and refine strategies to ensure constant long-term improvement."
+        }
+      },
+      "benefits_title": "Benefits of My Consulting",
+      "benefits_subtitle": "Tangible results that will transform your business area",
+      "benefits": {
+        "sales": {
+          "title": "Sales Increase",
+          "description": "Significant increase in conversion and sales volume thanks to optimized strategies"
+        },
+        "efficiency": {
+          "title": "More Efficient Teams",
+          "description": "Greater productivity and motivation in your sales teams with clear processes and adequate training"
+        },
+        "processes": {
+          "title": "Optimized Processes",
+          "description": "Elimination of inefficiencies and task automation to reduce costs and increase productivity"
+        },
+        "decisions": {
+          "title": "Better Decision Making",
+          "description": "Access to relevant data and clear KPIs to make informed and strategic decisions"
+        },
+        "competitive": {
+          "title": "Competitive Advantage",
+          "description": "Market differentiation with innovative strategies focused on the customer"
+        },
+        "culture": {
+          "title": "Continuous Improvement Culture",
+          "description": "Implementation of a growth mindset and constant optimization in your team"
+        }
+      },
+      "cta_title": "Boost Your Business Area",
+      "cta_subtitle": "Request a free initial consultation and discover how my business consulting can transform your business."
     }
   },
   "footer": {
@@ -413,5 +700,141 @@
     "back": "Back",
     "next": "Next",
     "previous": "Previous"
+  },
+  "project_pages": {
+    "antonio_yadama": {
+      "hero": {
+        "title": "Web Development",
+        "title_highlight": "Antonio y Adama Gardening",
+        "subtitle": "Professional website for Antonio y Adama Gardening, specialists in gardening and landscaping services in Lloret de Mar."
+      },
+      "overview": {
+        "title": "Professional Gardening Project",
+        "description": "Development of a professional website for Antonio y Adama Gardening, specialists in gardening and landscaping services. The project included modern web development, local SEO optimization for gardening services and optimized presence on Google Maps to attract local customers in Lloret de Mar.",
+        "web_development": "Modern and responsive website",
+        "seo": "Optimization for gardening",
+        "google_maps": "Optimized local presence",
+        "design": "Professional interface"
+      },
+      "services": {
+        "title": "Services Implemented",
+        "subtitle": "Comprehensive solutions to enhance the digital presence of a professional gardening business",
+        "web_development": {
+          "title": "Web Development",
+          "description": "Modern and responsive website developed with the latest technologies, optimized to showcase gardening services and landscaping projects professionally."
+        },
+        "seo_specialized": {
+          "title": "Specialized SEO",
+          "description": "SEO optimization specific to gardening services, including relevant keywords like \"gardening Lloret de Mar\" and search engine optimized structure."
+        },
+        "google_maps": {
+          "title": "Google Maps",
+          "description": "Optimization of presence on Google Maps to attract local customers interested in gardening and landscaping services in Lloret de Mar."
+        },
+        "responsive_design": {
+          "title": "Responsive Design",
+          "description": "Fully responsive design that adapts perfectly to all devices, from mobile to desktop."
+        },
+        "digital_portfolio": {
+          "title": "Digital Portfolio",
+          "description": "Professional gallery to showcase gardening and landscaping projects with intuitive navigation and impactful visual presentation."
+        },
+        "contact_optimized": {
+          "title": "Optimized Contact",
+          "description": "Optimized contact forms and clear contact information to facilitate communication with potential customers."
+        }
+      },
+      "results": {
+        "title": "Results Obtained",
+        "subtitle": "Measurable impact on the architect's digital presence",
+        "seo_improvement": {
+          "title": "SEO Improvement",
+          "description": "Improved positioning in searches related to gardening and landscaping services."
+        },
+        "local_visibility": {
+          "title": "Local Visibility",
+          "description": "Greater presence on Google Maps and local searches for architecture services."
+        },
+        "more_queries": {
+          "title": "More Queries",
+          "description": "Significant increase in queries from potential customers interested in gardening services."
+        },
+        "professional_image": {
+          "title": "Professional Image",
+          "description": "Website that projects professionalism and trust, improving brand perception."
+        }
+      },
+      "cta": {
+        "title": "Need a Professional Website?",
+        "description": "Contact me today and turn your idea into reality with my professional web development experience."
+      }
+    },
+    "cafe_nuevo_jago": {
+      "hero": {
+        "title": "Cafetería",
+        "title_highlight": "Nuevo Yago",
+        "subtitle": "Complete digital transformation for cafeterianuevoyago.es. Web development, specialized local SEO and Google Maps presence optimization to increase local customers."
+      },
+      "overview": {
+        "title": "Digital Transformation for Cafeteria",
+        "description": "Comprehensive digital transformation strategy for cafeterianuevoyago.es. The project included complete web development, specialized local SEO for restaurants and Google Maps presence optimization to increase local customers.",
+        "web_development": "Modern website for cafeteria",
+        "local_seo": "Optimization for restaurants",
+        "google_maps": "Optimized local presence",
+        "digital_marketing": "Comprehensive digital strategy"
+      },
+      "services": {
+        "title": "Services Implemented",
+        "subtitle": "Comprehensive solutions to enhance the digital presence of a local cafeteria",
+        "web_development": {
+          "title": "Web Development",
+          "description": "Modern and attractive website developed specifically for cafeterias, with digital menu, product gallery and contact information."
+        },
+        "local_seo": {
+          "title": "Local SEO",
+          "description": "Local SEO optimization specialized for restaurants and cafeterias, including keywords like \"cafeteria near me\" and \"best local coffee\"."
+        },
+        "google_maps": {
+          "title": "Google Maps",
+          "description": "Complete optimization of presence on Google Maps with updated information, hours, photos and reviews to attract local customers."
+        },
+        "responsive_design": {
+          "title": "Responsive Design",
+          "description": "Fully responsive design that adapts perfectly to mobile, tablets and desktops for an optimal experience on all devices."
+        },
+        "user_experience": {
+          "title": "User Experience",
+          "description": "Intuitive and attractive interface that reflects the warmth and cozy atmosphere of the cafeteria, improving the customer experience."
+        },
+        "digital_marketing": {
+          "title": "Digital Marketing",
+          "description": "Comprehensive digital marketing strategy that includes social media management and online promotion to increase cafeteria visibility."
+        }
+      },
+      "results": {
+        "title": "Results Obtained",
+        "subtitle": "Measurable impact on the cafeteria's digital presence",
+        "local_seo_improvement": {
+          "title": "Local SEO Improvement",
+          "description": "Improved positioning in local searches related to cafeterias and restaurants."
+        },
+        "maps_visibility": {
+          "title": "Maps Visibility",
+          "description": "Greater presence on Google Maps with updated information and positive reviews."
+        },
+        "more_customers": {
+          "title": "More Customers",
+          "description": "Significant increase in the number of local customers who discover the cafeteria online."
+        },
+        "modern_image": {
+          "title": "Modern Image",
+          "description": "Website that projects modernity and professionalism, improving brand perception."
+        }
+      },
+      "cta": {
+        "title": "Need to Transform Your Local Business?",
+        "description": "Contact me today and discover how my digital transformation strategy can boost your local business."
+      }
+    }
   }
 }

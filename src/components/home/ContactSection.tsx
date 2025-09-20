@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import ContactForm from '../ui/ContactForm';
-import { PhoneIcon, MapPinIcon, ClockIcon } from 'lucide-react';
+import { PhoneIcon, MapPinIcon, ClockIcon, MailIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import SpaceBackground from '../ui/SpaceBackground';
 const ContactSection = () => {
@@ -56,6 +56,11 @@ const ContactSection = () => {
     title: t('contact.info.phone'),
     details: '+598 98 009 803',
     link: 'tel:+59898009803'
+  }, {
+    icon: <MailIcon className="w-5 h-5 text-blue-500" />,
+    title: t('contact.info.email'),
+    details: 'maxisolucionesdigitales@gmail.com',
+    link: 'mailto:maxisolucionesdigitales@gmail.com'
   }, {
     icon: <MapPinIcon className="w-5 h-5 text-blue-500" />,
     title: t('contact.info.address'),

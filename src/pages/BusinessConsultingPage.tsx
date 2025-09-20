@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState, useRef } from 'react';
 import { ArrowLeft, Users, BarChart, TrendingUp, PieChart, CheckCircle, Briefcase, Lightbulb } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import { useNavigationWithScroll } from '../components/utils/NavigationUtils';
@@ -45,12 +44,10 @@ const BusinessConsultingPage = () => {
           </button>
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-              Consultoría <span className="text-blue-300">Comercial</span>{' '}
-              Estratégica
+              {t('pages.business_consulting.title')}
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-8 md:mb-10 px-4 md:px-0">
-              Optimizo tus procesos comerciales y estrategias de ventas para
-              maximizar tus resultados de negocio.
+              {t('pages.business_consulting.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
               <button 
@@ -60,7 +57,7 @@ const BusinessConsultingPage = () => {
                 {t('pages.business_consulting.request_consultation')}
               </button>
               <a href="#areas" className="bg-transparent border-2 border-blue-400 text-blue-100 hover:text-white hover:border-white font-medium py-3 md:py-4 px-6 md:px-8 rounded-lg transition-all duration-300 text-sm md:text-base">
-                Explorar áreas de consultoría
+{t('pages.business_consulting.explore_areas')}
               </a>
             </div>
           </div>
@@ -71,12 +68,11 @@ const BusinessConsultingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Áreas de Consultoría Comercial
+              {t('pages.business_consulting.areas_title')}
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Soluciones integrales para optimizar tus procesos comerciales y
-              aumentar tus ventas
+              {t('pages.business_consulting.areas_subtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -87,31 +83,22 @@ const BusinessConsultingPage = () => {
                   <Briefcase className="h-7 w-7 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Estrategia de Ventas B2B
+                  {t('pages.business_consulting.area_b2b.title')}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Desarrollo e implementación de estrategias de venta efectivas
-                  para el mercado empresarial.
+                  {t('pages.business_consulting.area_b2b.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Análisis del ciclo de ventas
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Prospección cualificada
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Negociación estratégica
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.business_consulting.area_b2b.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -124,31 +111,22 @@ const BusinessConsultingPage = () => {
                   <Users className="h-7 w-7 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Gestión de Equipos Comerciales
+                  {t('pages.business_consulting.area_team.title')}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Optimización y capacitación de equipos de venta para maximizar
-                  su rendimiento.
+                  {t('pages.business_consulting.area_team.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Formación especializada
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Sistemas de incentivos
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Gestión del rendimiento
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.business_consulting.area_team.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -161,29 +139,22 @@ const BusinessConsultingPage = () => {
                   <PieChart className="h-7 w-7 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Optimización de Procesos
+                  {t('pages.business_consulting.area_processes.title')}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Análisis y mejora de los procesos comerciales para incrementar
-                  la eficiencia.
+                  {t('pages.business_consulting.area_processes.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Mapeo de procesos</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Eliminación de cuellos de botella
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Automatización de tareas
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.business_consulting.area_processes.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -196,29 +167,22 @@ const BusinessConsultingPage = () => {
                   <BarChart className="h-7 w-7 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Implementación de CRM
+                  {t('pages.business_consulting.area_crm.title')}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Selección e implementación de sistemas CRM adaptados a tus
-                  necesidades.
+                  {t('pages.business_consulting.area_crm.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Análisis de necesidades
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Configuración personalizada
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">Formación de usuarios</span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.business_consulting.area_crm.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -231,31 +195,22 @@ const BusinessConsultingPage = () => {
                   <TrendingUp className="h-7 w-7 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Estrategia Comercial B2C
+                  {t('pages.business_consulting.area_b2c.title')}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Desarrollo de estrategias efectivas para la venta directa al
-                  consumidor.
+                  {t('pages.business_consulting.area_b2c.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Experiencia del cliente
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Técnicas de venta persuasiva
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Fidelización de clientes
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.business_consulting.area_b2c.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -268,31 +223,22 @@ const BusinessConsultingPage = () => {
                   <Lightbulb className="h-7 w-7 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  Innovación Comercial
+                  {t('pages.business_consulting.area_innovation.title')}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Implementación de nuevas metodologías y enfoques para
-                  diferenciarte en el mercado.
+                  {t('pages.business_consulting.area_innovation.description')}
                 </p>
                 <ul className="space-y-2">
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Design Thinking aplicado
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Nuevos modelos de negocio
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">
-                      Transformación digital
-                    </span>
-                  </li>
+                  {(() => {
+                    const features = t('pages.business_consulting.area_innovation.features');
+                    const featuresArray = Array.isArray(features) ? features : [];
+                    return featuresArray.map((feature: string, index: number) => (
+                      <li key={index} className="flex items-start">
+                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ));
+                  })()}
                 </ul>
               </div>
             </div>
@@ -304,11 +250,11 @@ const BusinessConsultingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Mi Metodología
+              {t('pages.business_consulting.methodology_title')}
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Un enfoque sistemático para transformar tu área comercial
+              {t('pages.business_consulting.methodology_subtitle')}
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -318,13 +264,11 @@ const BusinessConsultingPage = () => {
                 <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
                   1
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 pl-6">
-                  Diagnóstico
+                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.diagnosis.title')}
                 </h3>
-                <p className="text-gray-600 pl-6">
-                  Analizamos a fondo tu situación actual, identificando
-                  fortalezas, debilidades y oportunidades de mejora en tus
-                  procesos comerciales.
+                <p className='text-gray-600 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.diagnosis.description')}
                 </p>
               </div>
               {/* Methodology Item 2 */}
@@ -334,12 +278,11 @@ const BusinessConsultingPage = () => {
                 <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
                   2
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 pl-6">
-                  Planificación Estratégica
+                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.planning.title')}
                 </h3>
-                <p className="text-gray-600 pl-6">
-                  Diseñamos un plan de acción personalizado con objetivos
-                  claros, indicadores de rendimiento y plazos definidos.
+                <p className='text-gray-600 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.planning.description')}
                 </p>
               </div>
               {/* Methodology Item 3 */}
@@ -349,13 +292,11 @@ const BusinessConsultingPage = () => {
                 <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
                   3
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 pl-6">
-                  Implementación
+                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.implementation.title')}
                 </h3>
-                <p className="text-gray-600 pl-6">
-                  Ejecutamos las estrategias definidas, acompañándote en cada
-                  paso para asegurar una correcta adopción por parte de tu
-                  equipo.
+                <p className='text-gray-600 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.implementation.description')}
                 </p>
               </div>
               {/* Methodology Item 4 */}
@@ -365,12 +306,11 @@ const BusinessConsultingPage = () => {
                 <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
                   4
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 pl-6">
-                  Formación
+                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.training.title')}
                 </h3>
-                <p className="text-gray-600 pl-6">
-                  Capacitamos a tu equipo comercial con las habilidades y
-                  conocimientos necesarios para ejecutar las nuevas estrategias.
+                <p className='text-gray-600 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.training.description')}
                 </p>
               </div>
               {/* Methodology Item 5 */}
@@ -380,12 +320,11 @@ const BusinessConsultingPage = () => {
                 <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
                   5
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 pl-6">
-                  Seguimiento
+                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.monitoring.title')}
                 </h3>
-                <p className="text-gray-600 pl-6">
-                  Monitorizamos los resultados, realizando ajustes necesarios
-                  para asegurar el cumplimiento de los objetivos establecidos.
+                <p className='text-gray-600 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.monitoring.description')}
                 </p>
               </div>
               {/* Methodology Item 6 */}
@@ -395,12 +334,11 @@ const BusinessConsultingPage = () => {
                 <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
                   6
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 pl-6">
-                  Optimización Continua
+                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.optimization.title')}
                 </h3>
-                <p className="text-gray-600 pl-6">
-                  Evaluamos periódicamente los resultados y refinamos las
-                  estrategias para asegurar una mejora constante a largo plazo.
+                <p className='text-gray-600 pl-6'>
+                  {t('pages.business_consulting.methodology_steps.optimization.description')}
                 </p>
               </div>
             </div>
@@ -412,11 +350,11 @@ const BusinessConsultingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Beneficios de Mi Consultoría
+              {t('pages.business_consulting.benefits_title')}
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Resultados tangibles que transformarán tu área comercial
+              {t('pages.business_consulting.benefits_subtitle')}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -426,11 +364,10 @@ const BusinessConsultingPage = () => {
                 <TrendingUp className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Incremento de Ventas
+                {t('pages.business_consulting.benefits.sales.title')}
               </h3>
               <p className="text-gray-600">
-                Aumento significativo en la conversión y el volumen de ventas
-                gracias a estrategias optimizadas.
+                {t('pages.business_consulting.benefits.sales.description')}
               </p>
             </div>
             {/* Benefit Card 2 */}
@@ -441,11 +378,10 @@ const BusinessConsultingPage = () => {
                 <Users className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Equipos Más Eficientes
+                {t('pages.business_consulting.benefits.efficiency.title')}
               </h3>
               <p className="text-gray-600">
-                Mayor productividad y motivación en tus equipos comerciales con
-                procesos claros y formación adecuada.
+                {t('pages.business_consulting.benefits.efficiency.description')}
               </p>
             </div>
             {/* Benefit Card 3 */}
@@ -456,11 +392,10 @@ const BusinessConsultingPage = () => {
                 <PieChart className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Procesos Optimizados
+                {t('pages.business_consulting.benefits.processes.title')}
               </h3>
               <p className="text-gray-600">
-                Eliminación de ineficiencias y automatización de tareas para
-                reducir costos y aumentar la productividad.
+                {t('pages.business_consulting.benefits.processes.description')}
               </p>
             </div>
             {/* Benefit Card 4 */}
@@ -471,11 +406,10 @@ const BusinessConsultingPage = () => {
                 <BarChart className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Mejor Toma de Decisiones
+                {t('pages.business_consulting.benefits.decisions.title')}
               </h3>
               <p className="text-gray-600">
-                Acceso a datos relevantes y KPIs claros para tomar decisiones
-                informadas y estratégicas.
+                {t('pages.business_consulting.benefits.decisions.description')}
               </p>
             </div>
             {/* Benefit Card 5 */}
@@ -486,11 +420,10 @@ const BusinessConsultingPage = () => {
                 <Briefcase className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Ventaja Competitiva
+                {t('pages.business_consulting.benefits.competitive.title')}
               </h3>
               <p className="text-gray-600">
-                Diferenciación en el mercado con estrategias innovadoras y
-                enfocadas en el cliente.
+                {t('pages.business_consulting.benefits.competitive.description')}
               </p>
             </div>
             {/* Benefit Card 6 */}
@@ -501,11 +434,10 @@ const BusinessConsultingPage = () => {
                 <Lightbulb className="h-6 w-6 text-blue-600" />
               </div>
               <h3 className="text-xl font-bold mb-2 text-gray-900">
-                Cultura de Mejora Continua
+                {t('pages.business_consulting.benefits.culture.title')}
               </h3>
               <p className="text-gray-600">
-                Implementación de una mentalidad de crecimiento y optimización
-                constante en tu equipo.
+                {t('pages.business_consulting.benefits.culture.description')}
               </p>
             </div>
           </div>
@@ -515,11 +447,10 @@ const BusinessConsultingPage = () => {
       <AnimatedSection className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Potencia tu Área Comercial
+            {t('pages.business_consulting.cta_title')}
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-            Solicita una consulta inicial gratuita y descubre cómo mi
-            consultoría comercial puede transformar tu negocio.
+            {t('pages.business_consulting.cta_subtitle')}
           </p>
           <button 
             onClick={() => navigateToHomeWithScroll('contacto')}
