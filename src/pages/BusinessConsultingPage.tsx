@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Users, BarChart, TrendingUp, PieChart, CheckCircle, Briefcase, Lightbulb } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import { useNavigationWithScroll } from '../components/utils/NavigationUtils';
 const BusinessConsultingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);
+  const { navigateToHomeWithScroll } = useNavigationWithScroll();
   useEffect(() => {
     setIsVisible(true);
     const handleScroll = () => {
@@ -46,9 +48,12 @@ const BusinessConsultingPage = () => {
               maximizar tus resultados de negocio.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/#contacto" className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+              <button 
+                onClick={() => navigateToHomeWithScroll('contacto')}
+                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              >
                 Solicitar asesoría
-              </Link>
+              </button>
               <a href="#areas" className="bg-transparent border-2 border-blue-400 text-blue-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
                 Explorar áreas de consultoría
               </a>
@@ -294,7 +299,7 @@ const BusinessConsultingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Nuestra Metodología
+              Mi Metodología
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
@@ -402,7 +407,7 @@ const BusinessConsultingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Beneficios de Nuestra Consultoría
+              Beneficios de Mi Consultoría
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
@@ -508,12 +513,15 @@ const BusinessConsultingPage = () => {
             Potencia tu Área Comercial
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-            Solicita una consulta inicial gratuita y descubre cómo nuestra
+            Solicita una consulta inicial gratuita y descubre cómo mi
             consultoría comercial puede transformar tu negocio.
           </p>
-          <Link to="/#contacto" className="bg-white text-blue-600 hover:bg-blue-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block">
+          <button 
+            onClick={() => navigateToHomeWithScroll('contacto')}
+            className="bg-white text-blue-600 hover:bg-blue-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
+          >
             Solicitar consulta gratuita
-          </Link>
+          </button>
         </div>
       </AnimatedSection>
       <style jsx>{`

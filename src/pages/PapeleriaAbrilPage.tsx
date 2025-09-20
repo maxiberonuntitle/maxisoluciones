@@ -110,7 +110,7 @@ const PapeleriaAbrilPage = () => {
                 <div className="rounded-xl overflow-hidden border-2 border-gray-800 shadow-xl" style={{
                 boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)'
               }}>
-                  <img src="https://images.unsplash.com/photo-1472289065668-ce650ac443d2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="Papelería local con útiles escolares" className="w-full h-auto aspect-video object-cover" />
+                  <img src="/src/public/papeleriaaabril.png" alt="Papelería local con útiles escolares" className="w-full h-auto aspect-video object-cover" />
                 </div>
               </div>
               <div className="md:w-1/2 animate-on-scroll opacity-0 translate-y-8" style={{
@@ -219,7 +219,7 @@ const PapeleriaAbrilPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold mb-10 text-white text-center animate-on-scroll opacity-0 translate-y-8">
-              Nuestra solución
+              Mi solución
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {/* Solution Card 1 */}
@@ -302,7 +302,7 @@ const PapeleriaAbrilPage = () => {
                   </div>
                 </div>
                 <div className="relative h-64 bg-gray-800 rounded-lg overflow-hidden">
-                  <img src="https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80" alt="Diseño moderno de sitio web" className="w-full h-full object-cover" />
+                  <img src="/src/public/papeleriaaabril.png" alt="Diseño moderno de sitio web" className="w-full h-full object-cover" />
                   <div className="absolute right-4 bottom-4 bg-cyan-600 text-white text-xs font-medium px-3 py-1 rounded-full shadow-lg">
                     Después
                   </div>

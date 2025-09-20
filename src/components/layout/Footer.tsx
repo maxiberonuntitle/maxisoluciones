@@ -1,16 +1,35 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon, MailIcon, PhoneIcon, MapPinIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { useLocation } from 'react-router-dom';
 const Footer = () => {
   const {
     t
   } = useLanguage();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
   const footerRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [mousePosition, setMousePosition] = useState({
     x: 0,
     y: 0
   });
+
+  const scrollToSection = (sectionId: string) => {
+    if (isHomePage) {
+      // If on home page, scroll to section
+      const section = document.getElementById(sectionId);
+      if (section) {
+        window.scrollTo({
+          top: section.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // If on another page, navigate to home page with hash
+      window.location.href = `/#${sectionId}`;
+    }
+  };
   useEffect(() => {
     const handleScroll = () => {
       if (!footerRef.current) return;
@@ -130,22 +149,22 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">{t('footer_links')}</h3>
             <ul className="space-y-2">
               <li>
-                <a href="#inicio" className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
+                <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('inicio'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
                   {t('inicio')}
                 </a>
               </li>
               <li>
-                <a href="#por-qué-elegirnos" className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
+                <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('por-qué-elegirnos'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
                   {t('por_que_elegirnos')}
                 </a>
               </li>
               <li>
-                <a href="#proyectos" className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
+                <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('proyectos'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
                   {t('proyectos')}
                 </a>
               </li>
               <li>
-                <a href="#contacto" className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
+                <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('contacto'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
                   {t('contacto')}
                 </a>
               </li>

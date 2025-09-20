@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
+import { Link } from 'react-router-dom';
 import SpaceBackground from '../ui/SpaceBackground';
 const TechnologiesSection = () => {
   const {
@@ -44,26 +45,25 @@ const TechnologiesSection = () => {
     setTimeout(handleScroll, 50);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY]);
-  // Technologies without category
-  const technologies = [{
-    name: 'React',
-    category: 'stack'
-  }, {
-    name: 'TypeScript',
-    category: 'stack'
-  }, {
-    name: 'JavaScript',
-    category: 'stack'
-  }, {
-    name: 'Node.js',
-    category: 'stack'
-  }, {
-    name: 'TailwindCSS',
-    category: 'stack'
-  }, {
-    name: 'Vite',
-    category: 'stack'
-  }];
+  // Technologies list without categories or icons
+  const technologies = [
+    'React',
+    'Next.js',
+    'TypeScript',
+    'JavaScript',
+    'HTML5',
+    'CSS3',
+    'TailwindCSS',
+    'Node.js',
+    '.NET',
+    'C#',
+    'MongoDB',
+    'PostgreSQL',
+    'SQL',
+    'Git',
+    'GitHub',
+    'Vite'
+  ];
   return <section id="tecnologias" className="py-20 bg-gray-950 relative overflow-hidden" ref={sectionRef}>
       {/* Background elements - updated for retro-futuristic style */}
       <div className="absolute inset-0 pointer-events-none">
@@ -97,23 +97,66 @@ const TechnologiesSection = () => {
           <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
           <p className="text-xl text-blue-200">{t('tech_subtitle')}</p>
         </div>
-        {/* Technologies grid - without category header */}
-        <div className="space-y-12">
-          <div className="tech-animate tech-slide-up">
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-6 gap-6">
-              {technologies.map((tech, techIndex) => <div key={tech.name} className="tech-animate tech-expand bg-blue-900/30 backdrop-blur-sm rounded-lg p-6 flex flex-col items-center justify-center transition-all duration-500 hover:-translate-y-2 hover:shadow-lg hover:bg-blue-800/40 border border-blue-800/30 group" style={{
-              transitionDelay: `${techIndex * 50}ms`
-            }} data-scroll={scrollDirection}>
-                  {/* Nombre de tecnología con efecto hover */}
-                  <span className="text-xl font-bold text-blue-100 transition-all duration-300 group-hover:text-white group-hover:scale-110">
-                    {tech.name}
+        {/* Technologies Grid - All together */}
+        <div className="tech-animate tech-slide-up">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
+            {technologies.map((tech, techIndex) => (
+              <div 
+                key={tech} 
+                className="tech-animate tech-expand group relative" 
+                style={{
+                  transitionDelay: `${techIndex * 50}ms`
+                }} 
+                data-scroll={scrollDirection}
+              >
+                {/* Main Card */}
+                <div className="bg-gradient-to-br from-gray-800/40 to-gray-900/60 backdrop-blur-sm rounded-xl p-6 flex flex-col items-center justify-center transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl border border-gray-700/30 group-hover:border-blue-400/50 relative overflow-hidden h-24">
+                  
+                  {/* Background Pattern */}
+                  <div className="absolute inset-0 opacity-5">
+                    <div className="absolute inset-0" style={{
+                      backgroundImage: 'radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 1px, transparent 1px)',
+                      backgroundSize: '20px 20px'
+                    }}></div>
+                  </div>
+                  
+                  {/* Glow Effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 opacity-0 group-hover:opacity-100 transition-all duration-500 blur-sm rounded-xl"></div>
+                  
+                  {/* Tech Name with better typography */}
+                  <span className="relative z-10 text-sm font-semibold text-gray-200 transition-all duration-300 group-hover:text-white text-center leading-tight">
+                    {tech}
                   </span>
-                  {/* Efecto de brillo al hacer hover */}
-                  <div className="mt-2 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-indigo-400 group-hover:w-full transition-all duration-300"></div>
-                  {/* Efecto de halo */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-indigo-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
-                </div>)}
-            </div>
+                  
+                  {/* Progress bar effect */}
+                  <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-700/50 rounded-b-xl overflow-hidden">
+                    <div className="h-full bg-gradient-to-r from-blue-400 to-indigo-500 w-0 group-hover:w-full transition-all duration-700 ease-out"></div>
+                  </div>
+                  
+                  {/* Corner accent */}
+                  <div className="absolute top-2 right-2 w-3 h-3 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                  
+                  {/* Hover border effect */}
+                  <div className="absolute inset-0 rounded-xl border-2 border-transparent group-hover:border-blue-400/30 transition-all duration-300"></div>
+                </div>
+                
+                {/* Floating particles effect */}
+                <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  {[...Array(3)].map((_, i) => (
+                    <div 
+                      key={i}
+                      className="absolute w-1 h-1 bg-blue-400 rounded-full animate-ping"
+                      style={{
+                        top: `${20 + i * 30}%`,
+                        left: `${10 + i * 40}%`,
+                        animationDelay: `${i * 0.5}s`,
+                        animationDuration: '2s'
+                      }}
+                    ></div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
         {/* Floating code snippets */}
@@ -126,9 +169,9 @@ const TechnologiesSection = () => {
                   {t('tech_project_question')}
                 </h3>
                 <p className="text-blue-200 mb-6">{t('tech_project_desc')}</p>
-                <a href="#contacto" className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1">
+                <Link to="/#contacto" className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20 hover:-translate-y-1">
                   {t('tech_project_cta')}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -158,14 +201,15 @@ const TechnologiesSection = () => {
           transform: translateY(0);
           opacity: 1;
         }
-        /* Expand animation for tech cards */
+        /* Enhanced expand animation for tech cards */
         .tech-expand {
-          transform: scale(0.8);
+          transform: scale(0.8) translateY(20px);
+          opacity: 0;
         }
         .tech-expand.active {
-          transform: scale(1);
+          transform: scale(1) translateY(0);
           opacity: 1;
-          animation: techPulse 0.5s ease-out;
+          animation: techPulse 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         /* Fade in animation */
         .tech-fade {
@@ -185,13 +229,20 @@ const TechnologiesSection = () => {
         }
         @keyframes techPulse {
           0% {
-            transform: scale(0.8);
+            transform: scale(0.8) translateY(20px);
+            opacity: 0;
           }
           50% {
-            transform: scale(1.05);
+            transform: scale(1.05) translateY(-5px);
+            opacity: 0.8;
+          }
+          75% {
+            transform: scale(0.98) translateY(2px);
+            opacity: 1;
           }
           100% {
-            transform: scale(1);
+            transform: scale(1) translateY(0);
+            opacity: 1;
           }
         }
         @keyframes techReveal {
@@ -206,10 +257,35 @@ const TechnologiesSection = () => {
         .tech-animate[data-scroll='up'].active {
           transition-delay: 0s;
         }
+        /* Enhanced hover effects */
+        .tech-expand:hover {
+          transform: translateY(-8px) scale(1.02);
+        }
+        
+        /* Staggered animation improvements */
+        .tech-expand:nth-child(1) { transition-delay: 0ms; }
+        .tech-expand:nth-child(2) { transition-delay: 100ms; }
+        .tech-expand:nth-child(3) { transition-delay: 200ms; }
+        .tech-expand:nth-child(4) { transition-delay: 300ms; }
+        .tech-expand:nth-child(5) { transition-delay: 400ms; }
+        .tech-expand:nth-child(6) { transition-delay: 500ms; }
+        
         /* Mobile optimizations */
         @media (max-width: 768px) {
           .tech-animate {
             transition-duration: 0.5s;
+          }
+          .tech-expand {
+            transform: scale(0.9) translateY(10px);
+          }
+          .tech-expand.active {
+            transform: scale(1) translateY(0);
+          }
+        }
+        
+        @media (max-width: 640px) {
+          .tech-expand {
+            transform: scale(0.85) translateY(15px);
           }
         }
         /* Digital scanlines */

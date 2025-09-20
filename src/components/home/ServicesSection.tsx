@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Code, LineChart, Lightbulb } from 'lucide-react';
 import ServiceCard from '../ui/ServiceCard';
 import { useLanguage } from '../context/LanguageContext';
-import SpaceBackground from '../ui/SpaceBackground';
 const ServicesSection = () => {
   const {
     t
@@ -125,7 +124,7 @@ const ServicesSection = () => {
         </div>
       </div>
       {/* Custom animations for service elements */}
-      <style jsx>{`
+      <style>{`
         /* Base styles for service animations */
         .service-animate {
           opacity: 0;

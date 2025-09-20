@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { ChevronRightIcon, MousePointerClickIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { Link } from 'react-router-dom';
 import NotebookImage from './NotebookImage';
 const HeroSection = () => {
   const {
@@ -107,14 +108,14 @@ const HeroSection = () => {
               </p>
             </div>
             <div className={`flex flex-col sm:flex-row gap-4 transition-all duration-1000 delay-500 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <a href="#contacto" className="group bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] relative overflow-hidden">
+              <Link to="/#contacto" className="group bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-500 transform hover:scale-105 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] relative overflow-hidden">
                 <span className="relative z-10 flex items-center justify-center">
                   {t('hero_cta_primary')}
                   <ChevronRightIcon className="ml-2 w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                 </span>
                 <span className="absolute inset-0 bg-gradient-to-r from-cyan-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></span>
                 <span className="absolute top-0 left-0 w-full h-full bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
-              </a>
+              </Link>
               <a href="#servicios" className="group bg-transparent border-2 border-cyan-400 text-cyan-400 hover:border-cyan-300 hover:text-cyan-300 font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center relative overflow-hidden">
                 <span className="relative z-10">{t('hero_cta_secondary')}</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-300 group-hover:w-full transition-all duration-300 ease-in-out"></span>

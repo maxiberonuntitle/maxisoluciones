@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Code, Server, Smartphone, Globe, CheckCircle, Users, Zap } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import { useNavigationWithScroll } from '../components/utils/NavigationUtils';
 const WebDevelopmentPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);
+  const { navigateToHomeWithScroll } = useNavigationWithScroll();
   useEffect(() => {
     setIsVisible(true);
     const handleScroll = () => {
@@ -45,11 +47,14 @@ const WebDevelopmentPage = () => {
               rendimiento y experiencia de usuario.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/#contacto" className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+              <button 
+                onClick={() => navigateToHomeWithScroll('contacto')}
+                className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              >
                 Solicitar presupuesto
-              </Link>
+              </button>
               <a href="#proceso" className="bg-transparent border-2 border-blue-400 text-blue-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
-                Ver nuestro proceso
+                Ver mi proceso
               </a>
             </div>
           </div>
@@ -60,7 +65,7 @@ const WebDevelopmentPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Nuestros Servicios de Desarrollo
+              Mis Servicios de Desarrollo
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
@@ -271,7 +276,7 @@ const WebDevelopmentPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Nuestro Proceso de Desarrollo
+              Mi Proceso de Desarrollo
             </h2>
             <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
@@ -331,7 +336,7 @@ const WebDevelopmentPage = () => {
                       Desarrollo
                     </h3>
                     <p className="text-gray-600">
-                      Nuestros desarrolladores implementan el diseño utilizando
+                      Implemento el diseño utilizando
                       las tecnologías más adecuadas para tu proyecto, asegurando
                       código limpio, eficiente y escalable.
                     </p>
@@ -392,12 +397,15 @@ const WebDevelopmentPage = () => {
             ¿Listo para iniciar tu proyecto?
           </h2>
           <p className="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-            Contáctanos hoy mismo y convierte tu idea en realidad con nuestro
+            Contáctame hoy mismo y convierte tu idea en realidad con mi
             equipo de expertos en desarrollo web.
           </p>
-          <Link to="/#contacto" className="bg-white text-blue-600 hover:bg-blue-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block">
+          <button 
+            onClick={() => navigateToHomeWithScroll('contacto')}
+            className="bg-white text-blue-600 hover:bg-blue-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
+          >
             Solicitar presupuesto gratuito
-          </Link>
+          </button>
         </div>
       </AnimatedSection>
       <style jsx>{`

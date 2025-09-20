@@ -21,7 +21,7 @@ const ServiceCard = ({
     t
   } = useLanguage();
   const [isHovered, setIsHovered] = useState(false);
-  return <div className="group bg-gray-900/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-2 relative will-change-transform" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+  return <Link to={service.link || '#contacto'} className="block group bg-gray-900/80 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:-translate-y-2 relative will-change-transform cursor-pointer" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
       {/* Animated gradient border on hover */}
       <div className={`absolute inset-0 bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-xl -z-10 blur-sm`}></div>
       <div className="p-8 relative z-10">
@@ -55,10 +55,10 @@ const ServiceCard = ({
         </ul>
       </div>
       <div className="px-8 py-4 bg-gray-800/50 border-t border-gray-700/30 transition-all duration-300 group-hover:bg-gray-800/80 group-hover:border-cyan-800/30 relative overflow-hidden">
-        <Link to={service.link || '#contacto'} className="text-cyan-300 font-medium hover:text-cyan-200 transition-all duration-300 flex items-center relative z-10 group-hover:translate-x-2">
-          Ver más detalles
+        <div className="text-cyan-300 font-medium hover:text-cyan-200 transition-all duration-300 flex items-center relative z-10 group-hover:translate-x-2">
+          {t('view_details')}
           <ArrowRightIcon className="h-4 w-4 ml-1 transition-transform duration-300 group-hover:translate-x-1" />
-        </Link>
+        </div>
         {/* Animated background on hover */}
         <div className={`absolute bottom-0 left-0 h-full bg-gradient-to-r from-gray-800/50 to-gray-700/50 transition-all duration-500 ease-in-out ${isHovered ? 'w-full' : 'w-0'}`}></div>
       </div>
@@ -90,6 +90,6 @@ const ServiceCard = ({
           transition-delay: 200ms;
         }
       `}</style>
-    </div>;
+    </Link>;
 };
 export default ServiceCard;

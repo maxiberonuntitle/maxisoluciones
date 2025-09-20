@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Search, BarChart, LineChart, Mail, Target, CheckCircle, TrendingUp, Globe } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
+import { useNavigationWithScroll } from '../components/utils/NavigationUtils';
 const DigitalMarketingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const pageRef = useRef<HTMLDivElement>(null);
+  const { navigateToHomeWithScroll } = useNavigationWithScroll();
   useEffect(() => {
     setIsVisible(true);
     const handleScroll = () => {
@@ -46,9 +48,12 @@ const DigitalMarketingPage = () => {
               aumentan la visibilidad de tu marca.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/#contacto" className="bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+              <button 
+                onClick={() => navigateToHomeWithScroll('contacto')}
+                className="bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              >
                 Solicitar estrategia
-              </Link>
+              </button>
               <a href="#servicios-marketing" className="bg-transparent border-2 border-indigo-400 text-indigo-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300">
                 Explorar servicios
               </a>
@@ -61,7 +66,7 @@ const DigitalMarketingPage = () => {
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              Nuestros Servicios de Marketing
+              Mis Servicios de Marketing
             </h2>
             <div className="w-20 h-1 bg-indigo-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
@@ -284,7 +289,7 @@ const DigitalMarketingPage = () => {
             </h2>
             <div className="w-20 h-1 bg-indigo-500 mx-auto mb-6"></div>
             <p className="text-xl text-gray-600">
-              Nuestras estrategias de marketing digital están orientadas a
+              Mis estrategias de marketing digital están orientadas a
               resultados medibles
             </p>
           </div>
@@ -355,12 +360,15 @@ const DigitalMarketingPage = () => {
             Potencia tu Presencia Digital
           </h2>
           <p className="text-xl text-indigo-100 mb-10 max-w-3xl mx-auto">
-            Solicita una consultoría gratuita y descubre cómo nuestras
+            Solicita una consultoría gratuita y descubre cómo mis
             estrategias de marketing digital pueden impulsar tu negocio.
           </p>
-          <Link to="/#contacto" className="bg-white text-indigo-600 hover:bg-indigo-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block">
+          <button 
+            onClick={() => navigateToHomeWithScroll('contacto')}
+            className="bg-white text-indigo-600 hover:bg-indigo-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"
+          >
             Solicitar consultoría gratuita
-          </Link>
+          </button>
         </div>
       </AnimatedSection>
       <style jsx>{`

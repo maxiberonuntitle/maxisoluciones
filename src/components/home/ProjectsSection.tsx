@@ -46,23 +46,32 @@ const ProjectsSection = () => {
   }, [lastScrollY]);
   const projects = [{
     id: 1,
-    title: 'SEO y Desarrollo Web Papelería Abril Tacuarembó',
-    category: 'Desarrollo Web',
-    description: 'Transformación digital para una papelería local con visión moderna, mejorando su visibilidad en Google y modernizando su imagen online.',
-    image: 'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80',
+    title: 'Papelería Abril',
+    category: 'Papelería',
+    location: 'Tacuarembó',
+    description: 'Servicios aplicados: Desarrollo Web, SEO, Google Maps, Responsive Design. Transformación digital completa para una papelería local con desarrollo web moderno, optimización SEO avanzada y presencia destacada en Google Maps.',
+    image: '/src/public/papeleriaaabril.png',
+    link: '/proyectos/papeleria-abril',
+    technologies: ['Desarrollo Web', 'SEO', 'Google Maps', 'Responsive Design'],
     showCaseStudy: true
   }, {
     id: 2,
-    title: 'Desarrollo Web antonioyadama.es',
-    category: 'Desarrollo Web',
-    description: 'Sitio web profesional para Antonio Yadama, arquitecto especializado en diseño sostenible y proyectos residenciales innovadores.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+    title: 'Antonio y Adama Jardinería',
+    category: 'Jardinería',
+    location: 'Lloret de Mar',
+    description: 'Servicios aplicados: Desarrollo Web, SEO, Google Maps, Diseño Profesional. Sitio web profesional para especialistas en servicios de jardinería y paisajismo con optimización SEO local y presencia en Google Maps.',
+    image: '/src/public/antonioyadamajardineria.png',
+    link: '/proyectos/antonio-yadama',
+    technologies: ['Desarrollo Web', 'SEO', 'Google Maps', 'Diseño Profesional']
   }, {
     id: 3,
-    title: 'Cafetería Nuevo Yago - Transformación Digital',
-    category: 'Marketing Digital',
-    description: 'Estrategia integral de marketing digital y presencia online para cafeterianuevoyago.es, incluyendo SEO local y gestión de redes sociales.',
-    image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'
+    title: 'Cafetería Nuevo Jago',
+    category: 'Cafetería',
+    location: 'Madrid',
+    description: 'Servicios aplicados: Desarrollo Web, SEO Local, Google Maps, Marketing Digital. Estrategia integral de transformación digital con desarrollo web completo, SEO local especializado para restaurantes y optimización de presencia en Google Maps.',
+    image: '/src/public/cafefeterianuevojago.png',
+    link: '/proyectos/cafe-nuevo-jago',
+    technologies: ['Desarrollo Web', 'SEO Local', 'Google Maps', 'Marketing Digital']
   }];
   return <section id="proyectos" className="py-20 bg-gradient-to-b from-gray-950 to-indigo-950 relative overflow-hidden" ref={sectionRef}>
       {/* Background elements - updated for retro-futuristic look */}

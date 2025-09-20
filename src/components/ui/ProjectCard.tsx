@@ -44,7 +44,8 @@ const ProjectCard = ({
     setIsHovered(false);
   };
   return <>
-      <div ref={cardRef} className="overflow-hidden rounded-xl shadow-lg group cursor-pointer transition-all duration-500 ease-out transform-gpu bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700/30 will-change-transform relative" onMouseEnter={() => setIsHovered(true)} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove}>
+      <Link to={project.link || '#proyectos'} className="block">
+        <div ref={cardRef} className="overflow-hidden rounded-xl shadow-lg group cursor-pointer transition-all duration-500 ease-out transform-gpu bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700/30 will-change-transform relative" onMouseEnter={() => setIsHovered(true)} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove}>
         {/* Card image with enhanced effects */}
         <div className="relative h-64 overflow-hidden">
           {/* Animated gradient overlay */}
@@ -67,19 +68,16 @@ const ProjectCard = ({
         </div>
         {/* Card content with improved styling */}
         <div className="p-6 relative z-10">
-          <h3 className={`text-xl font-bold mb-3 transition-all duration-300 ${isHovered ? 'text-cyan-400' : 'text-white'}`}>
+          <h3 className={`text-xl font-bold mb-2 transition-all duration-300 ${isHovered ? 'text-cyan-400' : 'text-white'}`}>
             {project.title}
           </h3>
+          <p className={`text-sm mb-3 transition-all duration-300 ${isHovered ? 'text-cyan-300' : 'text-gray-400'}`}>
+            {project.location}
+          </p>
           <p className={`transition-all duration-300 line-clamp-3 ${isHovered ? 'text-blue-100' : 'text-gray-300'}`}>
             {project.description}
           </p>
-          {/* Action button with enhanced animation - only in bottom right corner */}
-          <div className="mt-4 flex justify-end">
-            <Link to={project.showCaseStudy ? '/proyectos/papeleria-abril' : '#proyectos'} className={`flex items-center text-sm font-medium transition-all duration-300 ${isHovered ? 'text-cyan-400 translate-x-0 opacity-100' : 'text-blue-300/70 -translate-x-4 opacity-0'}`}>
-              {t('view_details')}
-              <ArrowRightIcon className={`w-4 h-4 ml-1.5 transition-transform duration-300 ${isHovered ? 'translate-x-1' : 'translate-x-0'}`} />
-            </Link>
-          </div>
+          {/* Removed visible link - card is now completely clickeable */}
         </div>
         {/* New overlay content with space theme - WITHOUT the duplicate button */}
         <div className={`absolute inset-0 bg-gradient-to-br from-gray-900/95 to-indigo-900/95 flex items-center justify-center p-6 transition-all duration-500 ${isHovered ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
@@ -149,6 +147,7 @@ const ProjectCard = ({
           }
         }
       `}</style>
+      </Link>
     </>;
 };
 export default ProjectCard;

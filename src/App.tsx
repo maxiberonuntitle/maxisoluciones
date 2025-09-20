@@ -12,6 +12,8 @@ import WebDevelopmentPage from './pages/WebDevelopmentPage';
 import DigitalMarketingPage from './pages/DigitalMarketingPage';
 import BusinessConsultingPage from './pages/BusinessConsultingPage';
 import PapeleriaAbrilPage from './pages/PapeleriaAbrilPage';
+import AntonioYadamaPage from './pages/AntonioYadamaPage';
+import CafeNuevoJagoPage from './pages/CafeNuevoJagoPage';
 import WhatsAppButton from './components/ui/WhatsAppButton';
 import ScrollToTopButton from './components/ui/ScrollToTopButton';
 import AnimatedParticles from './components/ui/AnimatedParticles';
@@ -79,6 +81,8 @@ export function App() {
               <Route path="/servicios/marketing-digital" element={<DigitalMarketingPage />} />
               <Route path="/servicios/consultoria-comercial" element={<BusinessConsultingPage />} />
               <Route path="/proyectos/papeleria-abril" element={<PapeleriaAbrilPage />} />
+              <Route path="/proyectos/antonio-yadama" element={<AntonioYadamaPage />} />
+              <Route path="/proyectos/cafe-nuevo-jago" element={<CafeNuevoJagoPage />} />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
