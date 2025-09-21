@@ -43,14 +43,13 @@ const ProjectsSection = () => {
   }, [lastScrollY]);
   const projects = [{
     id: 1,
-    title: 'Papelería Abril',
-    category: 'Papelería',
-    location: 'Tacuarembó',
-    description: `${t('projects.services_applied')}: ${t('projects.web_development')}, ${t('projects.seo')}, ${t('projects.google_maps')}, ${t('projects.responsive_design')}. ${t('projects.papeleria_abril.description')}`,
-    image: '/papeleriaaabril.png',
-    link: '/proyectos/papeleria-abril',
-    technologies: [t('projects.web_development'), t('projects.seo'), t('projects.google_maps'), t('projects.responsive_design')],
-    showCaseStudy: true
+    title: 'Cafetería Nuevo Yago',
+    category: 'Cafetería',
+    location: 'Madrid',
+    description: `${t('projects.services_applied')}: ${t('projects.web_development')}, ${t('projects.local_seo')}, ${t('projects.google_maps')}, ${t('projects.digital_marketing')}. ${t('projects.cafe_nuevo_jago.description')}`,
+    image: '/cafefeterianuevojago.png',
+    link: '/proyectos/cafe-nuevo-jago',
+    technologies: [t('projects.web_development'), t('projects.local_seo'), t('projects.google_maps'), t('projects.digital_marketing')]
   }, {
     id: 2,
     title: 'Antonio y Adama Jardinería',
@@ -62,13 +61,14 @@ const ProjectsSection = () => {
     technologies: [t('projects.web_development'), t('projects.seo'), t('projects.google_maps'), t('projects.professional_design')]
   }, {
     id: 3,
-    title: 'Cafetería Nuevo Jago',
-    category: 'Cafetería',
-    location: 'Madrid',
-    description: `${t('projects.services_applied')}: ${t('projects.web_development')}, ${t('projects.local_seo')}, ${t('projects.google_maps')}, ${t('projects.digital_marketing')}. ${t('projects.cafe_nuevo_jago.description')}`,
-    image: '/cafefeterianuevojago.png',
-    link: '/proyectos/cafe-nuevo-jago',
-    technologies: [t('projects.web_development'), t('projects.local_seo'), t('projects.google_maps'), t('projects.digital_marketing')]
+    title: 'Papelería Abril',
+    category: 'Papelería',
+    location: 'Tacuarembó',
+    description: `${t('projects.services_applied')}: ${t('projects.web_development')}, ${t('projects.seo')}, ${t('projects.google_maps')}, ${t('projects.responsive_design')}. ${t('projects.papeleria_abril.description')}`,
+    image: '/papeleriaaabril.png',
+    link: '/proyectos/papeleria-abril',
+    technologies: [t('projects.web_development'), t('projects.seo'), t('projects.google_maps'), t('projects.responsive_design')],
+    showCaseStudy: true
   }];
   return <section id="proyectos" className="py-20 bg-gradient-to-b from-gray-950 to-indigo-950 relative overflow-hidden" ref={sectionRef}>
       {/* Background elements - updated for retro-futuristic look */}

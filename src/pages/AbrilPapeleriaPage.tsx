@@ -125,13 +125,13 @@ const AbrilPapeleriaPage = () => {
                   artículos de oficina y regalos personalizados.
                 </p>
                 <p className="text-gray-300 mb-6">
-                  Con más de 10 años de experiencia en el mercado, buscaban
+                  Con una visión moderna y emprendedora, buscaban
                   modernizar su presencia digital para llegar a más clientes en
                   su región.
                 </p>
                 <div className="flex items-center text-cyan-400 font-medium">
                   <Clock className="w-5 h-5 mr-2" />
-                  <span>Establecido desde 2013</span>
+                  <span>Establecido desde 2022</span>
                 </div>
               </div>
             </div>
@@ -388,61 +388,29 @@ const AbrilPapeleriaPage = () => {
         </div>
       </section>
 
-      {/* Testimonial Section */}
+      {/* CTA Section */}
       <section ref={el => sectionRefs.current[5] = el as HTMLDivElement} className="py-16 bg-gray-900">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-8 md:p-10 border border-gray-700 relative overflow-hidden">
-              {/* Decorative elements */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-600/10 rounded-full blur-3xl"></div>
-              {/* Quote mark */}
-              <div className="text-7xl font-serif text-cyan-800/30 absolute top-4 left-6">
-                "
-              </div>
-              <div className="relative z-10">
-                <p className="text-xl md:text-2xl text-gray-300 italic mb-8 relative z-10">
-                  Estamos encantados con el nuevo sitio, ahora nuestros clientes
-                  nos encuentran fácilmente en Google. La organización por
-                  categorías ha facilitado mucho mostrar nuestro catálogo y
-                  hemos notado un aumento en las consultas y ventas.
-                </p>
-                <div className="flex items-center">
-                  <div className="w-14 h-14 bg-gray-700 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-cyan-400 font-bold text-xl">A</span>
-                  </div>
-                  <div>
-                    <div className="font-bold text-white">Ana Martínez</div>
-                    <div className="text-gray-400">
-                      Gerente, Papelería Abril
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Section */}
-            <div className="mt-16 text-center">
-              <h3 className="text-2xl font-bold mb-6 text-white">
-                ¿Listo para impulsar tu negocio local?
-              </h3>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Contáctame hoy mismo y descubre cómo mi estrategia de transformación digital 
-                puede impulsar tu negocio local como lo hice con Papelería Abril.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <a href="https://abrilpapeleria.azurewebsites.net/" target="_blank" rel="noopener noreferrer" className="group bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
-                  Ver sitio en vivo
-                  <ExternalLink className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </a>
-                <button 
-                  onClick={() => navigateToHomeWithScroll('contacto')}
-                  className="bg-transparent border-2 border-cyan-400 text-cyan-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center"
-                >
-                  {t('common.contact_us')}
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </button>
-              </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl font-bold mb-6 text-white">
+              ¿Listo para impulsar tu negocio local?
+            </h3>
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contáctate hoy mismo y descubre cómo una estrategia de transformación digital 
+              puede impulsar tu negocio local.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="https://abrilpapeleria.azurewebsites.net/" target="_blank" rel="noopener noreferrer" className="group bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
+                Ver sitio en vivo
+                <ExternalLink className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
+              <button 
+                onClick={() => navigateToHomeWithScroll('contacto')}
+                className="bg-transparent border-2 border-cyan-400 text-cyan-100 hover:text-white hover:border-white font-medium py-3 px-8 rounded-lg transition-all duration-300 flex items-center"
+              >
+                {t('common.contact_us')}
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </button>
             </div>
           </div>
         </div>

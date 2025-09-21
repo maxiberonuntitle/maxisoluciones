@@ -479,8 +479,8 @@
       "about_client": {
         "title": "Sobre el client",
         "description_1": "Papelería Abril és un negoci local establert a Tacuarembó, Uruguai, que ofereix una àmplia gamma d'útils escolars, articles d'oficina i regals personalitzats.",
-        "description_2": "Amb més de 10 anys d'experiència al mercat, buscaven modernitzar la seva presència digital per arribar a més clients a la seva regió.",
-        "established": "Establert des de 2013"
+        "description_2": "Amb una visió moderna i emprenedora, buscaven modernitzar la seva presència digital per arribar a més clients a la seva regió.",
+        "established": "Establert des de 2022"
       },
       "objectives": {
         "title": "Objectius del projecte",
@@ -536,14 +536,9 @@
           "Major visibilitat de productes i ofertes especials"
         ]
       },
-      "testimonial": {
-        "quote": "Estem encantats amb el nou lloc, ara els nostres clients ens troben fàcilment a Google. L'organització per categories ha facilitat molt mostrar el nostre catàleg i hem notat un augment en les consultes i vendes.",
-        "author": "Ana Martínez",
-        "position": "Gerenta, Papelería Abril"
-      },
       "cta": {
         "title": "Llest per impulsar el teu negoci local?",
-        "description": "Contacta'm avui mateix i descobreix com la meva estratègia de transformació digital pot impulsar el teu negoci local com ho vaig fer amb Papelería Abril.",
+        "description": "Contacta'ns avui mateix i descobreix com una estratègia de transformació digital pot impulsar el teu negoci local.",
         "view_live_site": "Veure lloc en viu"
       }
     },
@@ -554,7 +549,7 @@
         "subtitle": "Lloc web professional per a Antonio y Adama Jardinería, especialistes en serveis de jardineria i paisatgisme a Lloret de Mar."
       },
       "overview": {
-        "title": "Projecte de Jardineria Professional",
+        "title": "Projecte per a Antonio y Adama",
         "description": "Desenvolupament d'un lloc web professional per a Antonio y Adama Jardinería, especialistes en serveis de jardineria i paisatgisme. El projecte va incloure desenvolupament web modern, optimització SEO local per a serveis de jardineria i presència optimitzada a Google Maps per atreure clients locals a Lloret de Mar.",
         "web_development": "Lloc web modern i responsiu",
         "seo": "Optimització per a jardineria",
@@ -591,7 +586,7 @@
       },
       "results": {
         "title": "Resultats Obtinguts",
-        "subtitle": "Impacte mesurable en la presència digital de l'arquitecte",
+        "subtitle": "Impacte mesurable en la presència digital del negoci",
         "seo_improvement": {
           "title": "Millora SEO",
           "description": "Posicionament millorat en cerques relacionades amb jardineria i serveis de paisatgisme."
@@ -611,7 +606,7 @@
       },
       "cta": {
         "title": "Necessites un Lloc Web Professional?",
-        "description": "Contacta'm avui mateix i converteix la teva idea en realitat amb la meva experiència en desenvolupament web professional."
+        "description": "Contacta't avui mateix i converteix la teva idea en realitat."
       }
     },
     "cafe_nuevo_jago": {
@@ -678,7 +673,7 @@
       },
       "cta": {
         "title": "Necessites Transformar el teu Negoci Local?",
-        "description": "Contacta'm avui mateix i descobreix com la meva estratègia de transformació digital pot impulsar el teu negoci local."
+        "description": "Contacta't avui mateix i descobreix com una estratègia de transformació digital pot impulsar el teu negoci local."
       }
     }
   },
@@ -691,7 +686,7 @@
     "read_more": "Llegir més",
     "learn_more": "Saber més",
     "get_started": "Començar",
-    "contact_us": "Contacta'ns",
+    "contact_us": "Contacte",
     "back": "Tornar",
     "next": "Següent",
     "previous": "Anterior"

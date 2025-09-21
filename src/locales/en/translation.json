@@ -479,8 +479,8 @@
       "about_client": {
         "title": "About the client",
         "description_1": "Papelería Abril is a local business established in Tacuarembó, Uruguay, offering a wide range of school supplies, office items and personalized gifts.",
-        "description_2": "With more than 10 years of experience in the market, they sought to modernize their digital presence to reach more customers in their region.",
-        "established": "Established since 2013"
+        "description_2": "With a modern and entrepreneurial vision, they sought to modernize their digital presence to reach more customers in their region.",
+        "established": "Established since 2022"
       },
       "objectives": {
         "title": "Project objectives",
@@ -536,14 +536,9 @@
           "Greater visibility of products and special offers"
         ]
       },
-      "testimonial": {
-        "quote": "We are delighted with the new site, now our customers find us easily on Google. The organization by categories has made it much easier to show our catalog and we have noticed an increase in queries and sales.",
-        "author": "Ana Martínez",
-        "position": "Manager, Papelería Abril"
-      },
       "cta": {
         "title": "Ready to boost your local business?",
-        "description": "Contact me today and discover how my digital transformation strategy can boost your local business as I did with Papelería Abril.",
+        "description": "Contact us today and discover how a digital transformation strategy can boost your local business.",
         "view_live_site": "View live site"
       }
     },
@@ -554,7 +549,7 @@
         "subtitle": "Professional website for Antonio y Adama Gardening, specialists in gardening and landscaping services in Lloret de Mar."
       },
       "overview": {
-        "title": "Professional Gardening Project",
+        "title": "Project for Antonio y Adama",
         "description": "Development of a professional website for Antonio y Adama Gardening, specialists in gardening and landscaping services. The project included modern web development, local SEO optimization for gardening services and optimized presence on Google Maps to attract local customers in Lloret de Mar.",
         "web_development": "Modern and responsive website",
         "seo": "Optimization for gardening",
@@ -591,7 +586,7 @@
       },
       "results": {
         "title": "Results Obtained",
-        "subtitle": "Measurable impact on the architect's digital presence",
+        "subtitle": "Measurable impact on the business's digital presence",
         "seo_improvement": {
           "title": "SEO Improvement",
           "description": "Improved positioning in searches related to gardening and landscaping services."
@@ -611,7 +606,7 @@
       },
       "cta": {
         "title": "Need a Professional Website?",
-        "description": "Contact me today and turn your idea into reality with my professional web development experience."
+        "description": "Contact us today and turn your idea into reality."
       }
     },
     "cafe_nuevo_jago": {
@@ -678,7 +673,7 @@
       },
       "cta": {
         "title": "Need to Transform Your Local Business?",
-        "description": "Contact me today and discover how my digital transformation strategy can boost your local business."
+        "description": "Contact us today and discover how a digital transformation strategy can boost your local business."
       }
     }
   },
@@ -691,7 +686,7 @@
     "read_more": "Read more",
     "learn_more": "Learn more",
     "get_started": "Get started",
-    "contact_us": "Contact us",
+    "contact_us": "Contact",
     "back": "Back",
     "next": "Next",
     "previous": "Previous"
@@ -704,7 +699,7 @@
         "subtitle": "Professional website for Antonio y Adama Gardening, specialists in gardening and landscaping services in Lloret de Mar."
       },
       "overview": {
-        "title": "Professional Gardening Project",
+        "title": "Project for Antonio y Adama",
         "description": "Development of a professional website for Antonio y Adama Gardening, specialists in gardening and landscaping services. The project included modern web development, local SEO optimization for gardening services and optimized presence on Google Maps to attract local customers in Lloret de Mar.",
         "web_development": "Modern and responsive website",
         "seo": "Optimization for gardening",
@@ -741,7 +736,7 @@
       },
       "results": {
         "title": "Results Obtained",
-        "subtitle": "Measurable impact on the architect's digital presence",
+        "subtitle": "Measurable impact on the business's digital presence",
         "seo_improvement": {
           "title": "SEO Improvement",
           "description": "Improved positioning in searches related to gardening and landscaping services."
@@ -761,7 +756,7 @@
       },
       "cta": {
         "title": "Need a Professional Website?",
-        "description": "Contact me today and turn your idea into reality with my professional web development experience."
+        "description": "Contact us today and turn your idea into reality."
       }
     },
     "cafe_nuevo_jago": {
@@ -828,7 +823,7 @@
       },
       "cta": {
         "title": "Need to Transform Your Local Business?",
-        "description": "Contact me today and discover how my digital transformation strategy can boost your local business."
+        "description": "Contact us today and discover how a digital transformation strategy can boost your local business."
       }
     }
   }
