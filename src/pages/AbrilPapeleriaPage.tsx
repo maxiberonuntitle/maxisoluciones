@@ -112,7 +112,19 @@ const AbrilPapeleriaPage = () => {
                 <div className="rounded-xl overflow-hidden border-2 border-gray-800 shadow-xl" style={{
                 boxShadow: '0 0 20px rgba(34, 211, 238, 0.1)'
               }}>
-                  <img src="/papeleriaaabril.png" alt="Papelería local con útiles escolares" className="w-full h-auto aspect-video object-cover" />
+                  <picture>
+                    <source srcSet="/papeleriaaabril.webp" type="image/webp" />
+                    <img 
+                      src="/papeleriaaabril.png" 
+                      alt="Papelería local con útiles escolares" 
+                      className="w-full h-auto aspect-video object-cover" 
+                      width="800"
+                      height="450"
+                      loading="lazy"
+                      decoding="async"
+                      style={{ aspectRatio: '16/9' }}
+                    />
+                  </picture>
                 </div>
               </div>
               <div className="md:w-1/2">
@@ -299,7 +311,15 @@ const AbrilPapeleriaPage = () => {
                   </div>
                 </div>
                 <div className="relative h-64 bg-gray-800 rounded-lg overflow-hidden">
-                  <img src="/papeleriaaabril.png" alt="Diseño moderno de sitio web" className="w-full h-full object-cover" />
+                  <img 
+                    src="/papeleriaaabril.png" 
+                    alt="Diseño moderno de sitio web" 
+                    className="w-full h-full object-cover" 
+                    width="400"
+                    height="256"
+                    loading="lazy"
+                    style={{ aspectRatio: '400/256' }}
+                  />
                   <div className="absolute right-4 bottom-4 bg-cyan-600 text-white text-xs font-medium px-3 py-1 rounded-full shadow-lg">
                     Después
                   </div>

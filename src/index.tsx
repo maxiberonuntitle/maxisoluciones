@@ -16,14 +16,105 @@ style.textContent = `
   .hardware-accelerated {
     transform: translateZ(0);
   }
-  /* Prevent layout shifts */
+  /* Prevent layout shifts - Enhanced CLS prevention */
   img {
     aspect-ratio: attr(width) / attr(height);
+    display: block;
+    max-width: 100%;
+    height: auto;
   }
-  /* Fallback for images */
+  
+  /* Fallback for images with proper dimensions */
   img.error {
     background: linear-gradient(45deg, #2a3f5f, #5f8db9);
     object-fit: cover;
+    aspect-ratio: 16/9;
+  }
+  
+  /* Prevent CLS for dynamic content */
+  .scroll-animate {
+    min-height: 1px; /* Prevent collapse */
+  }
+  
+  /* Reserve space for loading states */
+  .loading-placeholder {
+    aspect-ratio: 16/9;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading-shimmer 1.5s infinite;
+  }
+  
+  @keyframes loading-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  
+  /* Prevent CLS for text content */
+  h1, h2, h3, h4, h5, h6 {
+    min-height: 1.2em;
+    line-height: 1.2;
+  }
+  
+  /* Reserve space for buttons and interactive elements */
+  button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Loading spinner for lazy-loaded components */
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Font loading optimization to prevent CLS */
+  @font-face {
+    font-family: 'Inter';
+    font-display: swap;
+    font-weight: 400 600 700;
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+  }
+  
+  /* Prevent CLS during font loading */
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+    font-display: swap;
+  }
+  
+  /* Preload critical resources */
+  .preload-critical {
+    font-display: swap;
+  }
+  
+  /* Reserve space for dynamic content containers */
+  .dynamic-content {
+    min-height: 200px;
+  }
+  
+  /* Prevent CLS for cards and containers */
+  .card, .project-card {
+    min-height: 300px;
+  }
+  
+  /* Optimize for mobile CLS prevention */
+  @media (max-width: 768px) {
+    .card, .project-card {
+      min-height: 250px;
+    }
+    
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
   /* Parallax effect */
   .parallax-effect {
@@ -265,13 +356,34 @@ style.textContent = `
     50% { transform: scale(1.02); }
     100% { transform: scale(1); }
   }
-  /* Floating particles animation */
+  /* Fixed particles animation - Optimized for performance */
   .floating-particle {
     position: absolute;
     border-radius: 50%;
     pointer-events: none;
-    animation: float 25s infinite ease-in-out;
+    animation: floatFixed 20s infinite linear;
     will-change: transform;
+    transform: translateZ(0); /* Hardware acceleration */
+    backface-visibility: hidden; /* Prevent flickering */
+  }
+  
+  /* Optimized floating animation for fixed particles */
+  @keyframes floatFixed {
+    0% {
+      transform: translate(0, 0) translateZ(0);
+    }
+    25% {
+      transform: translate(20px, -30px) translateZ(0);
+    }
+    50% {
+      transform: translate(-10px, -50px) translateZ(0);
+    }
+    75% {
+      transform: translate(-30px, -20px) translateZ(0);
+    }
+    100% {
+      transform: translate(0, 0) translateZ(0);
+    }
   }
   /* New section reveal animation */
   @keyframes sectionReveal {
@@ -282,61 +394,88 @@ style.textContent = `
     animation: sectionReveal 0.6s ease-out forwards;
     will-change: clip-path;
   }
-  /* Optimizaciones para móviles */
+  /* Optimizaciones para móviles - Reduced main thread work */
   @media (max-width: 768px) {
     .scroll-animate {
-      transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      transition: opacity 0.2s ease-out; /* Simplified transition */
     }
     .floating-particle {
-      animation-duration: 20s;
+      animation-duration: 15s;
+      animation-timing-function: linear;
     }
-    /* Reducir distancias de animación en móviles */
+    /* Reduced animation distances for better performance */
     .scroll-animate-slide-up {
-      transform: translateY(15px);
+      transform: translateY(10px);
     }
     .scroll-animate-slide-down {
-      transform: translateY(-15px);
+      transform: translateY(-10px);
     }
     .scroll-animate-slide-right {
-      transform: translateX(-15px);
+      transform: translateX(-10px);
     }
     .scroll-animate-slide-left {
-      transform: translateX(15px);
+      transform: translateX(10px);
+    }
+    
+    /* Disable heavy animations on mobile */
+    .scroll-animate-rotate,
+    .scroll-animate-flip {
+      animation: none;
+      transition: opacity 0.2s ease-out;
+    }
+  }
+  
+  /* Reduce main thread work for low-end devices */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-animate,
+    .floating-particle,
+    .animate-pulse {
+      animation: none;
+      transition: opacity 0.2s ease-out;
+    }
+  }
+  
+  /* Optimizaciones adicionales para partículas fijas */
+  @media (prefers-reduced-motion: reduce) {
+    .floating-particle {
+      animation: none; /* Desactivar animaciones si el usuario prefiere movimiento reducido */
+    }
+  }
+  
+  /* Optimización para pantallas de alta densidad */
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .floating-particle {
+      animation-duration: 18s; /* Ligeramente más lento en pantallas de alta resolución */
     }
   }
 `;
 document.head.appendChild(style);
-// Add optimized scroll animation observer with better performance
+// Optimized scroll animation observer - Reduced JavaScript execution
 const scrollObserver = document.createElement('script');
 scrollObserver.textContent = `
-  document.addEventListener('DOMContentLoaded', () => {
+  // Defer non-critical JavaScript execution
+  const initScrollAnimations = () => {
     let lastScrollTop = 0;
     let scrollDirection = 'down';
     let ticking = false;
     let isMobile = window.innerWidth < 768;
-    const scrollElements = document.querySelectorAll('.scroll-animate');
-    // Detectar dispositivo móvil para optimizaciones
-    const checkDevice = () => {
-      isMobile = window.innerWidth < 768;
-    };
-    // Use Intersection Observer for better performance
+    
+    // Optimized Intersection Observer
     const observerOptions = {
       root: null,
       rootMargin: isMobile ? '0px 0px -20px 0px' : '0px 0px -40px 0px',
       threshold: 0.1
     };
-    const handleIntersect = (entries, observer) => {
+    
+    const handleIntersect = (entries) => {
       if (ticking) return;
       ticking = true;
-      // Usar requestAnimationFrame para mejor rendimiento
       requestAnimationFrame(() => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Element is visible - add active class
             entry.target.classList.add('active');
             entry.target.classList.remove('active-reverse');
           } else if (scrollDirection === 'up' && entry.boundingClientRect.y > 0) {
-            // When scrolling up and element is above viewport
             entry.target.classList.remove('active');
             entry.target.classList.add('active-reverse');
           }
@@ -344,26 +483,27 @@ scrollObserver.textContent = `
         ticking = false;
       });
     };
-    // Crear observer con opciones optimizadas
+    
     const observer = new IntersectionObserver(handleIntersect, observerOptions);
-    // Observe all scroll elements
+    const scrollElements = document.querySelectorAll('.scroll-animate');
+    
+    // Batch DOM operations
     scrollElements.forEach(el => {
       observer.observe(el);
       el.setAttribute('data-scroll-direction', scrollDirection);
     });
-    // Handle scroll direction with better throttling
+    
+    // Optimized scroll handler with better throttling
     let scrollTimeout;
     const handleScroll = () => {
       if (scrollTimeout) return;
       scrollTimeout = setTimeout(() => {
         const st = window.pageYOffset || document.documentElement.scrollTop;
-        // Detectar dirección de scroll
         if (Math.abs(st - lastScrollTop) > (isMobile ? 5 : 10)) {
           scrollDirection = st > lastScrollTop ? 'down' : 'up';
           lastScrollTop = st <= 0 ? 0 : st;
-          // Update scroll direction attribute
           document.documentElement.setAttribute('data-scroll-direction', scrollDirection);
-          // Add special effects when scrolling to top
+          
           if (scrollDirection === 'up' && lastScrollTop < 300) {
             document.body.classList.add('scrolling-top');
           } else {
@@ -371,45 +511,51 @@ scrollObserver.textContent = `
           }
         }
         scrollTimeout = null;
-      }, isMobile ? 100 : 50); // Mayor throttling en móviles para mejor rendimiento
+      }, isMobile ? 100 : 50);
     };
-    // Use passive event listener for better performance
+    
+    // Use passive event listeners
     window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('resize', checkDevice, { passive: true });
-    // Optimize transitions on interactive elements
-    document.querySelectorAll('a, button, .interactive').forEach(el => {
+    
+    // Optimize interactive elements - Reduced event listeners
+    const interactiveElements = document.querySelectorAll('a, button, .interactive');
+    interactiveElements.forEach(el => {
       el.classList.add('will-change-transform');
-      const addHardwareAcceleration = () => {
+      
+      const handleInteraction = () => {
         el.classList.add('hardware-accelerated');
-      };
-      const removeHardwareAcceleration = () => {
         setTimeout(() => {
           if (!el.matches(':hover')) {
             el.classList.remove('hardware-accelerated');
           }
         }, 300);
       };
-      // Usar eventos táctiles para dispositivos móviles
+      
       if ('ontouchstart' in window) {
-        el.addEventListener('touchstart', addHardwareAcceleration, { passive: true });
-        el.addEventListener('touchend', removeHardwareAcceleration, { passive: true });
+        el.addEventListener('touchstart', handleInteraction, { passive: true });
       } else {
-        el.addEventListener('mouseover', addHardwareAcceleration);
-        el.addEventListener('mouseout', removeHardwareAcceleration);
+        el.addEventListener('mouseover', handleInteraction);
       }
     });
-    // Handle image loading errors
-    document.querySelectorAll('img').forEach(img => {
+    
+    // Optimized image error handling
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
       img.addEventListener('error', function() {
         this.classList.add('error');
         if (!this.src.includes('unsplash')) {
           this.src = 'https://images.unsplash.com/photo-1557683316-973673baf926?q=80&w=1000';
         }
-      });
+      }, { once: true });
     });
-    // Inicializar
-    checkDevice();
-  });
+  };
+  
+  // Defer initialization to improve initial load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollAnimations);
+  } else {
+    initScrollAnimations();
+  }
 `;
 document.head.appendChild(scrollObserver);
 const container = document.getElementById('root');

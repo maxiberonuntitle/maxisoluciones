@@ -13,36 +13,61 @@ const HeroSection = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   useEffect(() => {
     setIsLoaded(true);
-    // Setup the parallax effect - simplified for better performance
-    const handleMouseMove = (e: MouseEvent) => {
-      const parallaxElements = document.querySelectorAll('.parallax-effect');
-      parallaxElements.forEach(element => {
-        const speed = element.getAttribute('data-speed') || '0.05';
-        const x = (window.innerWidth - e.pageX * parseFloat(speed)) / 100;
-        const y = (window.innerHeight - e.pageY * parseFloat(speed)) / 100;
-        // @ts-ignore
-        element.style.transform = `translateX(${x}px) translateY(${y}px)`;
-      });
-    };
-    // Track scroll position for notebook rotation
+    
+    let ticking = false;
+    let lastScrollTime = 0;
+    
+    // Throttled scroll handler for better performance
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setScrollY(currentScrollY);
-      // Detect scroll direction
-      if (currentScrollY > lastScrollY) {
-        setScrollDirection('down');
-      } else {
-        setScrollDirection('up');
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
+          const now = performance.now();
+          
+          // Throttle scroll updates to max 30fps for better performance
+          if (now - lastScrollTime > 33) {
+            setScrollY(currentScrollY);
+            
+            // Detect scroll direction with debouncing
+            if (Math.abs(currentScrollY - lastScrollY) > 5) {
+              if (currentScrollY > lastScrollY) {
+                setScrollDirection('down');
+              } else {
+                setScrollDirection('up');
+              }
+              setLastScrollY(currentScrollY);
+            }
+            
+            lastScrollTime = now;
+          }
+          
+          ticking = false;
+        });
+        ticking = true;
       }
-      setLastScrollY(currentScrollY);
     };
-    document.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('scroll', handleScroll, {
-      passive: true
-    });
+    
+    // Simplified parallax effect - only for essential elements
+    const handleMouseMove = (e: MouseEvent) => {
+      // Only update parallax on significant mouse movement
+      if (Math.abs(e.movementX) > 2 || Math.abs(e.movementY) > 2) {
+        const parallaxElements = document.querySelectorAll('.parallax-effect');
+        parallaxElements.forEach(element => {
+          const speed = element.getAttribute('data-speed') || '0.02'; // Reduced speed
+          const x = (window.innerWidth - e.pageX * parseFloat(speed)) / 200; // Reduced sensitivity
+          const y = (window.innerHeight - e.pageY * parseFloat(speed)) / 200;
+          // @ts-ignore
+          element.style.transform = `translateX(${x}px) translateY(${y}px) translateZ(0)`;
+        });
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    document.addEventListener('mousemove', handleMouseMove, { passive: true });
+    
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousemove', handleMouseMove);
     };
   }, [lastScrollY]);
   return <section id="inicio" className="relative min-h-screen flex items-center bg-gradient-to-r from-gray-950 via-blue-950 to-gray-900 overflow-hidden">

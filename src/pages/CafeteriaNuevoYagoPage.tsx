@@ -78,7 +78,15 @@ const CafeNuevoYagoPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-on-scroll opacity-0 translate-y-8">
               <div className="rounded-xl overflow-hidden border-2 border-gray-200 shadow-xl">
-                <img src="/cafefeterianuevojago.png" alt="Sitio web de Cafetería Nuevo Jago" className="w-full h-auto aspect-video object-cover" />
+                <img 
+                  src="/cafefeterianuevojago.png" 
+                  alt="Sitio web de Cafetería Nuevo Jago" 
+                  className="w-full h-auto aspect-video object-cover" 
+                  width="800"
+                  height="450"
+                  loading="lazy"
+                  style={{ aspectRatio: '16/9' }}
+                />
               </div>
             </div>
             <div className="animate-on-scroll opacity-0 translate-y-8" style={{ transitionDelay: '0.2s' }}>

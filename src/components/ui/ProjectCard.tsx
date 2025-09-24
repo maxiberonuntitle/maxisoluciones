@@ -48,11 +48,21 @@ const ProjectCard = ({
         <div ref={cardRef} className="overflow-hidden rounded-xl shadow-lg group cursor-pointer transition-all duration-500 ease-out transform-gpu bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700/30 will-change-transform relative" onMouseEnter={() => setIsHovered(true)} onMouseLeave={handleMouseLeave} onMouseMove={handleMouseMove}>
         {/* Card image with enhanced effects */}
         <div className="relative h-64 overflow-hidden">
+          {/* Loading placeholder to prevent CLS */}
+          <div className="absolute inset-0 bg-gray-800 loading-placeholder" style={{ aspectRatio: '400/256' }}></div>
           {/* Animated gradient overlay */}
           <div className={`absolute inset-0 bg-gradient-to-t from-cyan-600/20 via-blue-900/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-10`}></div>
           {/* Image with enhanced animation and fallback */}
           <div className="w-full h-full bg-gray-800">
-            <img src={project.image} alt={project.title} className={`w-full h-full object-cover transition-all duration-700 ease-out ${isHovered ? 'scale-110 filter brightness-90' : 'scale-100'}`} onError={e => {
+            <img 
+              src={project.image} 
+              alt={project.title} 
+              className={`w-full h-full object-cover transition-all duration-700 ease-out ${isHovered ? 'scale-110 filter brightness-90' : 'scale-100'}`} 
+              width="400"
+              height="256"
+              loading="lazy"
+              style={{ aspectRatio: '400/256' }}
+              onError={e => {
             // Fallback for image loading errors
             const target = e.target as HTMLImageElement;
             target.onerror = null;

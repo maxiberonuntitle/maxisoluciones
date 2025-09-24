@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -7,18 +7,20 @@ import ServicesSection from './components/home/ServicesSection';
 import TechnologiesSection from './components/home/TechnologiesSection';
 import ProjectsSection from './components/home/ProjectsSection';
 import ContactSection from './components/home/ContactSection';
-import WebDevelopmentPage from './pages/WebDevelopmentPage';
-import DigitalMarketingPage from './pages/DigitalMarketingPage';
-import BusinessConsultingPage from './pages/BusinessConsultingPage';
-import AbrilPapeleriaPage from './pages/AbrilPapeleriaPage';
-import AntonioYadamaPage from './pages/AntonioYadamaPage';
-import CafeNuevoYagoPage from './pages/CafeteriaNuevoYagoPage';
 import WhatsAppButton from './components/ui/WhatsAppButton';
 import ScrollToTopButton from './components/ui/ScrollToTopButton';
-import AnimatedParticles from './components/ui/AnimatedParticles';
+import FixedParticles from './components/ui/FixedParticles';
 import CursorFollower from './components/ui/CursorFollower';
 import { LanguageProvider } from './components/context/LanguageContext';
 import ScrollToTop from './components/utils/ScrollToTop';
+
+// Lazy load heavy components for better performance
+const WebDevelopmentPage = lazy(() => import('./pages/WebDevelopmentPage'));
+const DigitalMarketingPage = lazy(() => import('./pages/DigitalMarketingPage'));
+const BusinessConsultingPage = lazy(() => import('./pages/BusinessConsultingPage'));
+const AbrilPapeleriaPage = lazy(() => import('./pages/AbrilPapeleriaPage'));
+const AntonioYadamaPage = lazy(() => import('./pages/AntonioYadamaPage'));
+const CafeNuevoYagoPage = lazy(() => import('./pages/CafeteriaNuevoYagoPage'));
 const HomePage = () => {
   return <>
       <HeroSection />
@@ -67,20 +69,42 @@ export function App() {
         <div className="flex flex-col min-h-screen bg-white overflow-hidden">
           <Navbar />
           <main className="flex-grow relative">
-            {/* Global animated particles that appear in all sections */}
-            <div className="fixed inset-0 pointer-events-none z-0">
-              <AnimatedParticles count={40} color="blue" opacity={0.2} speed={0.5} />
-            </div>
+            {/* Global fixed particles that appear in all sections - Optimized for performance */}
+            <FixedParticles count={40} color="blue" opacity={0.2} />
             {/* Cursor follower dots */}
             <CursorFollower />
             <Routes>
               <Route path="/" element={<HomePage />} />
-              <Route path="/servicios/desarrollo-web" element={<WebDevelopmentPage />} />
-              <Route path="/servicios/marketing-digital" element={<DigitalMarketingPage />} />
-              <Route path="/servicios/consultoria-comercial" element={<BusinessConsultingPage />} />
-              <Route path="/proyectos/papeleria-abril" element={<AbrilPapeleriaPage />} />
-              <Route path="/proyectos/antonio-yadama" element={<AntonioYadamaPage />} />
-              <Route path="/proyectos/cafe-nuevo-jago" element={<CafeNuevoYagoPage />} />
+              <Route path="/servicios/desarrollo-web" element={
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="loading-spinner"></div></div>}>
+                  <WebDevelopmentPage />
+                </Suspense>
+              } />
+              <Route path="/servicios/marketing-digital" element={
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="loading-spinner"></div></div>}>
+                  <DigitalMarketingPage />
+                </Suspense>
+              } />
+              <Route path="/servicios/consultoria-comercial" element={
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="loading-spinner"></div></div>}>
+                  <BusinessConsultingPage />
+                </Suspense>
+              } />
+              <Route path="/proyectos/papeleria-abril" element={
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="loading-spinner"></div></div>}>
+                  <AbrilPapeleriaPage />
+                </Suspense>
+              } />
+              <Route path="/proyectos/antonio-yadama" element={
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="loading-spinner"></div></div>}>
+                  <AntonioYadamaPage />
+                </Suspense>
+              } />
+              <Route path="/proyectos/cafe-nuevo-jago" element={
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="loading-spinner"></div></div>}>
+                  <CafeNuevoYagoPage />
+                </Suspense>
+              } />
               <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
