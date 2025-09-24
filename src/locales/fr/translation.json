@@ -9,10 +9,10 @@
   },
   "hero": {
     "title_desktop": "Je renforce la",
-    "title_mobile": "La",
+    "title_mobile": "Je renforce la",
     "title_highlight": "présence numérique",
     "title_desktop_2": "pour stimuler votre",
-    "title_mobile_2": "pour votre",
+    "title_mobile_2": "pour stimuler votre",
     "title_highlight_2": "succès",
     "subtitle": "Je transforme votre vision en solutions numériques qui connectent, convertissent et font grandir votre entreprise dans le monde en ligne.",
     "cta_primary": "Commencer le projet",
@@ -38,41 +38,21 @@
       "features": [
         "SEO et positionnement web",
         "Google Ads et Facebook Ads",
-        "Marketing sur les réseaux sociaux",
         "Analyse et rapports détaillés"
       ]
     },
     "business_consulting": {
       "title": "Conseil Commercial",
-      "description": "Optimisation des processus et stratégies pour maximiser les résultats",
+      "description": "Optimisation des processus commerciaux et stratégies d'innovation pour maximiser les résultats",
       "features": [
-        "Analyse des processus commerciaux",
-        "Stratégies de vente",
-        "Optimisation de la conversion",
-        "Formation des équipes"
+        "Optimisation des processus commerciaux",
+        "Implémentation de CRM",
+        "Innovation commerciale",
+        "Transformation numérique"
       ]
     },
     "view_service": "Voir le service",
     "request_quote": "Demander un devis"
-  },
-  "why_choose_us": {
-    "title": "À quoi s'attendre ?",
-    "experience": {
-      "title": "Expérience Prouvée",
-      "description": "Plus de 5 ans d'aide aux entreprises pour grandir dans le monde numérique avec des résultats mesurables"
-    },
-    "personalized": {
-      "title": "Approche Personnalisée",
-      "description": "Chaque projet est unique. J'adapte mes solutions aux besoins spécifiques de votre entreprise"
-    },
-    "results": {
-      "title": "Résultats Mesurables",
-      "description": "Je travaille avec des métriques claires et des rapports détaillés pour que vous puissiez voir l'impact de mes actions"
-    },
-    "support": {
-      "title": "Support Continu",
-      "description": "Je ne vous laisse pas seul. J'offre un support et une maintenance continus pour garantir le succès à long terme"
-    }
   },
   "technologies": {
     "title": "Technologies utilisées",
@@ -153,72 +133,70 @@
     "info": {
       "title": "Informations de Contact",
       "phone": "Téléphone",
-      "email": "Email",
-      "address": "Adresse",
-      "hours": "Horaires"
+      "email": "Email"
     }
   },
   "pages": {
     "web_development": {
-      "title": "Développement Web Professionnel",
-      "subtitle": "Nous développons des sites web et applications qui se démarquent par leur design, performance et expérience utilisateur",
+      "title": "Développement Web",
+      "subtitle": "Axé sur la performance, le design et l'expérience utilisateur",
       "request_quote": "Demander un devis",
       "see_process": "Voir le processus",
       "back_to_home": "Retour à l'accueil",
-      "services_title": "Services de Développement",
-      "services_subtitle": "Nous offrons des solutions numériques complètes pour tous les besoins d'entreprise",
+      "services_title": "Ce que je peux faire pour vous",
+      "services_subtitle": "Je vous aide avec tout ce dont vous avez besoin pour votre entreprise en ligne",
       "service_corporate": {
-        "title": "Sites Web Corporatifs",
-        "description": "Conception et développement de sites web professionnels qui représentent l'identité de votre entreprise",
+        "title": "Sites Web d'Entreprise",
+        "description": "Je crée des sites web qui ont l'air professionnels et qui représentent vraiment votre entreprise",
         "features": [
-          "Design responsive",
-          "Optimisation SEO",
-          "Intégration réseaux sociaux"
+          "Se voit bien sur mobile et ordinateur",
+          "Google vous trouve facilement",
+          "Connecté à vos réseaux sociaux"
         ]
       },
       "service_apps": {
         "title": "Applications Web",
-        "description": "Développement d'applications web sur mesure avec fonctionnalités avancées pour votre entreprise",
+        "description": "Je crée des applications web spéciales pour que vous puissiez mieux gérer votre entreprise",
         "features": [
-          "Interfaces intuitives",
-          "Architecture évolutive",
-          "Intégrations API"
+          "Facile à utiliser",
+          "Grandit avec votre entreprise",
+          "Se connecte avec d'autres systèmes"
         ]
       },
       "service_responsive": {
-        "title": "Développement Responsive",
-        "description": "Sites web adaptés à tous les appareils pour une expérience optimale",
+        "title": "Design Adaptatif",
+        "description": "Votre site web sera parfait sur n'importe quel appareil : mobile, tablette ou ordinateur",
         "features": [
-          "Compatibilité mobile",
-          "Design adaptatif",
-          "Performance optimisée"
+          "Fonctionne sur tous les téléphones",
+          "S'ajuste automatiquement",
+          "Charge super vite"
         ]
       },
       "service_ecommerce": {
-        "title": "E-commerce",
-        "description": "Boutiques en ligne complètes avec toutes les fonctionnalités pour vendre vos produits",
+        "title": "Boutique en Ligne",
+        "description": "Je crée une boutique complète pour que vous vendiez vos produits en ligne",
         "features": [
-          "Passerelles de paiement",
-          "Gestion d'inventaire",
-          "Panier d'achat"
+          "Paiements sécurisés",
+          "Contrôlez votre inventaire",
+          "Panier d'achat inclus"
         ]
       },
       "service_cms": {
-        "title": "CMS Personnalisés",
-        "description": "Systèmes de gestion de contenu sur mesure pour faciliter la mise à jour de votre site",
+        "title": "Panneau de Contrôle Facile",
+        "description": "Je vous apprends à mettre à jour votre site vous-même, sans avoir besoin de m'appeler tout le temps",
         "features": [
-          "Interface intuitive",
-          "Gestion d'utilisateurs",
-          "Personnalisation totale"
+          "Super facile à utiliser",
+          "Seulement vous avez accès",
+          "Changez ce que vous voulez"
         ]
       },
       "service_maintenance": {
-        "title": "Maintenance Web",
-        "description": "Services de maintenance et mise à jour pour garder votre site sécurisé et fonctionnel",
+        "title": "Maintenance et Support",
+        "description": "Je m'occupe de garder votre site web qui fonctionne bien et sécurisé",
         "features": [
-          "Mises à jour de sécurité",
-          "Sauvegardes",
-          "Support technique"
+          "Mise à jour de sécurité",
+          "Faire des sauvegardes",
+          "Vous aider quand vous en avez besoin"
         ]
       },
       "process_title": "Processus de Développement",
@@ -246,7 +224,7 @@
         }
       },
       "cta_title": "Prêt à démarrer votre projet ?",
-      "cta_subtitle": "Contactez-nous aujourd'hui et transformez votre idée en réalité."
+      "cta_subtitle": ""
     },
     "digital_marketing": {
       "title": "Marketing Numérique Stratégique",
@@ -274,24 +252,6 @@
           "Optimisation des conversions"
         ]
       },
-      "service_social_media": {
-        "title": "Médias Sociaux",
-        "description": "Gestion professionnelle des médias sociaux pour connecter avec votre audience et augmenter l'engagement",
-        "features": [
-          "Stratégie de contenu",
-          "Publications organiques",
-          "Analyse des résultats"
-        ]
-      },
-      "service_email": {
-        "title": "Email Marketing",
-        "description": "Stratégies d'email marketing qui nourrissent les leads et fidélisent les clients",
-        "features": [
-          "Conception de newsletters",
-          "Séquences automatisées",
-          "Segmentation avancée"
-        ]
-      },
       "service_analytics": {
         "title": "Analytique Web",
         "description": "Analyse de données pour comprendre le comportement de vos utilisateurs et améliorer les résultats",
@@ -299,15 +259,6 @@
           "Configuration d'Analytics",
           "Rapports personnalisés",
           "Recommandations d'amélioration"
-        ]
-      },
-      "service_content": {
-        "title": "Marketing de Contenu",
-        "description": "Création de contenu pertinent qui attire, convertit et fidélise votre audience",
-        "features": [
-          "Blogs et articles",
-          "Infographies et ebooks",
-          "Vidéos et webinaires"
         ]
       },
       "results_title": "Résultats que Vous Pouvez Attendre",
@@ -341,24 +292,6 @@
       "explore_areas": "Explorer les domaines de conseil",
       "areas_title": "Domaines de Conseil Commercial",
       "areas_subtitle": "Solutions complètes pour optimiser vos processus commerciaux et augmenter vos ventes",
-      "area_b2b": {
-        "title": "Stratégie de Ventes B2B",
-        "description": "Développement et implémentation de stratégies de vente efficaces pour le marché d'entreprise",
-        "features": [
-          "Analyse du cycle de vente",
-          "Prospection qualifiée",
-          "Négociation stratégique"
-        ]
-      },
-      "area_team": {
-        "title": "Gestion d'Équipes Commerciales",
-        "description": "Optimisation et formation d'équipes de vente pour maximiser leurs performances",
-        "features": [
-          "Formation spécialisée",
-          "Systèmes d'incitation",
-          "Gestion des performances"
-        ]
-      },
       "area_processes": {
         "title": "Optimisation des Processus",
         "description": "Analyse et amélioration des processus commerciaux pour augmenter l'efficacité",
@@ -375,15 +308,6 @@
           "Analyse des besoins",
           "Configuration personnalisée",
           "Formation des utilisateurs"
-        ]
-      },
-      "area_b2c": {
-        "title": "Stratégie Commerciale B2C",
-        "description": "Développement de stratégies efficaces pour la vente directe au consommateur",
-        "features": [
-          "Expérience client",
-          "Techniques de vente persuasive",
-          "Fidélisation des clients"
         ]
       },
       "area_innovation": {
@@ -460,6 +384,7 @@
     "description": "Je transforme votre vision en solutions numériques qui connectent, convertissent et font grandir votre entreprise.",
     "services": "Services",
     "projects": "Projets",
+    "quick_links": "Liens Rapides",
     "contact": "Contact",
     "follow_us": "Suivez-moi",
     "rights": "Tous droits réservés",

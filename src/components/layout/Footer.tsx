@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { FacebookIcon, TwitterIcon, InstagramIcon, LinkedinIcon, MailIcon, MapPinIcon } from 'lucide-react';
+import { LinkedinIcon, MailIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useLocation } from 'react-router-dom';
 const Footer = () => {
@@ -107,16 +107,7 @@ const Footer = () => {
             </h3>
             <p className="text-gray-300 mb-4">{t('footer.description')}</p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors transform hover:scale-110">
-                <FacebookIcon className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors transform hover:scale-110">
-                <TwitterIcon className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors transform hover:scale-110">
-                <InstagramIcon className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-blue-400 transition-colors transform hover:scale-110">
+              <a href="https://www.linkedin.com/in/maxi-beron-laspiur/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors transform hover:scale-110">
                 <LinkedinIcon className="w-5 h-5" />
               </a>
             </div>
@@ -146,16 +137,11 @@ const Footer = () => {
           </div>
           {/* Quick Links */}
           <div className={`transition-all duration-700 delay-200 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            <h3 className="text-lg font-semibold mb-4">{t('footer.projects')}</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.quick_links')}</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('inicio'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
                   {t('navigation.inicio')}
-                </a>
-              </li>
-              <li>
-                <a href="#" onClick={(e) => { e.preventDefault(); scrollToSection('que-esperar'); }} className="text-gray-300 hover:text-blue-400 transition-all duration-300 hover:translate-x-2 inline-block">
-                  {t('navigation.por_que_elegirnos')}
                 </a>
               </li>
               <li>
@@ -176,12 +162,6 @@ const Footer = () => {
               {t('footer.contact')}
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start group">
-                <MapPinIcon className="w-5 h-5 text-blue-400 mr-2 mt-0.5 group-hover:scale-110 transition-transform" />
-                <span className="text-gray-300 group-hover:text-blue-200 transition-colors">
-                  Barcelona, España
-                </span>
-              </li>
               <li className="flex items-center group">
                 <MailIcon className="w-5 h-5 text-blue-400 mr-2 group-hover:scale-110 transition-transform" />
                 <a href="mailto:maxisolucionesdigitales@gmail.com" className="text-gray-300 group-hover:text-blue-200 transition-colors">

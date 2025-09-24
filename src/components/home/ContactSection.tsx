@@ -61,16 +61,6 @@ const ContactSection = () => {
     title: t('contact.info.email'),
     details: 'maxisolucionesdigitales@gmail.com',
     link: 'mailto:maxisolucionesdigitales@gmail.com'
-  }, {
-    icon: <MapPinIcon className="w-5 h-5 text-blue-500" />,
-    title: t('contact.info.address'),
-    details: 'Barcelona',
-    link: '#'
-  }, {
-    icon: <ClockIcon className="w-5 h-5 text-blue-500" />,
-    title: t('contact.info.hours'),
-    details: 'Lun - Vie: 9:00 - 18:00',
-    link: '#'
   }];
   return <section id="contacto" className="py-16 md:py-20 bg-gray-950 relative overflow-hidden" ref={sectionRef}>
       {/* Retro-futuristic background */}
@@ -105,32 +95,32 @@ const ContactSection = () => {
       </div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16 contact-animate contact-title">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-white">
             {t('contact.title')}
           </h2>
           <div className="w-20 h-1 bg-cyan-500 mx-auto mb-6"></div>
-          <p className="text-xl text-blue-200">{t('contact.subtitle')}</p>
+          <p className="text-lg sm:text-xl text-blue-200 px-4">{t('contact.subtitle')}</p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12">
           <div className="contact-animate contact-left">
-            <div className="bg-blue-900/30 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-sm mb-6 md:mb-8 border border-blue-800/50">
-              <h3 className="text-2xl font-bold mb-6 text-white">
+            <div className="bg-blue-900/30 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl shadow-sm mb-6 md:mb-8 border border-blue-800/50">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-white">
                 {t('contact.info.title')}
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-                {contactInfo.map((item, index) => <a key={index} href={item.link} className="flex items-start p-4 bg-blue-800/30 rounded-lg hover:bg-blue-800/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg border border-blue-700/30 contact-animate contact-info" style={{
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+                {contactInfo.map((item, index) => <a key={index} href={item.link} className="flex items-start p-3 sm:p-4 bg-blue-800/30 rounded-lg hover:bg-blue-800/50 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg border border-blue-700/30 contact-animate contact-info overflow-hidden" style={{
                 transitionDelay: `${index * 100}ms`
               }}>
-                    <div className="mr-4 mt-1">{item.icon}</div>
-                    <div>
-                      <h4 className="font-medium text-white">{item.title}</h4>
-                      <p className="text-blue-200">{item.details}</p>
+                    <div className="mr-3 sm:mr-4 mt-1 flex-shrink-0">{item.icon}</div>
+                    <div className="min-w-0 flex-1 overflow-hidden">
+                      <h4 className="font-medium text-white text-sm sm:text-base">{item.title}</h4>
+                      <p className="text-blue-200 text-xs sm:text-sm break-words overflow-wrap-anywhere">{item.details}</p>
                     </div>
                   </a>)}
               </div>
             </div>
             {/* Mapa - reducir altura en móviles para mejor visibilidad */}
-            <div className="bg-blue-900/30 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-sm h-48 md:h-64 lg:h-80 border border-blue-800/50 relative overflow-hidden contact-animate contact-map">
+            <div className="bg-blue-900/30 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl shadow-sm h-40 sm:h-48 md:h-64 lg:h-80 border border-blue-800/50 relative overflow-hidden contact-animate contact-map">
               {/* Map placeholder with animated elements */}
               <div className="w-full h-full bg-blue-800/30 rounded-lg flex items-center justify-center relative">
                 <div className="absolute inset-0">
@@ -232,6 +222,32 @@ const ContactSection = () => {
           }
           .contact-title.active {
             transform: translateY(0);
+          }
+        }
+        
+        /* Extra small screens */
+        @media (max-width: 480px) {
+          .contact-info {
+            padding: 0.75rem !important;
+          }
+          .contact-info h4 {
+            font-size: 0.875rem !important;
+          }
+          .contact-info p {
+            font-size: 0.75rem !important;
+            word-break: break-all;
+          }
+        }
+        
+        /* Desktop and larger screens - prevent text overflow */
+        @media (min-width: 1024px) {
+          .contact-info {
+            max-width: 100%;
+          }
+          .contact-info p {
+            word-break: break-word;
+            overflow-wrap: anywhere;
+            hyphens: auto;
           }
         }
         .bg-scanlines {

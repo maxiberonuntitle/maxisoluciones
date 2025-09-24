@@ -9,10 +9,10 @@
   },
   "hero": {
     "title_desktop": "I boost the",
-    "title_mobile": "The",
+    "title_mobile": "I boost the",
     "title_highlight": "digital presence",
     "title_desktop_2": "to drive your",
-    "title_mobile_2": "for your",
+    "title_mobile_2": "to drive your",
     "title_highlight_2": "success",
     "subtitle": "I transform your vision into digital solutions that connect, convert and grow your business in the online world.",
     "cta_primary": "Start project",
@@ -38,41 +38,21 @@
       "features": [
         "SEO and web positioning",
         "Google Ads and Facebook Ads",
-        "Social media marketing",
         "Detailed analysis and reports"
       ]
     },
     "business_consulting": {
       "title": "Business Consulting",
-      "description": "Process and strategy optimization to maximize results",
+      "description": "Commercial process optimization and innovation strategies to maximize results",
       "features": [
-        "Business process analysis",
-        "Sales strategies",
-        "Conversion optimization",
-        "Team training"
+        "Commercial process optimization",
+        "CRM implementation",
+        "Business innovation",
+        "Digital transformation"
       ]
     },
     "view_service": "View service",
     "request_quote": "Request quote"
-  },
-  "why_choose_us": {
-    "title": "What to expect?",
-    "experience": {
-      "title": "Proven Experience",
-      "description": "More than 5 years helping companies grow in the digital world with measurable results"
-    },
-    "personalized": {
-      "title": "Personalized Approach",
-      "description": "Every project is unique. I adapt my solutions to the specific needs of your business"
-    },
-    "results": {
-      "title": "Measurable Results",
-      "description": "I work with clear metrics and detailed reports so you can see the impact of my actions"
-    },
-    "support": {
-      "title": "Continuous Support",
-      "description": "I don't leave you alone. I offer continuous support and maintenance to ensure long-term success"
-    }
   },
   "technologies": {
     "title": "Technologies used",
@@ -153,76 +133,74 @@
     "info": {
       "title": "Contact Information",
       "phone": "Phone",
-      "email": "Email",
-      "address": "Address",
-      "hours": "Hours"
+      "email": "Email"
     }
   },
   "pages": {
     "web_development": {
-      "title": "Professional Web Development",
-      "subtitle": "We develop websites and applications that stand out for their design, performance and user experience",
+      "title": "Web Development",
+      "subtitle": "Focused on performance, design and user experience",
       "request_quote": "Request quote",
       "see_process": "See process",
       "back_to_home": "Back to home",
-      "services_title": "Development Services",
-      "services_subtitle": "We offer complete digital solutions for any business need",
+      "services_title": "What I can do for you",
+      "services_subtitle": "I help you with everything you need for your business online",
       "service_corporate": {
-        "title": "Corporate Websites",
-        "description": "Design and development of professional websites that represent your company's identity",
+        "title": "Business Websites",
+        "description": "I create professional-looking websites that truly represent your business",
         "features": [
-          "Responsive design",
-          "SEO optimization",
-          "Social media integration"
+          "Looks great on mobile and computer",
+          "Google finds you easily",
+          "Connected to your social media"
         ]
       },
       "service_apps": {
         "title": "Web Applications",
-        "description": "Custom web application development with advanced functionality for your business",
+        "description": "I create special web applications so you can manage your business better",
         "features": [
-          "Intuitive interfaces",
-          "Scalable architecture",
-          "API integrations"
+          "Easy to use",
+          "Grows with your business",
+          "Connects with other systems"
         ]
       },
       "service_responsive": {
-        "title": "Responsive Development",
-        "description": "Websites adapted to all devices for an optimal experience",
+        "title": "Adaptive Design",
+        "description": "Your website will look perfect on any device: mobile, tablet or computer",
         "features": [
-          "Mobile compatibility",
-          "Adaptive design",
-          "Optimized performance"
+          "Works on all phones",
+          "Adjusts automatically",
+          "Loads super fast"
         ]
       },
       "service_ecommerce": {
-        "title": "E-commerce",
-        "description": "Complete online stores with all functionality to sell your products",
+        "title": "Online Store",
+        "description": "I create a complete store for you to sell your products online",
         "features": [
-          "Payment gateways",
-          "Inventory management",
-          "Shopping cart"
+          "Secure payments",
+          "Control your inventory",
+          "Shopping cart included"
         ]
       },
       "service_cms": {
-        "title": "Custom CMS",
-        "description": "Custom content management systems to facilitate updating your site",
+        "title": "Easy Control Panel",
+        "description": "I teach you to update your website yourself, without needing to call me all the time",
         "features": [
-          "Intuitive interface",
-          "User management",
-          "Total customization"
+          "Super easy to use",
+          "Only you have access",
+          "Change whatever you want"
         ]
       },
       "service_maintenance": {
-        "title": "Web Maintenance",
-        "description": "Maintenance and update services to keep your site secure and functional",
+        "title": "Maintenance and Support",
+        "description": "I take care of keeping your website working well and secure",
         "features": [
-          "Security updates",
-          "Backups",
-          "Technical support"
+          "Update security",
+          "Make backups",
+          "Help you when you need it"
         ]
       },
       "process_title": "Development Process",
-      "process_subtitle": "A methodical approach that guarantees exceptional results",
+      "process_subtitle": "This is how we work to create your website",
       "process_steps": {
         "analysis": {
           "title": "Analysis and Planning",
@@ -246,7 +224,7 @@
         }
       },
       "cta_title": "Ready to start your project?",
-      "cta_subtitle": "Contact us today and turn your idea into reality."
+      "cta_subtitle": ""
     },
     "digital_marketing": {
       "title": "Strategic Digital Marketing",
@@ -274,24 +252,6 @@
           "Conversion optimization"
         ]
       },
-      "service_social_media": {
-        "title": "Social Media",
-        "description": "Professional social media management to connect with your audience and increase engagement",
-        "features": [
-          "Content strategy",
-          "Organic posts",
-          "Results analysis"
-        ]
-      },
-      "service_email": {
-        "title": "Email Marketing",
-        "description": "Email marketing strategies that nurture leads and retain customers",
-        "features": [
-          "Newsletter design",
-          "Automated sequences",
-          "Advanced segmentation"
-        ]
-      },
       "service_analytics": {
         "title": "Web Analytics",
         "description": "Data analysis to understand your users' behavior and improve results",
@@ -299,15 +259,6 @@
           "Analytics setup",
           "Custom reports",
           "Improvement recommendations"
-        ]
-      },
-      "service_content": {
-        "title": "Content Marketing",
-        "description": "Creation of relevant content that attracts, converts and retains your audience",
-        "features": [
-          "Blogs and articles",
-          "Infographics and ebooks",
-          "Videos and webinars"
         ]
       },
       "results_title": "Results You Can Expect",
@@ -341,24 +292,6 @@
       "explore_areas": "Explore consulting areas",
       "areas_title": "Business Consulting Areas",
       "areas_subtitle": "Comprehensive solutions to optimize your business processes and increase your sales",
-      "area_b2b": {
-        "title": "B2B Sales Strategy",
-        "description": "Development and implementation of effective sales strategies for the business market",
-        "features": [
-          "Sales cycle analysis",
-          "Qualified prospecting",
-          "Strategic negotiation"
-        ]
-      },
-      "area_team": {
-        "title": "Sales Team Management",
-        "description": "Optimization and training of sales teams to maximize their performance",
-        "features": [
-          "Specialized training",
-          "Incentive systems",
-          "Performance management"
-        ]
-      },
       "area_processes": {
         "title": "Process Optimization",
         "description": "Analysis and improvement of business processes to increase efficiency",
@@ -375,15 +308,6 @@
           "Needs analysis",
           "Custom configuration",
           "User training"
-        ]
-      },
-      "area_b2c": {
-        "title": "B2C Business Strategy",
-        "description": "Development of effective strategies for direct consumer sales",
-        "features": [
-          "Customer experience",
-          "Persuasive sales techniques",
-          "Customer retention"
         ]
       },
       "area_innovation": {
@@ -460,6 +384,7 @@
     "description": "I transform your vision into digital solutions that connect, convert and grow your business.",
     "services": "Services",
     "projects": "Projects",
+    "quick_links": "Quick Links",
     "contact": "Contact",
     "follow_us": "Follow me",
     "rights": "All rights reserved",

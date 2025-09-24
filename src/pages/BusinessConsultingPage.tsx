@@ -76,60 +76,6 @@ const BusinessConsultingPage = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            {/* Area Card 1 */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8">
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
-                  <Briefcase className="h-7 w-7 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  {t('pages.business_consulting.area_b2b.title')}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {t('pages.business_consulting.area_b2b.description')}
-                </p>
-                <ul className="space-y-2">
-                  {(() => {
-                    const features = t('pages.business_consulting.area_b2b.features');
-                    const featuresArray = Array.isArray(features) ? features : [];
-                    return featuresArray.map((feature: string, index: number) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ));
-                  })()}
-                </ul>
-              </div>
-            </div>
-            {/* Area Card 2 */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
-            transitionDelay: '0.1s'
-          }}>
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
-                  <Users className="h-7 w-7 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  {t('pages.business_consulting.area_team.title')}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {t('pages.business_consulting.area_team.description')}
-                </p>
-                <ul className="space-y-2">
-                  {(() => {
-                    const features = t('pages.business_consulting.area_team.features');
-                    const featuresArray = Array.isArray(features) ? features : [];
-                    return featuresArray.map((feature: string, index: number) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ));
-                  })()}
-                </ul>
-              </div>
-            </div>
             {/* Area Card 3 */}
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
             transitionDelay: '0.2s'
@@ -186,34 +132,6 @@ const BusinessConsultingPage = () => {
                 </ul>
               </div>
             </div>
-            {/* Area Card 5 */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
-            transitionDelay: '0.4s'
-          }}>
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-5">
-                  <TrendingUp className="h-7 w-7 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  {t('pages.business_consulting.area_b2c.title')}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {t('pages.business_consulting.area_b2c.description')}
-                </p>
-                <ul className="space-y-2">
-                  {(() => {
-                    const features = t('pages.business_consulting.area_b2c.features');
-                    const featuresArray = Array.isArray(features) ? features : [];
-                    return featuresArray.map((feature: string, index: number) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ));
-                  })()}
-                </ul>
-              </div>
-            </div>
             {/* Area Card 6 */}
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
             transitionDelay: '0.5s'
@@ -240,106 +158,6 @@ const BusinessConsultingPage = () => {
                     ));
                   })()}
                 </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </AnimatedSection>
-      {/* Methodology Section */}
-      <AnimatedSection className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              {t('pages.business_consulting.methodology_title')}
-            </h2>
-            <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600">
-              {t('pages.business_consulting.methodology_subtitle')}
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-              {/* Methodology Item 1 */}
-              <div className="relative animate-on-scroll opacity-0 translate-y-8">
-                <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
-                  1
-                </div>
-                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.diagnosis.title')}
-                </h3>
-                <p className='text-gray-600 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.diagnosis.description')}
-                </p>
-              </div>
-              {/* Methodology Item 2 */}
-              <div className="relative animate-on-scroll opacity-0 translate-y-8" style={{
-              transitionDelay: '0.1s'
-            }}>
-                <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
-                  2
-                </div>
-                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.planning.title')}
-                </h3>
-                <p className='text-gray-600 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.planning.description')}
-                </p>
-              </div>
-              {/* Methodology Item 3 */}
-              <div className="relative animate-on-scroll opacity-0 translate-y-8" style={{
-              transitionDelay: '0.2s'
-            }}>
-                <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
-                  3
-                </div>
-                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.implementation.title')}
-                </h3>
-                <p className='text-gray-600 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.implementation.description')}
-                </p>
-              </div>
-              {/* Methodology Item 4 */}
-              <div className="relative animate-on-scroll opacity-0 translate-y-8" style={{
-              transitionDelay: '0.3s'
-            }}>
-                <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
-                  4
-                </div>
-                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.training.title')}
-                </h3>
-                <p className='text-gray-600 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.training.description')}
-                </p>
-              </div>
-              {/* Methodology Item 5 */}
-              <div className="relative animate-on-scroll opacity-0 translate-y-8" style={{
-              transitionDelay: '0.4s'
-            }}>
-                <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
-                  5
-                </div>
-                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.monitoring.title')}
-                </h3>
-                <p className='text-gray-600 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.monitoring.description')}
-                </p>
-              </div>
-              {/* Methodology Item 6 */}
-              <div className="relative animate-on-scroll opacity-0 translate-y-8" style={{
-              transitionDelay: '0.5s'
-            }}>
-                <div className="absolute -left-4 top-0 w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold">
-                  6
-                </div>
-                <h3 className='text-xl font-bold mb-3 text-gray-900 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.optimization.title')}
-                </h3>
-                <p className='text-gray-600 pl-6'>
-                  {t('pages.business_consulting.methodology_steps.optimization.description')}
-                </p>
               </div>
             </div>
           </div>

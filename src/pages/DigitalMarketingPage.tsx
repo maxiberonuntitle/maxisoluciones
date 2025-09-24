@@ -134,62 +134,6 @@ const DigitalMarketingPage = () => {
           }}>
               <div className="p-6">
                 <div className="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-5">
-                  <Globe className="h-7 w-7 text-indigo-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  {t('pages.digital_marketing.service_social_media.title')}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {t('pages.digital_marketing.service_social_media.description')}
-                </p>
-                <ul className="space-y-2">
-                  {(() => {
-                    const features = t('pages.digital_marketing.service_social_media.features');
-                    const featuresArray = Array.isArray(features) ? features : [];
-                    return featuresArray.map((feature: string, index: number) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ));
-                  })()}
-                </ul>
-              </div>
-            </div>
-            {/* Service Card 4 */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
-            transitionDelay: '0.3s'
-          }}>
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center mb-5">
-                  <Mail className="h-7 w-7 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  {t('pages.digital_marketing.service_email.title')}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {t('pages.digital_marketing.service_email.description')}
-                </p>
-                <ul className="space-y-2">
-                  {(() => {
-                    const features = t('pages.digital_marketing.service_email.features');
-                    const featuresArray = Array.isArray(features) ? features : [];
-                    return featuresArray.map((feature: string, index: number) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ));
-                  })()}
-                </ul>
-              </div>
-            </div>
-            {/* Service Card 5 */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
-            transitionDelay: '0.4s'
-          }}>
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-indigo-100 flex items-center justify-center mb-5">
                   <BarChart className="h-7 w-7 text-indigo-600" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900">
@@ -201,34 +145,6 @@ const DigitalMarketingPage = () => {
                 <ul className="space-y-2">
                   {(() => {
                     const features = t('pages.digital_marketing.service_analytics.features');
-                    const featuresArray = Array.isArray(features) ? features : [];
-                    return featuresArray.map((feature: string, index: number) => (
-                      <li key={index} className="flex items-start">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700">{feature}</span>
-                      </li>
-                    ));
-                  })()}
-                </ul>
-              </div>
-            </div>
-            {/* Service Card 6 */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden animate-on-scroll opacity-0 translate-y-8" style={{
-            transitionDelay: '0.5s'
-          }}>
-              <div className="p-6">
-                <div className="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center mb-5">
-                  <TrendingUp className="h-7 w-7 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900">
-                  {t('pages.digital_marketing.service_content.title')}
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  {t('pages.digital_marketing.service_content.description')}
-                </p>
-                <ul className="space-y-2">
-                  {(() => {
-                    const features = t('pages.digital_marketing.service_content.features');
                     const featuresArray = Array.isArray(features) ? features : [];
                     return featuresArray.map((feature: string, index: number) => (
                       <li key={index} className="flex items-start">

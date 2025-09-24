@@ -112,9 +112,6 @@ const Navbar = () => {
     id: 'servicios',
     translationKey: 'navigation.servicios'
   }, {
-    id: 'que-esperar',
-    translationKey: 'navigation.por_que_elegirnos'
-  }, {
     id: 'tecnologias',
     translationKey: 'navigation.tecnologias'
   }, {
@@ -141,7 +138,7 @@ const Navbar = () => {
     const lang = languages.find(l => l.code === language);
     return lang ? lang.name : 'Español';
   };
-  return <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg py-3' : 'bg-transparent py-5'} ${isScrollingUp && isScrolled ? 'translate-y-0' : isScrolled && !isScrollingUp ? '-translate-y-full' : 'translate-y-0'}`}>
+  return <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${isScrolled ? 'bg-white/50 backdrop-blur-md shadow-lg py-3' : 'bg-transparent py-5'} ${isScrollingUp && isScrolled ? 'translate-y-0' : isScrolled && !isScrollingUp ? '-translate-y-full' : 'translate-y-0'}`}>
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center group">
@@ -200,7 +197,7 @@ const Navbar = () => {
         </div>
         {/* Mobile/Tablet Navigation */}
         <div className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'}`}>
-          <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg">
+          <div className="bg-white/50 backdrop-blur-md rounded-lg shadow-lg">
             <nav className="flex flex-col space-y-2 md:space-y-3 px-4 py-4">
               {navItems.map(item => <a key={item.id} href={`#${item.id}`} onClick={e => {
               e.preventDefault();

@@ -56,9 +56,6 @@ const WebDevelopmentPage = () => {
               >
                 {t('pages.web_development.request_quote')}
               </button>
-              <a href="#proceso" className="bg-transparent border-2 border-blue-400 text-blue-100 hover:text-white hover:border-white font-medium py-3 md:py-3 lg:py-4 px-6 md:px-7 lg:px-8 rounded-lg transition-all duration-300 text-sm md:text-sm lg:text-base">
-                {t('pages.web_development.see_process')}
-              </a>
             </div>
           </div>
         </div>
@@ -245,124 +242,17 @@ const WebDevelopmentPage = () => {
           </div>
         </div>
       </AnimatedSection>
-      {/* Process Section */}
-      <AnimatedSection id="proceso" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-4 text-gray-900">
-              {t('pages.web_development.process_title')}
-            </h2>
-            <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-            <p className="text-lg md:text-xl lg:text-xl text-gray-600">
-              {t('pages.web_development.process_subtitle')}
-            </p>
-          </div>
-          <div className="max-w-4xl mx-auto">
-            {/* Process Steps */}
-            <div className="relative">
-              {/* Vertical line */}
-              <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 top-0 h-full w-1 bg-blue-200 z-0"></div>
-              {/* Step 1 */}
-              <div className="relative z-10 mb-12 md:mb-20 animate-on-scroll opacity-0 translate-y-8">
-                <div className="flex flex-col md:flex-row items-center">
-                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-8 lg:pr-10 xl:pr-12 mt-6 md:mt-0">
-                    <h3 className="text-xl md:text-xl lg:text-2xl font-bold text-gray-900 mb-3">
-                      {t('pages.web_development.process_steps.analysis.title')}
-                    </h3>
-                    <p className="text-sm md:text-base text-gray-600">
-                      {t('pages.web_development.process_steps.analysis.description')}
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0 order-1 md:order-2 bg-blue-500 text-white w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center shadow-lg">
-                    <span className="font-bold text-sm md:text-base">1</span>
-                  </div>
-                </div>
-              </div>
-              {/* Step 2 */}
-              <div className="relative z-10 mb-12 md:mb-20 animate-on-scroll opacity-0 translate-y-8" style={{
-              transitionDelay: '0.1s'
-            }}>
-                <div className="flex flex-col md:flex-row items-center">
-                  <div className="flex-shrink-0 order-1 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
-                    <span className="font-bold">2</span>
-                  </div>
-                  <div className="flex-1 order-2 md:pl-10 lg:pl-12 mt-6 md:mt-0">
-                    <h3 className='text-xl md:text-xl lg:text-2xl font-bold text-gray-900 mb-3'>
-                      {t('pages.web_development.process_steps.design.title')}
-                    </h3>
-                    <p className='text-gray-600'>
-                      {t('pages.web_development.process_steps.design.description')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              {/* Step 3 */}
-              <div className="relative z-10 mb-12 md:mb-20 animate-on-scroll opacity-0 translate-y-8" style={{
-              transitionDelay: '0.2s'
-            }}>
-                <div className="flex flex-col md:flex-row items-center">
-                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-10 lg:pr-12 mt-6 md:mt-0">
-                    <h3 className='text-xl md:text-xl lg:text-2xl font-bold text-gray-900 mb-3'>
-                      {t('pages.web_development.process_steps.development.title')}
-                    </h3>
-                    <p className='text-gray-600'>
-                      {t('pages.web_development.process_steps.development.description')}
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0 order-1 md:order-2 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
-                    <span className="font-bold">3</span>
-                  </div>
-                </div>
-              </div>
-              {/* Step 4 */}
-              <div className="relative z-10 mb-12 md:mb-20 animate-on-scroll opacity-0 translate-y-8" style={{
-              transitionDelay: '0.3s'
-            }}>
-                <div className="flex flex-col md:flex-row items-center">
-                  <div className="flex-shrink-0 order-1 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
-                    <span className="font-bold">4</span>
-                  </div>
-                  <div className="flex-1 order-2 md:pl-10 lg:pl-12 mt-6 md:mt-0">
-                    <h3 className='text-xl md:text-xl lg:text-2xl font-bold text-gray-900 mb-3'>
-                      {t('pages.web_development.process_steps.testing.title')}
-                    </h3>
-                    <p className='text-gray-600'>
-                      {t('pages.web_development.process_steps.testing.description')}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              {/* Step 5 */}
-              <div className="relative z-10 animate-on-scroll opacity-0 translate-y-8" style={{
-              transitionDelay: '0.4s'
-            }}>
-                <div className="flex flex-col md:flex-row items-center">
-                  <div className="flex-1 order-2 md:order-1 md:text-right md:pr-10 lg:pr-12 mt-6 md:mt-0">
-                    <h3 className='text-xl md:text-xl lg:text-2xl font-bold text-gray-900 mb-3'>
-                      {t('pages.web_development.process_steps.launch.title')}
-                    </h3>
-                    <p className='text-gray-600'>
-                      {t('pages.web_development.process_steps.launch.description')}
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0 order-1 md:order-2 bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
-                    <span className="font-bold">5</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </AnimatedSection>
       {/* CTA Section */}
       <AnimatedSection className="py-20 bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl lg:text-4xl font-bold mb-6">
             {t('pages.web_development.cta_title')}
           </h2>
-          <p className="text-lg md:text-xl lg:text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
-            {t('pages.web_development.cta_subtitle')}
-          </p>
+          {t('pages.web_development.cta_subtitle') && (
+            <p className="text-lg md:text-xl lg:text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+              {t('pages.web_development.cta_subtitle')}
+            </p>
+          )}
           <button 
             onClick={() => navigateToHomeWithScroll('contacto')}
             className="bg-white text-blue-600 hover:bg-blue-50 font-medium py-3 md:py-3 lg:py-4 px-6 md:px-7 lg:px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg inline-block"

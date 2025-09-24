@@ -9,10 +9,10 @@
   },
   "hero": {
     "title_desktop": "Potenci la",
-    "title_mobile": "La",
+    "title_mobile": "Potenci la",
     "title_highlight": "presència digital",
     "title_desktop_2": "per impulsar el teu",
-    "title_mobile_2": "per al teu",
+    "title_mobile_2": "per impulsar el teu",
     "title_highlight_2": "èxit",
     "subtitle": "Transforma la teva visió en solucions digitals que connecten, converteixen i fan créixer el teu negoci al món online.",
     "cta_primary": "Començar projecte",
@@ -38,41 +38,21 @@
       "features": [
         "SEO i posicionament web",
         "Google Ads i Facebook Ads",
-        "Marketing a xarxes socials",
         "Anàlisi i informes detallats"
       ]
     },
     "business_consulting": {
       "title": "Consultoria Comercial",
-      "description": "Optimització de processos i estratègies per maximitzar resultats",
+      "description": "Optimització de processos comercials i estratègies d'innovació per maximitzar resultats",
       "features": [
-        "Anàlisi de processos comercials",
-        "Estratègies de vendes",
-        "Optimització de conversió",
-        "Formació d'equips"
+        "Optimització de processos comercials",
+        "Implementació de CRM",
+        "Innovació comercial",
+        "Transformació digital"
       ]
     },
     "view_service": "Veure servei",
     "request_quote": "Sol·licitar pressupost"
-  },
-  "why_choose_us": {
-    "title": "Què esperar?",
-    "experience": {
-      "title": "Experiència Comprovada",
-      "description": "Més de 5 anys ajudant empreses a créixer al món digital amb resultats mesurables"
-    },
-    "personalized": {
-      "title": "Enfocament Personalitzat",
-      "description": "Cada projecte és únic. Adapto les meves solucions a les necessitats específiques del teu negoci"
-    },
-    "results": {
-      "title": "Resultats Mesurables",
-      "description": "Treballo amb mètriques clares i informes detallats perquè puguis veure l'impacte de les meves accions"
-    },
-    "support": {
-      "title": "Suport Continu",
-      "description": "No et deixo sol. Oferisc suport i manteniment continu per garantir l'èxit a llarg termini"
-    }
   },
   "technologies": {
     "title": "Tecnologies utilitzades",
@@ -153,72 +133,70 @@
     "info": {
       "title": "Informació de Contacte",
       "phone": "Telèfon",
-      "email": "Email",
-      "address": "Adreça",
-      "hours": "Horaris"
+      "email": "Email"
     }
   },
   "pages": {
     "web_development": {
-      "title": "Desenvolupament Web Professional",
-      "subtitle": "Desenvolupem llocs web i aplicacions que destaquen pel seu disseny, rendiment i experiència d'usuari",
+      "title": "Desenvolupament Web",
+      "subtitle": "Centrat en el rendiment, disseny i experiència d'usuari",
       "request_quote": "Sol·licitar pressupost",
       "see_process": "Veure procés",
       "back_to_home": "Tornar a l'inici",
-      "services_title": "Serveis de Desenvolupament",
-      "services_subtitle": "Ofereixem solucions digitals completes per a qualsevol necessitat de negoci",
+      "services_title": "El que puc fer per tu",
+      "services_subtitle": "T'ajudo amb tot el que necessitis per al teu negoci a internet",
       "service_corporate": {
-        "title": "Llocs Web Corporatius",
-        "description": "Disseny i desenvolupament de llocs web professionals que representen la identitat de la teva empresa",
+        "title": "Pàgines Web per Empreses",
+        "description": "Faig pàgines web que es veuen professionals i que realment representen el teu negoci",
         "features": [
-          "Disseny responsive",
-          "Optimització SEO",
-          "Integració amb xarxes socials"
+          "Es veu bé en mòbil i ordinador",
+          "Google et troba fàcil",
+          "Connectat a les teves xarxes socials"
         ]
       },
       "service_apps": {
         "title": "Aplicacions Web",
-        "description": "Desenvolupament d'aplicacions web a mida amb funcionalitats avançades per al teu negoci",
+        "description": "Creo aplicacions web especials perquè puguis gestionar millor el teu negoci",
         "features": [
-          "Interfícies intuïtives",
-          "Arquitectura escalable",
-          "Integracions amb APIs"
+          "Fàcil d'usar",
+          "Creix amb el teu negoci",
+          "Es connecta amb altres sistemes"
         ]
       },
       "service_responsive": {
-        "title": "Desenvolupament Responsive",
-        "description": "Llocs web adaptats a tots els dispositius per a una experiència òptima",
+        "title": "Disseny que s'Adapta",
+        "description": "La teva pàgina es veurà perfecta en qualsevol dispositiu: mòbil, tauleta o ordinador",
         "features": [
-          "Compatibilitat mòbil",
-          "Disseny adaptatiu",
-          "Rendiment optimitzat"
+          "Funciona en tots els telèfons",
+          "S'ajusta automàticament",
+          "Carrega súper ràpid"
         ]
       },
       "service_ecommerce": {
-        "title": "E-commerce",
-        "description": "Botigues online completes amb totes les funcionalitats per vendre els teus productes",
+        "title": "Botiga Online",
+        "description": "Et faig una botiga completa perquè venguis els teus productes per internet",
         "features": [
-          "Passarel·les de pagament",
-          "Gestió d'inventari",
-          "Carretó de compres"
+          "Rep pagaments segurs",
+          "Controla el teu inventari",
+          "Cistell de compra inclòs"
         ]
       },
       "service_cms": {
-        "title": "CMS Personalitzats",
-        "description": "Sistemes de gestió de contingut a mida per facilitar l'actualització del teu lloc",
+        "title": "Panell de Control Fàcil",
+        "description": "T'ensenyo a actualitzar la teva pàgina tu mateix, sense necessitat de trucar-me sempre",
         "features": [
-          "Interfície intuïtiva",
-          "Gestió d'usuaris",
-          "Personalització total"
+          "Súper fàcil d'usar",
+          "Només tu tens accés",
+          "Canvies el que vulguis"
         ]
       },
       "service_maintenance": {
-        "title": "Manteniment Web",
-        "description": "Serveis de manteniment i actualització per mantenir el teu lloc segur i funcional",
+        "title": "Manteniment i Suport",
+        "description": "M'encarrego que la teva pàgina sempre funcioni bé i estigui segura",
         "features": [
-          "Actualitzacions de seguretat",
-          "Còpies de seguretat",
-          "Suport tècnic"
+          "Actualitzo la seguretat",
+          "Faig còpies de respatller",
+          "T'ajudo quan necessitis"
         ]
       },
       "process_title": "Procés de Desenvolupament",
@@ -246,7 +224,7 @@
         }
       },
       "cta_title": "Llest per iniciar el teu projecte?",
-      "cta_subtitle": "Contacta'ns avui mateix i converteix la teva idea en realitat."
+      "cta_subtitle": ""
     },
     "digital_marketing": {
       "title": "Marketing Digital Estratègic",
@@ -274,24 +252,6 @@
           "Optimització de conversions"
         ]
       },
-      "service_social_media": {
-        "title": "Xarxes Socials",
-        "description": "Gestió professional de xarxes socials per connectar amb la teva audiència i augmentar l'engagement",
-        "features": [
-          "Estratègia de contingut",
-          "Publicacions orgàniques",
-          "Anàlisi de resultats"
-        ]
-      },
-      "service_email": {
-        "title": "Email Marketing",
-        "description": "Estratègies d'email marketing que nodreixen leads i fidelitzen clients",
-        "features": [
-          "Disseny de newsletters",
-          "Seqüències automatitzades",
-          "Segmentació avançada"
-        ]
-      },
       "service_analytics": {
         "title": "Analítica Web",
         "description": "Anàlisi de dades per entendre el comportament dels teus usuaris i millorar resultats",
@@ -299,15 +259,6 @@
           "Configuració d'Analytics",
           "Informes personalitzats",
           "Recomanacions de millora"
-        ]
-      },
-      "service_content": {
-        "title": "Marketing de Contingut",
-        "description": "Creació de contingut rellevant que atreu, converteix i fidelitza la teva audiència",
-        "features": [
-          "Blogs i articles",
-          "Infografies i ebooks",
-          "Vídeos i webinars"
         ]
       },
       "results_title": "Resultats que Pots Esperar",
@@ -341,24 +292,6 @@
       "explore_areas": "Explorar àrees de consultoria",
       "areas_title": "Àrees de Consultoria Comercial",
       "areas_subtitle": "Solucions completes per optimitzar els teus processos comercials i augmentar les teves vendes",
-      "area_b2b": {
-        "title": "Estratègia de Vendes B2B",
-        "description": "Desenvolupament i implementació d'estratègies de venda efectives per al mercat empresarial",
-        "features": [
-          "Anàlisi del cicle de vendes",
-          "Prospecció qualificada",
-          "Negociació estratègica"
-        ]
-      },
-      "area_team": {
-        "title": "Gestió d'Equips Comercials",
-        "description": "Optimització i capacitació d'equips de venda per maximitzar el seu rendiment",
-        "features": [
-          "Formació especialitzada",
-          "Sistemes d'incentius",
-          "Gestió del rendiment"
-        ]
-      },
       "area_processes": {
         "title": "Optimització de Processos",
         "description": "Anàlisi i millora dels processos comercials per incrementar l'eficiència",
@@ -375,15 +308,6 @@
           "Anàlisi de necessitats",
           "Configuració personalitzada",
           "Formació d'usuaris"
-        ]
-      },
-      "area_b2c": {
-        "title": "Estratègia Comercial B2C",
-        "description": "Desenvolupament d'estratègies efectives per a la venda directa al consumidor",
-        "features": [
-          "Experiència del client",
-          "Tècniques de venda persuasiva",
-          "Fidelització de clients"
         ]
       },
       "area_innovation": {
@@ -460,6 +384,7 @@
     "description": "Transforma la teva visió en solucions digitals que connecten, converteixen i fan créixer el teu negoci.",
     "services": "Serveis",
     "projects": "Projectes",
+    "quick_links": "Enllaços Ràpids",
     "contact": "Contacte",
     "follow_us": "Segueix-me",
     "rights": "Tots els drets reservats",

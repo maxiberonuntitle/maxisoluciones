@@ -59,7 +59,6 @@ const TechnologiesSection = () => {
     'C#',
     'MongoDB',
     'Mongo Atlas',
-    'PostgreSQL',
     'SQL',
     'AWS',
     'Azure',

@@ -4,7 +4,6 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import HeroSection from './components/home/HeroSection';
 import ServicesSection from './components/home/ServicesSection';
-import WhyChooseUsSection from './components/home/WhyChooseUsSection';
 import TechnologiesSection from './components/home/TechnologiesSection';
 import ProjectsSection from './components/home/ProjectsSection';
 import ContactSection from './components/home/ContactSection';
@@ -24,7 +23,6 @@ const HomePage = () => {
   return <>
       <HeroSection />
       <ServicesSection />
-      <WhyChooseUsSection />
       <TechnologiesSection />
       <ProjectsSection />
       <ContactSection />
