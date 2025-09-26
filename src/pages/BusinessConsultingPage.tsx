@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
-import { ArrowLeft, Users, BarChart, TrendingUp, PieChart, CheckCircle, Briefcase, Lightbulb } from 'lucide-react';
+import { ArrowLeft, BarChart, PieChart, CheckCircle, Lightbulb } from 'lucide-react';
 import AnimatedSection from '../components/ui/AnimatedSection';
 import { useNavigationWithScroll } from '../components/utils/NavigationUtils';
 import { useLanguage } from '../components/context/LanguageContext';
@@ -159,104 +159,6 @@ const BusinessConsultingPage = () => {
                   })()}
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-      </AnimatedSection>
-      {/* Benefits Section */}
-      <AnimatedSection className="py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
-              {t('pages.business_consulting.benefits_title')}
-            </h2>
-            <div className="w-20 h-1 bg-blue-500 mx-auto mb-6"></div>
-            <p className="text-xl text-gray-600">
-              {t('pages.business_consulting.benefits_subtitle')}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Benefit Card 1 */}
-            <div className="bg-blue-50 rounded-xl p-6 animate-on-scroll opacity-0 translate-y-8">
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <TrendingUp className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-900">
-                {t('pages.business_consulting.benefits.sales.title')}
-              </h3>
-              <p className="text-gray-600">
-                {t('pages.business_consulting.benefits.sales.description')}
-              </p>
-            </div>
-            {/* Benefit Card 2 */}
-            <div className="bg-blue-50 rounded-xl p-6 animate-on-scroll opacity-0 translate-y-8" style={{
-            transitionDelay: '0.1s'
-          }}>
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <Users className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-900">
-                {t('pages.business_consulting.benefits.efficiency.title')}
-              </h3>
-              <p className="text-gray-600">
-                {t('pages.business_consulting.benefits.efficiency.description')}
-              </p>
-            </div>
-            {/* Benefit Card 3 */}
-            <div className="bg-blue-50 rounded-xl p-6 animate-on-scroll opacity-0 translate-y-8" style={{
-            transitionDelay: '0.2s'
-          }}>
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <PieChart className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-900">
-                {t('pages.business_consulting.benefits.processes.title')}
-              </h3>
-              <p className="text-gray-600">
-                {t('pages.business_consulting.benefits.processes.description')}
-              </p>
-            </div>
-            {/* Benefit Card 4 */}
-            <div className="bg-blue-50 rounded-xl p-6 animate-on-scroll opacity-0 translate-y-8" style={{
-            transitionDelay: '0.3s'
-          }}>
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <BarChart className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-900">
-                {t('pages.business_consulting.benefits.decisions.title')}
-              </h3>
-              <p className="text-gray-600">
-                {t('pages.business_consulting.benefits.decisions.description')}
-              </p>
-            </div>
-            {/* Benefit Card 5 */}
-            <div className="bg-blue-50 rounded-xl p-6 animate-on-scroll opacity-0 translate-y-8" style={{
-            transitionDelay: '0.4s'
-          }}>
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <Briefcase className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-900">
-                {t('pages.business_consulting.benefits.competitive.title')}
-              </h3>
-              <p className="text-gray-600">
-                {t('pages.business_consulting.benefits.competitive.description')}
-              </p>
-            </div>
-            {/* Benefit Card 6 */}
-            <div className="bg-blue-50 rounded-xl p-6 animate-on-scroll opacity-0 translate-y-8" style={{
-            transitionDelay: '0.5s'
-          }}>
-              <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <Lightbulb className="h-6 w-6 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 text-gray-900">
-                {t('pages.business_consulting.benefits.culture.title')}
-              </h3>
-              <p className="text-gray-600">
-                {t('pages.business_consulting.benefits.culture.description')}
-              </p>
             </div>
           </div>
         </div>

@@ -1,7 +1,6 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { ChevronRightIcon, MousePointerClickIcon } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { ChevronRightIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { Link } from 'react-router-dom';
 import NotebookImage from './NotebookImage';
 const HeroSection = () => {
   const {
@@ -9,7 +8,6 @@ const HeroSection = () => {
   } = useLanguage();
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const [scrollDirection, setScrollDirection] = useState('down');
   const [lastScrollY, setLastScrollY] = useState(0);
   useEffect(() => {
     setIsLoaded(true);
@@ -28,13 +26,8 @@ const HeroSection = () => {
           if (now - lastScrollTime > 33) {
             setScrollY(currentScrollY);
             
-            // Detect scroll direction with debouncing
+            // Update last scroll position
             if (Math.abs(currentScrollY - lastScrollY) > 5) {
-              if (currentScrollY > lastScrollY) {
-                setScrollDirection('down');
-              } else {
-                setScrollDirection('up');
-              }
               setLastScrollY(currentScrollY);
             }
             
@@ -113,11 +106,11 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 md:px-6 z-10 pt-12 sm:pt-16 md:pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-8 lg:gap-12 items-center min-h-[75vh] sm:min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh]">
+      <div className="container mx-auto px-4 md:px-6 z-10 pt-2 sm:pt-4 md:pt-8 lg:pt-12 xl:pt-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 lg:gap-6 xl:gap-8 items-center min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh] lg:min-h-[80vh] xl:min-h-[85vh]">
           <div className="text-white max-w-xl mx-auto lg:mx-0 text-center lg:text-left order-2 lg:order-1">
             <div className={`overflow-hidden transition-all duration-1000 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 md:mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 md:mb-6 leading-tight">
                 {/* Mobile version - 2 lines */}
                 <div className="lg:hidden">
                   <div className="text-white mb-2">{t('hero.title_mobile')} <span className="text-cyan-400">{t('hero.title_highlight')}</span></div>
@@ -133,7 +126,7 @@ const HeroSection = () => {
               </h1>
             </div>
             <div className={`transition-all duration-1000 delay-300 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <p className="text-lg sm:text-xl md:text-xl lg:text-xl text-blue-100 mb-8 sm:mb-10 md:mb-8 px-2 md:px-0 leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-xl lg:text-xl text-blue-100 mb-2 sm:mb-4 md:mb-6 px-2 md:px-0 leading-relaxed">
                 {t('hero.subtitle')}
               </p>
             </div>
@@ -157,8 +150,8 @@ const HeroSection = () => {
           </div>
           
           {/* Mobile Visual Element */}
-          <div className={`lg:hidden order-1 lg:order-2 mb-8 transition-all duration-1000 delay-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            <div className="relative h-[200px] sm:h-[250px] flex items-center justify-center">
+          <div className={`lg:hidden order-1 lg:order-2 mb-2 transition-all duration-1000 delay-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+            <div className="relative h-[140px] sm:h-[180px] flex items-center justify-center">
               {/* Mobile decorative elements */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 sm:w-40 sm:h-40 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-xl animate-pulse"></div>
@@ -193,7 +186,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className={`absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center transition-all duration-1000 delay-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+      <div className={`absolute bottom-8 md:bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center transition-all duration-1000 delay-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <span className="text-cyan-200 text-xs sm:text-sm mb-2 hidden sm:block">{t('hero.scroll_indicator')}</span>
         <div className="w-5 h-8 sm:w-6 sm:h-10 border-2 border-cyan-200 rounded-full flex justify-center">
           <div className="w-1 h-2 sm:w-1.5 sm:h-3 bg-cyan-200 rounded-full mt-1.5 sm:mt-2 animate-bounce"></div>
