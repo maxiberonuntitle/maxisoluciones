@@ -86,7 +86,7 @@ const AbrilPapeleriaPage = () => {
               moderna.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="https://abrilpapeleria.azurewebsites.net/" target="_blank" rel="noopener noreferrer" className="group bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
+              <a href="https://abrilpapeleria.com/" target="_blank" rel="noopener noreferrer" className="group bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
                 Visitar sitio
                 <ExternalLink className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
@@ -417,7 +417,7 @@ const AbrilPapeleriaPage = () => {
               puede impulsar tu negocio local.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="https://abrilpapeleria.azurewebsites.net/" target="_blank" rel="noopener noreferrer" className="group bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
+              <a href="https://abrilpapeleria.com/" target="_blank" rel="noopener noreferrer" className="group bg-cyan-600 hover:bg-cyan-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center">
                 Ver sitio en vivo
                 <ExternalLink className="ml-2 w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>

@@ -106,11 +106,11 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 md:px-6 z-10 pt-2 sm:pt-4 md:pt-8 lg:pt-12 xl:pt-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 lg:gap-6 xl:gap-8 items-center min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh] lg:min-h-[80vh] xl:min-h-[85vh]">
-          <div className="text-white max-w-xl mx-auto lg:mx-0 text-center lg:text-left order-2 lg:order-1">
+      <div className="container mx-auto px-4 md:px-6 z-10 pt-8 sm:pt-12 md:pt-24 lg:pt-28 xl:pt-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 md:gap-4 lg:gap-6 xl:gap-8 items-center min-h-[60vh] sm:min-h-[65vh] md:min-h-[80vh] lg:min-h-[85vh] xl:min-h-[90vh]">
+          <div className="text-white max-w-xl mx-auto lg:mx-0 text-center lg:text-left order-1 lg:order-1">
             <div className={`overflow-hidden transition-all duration-1000 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-4 md:mb-6 leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold mb-6 sm:mb-8 md:mb-10 leading-tight">
                 {/* Mobile version - 2 lines */}
                 <div className="lg:hidden">
                   <div className="text-white mb-2">{t('hero.title_mobile')} <span className="text-cyan-400">{t('hero.title_highlight')}</span></div>
@@ -126,7 +126,7 @@ const HeroSection = () => {
               </h1>
             </div>
             <div className={`transition-all duration-1000 delay-300 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <p className="text-lg sm:text-xl md:text-xl lg:text-xl text-blue-100 mb-2 sm:mb-4 md:mb-6 px-2 md:px-0 leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-xl lg:text-xl text-blue-100 mb-8 sm:mb-10 md:mb-12 px-2 md:px-0 leading-relaxed">
                 {t('hero.subtitle')}
               </p>
             </div>
@@ -150,8 +150,8 @@ const HeroSection = () => {
           </div>
           
           {/* Mobile Visual Element */}
-          <div className={`lg:hidden order-1 lg:order-2 mb-2 transition-all duration-1000 delay-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
-            <div className="relative h-[140px] sm:h-[180px] flex items-center justify-center">
+          <div className={`lg:hidden order-2 lg:order-2 mb-4 transition-all duration-1000 delay-700 ease-out ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
+            <div className="relative h-[100px] sm:h-[120px] flex items-center justify-center">
               {/* Mobile decorative elements */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 sm:w-40 sm:h-40 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-xl animate-pulse"></div>

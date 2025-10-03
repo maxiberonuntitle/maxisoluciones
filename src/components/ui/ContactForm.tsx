@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { SendIcon } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import CountryPhoneSelector from './CountryPhoneSelector';
 const ContactForm = () => {
   const {
     t
@@ -36,6 +37,13 @@ const ContactForm = () => {
         [name]: ''
       }));
     }
+  };
+
+  const handlePhoneChange = (value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      phone: value
+    }));
   };
   const validateForm = () => {
     let valid = true;
@@ -177,10 +185,14 @@ ${formData.message}`;
               <label htmlFor="phone" className={`block text-sm font-medium mb-1 transition-all duration-300 ${focused === 'phone' ? 'text-blue-300' : 'text-blue-200'}`}>
                 {t('contact.form.phone')}
               </label>
-              <div className="relative">
-                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} onFocus={() => handleFocus('phone')} onBlur={handleBlur} className={`w-full px-4 py-2 bg-blue-800/30 border rounded-lg transition-all duration-300 text-white ${focused === 'phone' ? 'border-blue-400 ring-2 ring-blue-500/20 bg-blue-800/50' : 'border-blue-700 hover:border-blue-600'}`} placeholder={t('contact.form.placeholder_phone')} />
-                <span className={`absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 ${focused === 'phone' ? 'w-full' : ''}`}></span>
-              </div>
+              <CountryPhoneSelector
+                value={formData.phone}
+                onChange={handlePhoneChange}
+                onFocus={() => handleFocus('phone')}
+                onBlur={handleBlur}
+                placeholder="Número de teléfono"
+                className="w-full"
+              />
             </div>
             <div className="relative">
               <label htmlFor="subject" className={`block text-sm font-medium mb-1 transition-all duration-300 ${focused === 'subject' ? 'text-blue-300' : 'text-blue-200'}`}>
