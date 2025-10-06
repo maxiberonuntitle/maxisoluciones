@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { RocketIcon, ArrowRightIcon } from 'lucide-react';
-import { useLanguage } from '../context/LanguageContext';
+import { RocketIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 interface Project {
   id: number;
@@ -8,6 +7,8 @@ interface Project {
   category: string;
   description: string;
   image: string;
+  location?: string;
+  link?: string;
   showCaseStudy?: boolean;
 }
 interface ProjectCardProps {
@@ -16,9 +17,6 @@ interface ProjectCardProps {
 const ProjectCard = ({
   project
 }: ProjectCardProps) => {
-  const {
-    t
-  } = useLanguage();
   const [isHovered, setIsHovered] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
   // Handle mouse move for 3D tilt effect

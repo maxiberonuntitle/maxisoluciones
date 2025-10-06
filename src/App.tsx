@@ -21,6 +21,7 @@ const BusinessConsultingPage = lazy(() => import('./pages/BusinessConsultingPage
 const AbrilPapeleriaPage = lazy(() => import('./pages/AbrilPapeleriaPage'));
 const AntonioYadamaPage = lazy(() => import('./pages/AntonioYadamaPage'));
 const CafeNuevoYagoPage = lazy(() => import('./pages/CafeteriaNuevoYagoPage'));
+const LomitoPage = lazy(() => import('./pages/LomitoPage'));
 const HomePage = () => {
   return <>
       <HeroSection />
@@ -103,6 +104,11 @@ export function App() {
               <Route path="/proyectos/cafe-nuevo-jago" element={
                 <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="loading-spinner"></div></div>}>
                   <CafeNuevoYagoPage />
+                </Suspense>
+              } />
+              <Route path="/proyectos/lomito" element={
+                <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="loading-spinner"></div></div>}>
+                  <LomitoPage />
                 </Suspense>
               } />
               <Route path="*" element={<Navigate to="/" replace />} />

@@ -600,6 +600,95 @@
         "title": "¿Necesitas Transformar tu Negocio Local?",
         "description": "Contactate hoy mismo y descubre como una estrategia de transformación digital puede impulsar tu negocio local."
       }
+    },
+    "lomito": {
+      "hero": {
+        "badge": "Proyecto Realizado",
+        "title": "Bar y Pizzería",
+        "title_highlight": "Lomito",
+        "subtitle": "Sitio web moderno para Lomito, bar y pizzería en Lloret de Mar. Desarrollo web, SEO local especializado y optimización de presencia en Google Maps para aumentar clientes locales.",
+        "visit_site": "Visitar sitio",
+        "view_details": "Ver detalles"
+      },
+      "about_client": {
+        "image_alt": "Bar y pizzería Lomito en Lloret de Mar",
+        "title": "Sobre el cliente",
+        "description_1": "Lomito es un bar y pizzería ubicado en Lloret de Mar, que ofrece una experiencia gastronómica única con pizzas artesanales y ambiente acogedor.",
+        "description_2": "Con una visión moderna y emprendedora, buscaban modernizar su presencia digital para llegar a más clientes locales y turistas en la zona.",
+        "established": "Establecido en Lloret de Mar"
+      },
+      "overview": {
+        "title": "Proyecto para Lomito",
+        "description": "Desarrollo de un sitio web moderno para Lomito, bar y pizzería ubicado en Lloret de Mar. El proyecto incluyó desarrollo web responsive, SEO local especializado para restaurantes y optimización de presencia en Google Maps para atraer clientes locales.",
+        "web_development": "Sitio web moderno para restaurante",
+        "local_seo": "Optimización para restaurantes",
+        "google_maps": "Presencia local optimizada",
+        "responsive_design": "Diseño responsive y atractivo"
+      },
+      "services": {
+        "title": "Servicios Implementados",
+        "subtitle": "Soluciones integrales para potenciar la presencia digital de un bar y pizzería local",
+        "web_development": {
+          "title": "Desarrollo Web",
+          "description": "Sitio web moderno y atractivo desarrollado específicamente para restaurantes, con menú digital, galería de productos y información de contacto."
+        },
+        "local_seo": {
+          "title": "SEO Local",
+          "description": "Optimización SEO local especializada para restaurantes y bares, incluyendo palabras clave como \"pizzería Lloret de Mar\" y \"bar cerca de mí\"."
+        },
+        "google_maps": {
+          "title": "Google Maps",
+          "description": "Optimización completa de presencia en Google Maps con información actualizada, horarios, fotos y reseñas para atraer clientes locales."
+        },
+        "responsive_design": {
+          "title": "Diseño Responsive",
+          "description": "Diseño completamente responsive que se adapta perfectamente a móviles, tablets y escritorios para una experiencia óptima en todos los dispositivos."
+        },
+        "user_experience": {
+          "title": "Experiencia de Usuario",
+          "description": "Interfaz intuitiva y atractiva que refleja la calidez y ambiente acogedor del bar, mejorando la experiencia del cliente."
+        },
+        "digital_marketing": {
+          "title": "Marketing Digital",
+          "description": "Estrategia de marketing digital integral que incluye gestión de redes sociales y promoción online para aumentar la visibilidad del restaurante."
+        }
+      },
+      "results": {
+        "title": "Resultados Obtenidos",
+        "subtitle": "Impacto medible en la presencia digital del restaurante",
+        "searches_label": "búsquedas mensuales en Google",
+        "local_ranking_label": "en búsquedas locales",
+        "whatsapp_label": "consultas vía WhatsApp",
+        "sales_growth_label": "crecimiento en ventas",
+        "key_improvements_title": "Mejoras clave logradas",
+        "improvements": [
+          "Presencia activa en Google Maps y búsquedas locales",
+          "Primeros resultados en búsquedas como \"pizzería Lloret de Mar\"",
+          "Crecimiento orgánico desde el primer mes de implementación",
+          "Mayor visibilidad de productos y ofertas especiales"
+        ],
+        "local_seo_improvement": {
+          "title": "Mejora SEO Local",
+          "description": "Posicionamiento mejorado en búsquedas locales relacionadas con restaurantes y bares."
+        },
+        "maps_visibility": {
+          "title": "Visibilidad en Maps",
+          "description": "Mayor presencia en Google Maps con información actualizada y reseñas positivas."
+        },
+        "more_customers": {
+          "title": "Más Clientes",
+          "description": "Aumento significativo en el número de clientes locales que descubren el restaurante online."
+        },
+        "modern_image": {
+          "title": "Imagen Moderna",
+          "description": "Sitio web que proyecta modernidad y profesionalismo, mejorando la percepción de marca."
+        }
+      },
+      "cta": {
+        "title": "¿Necesitas Transformar tu Restaurante Local?",
+        "description": "Contáctate hoy mismo y descubre cómo una estrategia de transformación digital puede impulsar tu negocio local.",
+        "view_live_site": "Ver sitio en vivo"
+      }
     }
   },
   "common": {
@@ -615,141 +704,5 @@
     "back": "Volver",
     "next": "Siguiente",
     "previous": "Anterior"
-  },
-  "project_pages": {
-    "antonio_yadama": {
-      "hero": {
-        "title": "Desarrollo Web",
-        "title_highlight": "Antonio y Adama Jardinería",
-        "subtitle": "Sitio web profesional para Antonio y Adama Jardinería, especialistas en servicios de jardinería y paisajismo en Lloret de Mar."
-      },
-      "overview": {
-        "title": "Proyecto para Antonio y Adama",
-        "description": "Desarrollo de un sitio web profesional para Antonio y Adama Jardinería, especialistas en servicios de jardinería y paisajismo. El proyecto incluyó desarrollo web moderno, optimización SEO local para servicios de jardinería y presencia optimizada en Google Maps para atraer clientes locales en Lloret de Mar.",
-        "web_development": "Sitio web moderno y responsive",
-        "seo": "Optimización para jardinería",
-        "google_maps": "Presencia local optimizada",
-        "design": "Interfaz profesional"
-      },
-      "services": {
-        "title": "Servicios Implementados",
-        "subtitle": "Soluciones integrales para potenciar la presencia digital de un negocio de jardinería profesional",
-        "web_development": {
-          "title": "Desarrollo Web",
-          "description": "Sitio web moderno y responsive desarrollado con las últimas tecnologías, optimizado para mostrar servicios de jardinería y proyectos de paisajismo de manera profesional."
-        },
-        "seo_specialized": {
-          "title": "SEO Especializado",
-          "description": "Optimización SEO específica para servicios de jardinería, incluyendo palabras clave relevantes como \"jardinería Lloret de Mar\" y estructura optimizada para motores de búsqueda."
-        },
-        "google_maps": {
-          "title": "Google Maps",
-          "description": "Optimización de presencia en Google Maps para atraer clientes locales interesados en servicios de jardinería y paisajismo en Lloret de Mar."
-        },
-        "responsive_design": {
-          "title": "Diseño Responsive",
-          "description": "Diseño completamente responsive que se adapta perfectamente a todos los dispositivos, desde móviles hasta escritorios."
-        },
-        "digital_portfolio": {
-          "title": "Portfolio Digital",
-          "description": "Galería profesional para mostrar proyectos de jardinería y paisajismo con navegación intuitiva y presentación visual impactante."
-        },
-        "contact_optimized": {
-          "title": "Contacto Optimizado",
-          "description": "Formularios de contacto optimizados y información de contacto clara para facilitar la comunicación con clientes potenciales."
-        }
-      },
-      "results": {
-        "title": "Resultados Obtenidos",
-        "subtitle": "Impacto medible en la presencia digital del negocio",
-        "seo_improvement": {
-          "title": "Mejora SEO",
-          "description": "Posicionamiento mejorado en búsquedas relacionadas con jardinería y servicios de paisajismo."
-        },
-        "local_visibility": {
-          "title": "Visibilidad Local",
-          "description": "Mayor presencia en Google Maps y búsquedas locales de servicios de arquitectura."
-        },
-        "more_queries": {
-          "title": "Más Consultas",
-          "description": "Aumento significativo en consultas de clientes potenciales interesados en servicios de jardinería."
-        },
-        "professional_image": {
-          "title": "Imagen Profesional",
-          "description": "Sitio web que proyecta profesionalismo y confianza, mejorando la percepción de marca."
-        }
-      },
-      "cta": {
-        "title": "¿Necesitas un Sitio Web Profesional?",
-        "description": "Contáctate hoy mismo y convierte tu idea en realidad."
-      }
-    },
-    "cafe_nuevo_jago": {
-      "hero": {
-        "title": "Cafetería",
-        "title_highlight": "Nuevo Yago",
-        "subtitle": "Transformación digital completa para cafeterianuevoyago.es. Desarrollo web, SEO local especializado y optimización de presencia en Google Maps para aumentar clientes locales."
-      },
-      "overview": {
-        "title": "Transformación Digital para Cafetería",
-        "description": "Estrategia integral de transformación digital para cafeterianuevoyago.es. El proyecto incluyó desarrollo web completo, SEO local especializado para restaurantes y optimización de presencia en Google Maps para aumentar clientes locales.",
-        "web_development": "Sitio web moderno para cafetería",
-        "local_seo": "Optimización para restaurantes",
-        "google_maps": "Presencia local optimizada",
-        "digital_marketing": "Estrategia digital integral"
-      },
-      "services": {
-        "title": "Servicios Implementados",
-        "subtitle": "Soluciones integrales para potenciar la presencia digital de una cafetería local",
-        "web_development": {
-          "title": "Desarrollo Web",
-          "description": "Sitio web moderno y atractivo desarrollado específicamente para cafeterías, con menú digital, galería de productos y información de contacto."
-        },
-        "local_seo": {
-          "title": "SEO Local",
-          "description": "Optimización SEO local especializada para restaurantes y cafeterías, incluyendo palabras clave como \"cafetería cerca de mí\" y \"mejor café local\"."
-        },
-        "google_maps": {
-          "title": "Google Maps",
-          "description": "Optimización completa de presencia en Google Maps con información actualizada, horarios, fotos y reseñas para atraer clientes locales."
-        },
-        "responsive_design": {
-          "title": "Diseño Responsive",
-          "description": "Diseño completamente responsive que se adapta perfectamente a móviles, tablets y escritorios para una experiencia óptima en todos los dispositivos."
-        },
-        "user_experience": {
-          "title": "Experiencia de Usuario",
-          "description": "Interfaz intuitiva y atractiva que refleja la calidez y ambiente acogedor de la cafetería, mejorando la experiencia del cliente."
-        },
-        "digital_marketing": {
-          "title": "Marketing Digital",
-          "description": "Estrategia de marketing digital integral que incluye gestión de redes sociales y promoción online para aumentar la visibilidad de la cafetería."
-        }
-      },
-      "results": {
-        "title": "Resultados Obtenidos",
-        "subtitle": "Impacto medible en la presencia digital de la cafetería",
-        "local_seo_improvement": {
-          "title": "Mejora SEO Local",
-          "description": "Posicionamiento mejorado en búsquedas locales relacionadas con cafeterías y restaurantes."
-        },
-        "maps_visibility": {
-          "title": "Visibilidad en Maps",
-          "description": "Mayor presencia en Google Maps con información actualizada y reseñas positivas."
-        },
-        "more_customers": {
-          "title": "Más Clientes",
-          "description": "Aumento significativo en el número de clientes locales que descubren la cafetería online."
-        },
-        "modern_image": {
-          "title": "Imagen Moderna",
-          "description": "Sitio web que proyecta modernidad y profesionalismo, mejorando la percepción de marca."
-        }
-      },
-      "cta": {
-        "title": "¿Necesitas Transformar tu Negocio Local?",
-        "description": "Contactate hoy mismo y descubre como una estrategia de transformación digital puede impulsar tu negocio local."
-      }
-    }
   }
 }

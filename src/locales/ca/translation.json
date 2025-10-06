@@ -600,6 +600,95 @@
         "title": "Necessites Transformar el teu Negoci Local?",
         "description": "Contacta't avui mateix i descobreix com una estratègia de transformació digital pot impulsar el teu negoci local."
       }
+    },
+    "lomito": {
+      "hero": {
+        "badge": "Projecte Realitzat",
+        "title": "Bar i Pizzería",
+        "title_highlight": "Lomito",
+        "subtitle": "Lloc web modern per a Lomito, bar i pizzería a Lloret de Mar. Desenvolupament web, SEO local especialitzat i optimització de presència a Google Maps per augmentar clients locals.",
+        "visit_site": "Visitar lloc",
+        "view_details": "Veure detalls"
+      },
+      "about_client": {
+        "image_alt": "Bar i pizzería Lomito a Lloret de Mar",
+        "title": "Sobre el client",
+        "description_1": "Lomito és un bar i pizzería ubicat a Lloret de Mar, que ofereix una experiència gastronòmica única amb pizzes artesanals i un ambient acollidor.",
+        "description_2": "Amb una visió moderna i emprenedora, buscaven modernitzar la seva presència digital per arribar a més clients locals i turistes de la zona.",
+        "established": "Establert a Lloret de Mar"
+      },
+      "overview": {
+        "title": "Projecte per a Lomito",
+        "description": "Desenvolupament d'un lloc web modern per a Lomito, bar i pizzería ubicat a Lloret de Mar. El projecte va incloure desenvolupament web responsive, SEO local especialitzat per a restaurants i optimització de presència a Google Maps per atreure clients locals.",
+        "web_development": "Lloc web modern per a restaurant",
+        "local_seo": "Optimització per a restaurants",
+        "google_maps": "Presència local optimitzada",
+        "responsive_design": "Disseny responsive i atractiu"
+      },
+      "services": {
+        "title": "Serveis Implementats",
+        "subtitle": "Solucions integrals per potenciar la presència digital d'un bar i pizzería local",
+        "web_development": {
+          "title": "Desenvolupament Web",
+          "description": "Lloc web modern i atractiu desenvolupat específicament per a restaurants, amb menú digital, galeria de productes i informació de contacte."
+        },
+        "local_seo": {
+          "title": "SEO Local",
+          "description": "Optimització SEO local especialitzada per a restaurants i bars, incloent paraules clau com \"pizzería Lloret de Mar\" i \"bar a prop meu\"."
+        },
+        "google_maps": {
+          "title": "Google Maps",
+          "description": "Optimització completa de presència a Google Maps amb informació actualitzada, horaris, fotos i ressenyes per atreure clients locals."
+        },
+        "responsive_design": {
+          "title": "Disseny Responsive",
+          "description": "Disseny completament responsive que s'adapta perfectament a mòbils, tauletes i escriptoris per a una experiència òptima en tots els dispositius."
+        },
+        "user_experience": {
+          "title": "Experiència d'Usuari",
+          "description": "Interfície intuïtiva i atractiva que reflecteix la calidesa i ambient acollidor del bar, millorant l'experiència del client."
+        },
+        "digital_marketing": {
+          "title": "Marketing Digital",
+          "description": "Estratègia de marketing digital integral que inclou gestió de xarxes socials i promoció online per augmentar la visibilitat del restaurant."
+        }
+      },
+      "results": {
+        "title": "Resultats Obtinguts",
+        "subtitle": "Impacte mesurable en la presència digital del restaurant",
+        "searches_label": "cerques mensuals a Google",
+        "local_ranking_label": "en cerques locals",
+        "whatsapp_label": "consultes via WhatsApp",
+        "sales_growth_label": "creixement en vendes",
+        "key_improvements_title": "Millores clau aconseguides",
+        "improvements": [
+          "Presència activa a Google Maps i cerques locals",
+          "Primers resultats en cerques com \"pizzería Lloret de Mar\"",
+          "Creixement orgànic des del primer mes d'implementació",
+          "Major visibilitat de productes i ofertes especials"
+        ],
+        "local_seo_improvement": {
+          "title": "Millora SEO Local",
+          "description": "Posicionament millorat en cerques locals relacionades amb restaurants i bars."
+        },
+        "maps_visibility": {
+          "title": "Visibilitat a Maps",
+          "description": "Major presència a Google Maps amb informació actualitzada i ressenyes positives."
+        },
+        "more_customers": {
+          "title": "Més Clients",
+          "description": "Augment significatiu en el nombre de clients locals que descobreixen el restaurant online."
+        },
+        "modern_image": {
+          "title": "Imatge Moderna",
+          "description": "Lloc web que projecta modernitat i professionalitat, millorant la percepció de marca."
+        }
+      },
+      "cta": {
+        "title": "Necessites Transformar el teu Restaurant Local?",
+        "description": "Contacta't avui mateix i descobreix com una estratègia de transformació digital pot impulsar el teu negoci local.",
+        "view_live_site": "Veure lloc en viu"
+      }
     }
   },
   "common": {
