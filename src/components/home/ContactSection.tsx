@@ -121,25 +121,23 @@ const ContactSection = () => {
             </div>
             {/* Mapa - reducir altura en móviles para mejor visibilidad */}
             <div className="bg-blue-900/30 backdrop-blur-sm p-4 sm:p-6 md:p-8 rounded-xl shadow-sm h-40 sm:h-48 md:h-64 lg:h-80 border border-blue-800/50 relative overflow-hidden contact-animate contact-map">
-              {/* Map placeholder with animated elements */}
-              <div className="w-full h-full bg-blue-800/30 rounded-lg flex items-center justify-center relative">
-                <div className="absolute inset-0">
-                  {/* Grid lines */}
-                  {[...Array(5)].map((_, i) => <div key={`map-h-${i}`} className="absolute h-px w-full bg-blue-700/30" style={{
-                  top: `${i * 25}%`
-                }}></div>)}
-                  {[...Array(5)].map((_, i) => <div key={`map-v-${i}`} className="absolute w-px h-full bg-blue-700/30" style={{
-                  left: `${i * 25}%`
-                }}></div>)}
-                  {/* Location marker */}
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div className="w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
-                    <div className="w-12 h-12 bg-blue-500/30 rounded-full absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-ping"></div>
-                  </div>
-                </div>
-                <span className="text-blue-300 relative z-10">
-                  Mapa de ubicación
-                </span>
+              <div className="w-full h-full bg-blue-800/30 rounded-lg overflow-hidden relative">
+                <iframe
+                  title="Ubicación en Lloret de Mar"
+                  className="w-full h-full"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=Lloret%20de%20Mar,%20Girona,%20Espa%C3%B1a&z=13&output=embed"
+                />
+
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Lloret%20de%20Mar,%20Girona,%20Espa%C3%B1a"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-3 right-3 text-xs sm:text-sm bg-gray-950/70 text-blue-100 px-3 py-2 rounded-lg border border-blue-700/40 hover:bg-gray-950/80 transition-colors"
+                >
+                  Ver en Google Maps
+                </a>
               </div>
             </div>
           </div>

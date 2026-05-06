@@ -11,6 +11,14 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+const normalizeLocale = (lng: string): Locale => {
+  if (lng?.startsWith('es')) return 'es';
+  if (lng?.startsWith('en')) return 'en';
+  if (lng?.startsWith('fr')) return 'fr';
+  if (lng?.startsWith('ca')) return 'ca';
+  return 'es';
+};
+
 export const LanguageProvider = ({
   children
 }: {
@@ -24,7 +32,7 @@ export const LanguageProvider = ({
 
   return (
     <LanguageContext.Provider value={{
-      language: i18n.language as Locale,
+      language: normalizeLocale(i18n.language),
       setLanguage,
       t
     }}>

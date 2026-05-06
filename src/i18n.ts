@@ -32,7 +32,9 @@ i18n
     debug: false,
     
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      // Forzar español por defecto usando <html lang="es">.
+      // El navegador solo se usa si el usuario no eligió idioma antes.
+      order: ['localStorage', 'htmlTag', 'navigator'],
       caches: ['localStorage'],
     },
 
