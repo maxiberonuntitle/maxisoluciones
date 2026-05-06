@@ -54,8 +54,8 @@ const ContactSection = () => {
   const contactInfo = [{
     icon: <PhoneIcon className="w-5 h-5 text-blue-500" />,
     title: t('contact.info.phone'),
-    details: '+598 98 009 803',
-    link: 'tel:+59898009803'
+    details: '+34 607 89 31 17',
+    link: 'tel:+34607893117'
   }, {
     icon: <MailIcon className="w-5 h-5 text-blue-500" />,
     title: t('contact.info.email'),

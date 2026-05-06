@@ -61,11 +61,11 @@ const CountryPhoneSelector: React.FC<CountryPhoneSelectorProps> = ({
         setCountries(countriesWithPhone);
         setFilteredCountries(countriesWithPhone);
         
-        // Set default country (Uruguay) only if no value is provided
+        // Set default country (Spain) only if no value is provided
         if (!value) {
-          const uruguay = countriesWithPhone.find((c: Country) => c.cca2 === 'UY');
-          if (uruguay) {
-            setSelectedCountry(uruguay);
+          const spain = countriesWithPhone.find((c: Country) => c.cca2 === 'ES');
+          if (spain) {
+            setSelectedCountry(spain);
           }
         }
         
